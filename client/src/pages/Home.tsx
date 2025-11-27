@@ -161,55 +161,55 @@ export default function Home() {
             Key Features That Matter
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-[200px]">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {/* Guided Journey - Large Block */}
-            <div className="md:col-span-2 md:row-span-2 bg-gray-50 border border-gray-200 p-8 flex flex-col justify-between group hover:border-[#ED7A30] transition-colors relative overflow-hidden">
+            <div className="md:col-span-2 md:row-span-2 bg-gray-50 border border-gray-200 p-8 flex flex-col justify-between group hover:border-[#ED7A30] transition-colors relative overflow-hidden min-h-[300px]">
               <div className="relative z-10">
                 <div className="w-10 h-10 bg-white border border-gray-200 flex items-center justify-center mb-4 text-[#ED7A30] shadow-sm">1</div>
                 <h3 className="text-2xl font-bold text-[#171717]">Guided Journey</h3>
-                <p className="text-gray-500 mt-2 text-lg leading-relaxed">Give customers, vendors, and new hires one simple, step-by-step flow to provide details and upload documents - no back-and-forth emails.</p>
+                <p className="text-gray-500 mt-2 text-lg leading-relaxed max-w-md">Give customers, vendors, and new hires one simple, step-by-step flow to provide details and upload documents - no back-and-forth emails.</p>
               </div>
               <img src={featureDashboard} alt="Guided Journey" className="absolute right-0 bottom-0 w-2/3 shadow-xl translate-x-10 translate-y-10 group-hover:translate-x-8 group-hover:translate-y-8 transition-transform opacity-80" />
             </div>
 
             {/* Automated Data - Standard Block */}
-            <div className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-shadow flex flex-col justify-between">
+            <div className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-shadow flex flex-col justify-start gap-4">
               <div>
                 <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center mb-3 text-[#ED7A30] font-bold text-xs">2</div>
-                <h3 className="text-lg font-bold text-[#171717] leading-tight mb-2">Automated Data & Document Collection</h3>
+                <h3 className="text-lg font-bold text-[#171717] leading-tight">Automated Data & Document Collection</h3>
               </div>
-              <p className="text-gray-500 text-sm">Capture information, documents, and signatures from anyone through a single, structured process.</p>
+              <p className="text-gray-500 text-sm leading-relaxed">Capture information, documents, and signatures from anyone through a single, structured process.</p>
             </div>
 
             {/* Checklists - Standard Block */}
-            <div className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-shadow flex flex-col justify-between">
+            <div className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-shadow flex flex-col justify-start gap-4">
               <div>
                 <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center mb-3 text-[#ED7A30] font-bold text-xs">3</div>
-                <h3 className="text-lg font-bold text-[#171717] leading-tight mb-2">Multi-Team Checklists</h3>
+                <h3 className="text-lg font-bold text-[#171717] leading-tight">Multi-Team Checklists</h3>
               </div>
-              <p className="text-gray-500 text-sm">HR, IT, Finance, Operations - everyone sees their tasks in one shared place, so work happens in parallel, not sequentially.</p>
+              <p className="text-gray-500 text-sm leading-relaxed">HR, IT, Finance, Operations - everyone sees their tasks in one shared place, so work happens in parallel, not sequentially.</p>
             </div>
 
             {/* Role Based - Standard Block */}
-            <div className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-shadow flex flex-col justify-between">
+            <div className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-shadow flex flex-col justify-start gap-4">
               <div>
                 <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center mb-3 text-[#ED7A30] font-bold text-xs">4</div>
-                <h3 className="text-lg font-bold text-[#171717] leading-tight mb-2">Role-Based Visibility</h3>
+                <h3 className="text-lg font-bold text-[#171717] leading-tight">Role-Based Visibility</h3>
               </div>
-              <p className="text-gray-500 text-sm">Each team member sees only what they need, with sensitive data protected by role permissions.</p>
+              <p className="text-gray-500 text-sm leading-relaxed">Each team member sees only what they need, with sensitive data protected by role permissions.</p>
             </div>
 
             {/* Communication - Standard Block */}
-            <div className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-shadow flex flex-col justify-between">
+            <div className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-shadow flex flex-col justify-start gap-4">
               <div>
                 <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center mb-3 text-[#ED7A30] font-bold text-xs">5</div>
-                <h3 className="text-lg font-bold text-[#171717] leading-tight mb-2">Built-In Communication</h3>
+                <h3 className="text-lg font-bold text-[#171717] leading-tight">Built-In Communication</h3>
               </div>
-              <p className="text-gray-500 text-sm">Ask questions and share clarifications directly inside the flow (instead of spawning new email threads).</p>
+              <p className="text-gray-500 text-sm leading-relaxed">Ask questions and share clarifications directly inside the flow (instead of spawning new email threads).</p>
             </div>
 
             {/* Doc Gen - Tall Block */}
-            <div className="md:col-span-1 md:row-span-2 bg-[#171717] p-8 flex flex-col justify-between text-white">
+            <div className="md:col-span-1 md:row-span-2 bg-[#171717] p-8 flex flex-col justify-between text-white min-h-[300px]">
               <div>
                 <div className="w-10 h-10 border border-gray-600 flex items-center justify-center mb-4 text-[#ED7A30]">6</div>
                 <h3 className="text-2xl font-bold mb-2">Document Generation & Signing</h3>
@@ -219,12 +219,12 @@ export default function Home() {
             </div>
 
             {/* Archiving - Standard Block */}
-            <div className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-shadow flex flex-col justify-between">
+            <div className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-shadow flex flex-col justify-start gap-4">
               <div>
                 <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center mb-3 text-[#ED7A30] font-bold text-xs">7</div>
-                <h3 className="text-lg font-bold text-[#171717] leading-tight mb-2">Automatic Archiving</h3>
+                <h3 className="text-lg font-bold text-[#171717] leading-tight">Automatic Archiving</h3>
               </div>
-              <p className="text-gray-500 text-sm">Completed documents go straight into SharePoint or your CRM - neatly stored and fully traceable.</p>
+              <p className="text-gray-500 text-sm leading-relaxed">Completed documents go straight into SharePoint or your CRM - neatly stored and fully traceable.</p>
             </div>
 
             {/* AI - Standard Block */}
