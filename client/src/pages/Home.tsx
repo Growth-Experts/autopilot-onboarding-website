@@ -460,12 +460,30 @@ export default function Home() {
       {/* Section 9: Bottom CTA */}
       <section className="py-32 bg-[#ED7A30] text-white text-center">
         <div className="container mx-auto px-4 md:px-6">
-          <h2 className="text-4xl md:text-6xl font-extrabold mb-10 max-w-4xl mx-auto leading-tight">
+          <h2 className="text-4xl md:text-6xl font-extrabold mb-6 max-w-4xl mx-auto leading-tight">
             Make onboarding the easiest part of your day.
           </h2>
-          <Button className="bg-white text-[#ED7A30] hover:bg-gray-100 hover:text-[#ED7A30] text-xl px-12 py-8 rounded-none font-bold uppercase tracking-wider shadow-2xl">
+          <p className="text-xl md:text-2xl font-light mb-12 max-w-3xl mx-auto opacity-90">
+            Let's replace scattered emails and loose tasks with one clean onboarding flow.
+          </p>
+          
+          <Button className="bg-white text-[#ED7A30] hover:bg-gray-100 hover:text-[#ED7A30] text-xl px-12 py-8 rounded-none font-bold uppercase tracking-wider shadow-2xl mb-16">
             Book a Demo
           </Button>
+
+          <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-sm md:text-base font-medium opacity-90">
+            {[
+              "Free 30-day trial",
+              "No payment info required",
+              "Full feature access",
+              "Dedicated onboarding support"
+            ].map((benefit, i) => (
+              <div key={i} className="flex items-center gap-2">
+                <Check className="w-5 h-5" strokeWidth={3} />
+                <span>{benefit}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </div>
