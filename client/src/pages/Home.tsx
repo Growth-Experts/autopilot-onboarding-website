@@ -350,17 +350,14 @@ export default function Home() {
       {/* Section 7: Case Study Teaser */}
       <section className="py-24 bg-[#171717] text-white border-b border-gray-800">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
             <div>
               <div className="inline-block bg-[#ED7A30] text-white text-xs font-bold px-3 py-1 uppercase tracking-widest mb-6">
                 Case Study
               </div>
-              <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-8">
+              <h2 className="text-3xl md:text-5xl font-bold leading-tight">
                 From Paper Delays to Real-Time, Error-Free Onboarding for YMCA
               </h2>
-              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-[#171717] rounded-none uppercase font-bold px-8">
-                Read Full Story
-              </Button>
             </div>
             
             <div className="space-y-8">
@@ -375,6 +372,12 @@ export default function Home() {
                 </div>
               ))}
             </div>
+          </div>
+
+          <div className="text-center">
+            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-[#171717] rounded-none uppercase font-bold px-10 py-6 text-lg transition-all duration-300">
+              Read Full Story
+            </Button>
           </div>
         </div>
       </section>
