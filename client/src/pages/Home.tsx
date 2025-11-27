@@ -106,60 +106,57 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
-            <div className="grid grid-cols-1 gap-8">
-              <div className="flex items-start gap-6 group">
-                <div className="w-12 h-12 bg-[#ED7A30]/10 flex items-center justify-center text-[#ED7A30] shrink-0 group-hover:bg-[#ED7A30] group-hover:text-white transition-colors">
-                  <Zap size={24} />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-[#171717] mb-2">Automate data collection and task hand offs</h3>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-6 group">
-                <div className="w-12 h-12 bg-[#ED7A30]/10 flex items-center justify-center text-[#ED7A30] shrink-0 group-hover:bg-[#ED7A30] group-hover:text-white transition-colors">
-                  <Users size={24} />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-[#171717] mb-2">Give internal teams role-based checklists</h3>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-6 group">
-                <div className="w-12 h-12 bg-[#ED7A30]/10 flex items-center justify-center text-[#ED7A30] shrink-0 group-hover:bg-[#ED7A30] group-hover:text-white transition-colors">
-                  <ArrowRight size={24} />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-[#171717] mb-2">Let external parties upload documents and sign in one guided journey</h3>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-6 group">
-                <div className="w-12 h-12 bg-[#ED7A30]/10 flex items-center justify-center text-[#ED7A30] shrink-0 group-hover:bg-[#ED7A30] group-hover:text-white transition-colors">
-                  <Check size={24} />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-[#171717] mb-2">Track progress end-to-end with a clear audit trail</h3>
-                </div>
-              </div>
-
-              <div className="pt-8 border-t border-gray-200 mt-4">
-                <p className="text-xl font-bold text-[#171717] italic mb-8">Everything moves in sync, every time.</p>
-                <Button className="bg-[#ED7A30] hover:bg-[#d66520] text-white text-lg px-8 py-6 rounded-none font-bold uppercase tracking-wider shadow-lg">
-                  See how it works
-                </Button>
+          <div className="flex flex-col items-center">
+            {/* Central Visual - Large & Responsive */}
+            <div className="w-full max-w-5xl mb-16">
+              <div className="relative shadow-2xl rounded-xl overflow-hidden border border-gray-200 bg-white">
+                <WindowFrame title="Workflow Management">
+                  <img 
+                    src={checklistImage} 
+                    alt="Checklist Dashboard" 
+                    className="w-full h-auto object-cover"
+                  />
+                </WindowFrame>
               </div>
             </div>
 
-            <div className="relative">
-              <WindowFrame title="Workflow Management">
-                <img 
-                  src={checklistImage} 
-                  alt="Checklist Dashboard" 
-                  className="w-full h-auto object-cover"
-                />
-              </WindowFrame>
+            {/* Features Grid - Underneath */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-full max-w-6xl">
+              <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 group">
+                <div className="w-12 h-12 bg-[#ED7A30]/10 rounded-lg flex items-center justify-center text-[#ED7A30] mb-4 group-hover:bg-[#ED7A30] group-hover:text-white transition-colors">
+                  <Zap size={24} />
+                </div>
+                <h3 className="text-lg font-bold text-[#171717] mb-2">Automate data collection and task hand offs</h3>
+              </div>
+
+              <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 group">
+                <div className="w-12 h-12 bg-[#ED7A30]/10 rounded-lg flex items-center justify-center text-[#ED7A30] mb-4 group-hover:bg-[#ED7A30] group-hover:text-white transition-colors">
+                  <Users size={24} />
+                </div>
+                <h3 className="text-lg font-bold text-[#171717] mb-2">Give internal teams role-based checklists</h3>
+              </div>
+
+              <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 group">
+                <div className="w-12 h-12 bg-[#ED7A30]/10 rounded-lg flex items-center justify-center text-[#ED7A30] mb-4 group-hover:bg-[#ED7A30] group-hover:text-white transition-colors">
+                  <ArrowRight size={24} />
+                </div>
+                <h3 className="text-lg font-bold text-[#171717] mb-2">Let external parties upload documents and sign in one guided journey</h3>
+              </div>
+
+              <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 group">
+                <div className="w-12 h-12 bg-[#ED7A30]/10 rounded-lg flex items-center justify-center text-[#ED7A30] mb-4 group-hover:bg-[#ED7A30] group-hover:text-white transition-colors">
+                  <Check size={24} />
+                </div>
+                <h3 className="text-lg font-bold text-[#171717] mb-2">Track progress end-to-end with a clear audit trail</h3>
+              </div>
+            </div>
+
+            {/* Footer / CTA */}
+            <div className="mt-16 text-center">
+              <p className="text-2xl font-bold text-[#171717] italic mb-8 tracking-tight">Everything moves in sync, every time.</p>
+              <Button className="bg-[#ED7A30] hover:bg-[#d66520] text-white text-lg px-10 py-6 rounded-none font-bold uppercase tracking-wider shadow-lg hover:shadow-xl transition-all transform hover:scale-105">
+                See how it works
+              </Button>
             </div>
           </div>
         </div>
