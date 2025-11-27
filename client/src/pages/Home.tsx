@@ -34,6 +34,32 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Trusted By Section */}
+      <section className="py-12 bg-white border-b border-gray-200">
+        <div className="container mx-auto px-4 md:px-6 text-center">
+          <h3 className="text-xl font-bold text-[#171717] mb-8">
+            Trusted by teams who care about first impressions
+          </h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+            <div className="font-bold text-lg text-gray-500 tracking-tight">3 WAY MARKETING</div>
+            <div className="font-bold text-lg text-green-700 flex items-center justify-center gap-2">
+               <span className="text-xl">🌱</span> SA Canegrowers
+            </div>
+            <div className="font-bold text-lg text-red-600 flex items-center justify-center gap-2">
+               <span className="text-xl">🌶️</span> Capsicum
+            </div>
+            <div className="font-bold text-lg text-purple-800 border-2 border-purple-800 rounded-full w-10 h-10 flex items-center justify-center">cbf</div>
+            <div className="font-bold text-lg text-gray-800 flex items-center justify-center gap-1">
+               <span className="text-red-600 text-xl">❖</span> turnkey
+            </div>
+             <div className="font-bold text-lg text-red-700 border-2 border-red-700 rounded px-2 py-0.5">BRM</div>
+            <div className="font-bold text-lg text-black tracking-tighter">nologo</div>
+            <div className="font-bold text-lg text-amber-800">Tongaat Hulett</div>
+          </div>
+        </div>
+      </section>
+
       {/* Section 2: The Problem (Pain Points) */}
       <section className="py-24 bg-white border-b border-gray-200">
         <div className="container mx-auto px-4 md:px-6">
