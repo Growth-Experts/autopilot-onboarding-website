@@ -18,7 +18,7 @@ export default function Home() {
         
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#171717] leading-[1.1] mb-8 tracking-tight">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#171717] leading-[1.1] mb-8 tracking-tighter">
               Onboarding shouldn't feel like a <span className="text-[#ED7A30]">scavenger hunt</span>
             </h1>
             <h2 className="text-xl md:text-2xl text-gray-600 font-light max-w-3xl mx-auto leading-relaxed mb-10">Autopilot Onboarding connects every department - HR, IT, Finance, Ops, and anyone else - so the people you're onboarding get one clean, guided flow instead of scattered emails and manual checklists.</h2>
@@ -41,7 +41,7 @@ export default function Home() {
       {/* Trusted By Section */}
       <section className="py-20 bg-[#FAFAFA] border-b border-gray-200">
         <div className="container mx-auto px-4 md:px-6 text-center">
-          <h3 className="text-2xl md:text-3xl font-bold text-[#171717] mb-12 tracking-tight">
+            <h3 className="text-2xl md:text-3xl font-bold text-[#171717] mb-12 tracking-tighter">
             Trusted by teams who care about first impressions
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-12 items-center justify-items-center opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
@@ -67,7 +67,7 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-start">
             <div className="lg:col-span-5">
-              <h2 className="text-4xl md:text-5xl font-bold text-[#171717] leading-tight mb-8">
+              <h2 className="text-4xl md:text-5xl font-bold text-[#171717] leading-tight mb-8 tracking-tighter">
                 Onboarding delays hurt people and partnerships
               </h2>
             </div>
@@ -89,7 +89,7 @@ export default function Home() {
       <section className="py-24 bg-[#F5F5F5] border-b border-gray-200">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#171717] mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#171717] mb-6 tracking-tighter">
               Use one connected system for every onboarding
             </h2>
             <p className="text-xl text-gray-600 font-light leading-relaxed max-w-2xl mx-auto">
@@ -245,7 +245,7 @@ export default function Home() {
       <section className="py-24 bg-[#F5F5F5] border-b border-gray-200">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#171717] mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#171717] mb-6 tracking-tighter">
               Works with the tools your team already uses
             </h2>
             <p className="text-lg text-gray-600 font-light">
@@ -309,7 +309,7 @@ export default function Home() {
       {/* Section 6: The Process (Timeline Strip) */}
       <section className="py-24 bg-white border-b border-gray-200">
         <div className="container mx-auto px-4 md:px-6">
-          <h2 className="text-3xl font-bold text-[#171717] mb-16 text-center uppercase tracking-widest">made for people. powered by process.</h2>
+          <h2 className="text-3xl font-bold text-[#171717] mb-16 text-center uppercase tracking-tighter">made for people. powered by process.</h2>
           
           <div className="relative">
             {/* Line connecting steps */}
@@ -357,7 +357,7 @@ export default function Home() {
             <div className="inline-block bg-[#ED7A30] text-white text-xs font-bold px-3 py-1 uppercase tracking-widest mb-6">
               Case Study
             </div>
-            <h2 className="text-4xl md:text-6xl font-bold leading-tight text-white max-w-5xl mx-auto">
+            <h2 className="text-4xl md:text-6xl font-bold leading-tight text-white max-w-5xl mx-auto tracking-tighter">
               From Paper Delays to Real-Time, Error-Free Onboarding for YMCA
             </h2>
           </div>
@@ -396,7 +396,7 @@ export default function Home() {
       {/* Section 8: Testimonials & Video */}
       <section className="py-24 bg-white border-b border-gray-200">
         <div className="container mx-auto px-4 md:px-6">
-          <h2 className="text-3xl md:text-5xl font-bold text-[#171717] text-center mb-16">
+          <h2 className="text-3xl md:text-5xl font-bold text-[#171717] text-center mb-16 tracking-tighter">
             Results that speak for themselves
           </h2>
 
@@ -462,7 +462,7 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
             <div className="text-left">
-              <h2 className="text-4xl md:text-6xl font-extrabold leading-[1.1] tracking-tight">
+              <h2 className="text-4xl md:text-6xl font-extrabold leading-[1.1] tracking-tighter">
                 Make onboarding the easiest part of your day.
               </h2>
             </div>
