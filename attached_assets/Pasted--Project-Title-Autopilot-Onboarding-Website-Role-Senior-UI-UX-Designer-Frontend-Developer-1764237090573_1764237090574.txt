@@ -1,0 +1,103 @@
+**Project Title:** Autopilot Onboarding Website
+**Role:** Senior UI/UX Designer & Frontend Developer
+**Tech Stack:** React, Tailwind CSS, Framer Motion, Lucide React, React Router.
+
+**CRITICAL INSTRUCTION - PLEASE READ FIRST:**
+1.  **Strict Content Fidelity:** You are NOT allowed to summarize, skip, or "optimize" the text. You must use the **exact copy** provided below for the Home Page. If a section exists in the text below, it MUST exist in the code.
+2.  **Wireframe Structure:** The layout hierarchy must follow the order of the content below exactly (Hero -> Pain Points -> Solution -> Features -> Integrations -> Process -> Case Study -> Testimonial -> CTA).
+3.  **Visual Style Application:** While the *structure* follows the wireframe, the *visual design* must be **Editorial / Magazine Style**.
+    * Do NOT make it look like a wireframe (black and white lines).
+    * DO apply the "New York Times Magazine" aesthetic: large bold typography, visible grid lines, bento-box layouts, and the specific color palette detailed below.
+
+---
+
+### 1. Design System (The "Look & Feel")
+**Typography (Montserrat - Strict):**
+* **Hero Headings (H1):** Montserrat ExtraBold (800).
+* **Main Headings (H2):** Montserrat Bold (700).
+* **Sub-Headings (H3-H4):** Montserrat SemiBold (600).
+* **Body Text:** Montserrat Regular (400).
+* **Captions/Metadata:** Montserrat Light (300).
+
+**Color Palette:**
+* **Primary Accent:** `#ED7A30` (Orange). Use for buttons, borders, and interaction states.
+* **Secondary:** `#171717` (Almost Black) for text and grid structure.
+* **Backgrounds:** White (`#ffffff`) and Off-White (`#F5F5F5`).
+
+**Visual Elements:**
+* **Grid Lines:** Use visible 1px borders (`border-gray-200` or `border-neutral-900`) to separate every section, mimicking a newspaper layout.
+* **Mockups:** Wrap screenshot placeholders in a styled "Window Frame" (border + header bar) so they look premium.
+
+---
+
+### 2. Home Page Content (Must Implement ALL Sections)
+
+**Section 1: Hero**
+* **Headline:** "Onboarding shouldn't feel like a scavenger hunt"
+* **Subhead:** "Autopilot Onboarding connects every department—HR, IT, Finance, Ops—so the people you're onboarding get one clean, guided flow instead of scattered emails and manual checklists."
+* **CTA Button:** "Book a Demo"
+
+**Section 2: The Problem (Pain Points)**
+* **Headline:** "Onboarding delays hurt people and partnerships"
+* **Body Copy:** "When onboarding lives in inboxes, details fall through. People get duplicate requests. Documents go missing. IT setups are delayed. Teams work from different versions of the truth."
+* **Key Insight (Style as a highlight/quote):** "The real issue? Confusion makes your organization feel scattered and creates friction at the very moment you're trying to build trust."
+
+**Section 3: The Solution (High Level)**
+* **Headline:** "Use one connected system for every onboarding"
+* **Bullet Points / Grid Items:**
+    1.  "Autopilot links HR, IT, Finance, and your vendors into one shared onboarding flow—no spreadsheets, no chasing, no guesswork."
+    2.  "Automate data collection and task hand-offs."
+    3.  "Let external parties upload documents and sign in one guided journey."
+    4.  "Track progress end-to-end with a clear audit trail. Everything moves in sync, every time."
+
+**Section 4: Features Grid (Bento Style)**
+* Create a grid with these exact feature titles:
+    1.  Guided Journey
+    2.  Automated Data & Document Collection
+    3.  Multi-Team Checklists
+    4.  Role-Based Visibility
+    5.  Built-In Communication
+    6.  Document Generation & Signing
+    7.  Automatic Archiving
+    8.  AI-Driven Document Validation
+
+**Section 5: Integrations**
+* **Headline:** "Works with the tools your team already uses"
+* **Subhead:** "Autopilot fits naturally into your existing environment, no need to rebuild."
+* **Logos to display:** Sage One, DocuSign, Flowgear, Azure, Pipedrive, SharePoint Online.
+
+**Section 6: The Process (Timeline Strip)**
+* **Step 1:** "Prepare Once" – *Text:* "Set up your onboarding checklist, data fields, documents, and automations one setup for all future workflows."
+* **Step 2:** "Collect What's Needed" – *Text:* "External parties complete a clean, modern journey to submit details, upload documents, and sign agreements."
+* **Step 3:** "Everyone in Sync" – *Text:* "HR, IT, Finance, Payroll, and vendors receive structured tasks with full visibility of what's done and what's pending."
+* **Step 4:** "Deliver a Confident Start" – *Text:* "Every onboarding ends with validated data, completed documents, and a complete audit trail without anyone needing to chase."
+
+**Section 7: Case Study Teaser**
+* **Headline:** "From Paper Delays to Real-Time, Error-Free Onboarding for YMCA"
+* **Benefit 1:** "Gave remote and rural staff mobile-friendly access, reducing onboarding delays caused by limited computer access."
+* **Benefit 2:** "Centralized documents and activity logs for easy retrieval, removing back-and-forth and missing paperwork."
+* **Benefit 3:** "Standardized onboarding steps through rule-driven digital workflows, ensuring consistency and fewer manual errors."
+
+**Section 8: Testimonials**
+* **Quote:** "The ease of setting up workflows and the clarity it provides are game-changers. Our team is more efficient, and we can make quicker, more informed decisions. Finally, an onboarding solution that truly understands our needs."
+* **Author:** Jane Doe, Operations Manager.
+
+**Section 9: Bottom CTA**
+* **Headline:** "Make onboarding the easiest part of your day."
+* **Button:** "Book a Demo"
+
+---
+
+### 3. Other Pages & Routing
+* **Navigation Links:** Home, Solutions (Employee, Customer, Vendor, Reseller), Case Studies, Contact.
+* **Solutions Template:** Create a reusable template (Hero -> Pain Point -> How it Works -> Testimonial).
+    * *Default Data:* Use the "Employee Onboarding" content from the attached PDF.
+* **Case Studies Page:** A grid layout linking to detail pages.
+* **Contact Page:** Split screen (Form on Left, Map Graphic on Right).
+
+### 4. Implementation Steps
+1.  **Scaffold:** Set up the project with React and Tailwind.
+2.  **Config:** Set up `font-montserrat` in Tailwind config.
+3.  **Layout Component:** Build the Navbar (Logo Left, Links Center, Orange CTA Right) and Footer.
+4.  **Home Page Build:** Implement the 9 sections listed above in Section 2 exactly as written. Use the "Editorial" design style (grids, borders, bold type) to visually organize this content.
+5.  **Remaining Pages:** Implement the Solutions template, Case Studies grid, and Contact page.
