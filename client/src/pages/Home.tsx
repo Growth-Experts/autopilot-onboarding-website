@@ -78,7 +78,7 @@ export default function Home() {
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#171717] leading-[1.1] mb-8 tracking-tighter">
               Onboarding shouldn't feel like a <span className="text-[#ED7A30]">scavenger hunt</span>
             </h1>
-            <h2 className="text-xl md:text-2xl text-gray-600 font-light max-w-3xl mx-auto leading-relaxed mb-10">Autopilot Onboarding connects every department - HR, IT, Finance, Ops, and anyone else - so the people you're onboarding get one clean, guided flow instead of scattered emails and manual checklists.</h2>
+            <h2 className="text-xl md:text-2xl text-gray-600 font-light max-w-3xl mx-auto leading-relaxed mb-10"><span className="font-bold text-[#171717]">Autopilot Onboarding</span> connects every department - HR, IT, Finance, Ops, and anyone else - so the people you're onboarding get one clean, guided flow instead of scattered emails and manual checklists.</h2>
             <Button className="bg-[#ED7A30] hover:bg-[#d66520] text-white text-lg px-10 py-7 rounded-none font-bold uppercase tracking-wider shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1">
               Book a Demo
             </Button>
