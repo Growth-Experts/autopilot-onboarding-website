@@ -3,6 +3,7 @@ import { WindowFrame } from "@/components/ui/WindowFrame";
 import heroDashboard from "@assets/generated_images/modern_saas_dashboard_ui_showing_onboarding_progress_with_orange_accents.png";
 import featureDashboard from "@assets/generated_images/clean_saas_form_interface_for_employee_data_collection.png";
 import janeDoe from "@assets/generated_images/professional_headshot_of_a_female_operations_manager.png";
+import checklistImage from "@assets/generated_images/saas_interface_showing_role-based_checklists_and_progress_tracking.png";
 import { Check, ArrowRight, Clock, Users, FileText, Shield, MessageSquare, Database, Archive, Zap } from "lucide-react";
 
 export default function Home() {
@@ -95,45 +96,60 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-gray-200 bg-white shadow-sm">
-            <div className="p-10 md:p-12 border-b md:border-b-0 md:border-r border-gray-200 hover:bg-orange-50/30 transition-colors">
-              <div className="w-12 h-12 bg-[#ED7A30]/10 flex items-center justify-center mb-6 text-[#ED7A30]">
-                <Users size={24} />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+            <div className="grid grid-cols-1 gap-8">
+              <div className="flex items-start gap-6 group">
+                <div className="w-12 h-12 bg-[#ED7A30]/10 flex items-center justify-center text-[#ED7A30] shrink-0 group-hover:bg-[#ED7A30] group-hover:text-white transition-colors">
+                  <Zap size={24} />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-[#171717] mb-2">Automate data collection and task hand offs</h3>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold text-[#171717] mb-4">Unified Ecosystem</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Autopilot links HR, IT, Finance, and your vendors into one shared onboarding flow—no spreadsheets, no chasing, no guesswork.
-              </p>
-            </div>
-            
-            <div className="p-10 md:p-12 border-b border-gray-200 hover:bg-orange-50/30 transition-colors">
-              <div className="w-12 h-12 bg-[#ED7A30]/10 flex items-center justify-center mb-6 text-[#ED7A30]">
-                <Zap size={24} />
+
+              <div className="flex items-start gap-6 group">
+                <div className="w-12 h-12 bg-[#ED7A30]/10 flex items-center justify-center text-[#ED7A30] shrink-0 group-hover:bg-[#ED7A30] group-hover:text-white transition-colors">
+                  <Users size={24} />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-[#171717] mb-2">Give internal teams role-based checklists</h3>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold text-[#171717] mb-4">Automated Handoffs</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Automate data collection and task hand-offs. Trigger provisioning the moment a contract is signed.
-              </p>
+
+              <div className="flex items-start gap-6 group">
+                <div className="w-12 h-12 bg-[#ED7A30]/10 flex items-center justify-center text-[#ED7A30] shrink-0 group-hover:bg-[#ED7A30] group-hover:text-white transition-colors">
+                  <ArrowRight size={24} />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-[#171717] mb-2">Let external parties upload documents and sign in one guided journey</h3>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-6 group">
+                <div className="w-12 h-12 bg-[#ED7A30]/10 flex items-center justify-center text-[#ED7A30] shrink-0 group-hover:bg-[#ED7A30] group-hover:text-white transition-colors">
+                  <Check size={24} />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-[#171717] mb-2">Track progress end-to-end with a clear audit trail</h3>
+                </div>
+              </div>
+
+              <div className="pt-8 border-t border-gray-200 mt-4">
+                <p className="text-xl font-bold text-[#171717] italic mb-8">Everything moves in sync, every time.</p>
+                <Button className="bg-[#ED7A30] hover:bg-[#d66520] text-white text-lg px-8 py-6 rounded-none font-bold uppercase tracking-wider shadow-lg">
+                  See how it works
+                </Button>
+              </div>
             </div>
 
-            <div className="p-10 md:p-12 border-b md:border-b-0 md:border-r border-gray-200 hover:bg-orange-50/30 transition-colors">
-              <div className="w-12 h-12 bg-[#ED7A30]/10 flex items-center justify-center mb-6 text-[#ED7A30]">
-                <ArrowRight size={24} />
-              </div>
-              <h3 className="text-2xl font-bold text-[#171717] mb-4">External Portal</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Let external parties upload documents and sign in one guided journey. No login friction, just a secure link.
-              </p>
-            </div>
-
-            <div className="p-10 md:p-12 hover:bg-orange-50/30 transition-colors">
-              <div className="w-12 h-12 bg-[#ED7A30]/10 flex items-center justify-center mb-6 text-[#ED7A30]">
-                <Check size={24} />
-              </div>
-              <h3 className="text-2xl font-bold text-[#171717] mb-4">Full Audit Trail</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Track progress end-to-end with a clear audit trail. Everything moves in sync, every time.
-              </p>
+            <div className="relative">
+              <WindowFrame title="Workflow Management">
+                <img 
+                  src={checklistImage} 
+                  alt="Checklist Dashboard" 
+                  className="w-full h-auto object-cover"
+                />
+              </WindowFrame>
             </div>
           </div>
         </div>
