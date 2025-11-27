@@ -36,26 +36,26 @@ export default function Home() {
       </section>
 
       {/* Trusted By Section */}
-      <section className="py-12 bg-white border-b border-gray-200">
+      <section className="py-20 bg-[#FAFAFA] border-b border-gray-200">
         <div className="container mx-auto px-4 md:px-6 text-center">
-          <h3 className="text-xl font-bold text-[#171717] mb-8">
+          <h3 className="text-2xl md:text-3xl font-bold text-[#171717] mb-12 tracking-tight">
             Trusted by teams who care about first impressions
           </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-            <div className="font-bold text-lg text-gray-500 tracking-tight">3 WAY MARKETING</div>
-            <div className="font-bold text-lg text-green-700 flex items-center justify-center gap-2">
-               <span className="text-xl">🌱</span> SA Canegrowers
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 items-center justify-items-center opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+            <div className="font-extrabold text-xl text-gray-600 tracking-tight">3 WAY MARKETING</div>
+            <div className="font-bold text-xl text-green-700 flex items-center justify-center gap-2">
+               <span className="text-2xl">🌱</span> SA Canegrowers
             </div>
-            <div className="font-bold text-lg text-red-600 flex items-center justify-center gap-2">
-               <span className="text-xl">🌶️</span> Capsicum
+            <div className="font-bold text-xl text-red-600 flex items-center justify-center gap-2">
+               <span className="text-2xl">🌶️</span> Capsicum
             </div>
-            <div className="font-bold text-lg text-purple-800 border-2 border-purple-800 rounded-full w-10 h-10 flex items-center justify-center">cbf</div>
-            <div className="font-bold text-lg text-gray-800 flex items-center justify-center gap-1">
-               <span className="text-red-600 text-xl">❖</span> turnkey
+            <div className="font-bold text-xl text-purple-800 border-2 border-purple-800 rounded-full w-12 h-12 flex items-center justify-center">cbf</div>
+            <div className="font-bold text-xl text-gray-800 flex items-center justify-center gap-1">
+               <span className="text-red-600 text-2xl">❖</span> turnkey
             </div>
-             <div className="font-bold text-lg text-red-700 border-2 border-red-700 rounded px-2 py-0.5">BRM</div>
-            <div className="font-bold text-lg text-black tracking-tighter">nologo</div>
-            <div className="font-bold text-lg text-amber-800">Tongaat Hulett</div>
+             <div className="font-bold text-lg text-red-700 border-2 border-red-700 rounded px-3 py-1 tracking-wider">BRM</div>
+            <div className="font-extrabold text-2xl text-black tracking-tighter lowercase">nologo</div>
+            <div className="font-bold text-xl text-amber-800 font-serif">Tongaat Hulett</div>
           </div>
         </div>
       </section>
