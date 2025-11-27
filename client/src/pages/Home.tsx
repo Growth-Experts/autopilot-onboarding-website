@@ -314,7 +314,7 @@ export default function Home() {
             </div>
 
             {/* AI - Standard Block - Full Width Bottom */}
-            <div className="md:col-span-2 lg:col-span-4 bg-orange-50 border border-orange-100 px-8 py-5 rounded-xl flex items-center gap-6 hover:border-[#ED7A30] transition-colors">
+            <div className="md:col-span-2 lg:col-span-4 bg-orange-50 border border-orange-100 px-6 py-3 rounded-xl flex items-center gap-4 hover:border-[#ED7A30] transition-colors">
               <div className="w-14 h-14 bg-[#ED7A30] text-white rounded-xl flex items-center justify-center shrink-0 shadow-lg">
                 <Zap size={28} />
               </div>
