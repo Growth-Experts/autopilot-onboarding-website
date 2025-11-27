@@ -240,6 +240,15 @@ export default function Home() {
               <p className="text-gray-500 text-sm leading-relaxed">Give customers, vendors, and new hires one simple, step-by-step flow to provide details and upload documents - no back-and-forth emails.</p>
             </div>
 
+            {/* NEW: App Gallery Slider - Big Block (2x2) */}
+            <div className="md:col-span-2 md:row-span-2 bg-[#171717] rounded-xl overflow-hidden relative flex flex-col justify-center p-0 group min-h-[280px] border border-gray-800 shadow-2xl">
+               <div className="absolute top-6 left-6 z-20 bg-[#ED7A30] text-white text-xs font-bold px-3 py-1 uppercase tracking-widest rounded-full">
+                  Platform Preview
+               </div>
+               
+               <AppGallerySlider images={[appShot1, appShot2, appShot3, appShot4]} />
+            </div>
+
             {/* 2. Automated Data - Standard Block */}
             <div className="bg-white border border-gray-200 p-8 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1">
               <div className="flex justify-between items-start">
@@ -256,16 +265,6 @@ export default function Home() {
                 <div className="w-8 h-8 bg-orange-50 rounded-full flex items-center justify-center text-[#ED7A30] font-bold text-xs shrink-0">3</div>
               </div>
               <p className="text-gray-500 text-sm leading-relaxed">HR, IT, Finance, Operations - everyone sees their tasks in one shared place, so work happens in parallel, not sequentially.</p>
-            </div>
-
-            {/* NEW: App Gallery Slider - Standard Block */}
-            <div className="bg-[#171717] rounded-xl overflow-hidden relative flex flex-col justify-center p-0 group min-h-[280px]">
-               <div className="absolute top-6 left-6 z-20 bg-[#ED7A30] text-white text-xs font-bold px-3 py-1 uppercase tracking-widest rounded-full">
-                  Platform Preview
-               </div>
-               
-               <AppGallerySlider images={[appShot1, appShot2, appShot3, appShot4]} />
-
             </div>
 
             {/* 4. Role Based - Standard Block */}
@@ -310,15 +309,15 @@ export default function Home() {
               </div>
             </div>
 
-            {/* AI - Standard Block - Full Width Bottom */}
-            <div className="md:col-span-2 lg:col-span-4 bg-orange-50 border border-orange-100 px-4 py-2 rounded-xl flex items-center gap-4 hover:border-[#ED7A30] transition-colors">
-              <div className="w-12 h-12 bg-[#ED7A30] text-white rounded-lg flex items-center justify-center shrink-0 shadow-md">
-                <Zap size={24} />
+            {/* AI - Standard Block */}
+            <div className="bg-orange-50 border border-orange-100 p-8 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:border-[#ED7A30]">
+              <div className="flex justify-between items-start">
+                <h3 className="text-xl font-bold text-[#171717] leading-tight">AI Validation</h3>
+                <div className="w-8 h-8 bg-[#ED7A30] text-white rounded-full flex items-center justify-center shadow-md">
+                  <Zap size={16} />
+                </div>
               </div>
-              <div>
-                <h3 className="text-lg font-bold text-[#171717] mb-1">AI-Driven Document Validation</h3>
-                <p className="text-gray-600 text-sm leading-tight">Uploaded documents are checked and cross-verified against captured form data, reducing errors and preventing onboarding delays.</p>
-              </div>
+              <p className="text-gray-600 text-sm leading-relaxed">Uploaded documents are checked and cross-verified against captured form data, reducing errors and preventing delays.</p>
             </div>
           </div>
         </div>
