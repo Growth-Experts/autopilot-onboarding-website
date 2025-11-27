@@ -561,8 +561,8 @@ export default function Home() {
                   "Dedicated onboarding support"
                 ].map((benefit, i) => (
                   <div key={i} className="flex items-center gap-2">
-                    <div className="bg-white/20 p-0.5 rounded-full">
-                      <Check className="w-2.5 h-2.5 text-white" strokeWidth={4} />
+                    <div className="bg-white p-0.5 rounded-full">
+                      <Check className="w-2.5 h-2.5 text-green-600" strokeWidth={4} />
                     </div>
                     <span>{benefit}</span>
                   </div>
