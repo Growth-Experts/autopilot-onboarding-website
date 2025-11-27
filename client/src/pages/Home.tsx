@@ -4,6 +4,7 @@ import heroDashboard from "@assets/generated_images/modern_saas_dashboard_ui_sho
 import featureDashboard from "@assets/generated_images/clean_saas_form_interface_for_employee_data_collection.png";
 import checklistImage from "@assets/generated_images/saas_interface_showing_role-based_checklists_and_progress_tracking.png";
 import caseStudyImage from "@assets/stock_images/diverse_professional_10bf22ef.jpg";
+import problemImage from "@assets/stock_images/messy_office_desk_wi_6f0aff20.jpg";
 import avatarJane from "@assets/stock_images/professional_woman_c_a3afb741.jpg";
 import avatarJohn from "@assets/stock_images/professional_man_cor_a0338afc.jpg";
 import avatarEmily from "@assets/stock_images/business_woman_profe_0724059b.jpg";
@@ -65,22 +66,30 @@ export default function Home() {
       {/* Section 2: The Problem (Pain Points) */}
       <section className="py-24 bg-white border-b border-gray-200">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-start">
-            <div className="lg:col-span-5">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+            <div>
               <h2 className="text-4xl md:text-5xl font-bold text-[#171717] leading-tight mb-8 tracking-tighter">
                 Onboarding delays hurt people and partnerships
               </h2>
-            </div>
-            <div className="lg:col-span-7 space-y-8">
-              <p className="text-xl text-gray-600 leading-relaxed font-light">
-                When onboarding lives in inboxes, details fall through. People get duplicate requests. Documents go missing. IT setups are delayed. Teams work from different versions of the truth.
+              
+              <p className="text-xl text-gray-600 leading-relaxed font-light mb-8">
+                When onboarding lives in inboxes, mistakes follow. People get duplicate requests. Documents go missing. IT setups are delayed. Teams work from different versions of the truth.
               </p>
               
-              <div className="bg-[#F5F5F5] p-8 border-l-4 border-[#ED7A30]">
-                <p className="text-2xl font-serif italic text-[#171717] leading-relaxed">
-                  "The real issue? Confusion makes your organization feel scattered and creates friction at the very moment you're trying to build trust."
+              <div className="space-y-4">
+                <h3 className="text-2xl font-bold text-[#171717]">The real issue?</h3>
+                <p className="text-xl text-gray-600 leading-relaxed font-light">
+                  Confusion makes your organization feel disorganized - and creates friction at the very moment you're trying to build trust.
                 </p>
               </div>
+            </div>
+
+            <div className="relative h-full min-h-[400px] bg-gray-100 rounded-xl overflow-hidden border border-gray-200">
+              <img 
+                src={problemImage} 
+                alt="Disorganized Onboarding Process" 
+                className="absolute inset-0 w-full h-full object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-700"
+              />
             </div>
           </div>
         </div>
