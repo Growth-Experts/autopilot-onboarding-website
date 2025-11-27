@@ -240,23 +240,68 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* Section 5: Integrations */}
-      <section className="py-20 bg-[#F5F5F5] border-b border-gray-200">
-        <div className="container mx-auto px-4 md:px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#171717] mb-4">
-            Works with the tools your team already uses
-          </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-12 font-light">
-            Autopilot fits naturally into your existing environment, no need to rebuild.
-          </p>
-          
-          <div className="flex flex-wrap justify-center gap-8 md:gap-16 items-center opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
-            {/* Text placeholders for logos as requested, styled to look like logos */}
-            {["Sage One", "DocuSign", "Flowgear", "Azure", "Pipedrive", "SharePoint Online"].map((name) => (
-              <div key={name} className="text-xl md:text-2xl font-bold text-gray-400 font-sans tracking-tighter">
-                {name}
+      {/* Section 5: Integrations & Workflow */}
+      <section className="py-24 bg-[#F5F5F5] border-b border-gray-200">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#171717] mb-6">
+              Works with the tools your team already uses
+            </h2>
+            <p className="text-lg text-gray-600 font-light">
+              Autopilot fits naturally into your existing environment, no need to rebuild.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Left: The Process Copy */}
+            <div className="space-y-8">
+              <div className="flex gap-4">
+                <div className="w-8 h-8 rounded-full bg-[#ED7A30] text-white flex items-center justify-center font-bold text-sm shrink-0 mt-1">1</div>
+                <div>
+                  <h3 className="text-xl font-bold text-[#171717] mb-2">Prepare Once</h3>
+                  <p className="text-gray-600 leading-relaxed">Set up your onboarding checklist, data fields, documents, and automations - one setup for all future workflows.</p>
+                </div>
               </div>
-            ))}
+
+              <div className="flex gap-4">
+                <div className="w-8 h-8 rounded-full bg-[#ED7A30] text-white flex items-center justify-center font-bold text-sm shrink-0 mt-1">2</div>
+                <div>
+                  <h3 className="text-xl font-bold text-[#171717] mb-2">Collect What's Needed</h3>
+                  <p className="text-gray-600 leading-relaxed">External parties complete a clean, guided journey to submit details, upload documents, and sign agreements.</p>
+                </div>
+              </div>
+
+              <div className="flex gap-4">
+                <div className="w-8 h-8 rounded-full bg-[#ED7A30] text-white flex items-center justify-center font-bold text-sm shrink-0 mt-1">3</div>
+                <div>
+                  <h3 className="text-xl font-bold text-[#171717] mb-2">Everyone in Sync</h3>
+                  <p className="text-gray-600 leading-relaxed">HR, IT, Finance, Payroll, and vendors receive structured tasks with full visibility of what's done and what's pending.</p>
+                </div>
+              </div>
+
+              <div className="flex gap-4">
+                <div className="w-8 h-8 rounded-full bg-[#ED7A30] text-white flex items-center justify-center font-bold text-sm shrink-0 mt-1">4</div>
+                <div>
+                  <h3 className="text-xl font-bold text-[#171717] mb-2">Deliver a Confident Start</h3>
+                  <p className="text-gray-600 leading-relaxed">Every onboarding ends with validated data, completed documents, and a complete audit trail - without anyone needing to chase.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Right: The Logos Grid */}
+            <div className="bg-white p-10 border border-gray-200 shadow-sm">
+              <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-8 text-center">Integrated Ecosystem</h3>
+              <div className="grid grid-cols-2 gap-8 items-center justify-items-center opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                {["Sage One", "DocuSign", "Flowgear", "Azure", "Pipedrive", "SharePoint Online"].map((name) => (
+                  <div key={name} className="h-16 w-full flex items-center justify-center border border-dashed border-gray-300 rounded-lg hover:border-[#ED7A30] hover:border-solid transition-colors">
+                    <span className="text-sm font-bold text-gray-500">{name}</span>
+                  </div>
+                ))}
+                <div className="col-span-2 text-xs text-gray-400 font-mono mt-4">
+                  + Custom API Integrations Available
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
