@@ -471,26 +471,26 @@ export default function Home() {
               <p className="text-xl md:text-2xl font-light opacity-90 leading-relaxed text-left">
                 Let's replace scattered emails and loose tasks with one clean onboarding flow.
               </p>
-              
-              <Button className="bg-white text-[#ED7A30] hover:bg-gray-100 hover:text-[#ED7A30] text-xl px-10 py-8 rounded-none font-bold uppercase tracking-wider shadow-2xl w-full md:w-auto">
-                Book a Demo
-              </Button>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 text-sm md:text-base font-medium opacity-90 w-full">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs md:text-sm font-medium opacity-80 w-full max-w-md">
                 {[
                   "Free 30-day trial",
                   "No payment info required",
                   "Full feature access",
                   "Dedicated onboarding support"
                 ].map((benefit, i) => (
-                  <div key={i} className="flex items-center gap-3">
-                    <div className="bg-white/20 p-1 rounded-full">
-                      <Check className="w-3 h-3 md:w-4 md:h-4 text-white" strokeWidth={4} />
+                  <div key={i} className="flex items-center gap-2">
+                    <div className="bg-white/20 p-0.5 rounded-full">
+                      <Check className="w-2.5 h-2.5 text-white" strokeWidth={4} />
                     </div>
                     <span>{benefit}</span>
                   </div>
                 ))}
               </div>
+              
+              <Button className="bg-white text-[#ED7A30] hover:bg-gray-100 hover:text-[#ED7A30] text-xl px-10 py-8 rounded-none font-bold uppercase tracking-wider shadow-2xl w-full md:w-auto">
+                Book a Demo
+              </Button>
             </div>
           </div>
         </div>
