@@ -158,7 +158,7 @@ export default function Home() {
       <section className="py-24 bg-white border-b border-gray-200">
         <div className="container mx-auto px-4 md:px-6">
           <h2 className="text-3xl font-bold text-[#171717] mb-12 border-l-8 border-[#ED7A30] pl-6 uppercase tracking-wide">
-            Platform Capabilities
+            Key Features That Matter
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-[200px]">
@@ -167,33 +167,45 @@ export default function Home() {
               <div className="relative z-10">
                 <div className="w-10 h-10 bg-white border border-gray-200 flex items-center justify-center mb-4 text-[#ED7A30] shadow-sm">1</div>
                 <h3 className="text-2xl font-bold text-[#171717]">Guided Journey</h3>
-                <p className="text-gray-500 mt-2">Step-by-step wizards for every user type.</p>
+                <p className="text-gray-500 mt-2 text-lg leading-relaxed">Give customers, vendors, and new hires one simple, step-by-step flow to provide details and upload documents - no back-and-forth emails.</p>
               </div>
               <img src={featureDashboard} alt="Guided Journey" className="absolute right-0 bottom-0 w-2/3 shadow-xl translate-x-10 translate-y-10 group-hover:translate-x-8 group-hover:translate-y-8 transition-transform opacity-80" />
             </div>
 
             {/* Automated Data - Standard Block */}
-            <div className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-shadow">
-              <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center mb-3 text-[#ED7A30] font-bold text-xs">2</div>
-              <h3 className="text-lg font-bold text-[#171717] leading-tight">Automated Data & Document Collection</h3>
+            <div className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-shadow flex flex-col justify-between">
+              <div>
+                <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center mb-3 text-[#ED7A30] font-bold text-xs">2</div>
+                <h3 className="text-lg font-bold text-[#171717] leading-tight mb-2">Automated Data & Document Collection</h3>
+              </div>
+              <p className="text-gray-500 text-sm">Capture information, documents, and signatures from anyone through a single, structured process.</p>
             </div>
 
             {/* Checklists - Standard Block */}
-            <div className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-shadow">
-              <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center mb-3 text-[#ED7A30] font-bold text-xs">3</div>
-              <h3 className="text-lg font-bold text-[#171717] leading-tight">Multi-Team Checklists</h3>
+            <div className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-shadow flex flex-col justify-between">
+              <div>
+                <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center mb-3 text-[#ED7A30] font-bold text-xs">3</div>
+                <h3 className="text-lg font-bold text-[#171717] leading-tight mb-2">Multi-Team Checklists</h3>
+              </div>
+              <p className="text-gray-500 text-sm">HR, IT, Finance, Operations - everyone sees their tasks in one shared place, so work happens in parallel, not sequentially.</p>
             </div>
 
             {/* Role Based - Standard Block */}
-            <div className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-shadow">
-              <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center mb-3 text-[#ED7A30] font-bold text-xs">4</div>
-              <h3 className="text-lg font-bold text-[#171717] leading-tight">Role-Based Visibility</h3>
+            <div className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-shadow flex flex-col justify-between">
+              <div>
+                <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center mb-3 text-[#ED7A30] font-bold text-xs">4</div>
+                <h3 className="text-lg font-bold text-[#171717] leading-tight mb-2">Role-Based Visibility</h3>
+              </div>
+              <p className="text-gray-500 text-sm">Each team member sees only what they need, with sensitive data protected by role permissions.</p>
             </div>
 
             {/* Communication - Standard Block */}
-            <div className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-shadow">
-              <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center mb-3 text-[#ED7A30] font-bold text-xs">5</div>
-              <h3 className="text-lg font-bold text-[#171717] leading-tight">Built-In Communication</h3>
+            <div className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-shadow flex flex-col justify-between">
+              <div>
+                <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center mb-3 text-[#ED7A30] font-bold text-xs">5</div>
+                <h3 className="text-lg font-bold text-[#171717] leading-tight mb-2">Built-In Communication</h3>
+              </div>
+              <p className="text-gray-500 text-sm">Ask questions and share clarifications directly inside the flow (instead of spawning new email threads).</p>
             </div>
 
             {/* Doc Gen - Tall Block */}
@@ -201,26 +213,29 @@ export default function Home() {
               <div>
                 <div className="w-10 h-10 border border-gray-600 flex items-center justify-center mb-4 text-[#ED7A30]">6</div>
                 <h3 className="text-2xl font-bold mb-2">Document Generation & Signing</h3>
-                <p className="text-gray-400 text-sm">Instantly create contracts and get them e-signed.</p>
+                <p className="text-gray-400 text-sm leading-relaxed">Generate standard forms automatically and send them for compliant e-signature with a click.</p>
               </div>
               <FileText className="text-[#ED7A30] opacity-50 w-16 h-16 self-end" />
             </div>
 
             {/* Archiving - Standard Block */}
-            <div className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-shadow">
-              <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center mb-3 text-[#ED7A30] font-bold text-xs">7</div>
-              <h3 className="text-lg font-bold text-[#171717] leading-tight">Automatic Archiving</h3>
+            <div className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-shadow flex flex-col justify-between">
+              <div>
+                <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center mb-3 text-[#ED7A30] font-bold text-xs">7</div>
+                <h3 className="text-lg font-bold text-[#171717] leading-tight mb-2">Automatic Archiving</h3>
+              </div>
+              <p className="text-gray-500 text-sm">Completed documents go straight into SharePoint or your CRM - neatly stored and fully traceable.</p>
             </div>
 
             {/* AI - Standard Block */}
-            <div className="md:col-span-2 bg-orange-50 border border-orange-100 p-6 flex items-center gap-4">
-              <div className="w-12 h-12 bg-[#ED7A30] text-white flex items-center justify-center shrink-0">
-                <Zap size={24} />
+            <div className="md:col-span-2 bg-orange-50 border border-orange-100 p-6 flex flex-col justify-center gap-2">
+              <div className="flex items-center gap-4 mb-2">
+                <div className="w-10 h-10 bg-[#ED7A30] text-white flex items-center justify-center shrink-0">
+                  <Zap size={20} />
+                </div>
+                <h3 className="text-xl font-bold text-[#171717]">AI-Driven Document Validation</h3>
               </div>
-              <div>
-                <h3 className="text-xl font-bold text-[#171717] mb-1">AI-Driven Document Validation</h3>
-                <p className="text-gray-600 text-sm">Automatically verify uploaded IDs and certifications.</p>
-              </div>
+              <p className="text-gray-600 text-sm leading-relaxed pl-14">Uploaded documents are checked and cross-verified against captured form data, reducing errors and preventing onboarding delays.</p>
             </div>
           </div>
         </div>
