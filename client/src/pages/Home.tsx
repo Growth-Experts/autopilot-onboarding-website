@@ -2,10 +2,12 @@ import { Button } from "@/components/ui/button";
 import { WindowFrame } from "@/components/ui/WindowFrame";
 import heroDashboard from "@assets/generated_images/modern_saas_dashboard_ui_showing_onboarding_progress_with_orange_accents.png";
 import featureDashboard from "@assets/generated_images/clean_saas_form_interface_for_employee_data_collection.png";
-import janeDoe from "@assets/generated_images/professional_headshot_of_a_female_operations_manager.png";
 import checklistImage from "@assets/generated_images/saas_interface_showing_role-based_checklists_and_progress_tracking.png";
 import caseStudyImage from "@assets/stock_images/diverse_professional_10bf22ef.jpg";
-import { Check, ArrowRight, Clock, Users, FileText, Shield, MessageSquare, Database, Archive, Zap } from "lucide-react";
+import avatarJane from "@assets/stock_images/professional_woman_c_a3afb741.jpg";
+import avatarJohn from "@assets/stock_images/professional_man_cor_a0338afc.jpg";
+import avatarEmily from "@assets/stock_images/business_woman_profe_0724059b.jpg";
+import { Check, ArrowRight, Clock, Users, FileText, Shield, MessageSquare, Database, Archive, Zap, Play } from "lucide-react";
 
 export default function Home() {
   return (
@@ -391,23 +393,67 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* Section 8: Testimonials */}
+      {/* Section 8: Testimonials & Video */}
       <section className="py-24 bg-white border-b border-gray-200">
-        <div className="container mx-auto px-4 md:px-6 max-w-5xl">
-          <div className="flex flex-col md:flex-row items-center gap-12">
-            <div className="w-32 h-32 md:w-48 md:h-48 shrink-0">
-              <img src={janeDoe} alt="Jane Doe" className="w-full h-full object-cover rounded-full grayscale hover:grayscale-0 transition-all duration-500 border-4 border-gray-100" />
+        <div className="container mx-auto px-4 md:px-6">
+          <h2 className="text-3xl md:text-5xl font-bold text-[#171717] text-center mb-16">
+            Results that speak for themselves
+          </h2>
+
+          {/* Video Placeholder */}
+          <div className="max-w-5xl mx-auto mb-20 relative group cursor-pointer">
+            <div className="aspect-video bg-gray-100 rounded-xl border border-gray-200 flex items-center justify-center shadow-lg overflow-hidden relative">
+              <div className="absolute inset-0 bg-black/5 group-hover:bg-black/10 transition-colors" />
+              <div className="w-24 h-24 bg-white rounded-full shadow-xl flex items-center justify-center z-10 group-hover:scale-110 transition-transform duration-300">
+                <Play className="w-10 h-10 text-[#ED7A30] ml-2 fill-[#ED7A30]" />
+              </div>
             </div>
-            <div className="flex-1 text-center md:text-left">
-              <div className="text-[#ED7A30] text-6xl font-serif leading-none mb-4 opacity-30">"</div>
-              <blockquote className="text-2xl md:text-3xl font-medium text-[#171717] leading-relaxed mb-6">
-                The ease of setting up workflows and the clarity it provides are game-changers. Our team is more efficient, and we can make quicker, more informed decisions. Finally, an onboarding solution that truly understands our needs.
-              </blockquote>
-              <cite className="not-italic">
-                <div className="font-bold text-[#171717] uppercase tracking-wide">Jane Doe</div>
-                <div className="text-gray-500 font-light">Operations Manager</div>
-              </cite>
-            </div>
+          </div>
+
+          {/* Testimonials Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {[
+              {
+                quote: "Autopilot Onboarding has transformed our internal processes. What used to take days now takes hours. The visibility and control are unmatched.",
+                name: "Jane Doe",
+                role: "Operations Manager",
+                company: "Tech Solutions Inc.",
+                image: avatarJane
+              },
+              {
+                quote: "The ease of setting up workflows and the clarity it provides are game-changers. Our team is more efficient, and we can make quicker, more informed decisions.",
+                name: "John Smith",
+                role: "Product Lead",
+                company: "Innovate Corp.",
+                image: avatarJohn
+              },
+              {
+                quote: "Finally, an onboarding solution that truly understands B2B needs. The customizable features and robust reporting have saved us countless hours.",
+                name: "Emily White",
+                role: "Marketing Director",
+                company: "Global Brands Inc.",
+                image: avatarEmily
+              }
+            ].map((testimonial, i) => (
+              <div key={i} className="bg-white p-8 border border-gray-100 shadow-sm hover:shadow-md transition-shadow rounded-xl flex flex-col">
+                <div className="mb-6">
+                  {[...Array(5)].map((_, i) => (
+                    <span key={i} className="text-[#ED7A30] text-lg">★</span>
+                  ))}
+                </div>
+                <blockquote className="text-gray-700 text-lg leading-relaxed mb-8 flex-grow">
+                  "{testimonial.quote}"
+                </blockquote>
+                <div className="flex items-center gap-4 mt-auto">
+                  <img src={testimonial.image} alt={testimonial.name} className="w-12 h-12 rounded-full object-cover border-2 border-gray-100" />
+                  <div>
+                    <div className="font-bold text-[#171717] text-sm">{testimonial.name}</div>
+                    <div className="text-xs text-gray-500 leading-tight">{testimonial.role}</div>
+                    <div className="text-xs text-gray-400 leading-tight">{testimonial.company}</div>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
