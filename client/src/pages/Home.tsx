@@ -229,13 +229,13 @@ export default function Home() {
             </div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-[minmax(280px,auto)]">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-[minmax(280px,auto)] grid-flow-dense">
             
             {/* 1. Guided Journey - Standard Block */}
             <div className="bg-white border border-gray-200 p-8 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1">
-              <div className="flex justify-between items-start">
+              <div className="flex flex-col items-start gap-2">
+                <span className="text-[#ED7A30] font-mono text-lg font-bold">01</span>
                 <h3 className="text-xl font-bold text-[#171717] leading-tight">Guided Journey</h3>
-                <div className="w-8 h-8 bg-orange-50 rounded-full flex items-center justify-center text-[#ED7A30] font-bold text-xs shrink-0">1</div>
               </div>
               <p className="text-gray-500 text-sm leading-relaxed">Give customers, vendors, and new hires one simple, step-by-step flow to provide details and upload documents - no back-and-forth emails.</p>
             </div>
@@ -251,45 +251,45 @@ export default function Home() {
 
             {/* 2. Automated Data - Standard Block */}
             <div className="bg-white border border-gray-200 p-8 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1">
-              <div className="flex justify-between items-start">
+              <div className="flex flex-col items-start gap-2">
+                <span className="text-[#ED7A30] font-mono text-lg font-bold">02</span>
                 <h3 className="text-xl font-bold text-[#171717] leading-tight">Automated Data & Document Collection</h3>
-                <div className="w-8 h-8 bg-orange-50 rounded-full flex items-center justify-center text-[#ED7A30] font-bold text-xs shrink-0">2</div>
               </div>
               <p className="text-gray-500 text-sm leading-relaxed">Capture information, documents, and signatures from anyone through a single, structured process.</p>
             </div>
 
             {/* 3. Checklists - Standard Block */}
             <div className="bg-white border border-gray-200 p-8 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1">
-              <div className="flex justify-between items-start">
+              <div className="flex flex-col items-start gap-2">
+                <span className="text-[#ED7A30] font-mono text-lg font-bold">03</span>
                 <h3 className="text-xl font-bold text-[#171717] leading-tight">Multi-Team Checklists</h3>
-                <div className="w-8 h-8 bg-orange-50 rounded-full flex items-center justify-center text-[#ED7A30] font-bold text-xs shrink-0">3</div>
               </div>
               <p className="text-gray-500 text-sm leading-relaxed">HR, IT, Finance, Operations - everyone sees their tasks in one shared place, so work happens in parallel, not sequentially.</p>
             </div>
 
             {/* 4. Role Based - Standard Block */}
             <div className="bg-white border border-gray-200 p-8 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1">
-              <div className="flex justify-between items-start">
+              <div className="flex flex-col items-start gap-2">
+                <span className="text-[#ED7A30] font-mono text-lg font-bold">04</span>
                 <h3 className="text-xl font-bold text-[#171717] leading-tight">Role-Based Visibility</h3>
-                <div className="w-8 h-8 bg-orange-50 rounded-full flex items-center justify-center text-[#ED7A30] font-bold text-xs shrink-0">4</div>
               </div>
               <p className="text-gray-500 text-sm leading-relaxed">Each team member sees only what they need, with sensitive data protected by role permissions.</p>
             </div>
 
             {/* 5. Communication - Standard Block */}
             <div className="bg-white border border-gray-200 p-8 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1">
-              <div className="flex justify-between items-start">
+              <div className="flex flex-col items-start gap-2">
+                <span className="text-[#ED7A30] font-mono text-lg font-bold">05</span>
                 <h3 className="text-xl font-bold text-[#171717] leading-tight">Built-In Communication</h3>
-                <div className="w-8 h-8 bg-orange-50 rounded-full flex items-center justify-center text-[#ED7A30] font-bold text-xs shrink-0">5</div>
               </div>
               <p className="text-gray-500 text-sm leading-relaxed">Ask questions and share clarifications directly inside the flow (instead of spawning new email threads).</p>
             </div>
 
             {/* 6. Document Generation - Standard Block (Fixed Alignment) */}
             <div className="bg-white border border-gray-200 p-8 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1">
-              <div className="flex justify-between items-start">
+              <div className="flex flex-col items-start gap-2">
+                <span className="text-[#ED7A30] font-mono text-lg font-bold">06</span>
                 <h3 className="text-xl font-bold text-[#171717] leading-tight">Document Generation & Signing</h3>
-                <div className="w-8 h-8 bg-orange-50 rounded-full flex items-center justify-center text-[#ED7A30] font-bold text-xs shrink-0">6</div>
               </div>
               <p className="text-gray-500 text-sm leading-relaxed">Generate standard forms automatically and send them for compliant e-signature with a click.</p>
               <div className="mt-auto pt-4">
@@ -299,9 +299,9 @@ export default function Home() {
 
             {/* 7. Archiving - Standard Block */}
             <div className="bg-white border border-gray-200 p-8 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1">
-              <div className="flex justify-between items-start">
+              <div className="flex flex-col items-start gap-2">
+                 <span className="text-[#ED7A30] font-mono text-lg font-bold">07</span>
                  <h3 className="text-xl font-bold text-[#171717] leading-tight">Automatic Archiving</h3>
-                 <div className="w-8 h-8 bg-orange-50 rounded-full flex items-center justify-center text-[#ED7A30] font-bold text-xs shrink-0">7</div>
               </div>
               <p className="text-gray-500 text-sm leading-relaxed">Completed documents go straight into SharePoint or your CRM - neatly stored and fully traceable.</p>
               <div className="mt-auto pt-4">
