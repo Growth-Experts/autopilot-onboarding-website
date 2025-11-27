@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { WindowFrame } from "@/components/ui/WindowFrame";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import heroDashboard from "@assets/generated_images/modern_saas_dashboard_ui_showing_onboarding_progress_with_orange_accents.png";
 import featureDashboard from "@assets/generated_images/clean_saas_form_interface_for_employee_data_collection.png";
 import checklistImage from "@assets/generated_images/saas_interface_showing_role-based_checklists_and_progress_tracking.png";
@@ -13,7 +12,59 @@ import problemImage from "@assets/stock_images/chaotic_messy_office_8b8ef31a.jpg
 import avatarJane from "@assets/stock_images/professional_woman_c_a3afb741.jpg";
 import avatarJohn from "@assets/stock_images/professional_man_cor_a0338afc.jpg";
 import avatarEmily from "@assets/stock_images/business_woman_profe_0724059b.jpg";
-import { Check, ArrowRight, Clock, Users, FileText, Shield, MessageSquare, Database, Archive, Zap, Play } from "lucide-react";
+import { Check, ArrowRight, Clock, Users, FileText, Shield, MessageSquare, Database, Archive, Zap, Play, ChevronLeft, ChevronRight } from "lucide-react";
+import { useState, useEffect } from "react";
+
+function AppGallerySlider({ images }: { images: string[] }) {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev + 1) % images.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
+
+  return (
+    <div className="relative w-full h-full min-h-[300px] md:min-h-[350px]">
+      <div className="absolute inset-0">
+        <img 
+          src={images[currentIndex]} 
+          alt={`App Screenshot ${currentIndex + 1}`} 
+          className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-500" 
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
+      </div>
+      
+      <div className="absolute bottom-4 right-4 flex gap-2 z-20">
+        <button 
+          onClick={prevSlide}
+          className="bg-white/10 hover:bg-white/20 border-0 text-white p-2 rounded-full transition-colors"
+          aria-label="Previous slide"
+        >
+          <ChevronLeft size={20} />
+        </button>
+        <button 
+          onClick={nextSlide}
+          className="bg-white/10 hover:bg-white/20 border-0 text-white p-2 rounded-full transition-colors"
+          aria-label="Next slide"
+        >
+          <ChevronRight size={20} />
+        </button>
+      </div>
+      
+      <div className="absolute bottom-4 left-6 flex gap-1.5 z-20">
+        {images.map((_, idx) => (
+          <div 
+            key={idx} 
+            className={`h-1.5 rounded-full transition-all duration-300 ${idx === currentIndex ? 'w-6 bg-[#ED7A30]' : 'w-1.5 bg-white/30'}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export default function Home() {
   return (
@@ -211,26 +262,13 @@ export default function Home() {
             </div>
 
             {/* NEW: App Gallery Slider - Spans 2 Cols */}
-            <div className="md:col-span-2 bg-[#171717] rounded-xl overflow-hidden relative flex flex-col justify-center p-8 md:p-0">
+            <div className="md:col-span-2 bg-[#171717] rounded-xl overflow-hidden relative flex flex-col justify-center p-8 md:p-0 group">
                <div className="absolute top-6 left-6 z-20 bg-[#ED7A30] text-white text-xs font-bold px-3 py-1 uppercase tracking-widest rounded-full">
                   Platform Preview
                </div>
-               <Carousel className="w-full h-full" opts={{ loop: true, align: "start" }}>
-                  <CarouselContent>
-                    {[appShot1, appShot2, appShot3, appShot4].map((shot, index) => (
-                      <CarouselItem key={index} className="flex items-center justify-center h-full p-0">
-                        <div className="relative w-full h-full min-h-[300px] md:min-h-[350px]">
-                          <img src={shot} alt={`App Screenshot ${index + 1}`} className="absolute inset-0 w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity" />
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
-                        </div>
-                      </CarouselItem>
-                    ))}
-                  </CarouselContent>
-                  <div className="absolute bottom-4 right-4 flex gap-2 z-20">
-                     <CarouselPrevious className="static translate-y-0 bg-white/10 hover:bg-white/20 border-0 text-white" />
-                     <CarouselNext className="static translate-y-0 bg-white/10 hover:bg-white/20 border-0 text-white" />
-                  </div>
-               </Carousel>
+               
+               <AppGallerySlider images={[appShot1, appShot2, appShot3, appShot4]} />
+
             </div>
 
             {/* 4. Role Based - Standard Block */}
