@@ -169,7 +169,7 @@ export default function Home() {
                 <h3 className="text-2xl font-bold text-[#171717]">Guided Journey</h3>
                 <p className="text-gray-500 mt-2 text-lg leading-relaxed max-w-md">Give customers, vendors, and new hires one simple, step-by-step flow to provide details and upload documents - no back-and-forth emails.</p>
               </div>
-              <img src={featureDashboard} alt="Guided Journey" className="absolute right-0 bottom-0 w-2/3 shadow-xl translate-x-10 translate-y-10 group-hover:translate-x-8 group-hover:translate-y-8 transition-transform opacity-80" />
+              <img src={featureDashboard} alt="Guided Journey" className="absolute -right-12 -bottom-12 w-[90%] shadow-2xl rounded-tl-xl border border-gray-200 group-hover:-translate-y-2 group-hover:-translate-x-2 transition-transform duration-500" />
             </div>
 
             {/* Automated Data - Standard Block */}
