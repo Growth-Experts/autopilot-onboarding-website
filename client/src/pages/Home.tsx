@@ -209,13 +209,13 @@ export default function Home() {
             </div>
 
             {/* Doc Gen - Tall Block */}
-            <div className="md:col-span-1 md:row-span-2 bg-[#171717] p-8 flex flex-col justify-between text-white min-h-[300px]">
-              <div>
-                <div className="w-10 h-10 border border-gray-600 flex items-center justify-center mb-4 text-[#ED7A30]">6</div>
-                <h3 className="text-2xl font-bold mb-2">Document Generation & Signing</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">Generate standard forms automatically and send them for compliant e-signature with a click.</p>
+            <div className="md:col-span-1 md:row-span-2 bg-white border border-gray-200 p-8 flex flex-col justify-between hover:border-[#ED7A30] transition-colors min-h-[300px] relative overflow-hidden group">
+              <div className="relative z-10">
+                <div className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center mb-4 text-[#ED7A30] font-bold text-sm">6</div>
+                <h3 className="text-2xl font-bold text-[#171717] mb-2">Document Generation & Signing</h3>
+                <p className="text-gray-500 text-sm leading-relaxed">Generate standard forms automatically and send them for compliant e-signature with a click.</p>
               </div>
-              <FileText className="text-[#ED7A30] opacity-50 w-16 h-16 self-end" />
+              <FileText className="text-[#ED7A30] opacity-10 w-32 h-32 absolute -bottom-4 -right-4 group-hover:scale-110 transition-transform duration-500" />
             </div>
 
             {/* Archiving - Standard Block */}
