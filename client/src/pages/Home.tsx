@@ -4,6 +4,7 @@ import heroDashboard from "@assets/generated_images/modern_saas_dashboard_ui_sho
 import featureDashboard from "@assets/generated_images/clean_saas_form_interface_for_employee_data_collection.png";
 import janeDoe from "@assets/generated_images/professional_headshot_of_a_female_operations_manager.png";
 import checklistImage from "@assets/generated_images/saas_interface_showing_role-based_checklists_and_progress_tracking.png";
+import caseStudyImage from "@assets/stock_images/diverse_professional_10bf22ef.jpg";
 import { Check, ArrowRight, Clock, Users, FileText, Shield, MessageSquare, Database, Archive, Zap } from "lucide-react";
 
 export default function Home() {
@@ -350,14 +351,23 @@ export default function Home() {
       {/* Section 7: Case Study Teaser */}
       <section className="py-24 bg-[#171717] text-white border-b border-gray-800">
         <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center mb-16">
+            <div className="inline-block bg-[#ED7A30] text-white text-xs font-bold px-3 py-1 uppercase tracking-widest mb-6">
+              Case Study
+            </div>
+            <h2 className="text-4xl md:text-6xl font-bold leading-tight text-white max-w-5xl mx-auto">
+              From Paper Delays to Real-Time, Error-Free Onboarding for YMCA
+            </h2>
+          </div>
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
-            <div>
-              <div className="inline-block bg-[#ED7A30] text-white text-xs font-bold px-3 py-1 uppercase tracking-widest mb-6">
-                Case Study
-              </div>
-              <h2 className="text-4xl md:text-6xl font-bold leading-tight mb-8 md:mb-0 text-[#ffffff]">
-                From Paper Delays to Real-Time, Error-Free Onboarding for YMCA
-              </h2>
+            <div className="relative h-full min-h-[400px] rounded-xl overflow-hidden shadow-2xl border border-gray-700">
+              <img 
+                src={caseStudyImage} 
+                alt="YMCA Team Collaboration" 
+                className="absolute inset-0 w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+              />
+              <div className="absolute inset-0 bg-black/20" />
             </div>
             
             <div className="space-y-8">
