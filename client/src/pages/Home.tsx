@@ -1,8 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { WindowFrame } from "@/components/ui/WindowFrame";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import heroDashboard from "@assets/generated_images/modern_saas_dashboard_ui_showing_onboarding_progress_with_orange_accents.png";
 import featureDashboard from "@assets/generated_images/clean_saas_form_interface_for_employee_data_collection.png";
 import checklistImage from "@assets/generated_images/saas_interface_showing_role-based_checklists_and_progress_tracking.png";
+import appShot1 from "@assets/generated_images/saas_dashboard_showing_onboarding_progress.png";
+import appShot2 from "@assets/generated_images/digital_form_for_employee_data.png";
+import appShot3 from "@assets/generated_images/document_signing_interface.png";
+import appShot4 from "@assets/generated_images/team_collaboration_checklist.png";
 import caseStudyImage from "@assets/stock_images/diverse_professional_10bf22ef.jpg";
 import problemImage from "@assets/stock_images/chaotic_messy_office_8b8ef31a.jpg";
 import avatarJane from "@assets/stock_images/professional_woman_c_a3afb741.jpg";
@@ -164,85 +169,121 @@ export default function Home() {
       {/* Section 4: Features Grid (Bento Style) */}
       <section className="py-24 bg-white border-b border-gray-200">
         <div className="container mx-auto px-4 md:px-6">
-          <h2 className="text-3xl font-bold text-[#171717] mb-12 border-l-8 border-[#ED7A30] pl-6 uppercase tracking-wide">
-            Key Features That Matter
-          </h2>
+          <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+            <h2 className="text-3xl font-bold text-[#171717] border-l-8 border-[#ED7A30] pl-6 uppercase tracking-wide">
+              Key Features That Matter
+            </h2>
+            <div className="text-gray-500 text-sm font-medium tracking-wide uppercase hidden md:block">
+              Everything you need to onboard better
+            </div>
+          </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {/* Guided Journey - Large Block */}
-            <div className="md:col-span-2 md:row-span-2 bg-gray-50 border border-gray-200 p-8 flex flex-col justify-between group hover:border-[#ED7A30] transition-colors relative overflow-hidden min-h-[300px]">
-              <div className="relative z-10">
-                <div className="w-10 h-10 bg-white border border-gray-200 flex items-center justify-center mb-4 text-[#ED7A30] shadow-sm">1</div>
-                <h3 className="text-2xl font-bold text-[#171717]">Guided Journey</h3>
-                <p className="text-gray-500 mt-2 text-lg leading-relaxed max-w-md">Give customers, vendors, and new hires one simple, step-by-step flow to provide details and upload documents - no back-and-forth emails.</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-[minmax(280px,auto)]">
+            
+            {/* 1. Guided Journey - Large Block (Top Left) */}
+            <div className="md:col-span-2 md:row-span-2 bg-gray-50 border border-gray-200 p-8 flex flex-col justify-between group hover:border-[#ED7A30] transition-colors relative overflow-hidden rounded-xl">
+              <div className="relative z-10 max-w-md">
+                <div className="w-10 h-10 bg-white border border-gray-200 flex items-center justify-center mb-6 text-[#ED7A30] shadow-sm rounded-lg font-bold">1</div>
+                <h3 className="text-3xl font-bold text-[#171717] mb-4 tracking-tight">Guided Journey</h3>
+                <p className="text-gray-600 text-lg leading-relaxed">Give customers, vendors, and new hires one simple, step-by-step flow to provide details and upload documents - no back-and-forth emails.</p>
               </div>
-              <img src={featureDashboard} alt="Guided Journey" className="absolute -right-12 -bottom-12 w-[90%] shadow-2xl rounded-tl-xl border border-gray-200 group-hover:-translate-y-2 group-hover:-translate-x-2 transition-transform duration-500" />
+              <div className="mt-8 relative rounded-lg overflow-hidden shadow-xl border border-gray-200 transform group-hover:scale-[1.02] transition-transform duration-500">
+                 <img src={featureDashboard} alt="Guided Journey UI" className="w-full h-auto object-cover" />
+              </div>
             </div>
 
-            {/* Automated Data - Standard Block */}
-            <div className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-shadow flex flex-col justify-start gap-4">
-              <div>
-                <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center mb-3 text-[#ED7A30] font-bold text-xs">2</div>
-                <h3 className="text-lg font-bold text-[#171717] leading-tight">Automated Data & Document Collection</h3>
+            {/* 2. Automated Data - Standard Block */}
+            <div className="bg-white border border-gray-200 p-8 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1">
+              <div className="flex justify-between items-start">
+                <h3 className="text-xl font-bold text-[#171717] leading-tight">Automated Data & Document Collection</h3>
+                <div className="w-8 h-8 bg-orange-50 rounded-full flex items-center justify-center text-[#ED7A30] font-bold text-xs shrink-0">2</div>
               </div>
               <p className="text-gray-500 text-sm leading-relaxed">Capture information, documents, and signatures from anyone through a single, structured process.</p>
             </div>
 
-            {/* Checklists - Standard Block */}
-            <div className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-shadow flex flex-col justify-start gap-4">
-              <div>
-                <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center mb-3 text-[#ED7A30] font-bold text-xs">3</div>
-                <h3 className="text-lg font-bold text-[#171717] leading-tight">Multi-Team Checklists</h3>
+            {/* 3. Checklists - Standard Block */}
+            <div className="bg-white border border-gray-200 p-8 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1">
+              <div className="flex justify-between items-start">
+                <h3 className="text-xl font-bold text-[#171717] leading-tight">Multi-Team Checklists</h3>
+                <div className="w-8 h-8 bg-orange-50 rounded-full flex items-center justify-center text-[#ED7A30] font-bold text-xs shrink-0">3</div>
               </div>
               <p className="text-gray-500 text-sm leading-relaxed">HR, IT, Finance, Operations - everyone sees their tasks in one shared place, so work happens in parallel, not sequentially.</p>
             </div>
 
-            {/* Role Based - Standard Block */}
-            <div className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-shadow flex flex-col justify-start gap-4">
-              <div>
-                <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center mb-3 text-[#ED7A30] font-bold text-xs">4</div>
-                <h3 className="text-lg font-bold text-[#171717] leading-tight">Role-Based Visibility</h3>
+            {/* NEW: App Gallery Slider - Spans 2 Cols */}
+            <div className="md:col-span-2 bg-[#171717] rounded-xl overflow-hidden relative flex flex-col justify-center p-8 md:p-0">
+               <div className="absolute top-6 left-6 z-20 bg-[#ED7A30] text-white text-xs font-bold px-3 py-1 uppercase tracking-widest rounded-full">
+                  Platform Preview
+               </div>
+               <Carousel className="w-full h-full" opts={{ loop: true, align: "start" }}>
+                  <CarouselContent>
+                    {[appShot1, appShot2, appShot3, appShot4].map((shot, index) => (
+                      <CarouselItem key={index} className="flex items-center justify-center h-full p-0">
+                        <div className="relative w-full h-full min-h-[300px] md:min-h-[350px]">
+                          <img src={shot} alt={`App Screenshot ${index + 1}`} className="absolute inset-0 w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity" />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
+                        </div>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <div className="absolute bottom-4 right-4 flex gap-2 z-20">
+                     <CarouselPrevious className="static translate-y-0 bg-white/10 hover:bg-white/20 border-0 text-white" />
+                     <CarouselNext className="static translate-y-0 bg-white/10 hover:bg-white/20 border-0 text-white" />
+                  </div>
+               </Carousel>
+            </div>
+
+            {/* 4. Role Based - Standard Block */}
+            <div className="bg-white border border-gray-200 p-8 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1">
+              <div className="flex justify-between items-start">
+                <h3 className="text-xl font-bold text-[#171717] leading-tight">Role-Based Visibility</h3>
+                <div className="w-8 h-8 bg-orange-50 rounded-full flex items-center justify-center text-[#ED7A30] font-bold text-xs shrink-0">4</div>
               </div>
               <p className="text-gray-500 text-sm leading-relaxed">Each team member sees only what they need, with sensitive data protected by role permissions.</p>
             </div>
 
-            {/* Communication - Standard Block */}
-            <div className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-shadow flex flex-col justify-start gap-4">
-              <div>
-                <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center mb-3 text-[#ED7A30] font-bold text-xs">5</div>
-                <h3 className="text-lg font-bold text-[#171717] leading-tight">Built-In Communication</h3>
+            {/* 5. Communication - Standard Block */}
+            <div className="bg-white border border-gray-200 p-8 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1">
+              <div className="flex justify-between items-start">
+                <h3 className="text-xl font-bold text-[#171717] leading-tight">Built-In Communication</h3>
+                <div className="w-8 h-8 bg-orange-50 rounded-full flex items-center justify-center text-[#ED7A30] font-bold text-xs shrink-0">5</div>
               </div>
               <p className="text-gray-500 text-sm leading-relaxed">Ask questions and share clarifications directly inside the flow (instead of spawning new email threads).</p>
             </div>
 
-            {/* Doc Gen - Tall Block */}
-            <div className="md:col-span-1 md:row-span-2 bg-white border border-gray-200 p-8 flex flex-col justify-between hover:border-[#ED7A30] transition-colors min-h-[300px] relative overflow-hidden group">
-              <div className="relative z-10">
-                <div className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center mb-4 text-[#ED7A30] font-bold text-sm">6</div>
-                <h3 className="text-2xl font-bold text-[#171717] mb-2">Document Generation & Signing</h3>
-                <p className="text-gray-500 text-sm leading-relaxed">Generate standard forms automatically and send them for compliant e-signature with a click.</p>
+            {/* 6. Document Generation - Standard Block (Fixed Alignment) */}
+            <div className="bg-white border border-gray-200 p-8 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1">
+              <div className="flex justify-between items-start">
+                <h3 className="text-xl font-bold text-[#171717] leading-tight">Document Generation & Signing</h3>
+                <div className="w-8 h-8 bg-orange-50 rounded-full flex items-center justify-center text-[#ED7A30] font-bold text-xs shrink-0">6</div>
               </div>
-              <FileText className="text-[#ED7A30] opacity-10 w-32 h-32 absolute -bottom-4 -right-4 group-hover:scale-110 transition-transform duration-500" />
+              <p className="text-gray-500 text-sm leading-relaxed">Generate standard forms automatically and send them for compliant e-signature with a click.</p>
+              <div className="mt-auto pt-4">
+                 <FileText className="text-[#ED7A30] opacity-20 w-12 h-12 group-hover:scale-110 transition-transform" />
+              </div>
             </div>
 
-            {/* Archiving - Standard Block */}
-            <div className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-shadow flex flex-col justify-start gap-4">
-              <div>
-                <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center mb-3 text-[#ED7A30] font-bold text-xs">7</div>
-                <h3 className="text-lg font-bold text-[#171717] leading-tight">Automatic Archiving</h3>
+            {/* 7. Archiving - Standard Block */}
+            <div className="bg-white border border-gray-200 p-8 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1">
+              <div className="flex justify-between items-start">
+                 <h3 className="text-xl font-bold text-[#171717] leading-tight">Automatic Archiving</h3>
+                 <div className="w-8 h-8 bg-orange-50 rounded-full flex items-center justify-center text-[#ED7A30] font-bold text-xs shrink-0">7</div>
               </div>
               <p className="text-gray-500 text-sm leading-relaxed">Completed documents go straight into SharePoint or your CRM - neatly stored and fully traceable.</p>
+              <div className="mt-auto pt-4">
+                 <Archive className="text-[#ED7A30] opacity-20 w-12 h-12 group-hover:scale-110 transition-transform" />
+              </div>
             </div>
 
-            {/* AI - Standard Block */}
-            <div className="md:col-span-2 bg-orange-50 border border-orange-100 p-6 flex flex-col justify-center gap-2">
-              <div className="flex items-center gap-4 mb-2">
-                <div className="w-10 h-10 bg-[#ED7A30] text-white flex items-center justify-center shrink-0">
-                  <Zap size={20} />
-                </div>
-                <h3 className="text-xl font-bold text-[#171717]">AI-Driven Document Validation</h3>
+            {/* AI - Standard Block - Full Width Bottom */}
+            <div className="md:col-span-2 bg-orange-50 border border-orange-100 p-8 rounded-xl flex items-center gap-6 hover:border-[#ED7A30] transition-colors">
+              <div className="w-14 h-14 bg-[#ED7A30] text-white rounded-xl flex items-center justify-center shrink-0 shadow-lg">
+                <Zap size={28} />
               </div>
-              <p className="text-gray-600 text-sm leading-relaxed pl-14">Uploaded documents are checked and cross-verified against captured form data, reducing errors and preventing onboarding delays.</p>
+              <div>
+                <h3 className="text-xl font-bold text-[#171717] mb-2">AI-Driven Document Validation</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">Uploaded documents are checked and cross-verified against captured form data, reducing errors and preventing onboarding delays.</p>
+              </div>
             </div>
           </div>
         </div>
