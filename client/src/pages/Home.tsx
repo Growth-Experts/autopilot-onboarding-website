@@ -4,7 +4,7 @@ import heroDashboard from "@assets/generated_images/modern_saas_dashboard_ui_sho
 import featureDashboard from "@assets/generated_images/clean_saas_form_interface_for_employee_data_collection.png";
 import checklistImage from "@assets/generated_images/saas_interface_showing_role-based_checklists_and_progress_tracking.png";
 import caseStudyImage from "@assets/stock_images/diverse_professional_10bf22ef.jpg";
-import problemImage from "@assets/stock_images/messy_office_desk_wi_6f0aff20.jpg";
+import problemImage from "@assets/stock_images/chaotic_messy_office_8b8ef31a.jpg";
 import avatarJane from "@assets/stock_images/professional_woman_c_a3afb741.jpg";
 import avatarJohn from "@assets/stock_images/professional_man_cor_a0338afc.jpg";
 import avatarEmily from "@assets/stock_images/business_woman_profe_0724059b.jpg";
