@@ -355,7 +355,7 @@ export default function Home() {
               <div className="inline-block bg-[#ED7A30] text-white text-xs font-bold px-3 py-1 uppercase tracking-widest mb-6">
                 Case Study
               </div>
-              <h2 className="text-4xl md:text-6xl font-bold leading-tight text-[#171717] mb-8 md:mb-0">
+              <h2 className="text-4xl md:text-6xl font-bold leading-tight mb-8 md:mb-0 text-[#ffffff]">
                 From Paper Delays to Real-Time, Error-Free Onboarding for YMCA
               </h2>
             </div>
