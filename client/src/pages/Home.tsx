@@ -231,16 +231,13 @@ export default function Home() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-[minmax(280px,auto)]">
             
-            {/* 1. Guided Journey - Large Block (Top Left) */}
-            <div className="md:col-span-2 md:row-span-2 bg-gray-50 border border-gray-200 p-8 flex flex-col justify-between group hover:border-[#ED7A30] transition-colors relative overflow-hidden rounded-xl">
-              <div className="relative z-10 max-w-md">
-                <div className="w-10 h-10 bg-white border border-gray-200 flex items-center justify-center mb-6 text-[#ED7A30] shadow-sm rounded-lg font-bold">1</div>
-                <h3 className="text-3xl font-bold text-[#171717] mb-4 tracking-tight">Guided Journey</h3>
-                <p className="text-gray-600 text-lg leading-relaxed">Give customers, vendors, and new hires one simple, step-by-step flow to provide details and upload documents - no back-and-forth emails.</p>
+            {/* 1. Guided Journey - Standard Block */}
+            <div className="bg-white border border-gray-200 p-8 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1">
+              <div className="flex justify-between items-start">
+                <h3 className="text-xl font-bold text-[#171717] leading-tight">Guided Journey</h3>
+                <div className="w-8 h-8 bg-orange-50 rounded-full flex items-center justify-center text-[#ED7A30] font-bold text-xs shrink-0">1</div>
               </div>
-              <div className="mt-8 relative rounded-lg overflow-hidden shadow-xl border border-gray-200 transform group-hover:scale-[1.02] transition-transform duration-500">
-                 <img src={featureDashboard} alt="Guided Journey UI" className="w-full h-auto object-cover" />
-              </div>
+              <p className="text-gray-500 text-sm leading-relaxed">Give customers, vendors, and new hires one simple, step-by-step flow to provide details and upload documents - no back-and-forth emails.</p>
             </div>
 
             {/* 2. Automated Data - Standard Block */}
@@ -261,8 +258,8 @@ export default function Home() {
               <p className="text-gray-500 text-sm leading-relaxed">HR, IT, Finance, Operations - everyone sees their tasks in one shared place, so work happens in parallel, not sequentially.</p>
             </div>
 
-            {/* NEW: App Gallery Slider - Spans 2 Cols */}
-            <div className="md:col-span-2 bg-[#171717] rounded-xl overflow-hidden relative flex flex-col justify-center p-8 md:p-0 group">
+            {/* NEW: App Gallery Slider - Standard Block */}
+            <div className="bg-[#171717] rounded-xl overflow-hidden relative flex flex-col justify-center p-0 group min-h-[280px]">
                <div className="absolute top-6 left-6 z-20 bg-[#ED7A30] text-white text-xs font-bold px-3 py-1 uppercase tracking-widest rounded-full">
                   Platform Preview
                </div>
