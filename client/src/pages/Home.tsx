@@ -35,7 +35,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Trusted By Section */}
       <section className="py-20 bg-[#FAFAFA] border-b border-gray-200">
         <div className="container mx-auto px-4 md:px-6 text-center">
@@ -60,7 +59,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Section 2: The Problem (Pain Points) */}
       <section className="py-24 bg-white border-b border-gray-200">
         <div className="container mx-auto px-4 md:px-6">
@@ -308,9 +306,7 @@ export default function Home() {
       {/* Section 6: The Process (Timeline Strip) */}
       <section className="py-24 bg-white border-b border-gray-200">
         <div className="container mx-auto px-4 md:px-6">
-          <h2 className="text-3xl font-bold text-[#171717] mb-16 text-center uppercase tracking-widest">
-            How It Works
-          </h2>
+          <h2 className="text-3xl font-bold text-[#171717] mb-16 text-center uppercase tracking-widest">made for people. powered by process.</h2>
           
           <div className="relative">
             {/* Line connecting steps */}
