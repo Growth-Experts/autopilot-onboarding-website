@@ -314,13 +314,13 @@ export default function Home() {
             </div>
 
             {/* AI - Standard Block - Full Width Bottom */}
-            <div className="md:col-span-2 lg:col-span-4 bg-orange-50 border border-orange-100 px-6 py-3 rounded-xl flex items-center gap-4 hover:border-[#ED7A30] transition-colors">
-              <div className="w-14 h-14 bg-[#ED7A30] text-white rounded-xl flex items-center justify-center shrink-0 shadow-lg">
-                <Zap size={28} />
+            <div className="md:col-span-2 lg:col-span-4 bg-orange-50 border border-orange-100 px-4 py-2 rounded-xl flex items-center gap-4 hover:border-[#ED7A30] transition-colors">
+              <div className="w-12 h-12 bg-[#ED7A30] text-white rounded-lg flex items-center justify-center shrink-0 shadow-md">
+                <Zap size={24} />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-[#171717] mb-2">AI-Driven Document Validation</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">Uploaded documents are checked and cross-verified against captured form data, reducing errors and preventing onboarding delays.</p>
+                <h3 className="text-lg font-bold text-[#171717] mb-1">AI-Driven Document Validation</h3>
+                <p className="text-gray-600 text-sm leading-tight">Uploaded documents are checked and cross-verified against captured form data, reducing errors and preventing onboarding delays.</p>
               </div>
             </div>
           </div>
