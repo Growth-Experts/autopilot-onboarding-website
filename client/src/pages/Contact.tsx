@@ -11,9 +11,7 @@ export default function Contact() {
         {/* Left: Form */}
         <div className="p-8 md:p-16 lg:p-24 flex flex-col justify-center">
           <div className="max-w-lg mx-auto w-full">
-            <h1 className="text-4xl md:text-5xl font-bold text-[#171717] mb-6">
-              Get in touch
-            </h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-[#171717] mb-6">Get in touch!</h1>
             <p className="text-gray-600 mb-10 text-lg">
               Ready to streamline your onboarding? Fill out the form below and our team will be in touch shortly.
             </p>
