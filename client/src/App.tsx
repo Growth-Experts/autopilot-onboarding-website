@@ -23,6 +23,8 @@ function ScrollToTop() {
   return null;
 }
 
+import EmployeeOnboarding from "@/pages/EmployeeOnboarding";
+
 function Router() {
   return (
     <div className="flex flex-col min-h-screen font-montserrat">
@@ -31,6 +33,7 @@ function Router() {
       <main className="flex-grow">
         <Switch>
           <Route path="/" component={Home} />
+          <Route path="/solutions/employee" component={EmployeeOnboarding} />
           <Route path="/solutions/:type" component={Solutions} />
           <Route path="/case-studies" component={CaseStudies} />
           <Route path="/contact" component={Contact} />
