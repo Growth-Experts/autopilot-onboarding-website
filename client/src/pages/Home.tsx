@@ -13,6 +13,7 @@ import avatarJane from "@assets/stock_images/professional_woman_c_a3afb741.jpg";
 import avatarJohn from "@assets/stock_images/professional_man_cor_a0338afc.jpg";
 import avatarEmily from "@assets/stock_images/business_woman_profe_0724059b.jpg";
 import capsicumLogo from "@assets/capsicum-logo_1764671045702.png";
+import integrationsImage from "@assets/autopilot-integrations_1764671619557.png";
 import { Check, ArrowRight, Clock, Users, FileText, Shield, MessageSquare, Database, Archive, Zap, Play, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
 
@@ -374,15 +375,12 @@ export default function Home() {
             {/* Right: The Logos Grid */}
             <div className="bg-white p-10 border border-gray-200 shadow-sm">
               <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-8 text-center">Integrated Ecosystem</h3>
-              <div className="grid grid-cols-2 gap-8 items-center justify-items-center opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-                {["Sage One", "DocuSign", "Flowgear", "Azure", "Pipedrive", "SharePoint Online"].map((name) => (
-                  <div key={name} className="h-16 w-full flex items-center justify-center border border-dashed border-gray-300 rounded-lg hover:border-[#ED7A30] hover:border-solid transition-colors">
-                    <span className="text-sm font-bold text-gray-500">{name}</span>
-                  </div>
-                ))}
-                <div className="col-span-2 text-xs text-gray-400 font-mono mt-4">
-                  + Custom API Integrations Available
-                </div>
+              <div className="flex justify-center items-center">
+                <img 
+                  src={integrationsImage} 
+                  alt="Autopilot Integrations Ecosystem including Sage, DocuSign, Azure, and more" 
+                  className="w-full h-auto max-w-md object-contain hover:scale-105 transition-transform duration-500"
+                />
               </div>
             </div>
           </div>
