@@ -1,13 +1,15 @@
 import { Link } from "wouter";
 import logo from "@assets/autopilot-onboarding-logo_1764237094364.png";
 
+import Autopilot_Logo_Onboarding___White from "@assets/Autopilot Logo_Onboarding - White.png";
+
 export function Footer() {
   return (
     <footer className="bg-[#171717] text-white border-t border-gray-800">
       <div className="container mx-auto px-4 md:px-6 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="space-y-6">
-            <img src={logo} alt="Autopilot Onboarding" className="h-8 w-auto brightness-0 invert" />
+            <img src={Autopilot_Logo_Onboarding___White} alt="Autopilot Onboarding" className="h-8 w-auto brightness-0 invert" />
             <p className="text-gray-400 text-sm leading-relaxed">
               Autopilot Onboarding connects every department so the people you're onboarding get one clean, guided flow.
             </p>
