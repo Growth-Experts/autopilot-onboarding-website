@@ -4,6 +4,7 @@ import { WindowFrame } from "@/components/ui/WindowFrame";
 import dashboardImage from "@assets/generated_images/clean_saas_form_interface_for_employee_data_collection.png";
 import caseStudyImage from "@assets/stock_images/chaotic_messy_office_8b8ef31a.jpg"; // Reusing the office image for case study or finding a new one? Using same for now or placeholder.
 import heroDashboard from "@assets/generated_images/saas_dashboard_showing_onboarding_progress.png";
+import capsicumLogo from "@assets/capsicum-logo_1764671045702.png";
 
 export default function EmployeeOnboarding() {
   return (
@@ -48,8 +49,8 @@ export default function EmployeeOnboarding() {
             <div className="font-bold text-xl text-green-700 flex items-center justify-center gap-2">
                <span className="text-2xl">🌱</span> Sanegrowers
             </div>
-            <div className="font-bold text-xl text-red-600 flex items-center justify-center gap-2">
-               <span className="text-2xl">🌶️</span> Capsicum
+            <div className="flex items-center justify-center">
+               <img src={capsicumLogo} alt="Capsicum" className="h-12 w-auto object-contain" />
             </div>
             <div className="font-bold text-xl text-purple-800 border-2 border-purple-800 rounded-full w-12 h-12 flex items-center justify-center">cbf</div>
             <div className="font-bold text-xl text-gray-800 flex items-center justify-center gap-1">
