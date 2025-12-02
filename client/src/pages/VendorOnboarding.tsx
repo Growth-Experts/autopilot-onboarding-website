@@ -17,9 +17,7 @@ export default function VendorOnboarding() {
             Vendor onboarding shouldn't <span className="text-[#ED7A30]">slow down your operations</span>
           </h1>
           
-          <p className="text-xl text-gray-400 mb-10 max-w-3xl mx-auto leading-relaxed font-medium">
-            Standardize how you onboard vendors—from documents to approvals—and keep procurement, finance, and compliance perfectly aligned.
-          </p>
+          <p className="text-xl text-gray-400 mb-10 max-w-3xl mx-auto leading-relaxed font-medium">Standardize how you onboard vendors, from documents to approvals, and keep procurement, finance, and compliance perfectly aligned.</p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button className="bg-[#ED7A30] hover:bg-[#d66520] text-white text-lg px-8 py-4 rounded-none font-bold uppercase tracking-wider w-full sm:w-auto shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-1">
