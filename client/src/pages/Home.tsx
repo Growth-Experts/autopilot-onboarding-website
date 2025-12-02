@@ -338,7 +338,7 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold text-[#171717] mb-6 tracking-tighter">
               Works with the tools your team already uses
             </h2>
-            <p className="text-lg text-gray-600 font-light">
+            <p className="text-lg text-gray-600 font-medium">
               Autopilot fits naturally into your existing environment, no need to rebuild.
             </p>
           </div>
