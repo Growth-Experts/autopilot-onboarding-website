@@ -37,11 +37,12 @@ export default function CaseStudies() {
     <div className="bg-white min-h-screen">
       <section className="pt-20 pb-16 bg-white border-b border-gray-200">
         <div className="container mx-auto px-4 md:px-6">
-          <h1 className="text-5xl md:text-6xl font-extrabold text-[#171717] mb-6">
-            Success Stories
+          <h1 className="text-5xl md:text-6xl font-extrabold text-[#171717] mb-6 tracking-tighter leading-tight">
+            Smarter Onboarding. <br className="hidden md:block" />
+            <span className="text-[#ED7A30]">Stronger Partnerships.</span>
           </h1>
-          <p className="text-xl text-gray-600 max-w-2xl">
-            See how leading organizations are transforming their onboarding from a bottleneck into a competitive advantage.
+          <p className="text-xl text-gray-600 max-w-3xl font-light leading-relaxed">
+            See how organizations use Autopilot to replace scattered emails and manual checklists with one connected onboarding flow - for customers, vendors, resellers, and employees.
           </p>
         </div>
       </section>
