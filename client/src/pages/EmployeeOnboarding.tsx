@@ -5,6 +5,8 @@ import dashboardImage from "@assets/generated_images/clean_saas_form_interface_f
 import caseStudyImage from "@assets/stock_images/chaotic_messy_office_8b8ef31a.jpg"; // Reusing the office image for case study or finding a new one? Using same for now or placeholder.
 import heroDashboard from "@assets/generated_images/saas_dashboard_showing_onboarding_progress.png";
 import capsicumLogo from "@assets/capsicum-logo_1764671045702.png";
+import saCanegrowersLogo from "@assets/SA_CaneGrowers_logo_1764682801217.png";
+import threeWayLogo from "@assets/3way-logo_1764684321801.png";
 
 export default function EmployeeOnboarding() {
   return (
@@ -45,9 +47,11 @@ export default function EmployeeOnboarding() {
             Trusted by teams who care about first impressions
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-12 items-center justify-items-center [&>*]:opacity-50 [&>*]:grayscale [&>*]:transition-all [&>*]:duration-500 [&>:hover]:grayscale-0 [&>:hover]:opacity-100">
-            <div className="font-extrabold text-xl text-gray-600 tracking-tight">WAYWHE</div>
-            <div className="font-bold text-xl text-green-700 flex items-center justify-center gap-2">
-               <span className="text-2xl">🌱</span> Sanegrowers
+            <div className="flex items-center justify-center">
+               <img src={threeWayLogo} alt="3 Way Marketing" className="h-16 w-auto object-contain" />
+            </div>
+            <div className="flex items-center justify-center">
+               <img src={saCanegrowersLogo} alt="SA Canegrowers" className="h-16 w-auto object-contain" />
             </div>
             <div className="flex items-center justify-center">
                <img src={capsicumLogo} alt="Capsicum" className="h-12 w-auto object-contain" />
