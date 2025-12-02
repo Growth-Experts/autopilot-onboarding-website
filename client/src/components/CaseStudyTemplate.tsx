@@ -66,10 +66,6 @@ export function CaseStudyTemplate({
             <div className="opacity-90">
               {logo}
             </div>
-            <div className="hidden md:block w-px h-8 bg-gray-700 mx-2 self-center" />
-            <div className="text-[#ED7A30] font-bold uppercase tracking-widest text-sm md:self-center">
-              {industry}
-            </div>
           </div>
 
           <h1 className="text-3xl md:text-5xl font-extrabold mb-6 leading-tight tracking-tighter max-w-4xl text-white">
