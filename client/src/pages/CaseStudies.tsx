@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
 import talksureLogo from "@assets/talksure-logo_1764682329403.png";
 import lawdLogo from "@assets/lawd-logo_1764682505153.png";
+import saCanegrowersLogo from "@assets/SA_CaneGrowers_logo_1764682801217.png";
 
 export default function CaseStudies() {
   const cases = [
@@ -39,11 +40,7 @@ export default function CaseStudies() {
       description: "How SA Canegrowers digitized key approval processes and improved control by integrating Autopilot into their daily Microsoft 365 workflow.",
       stat: "Integrated into MS Teams",
       color: "bg-green-600",
-      logo: (
-        <div className="font-bold text-xl text-green-700 flex items-center gap-2">
-           <span className="text-2xl">🌱</span> SA Canegrowers
-        </div>
-      )
+      logo: <img src={saCanegrowersLogo} alt="SA Canegrowers" className="h-12 w-auto object-contain" />
     }
   ];
 
