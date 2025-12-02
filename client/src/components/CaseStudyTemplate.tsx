@@ -76,15 +76,15 @@ export function CaseStudyTemplate({
             {title}
           </h1>
           
-          <p className="text-lg text-gray-400 max-w-3xl leading-relaxed font-light mb-10">
+          <p className="text-lg text-gray-400 max-w-3xl leading-relaxed mb-10 font-medium">
             {subtitle}
           </p>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-4 border-t border-gray-800 pt-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-4 border-t border-gray-800 pt-6">
             {stats.map((stat, i) => (
               <div key={i}>
-                <div className="text-3xl md:text-4xl font-bold text-[#ED7A30] mb-1">{stat.value}</div>
-                <div className="text-gray-500 uppercase tracking-wide text-xs font-bold">{stat.label}</div>
+                <div className="text-xl md:text-2xl font-bold text-[#ED7A30] mb-0.5">{stat.value}</div>
+                <div className="text-gray-600 uppercase tracking-wide font-bold text-[14px]">{stat.label}</div>
               </div>
             ))}
           </div>
