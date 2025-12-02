@@ -28,6 +28,10 @@ import ResellerOnboarding from "@/pages/ResellerOnboarding";
 import VendorOnboarding from "@/pages/VendorOnboarding";
 import CustomerOnboarding from "@/pages/CustomerOnboarding";
 
+import CaseStudyLAWD from "@/pages/CaseStudyLAWD";
+import CaseStudySyntech from "@/pages/CaseStudySyntech";
+import CaseStudyTalksure from "@/pages/CaseStudyTalksure";
+
 function Router() {
   return (
     <div className="flex flex-col min-h-screen font-montserrat">
@@ -43,6 +47,9 @@ function Router() {
           <Route path="/solutions/partner" component={ResellerOnboarding} />
           <Route path="/solutions/:type" component={Solutions} />
           <Route path="/case-studies" component={CaseStudies} />
+          <Route path="/case-studies/lawd" component={CaseStudyLAWD} />
+          <Route path="/case-studies/syntech" component={CaseStudySyntech} />
+          <Route path="/case-studies/talksure" component={CaseStudyTalksure} />
           <Route path="/contact" component={Contact} />
           <Route component={NotFound} />
         </Switch>
