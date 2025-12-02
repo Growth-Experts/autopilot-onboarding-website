@@ -24,6 +24,9 @@ function ScrollToTop() {
 }
 
 import EmployeeOnboarding from "@/pages/EmployeeOnboarding";
+import ResellerOnboarding from "@/pages/ResellerOnboarding";
+import VendorOnboarding from "@/pages/VendorOnboarding";
+import CustomerOnboarding from "@/pages/CustomerOnboarding";
 
 function Router() {
   return (
@@ -34,6 +37,10 @@ function Router() {
         <Switch>
           <Route path="/" component={Home} />
           <Route path="/solutions/employee" component={EmployeeOnboarding} />
+          <Route path="/solutions/reseller" component={ResellerOnboarding} />
+          <Route path="/solutions/vendor" component={VendorOnboarding} />
+          <Route path="/solutions/customer" component={CustomerOnboarding} />
+          <Route path="/solutions/partner" component={ResellerOnboarding} />
           <Route path="/solutions/:type" component={Solutions} />
           <Route path="/case-studies" component={CaseStudies} />
           <Route path="/contact" component={Contact} />

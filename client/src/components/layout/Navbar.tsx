@@ -23,9 +23,9 @@ export function Navbar() {
 
   const solutionLinks = [
     { name: "Employee Onboarding", href: "/solutions/employee" },
+    { name: "Reseller Onboarding", href: "/solutions/reseller" },
     { name: "Vendor Onboarding", href: "/solutions/vendor" },
     { name: "Customer Onboarding", href: "/solutions/customer" },
-    { name: "Partner Onboarding", href: "/solutions/partner" },
   ];
 
   return (
