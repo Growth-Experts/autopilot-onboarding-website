@@ -17,7 +17,7 @@ export default function ResellerOnboarding() {
             Turn reseller onboarding into a <span className="text-[#ED7A30]">Competitive Advantage</span>
           </h1>
           
-          <p className="text-xl text-gray-400 mb-10 max-w-3xl mx-auto leading-relaxed font-light">
+          <p className="text-xl text-gray-400 mb-10 max-w-3xl mx-auto leading-relaxed font-medium">
             Centralize requirements, automate approvals, and shorten time-to-activation for every partner you sign.
           </p>
           
@@ -34,7 +34,6 @@ export default function ResellerOnboarding() {
            <div className="absolute bottom-[-10%] left-[-5%] w-[600px] h-[600px] rounded-full bg-blue-900 blur-[120px]" />
         </div>
       </section>
-
       {/* Trusted By Section */}
       <section className="py-20 bg-[#FAFAFA] border-b border-gray-200">
         <div className="container mx-auto px-4 md:px-6 text-center">
@@ -58,7 +57,6 @@ export default function ResellerOnboarding() {
           </div>
         </div>
       </section>
-
       {/* The Challenge & Solution Section */}
       <section className="py-24 bg-white border-b border-gray-200">
         <div className="container mx-auto px-4 md:px-6">
@@ -98,7 +96,6 @@ export default function ResellerOnboarding() {
           </div>
         </div>
       </section>
-
       {/* Core Value Proposition */}
       <section className="py-24 bg-[#F5F5F5] border-b border-gray-200 text-center">
         <div className="container mx-auto px-4 md:px-6">
@@ -131,7 +128,6 @@ export default function ResellerOnboarding() {
           </div>
         </div>
       </section>
-
       {/* Key Features That Matter */}
       <section className="py-24 bg-white border-b border-gray-200">
         <div className="container mx-auto px-4 md:px-6">
@@ -159,7 +155,6 @@ export default function ResellerOnboarding() {
           </div>
         </div>
       </section>
-
       {/* Integrations */}
       <section className="py-24 bg-[#F5F5F5] border-b border-gray-200">
         <div className="container mx-auto px-4 md:px-6">
@@ -186,7 +181,6 @@ export default function ResellerOnboarding() {
            </div>
         </div>
       </section>
-
       {/* How It Works */}
       <section className="py-24 bg-white border-b border-gray-200">
         <div className="container mx-auto px-4 md:px-6">
@@ -226,7 +220,6 @@ export default function ResellerOnboarding() {
           </div>
         </div>
       </section>
-
       {/* Case Study: YMCA */}
       <section className="py-24 bg-[#171717] text-white border-b border-gray-800">
         <div className="container mx-auto px-4 md:px-6">
@@ -258,7 +251,6 @@ export default function ResellerOnboarding() {
           </div>
         </div>
       </section>
-
       {/* Testimonials */}
       <section className="py-24 bg-white border-b border-gray-200">
         <div className="container mx-auto px-4 md:px-6">
@@ -296,7 +288,6 @@ export default function ResellerOnboarding() {
           </div>
         </div>
       </section>
-
       {/* Footer / Bottom CTA */}
       <section className="py-32 bg-[#ED7A30] text-white">
         <div className="container mx-auto px-4 md:px-6">
