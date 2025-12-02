@@ -1,8 +1,14 @@
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import logo from "@assets/autopilot-onboarding-logo_1764237094364.png";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 export function Navbar() {
   const [location] = useLocation();
@@ -10,9 +16,16 @@ export function Navbar() {
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "Solutions", href: "/solutions/employee" }, // Defaulting to employee for the link
+    { name: "Solutions", href: "/solutions/employee", isDropdown: true }, 
     { name: "Case Studies", href: "/case-studies" },
     { name: "Contact", href: "/contact" },
+  ];
+
+  const solutionLinks = [
+    { name: "Employee Onboarding", href: "/solutions/employee" },
+    { name: "Vendor Onboarding", href: "/solutions/vendor" },
+    { name: "Customer Onboarding", href: "/solutions/customer" },
+    { name: "Partner Onboarding", href: "/solutions/partner" },
   ];
 
   return (
@@ -28,17 +41,42 @@ export function Navbar() {
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <Link key={link.name} href={link.href}>
-                <a
-                  className={`text-sm font-semibold uppercase tracking-wide hover:text-[#ED7A30] transition-colors ${
-                    location === link.href ? "text-[#ED7A30]" : "text-[#171717]"
-                  }`}
-                >
-                  {link.name}
-                </a>
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              if (link.isDropdown) {
+                return (
+                  <DropdownMenu key={link.name}>
+                    <DropdownMenuTrigger className={`flex items-center gap-1 text-sm font-semibold uppercase tracking-wide hover:text-[#ED7A30] transition-colors outline-none ${
+                      location.startsWith("/solutions") ? "text-[#ED7A30]" : "text-[#171717]"
+                    }`}>
+                      {link.name} <ChevronDown size={16} />
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent className="w-64 p-2 bg-white border border-gray-200 shadow-xl rounded-none animate-in fade-in-0 zoom-in-95">
+                      {solutionLinks.map((subLink) => (
+                        <DropdownMenuItem key={subLink.name} asChild className="rounded-none cursor-pointer focus:bg-orange-50 focus:text-[#ED7A30]">
+                          <Link href={subLink.href}>
+                            <a className="block w-full py-2 px-2 text-sm font-medium text-[#171717]">
+                              {subLink.name}
+                            </a>
+                          </Link>
+                        </DropdownMenuItem>
+                      ))}
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                );
+              }
+              
+              return (
+                <Link key={link.name} href={link.href}>
+                  <a
+                    className={`text-sm font-semibold uppercase tracking-wide hover:text-[#ED7A30] transition-colors ${
+                      location === link.href ? "text-[#ED7A30]" : "text-[#171717]"
+                    }`}
+                  >
+                    {link.name}
+                  </a>
+                </Link>
+              );
+            })}
           </div>
 
           {/* CTA */}
@@ -62,21 +100,46 @@ export function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden border-t border-gray-200 bg-white absolute w-full">
-          <div className="flex flex-col p-4 space-y-4">
-            {navLinks.map((link) => (
-              <Link key={link.name} href={link.href}>
-                <a
-                  className="block text-base font-semibold text-[#171717] hover:text-[#ED7A30]"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {link.name}
-                </a>
-              </Link>
-            ))}
-            <Button className="w-full bg-[#ED7A30] hover:bg-[#d66520] text-white rounded-none font-bold uppercase">
-              Book a Demo
-            </Button>
+        <div className="md:hidden border-t border-gray-200 bg-white absolute w-full shadow-xl z-50 h-[calc(100vh-80px)] overflow-y-auto">
+          <div className="flex flex-col p-4 space-y-6">
+            {navLinks.map((link) => {
+              if (link.isDropdown) {
+                return (
+                  <div key={link.name} className="space-y-3">
+                    <div className="text-base font-semibold text-[#171717] uppercase tracking-wide border-b border-gray-100 pb-2">
+                      {link.name}
+                    </div>
+                    <div className="pl-4 flex flex-col space-y-3">
+                      {solutionLinks.map((subLink) => (
+                         <Link key={subLink.name} href={subLink.href}>
+                           <a 
+                             className="block text-sm font-medium text-gray-600 hover:text-[#ED7A30]"
+                             onClick={() => setIsOpen(false)}
+                           >
+                             {subLink.name}
+                           </a>
+                         </Link>
+                      ))}
+                    </div>
+                  </div>
+                );
+              }
+              return (
+                <Link key={link.name} href={link.href}>
+                  <a
+                    className="block text-base font-semibold text-[#171717] hover:text-[#ED7A30] uppercase tracking-wide"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {link.name}
+                  </a>
+                </Link>
+              );
+            })}
+            <div className="pt-4">
+              <Button className="w-full bg-[#ED7A30] hover:bg-[#d66520] text-white rounded-none font-bold uppercase py-6">
+                Book a Demo
+              </Button>
+            </div>
           </div>
         </div>
       )}
