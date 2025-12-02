@@ -10,7 +10,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="space-y-6">
             <img src={Autopilot_Logo_Onboarding___White} alt="Autopilot Onboarding" className="h-8 w-auto brightness-0 invert" />
-            <p className="text-gray-400 text-sm leading-relaxed">
+            <p className="text-sm leading-relaxed font-medium text-[#ffffff]">
               Autopilot Onboarding connects every department so the people you're onboarding get one clean, guided flow.
             </p>
           </div>
