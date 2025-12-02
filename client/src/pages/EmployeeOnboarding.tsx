@@ -16,7 +16,7 @@ export default function EmployeeOnboarding() {
             <span>Employee Onboarding</span>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-extrabold mb-8 leading-tight tracking-tighter max-w-5xl mx-auto">
+          <h1 className="text-5xl md:text-7xl font-extrabold mb-8 leading-tight tracking-tighter max-w-5xl mx-auto text-white">
             Give Every New Hire a <span className="text-[#ED7A30]">Confident Start</span>
           </h1>
           
