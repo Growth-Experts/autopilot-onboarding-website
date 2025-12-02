@@ -71,7 +71,7 @@ export function CaseStudyTemplate({
             </div>
           </div>
 
-          <h1 className="text-4xl md:text-6xl font-extrabold mb-8 leading-tight tracking-tighter max-w-5xl">
+          <h1 className="text-4xl md:text-6xl font-extrabold mb-8 leading-tight tracking-tighter max-w-5xl text-white">
             {title}
           </h1>
           
