@@ -12,6 +12,7 @@ import problemImage from "@assets/stock_images/chaotic_messy_office_8b8ef31a.jpg
 import avatarJane from "@assets/stock_images/professional_woman_c_a3afb741.jpg";
 import avatarJohn from "@assets/stock_images/professional_man_cor_a0338afc.jpg";
 import avatarEmily from "@assets/stock_images/business_woman_profe_0724059b.jpg";
+import capsicumLogo from "@assets/capsicum-logo_1764671045702.png";
 import { Check, ArrowRight, Clock, Users, FileText, Shield, MessageSquare, Database, Archive, Zap, Play, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
 
@@ -106,8 +107,8 @@ export default function Home() {
             <div className="font-bold text-xl text-green-700 flex items-center justify-center gap-2">
                <span className="text-2xl">🌱</span> SA Canegrowers
             </div>
-            <div className="font-bold text-xl text-red-600 flex items-center justify-center gap-2">
-               <span className="text-2xl">🌶️</span> Capsicum
+            <div className="flex items-center justify-center">
+               <img src={capsicumLogo} alt="Capsicum" className="h-12 w-auto object-contain" />
             </div>
             <div className="font-bold text-xl text-purple-800 border-2 border-purple-800 rounded-full w-12 h-12 flex items-center justify-center">cbf</div>
             <div className="font-bold text-xl text-gray-800 flex items-center justify-center gap-1">
