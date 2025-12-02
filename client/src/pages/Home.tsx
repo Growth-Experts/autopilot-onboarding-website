@@ -20,6 +20,7 @@ import { useState, useEffect } from "react";
 import autopilot_integrations from "@assets/autopilot-integrations.png";
 
 import saCanegrowersLogo from "@assets/SA_CaneGrowers_logo_1764682801217.png";
+import threeWayLogo from "@assets/3way-logo_1764684321801.png";
 
 function AppGallerySlider({ images }: { images: string[] }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -108,7 +109,9 @@ export default function Home() {
             Trusted by teams who care about first impressions
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-12 items-center justify-items-center [&>*]:opacity-50 [&>*]:grayscale [&>*]:transition-all [&>*]:duration-500 [&>:hover]:grayscale-0 [&>:hover]:opacity-100">
-            <div className="font-extrabold text-xl text-gray-600 tracking-tight">3 WAY MARKETING</div>
+            <div className="flex items-center justify-center">
+              <img src={threeWayLogo} alt="3 Way Marketing" className="h-12 w-auto object-contain" />
+            </div>
             <div className="flex items-center justify-center">
               <img src={saCanegrowersLogo} alt="SA Canegrowers" className="h-14 w-auto object-contain" />
             </div>
