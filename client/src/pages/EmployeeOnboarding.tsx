@@ -25,7 +25,7 @@ export default function EmployeeOnboarding() {
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button className="bg-[#ED7A30] hover:bg-[#d66520] text-white text-lg px-10 py-6 rounded-none font-bold uppercase tracking-wider w-full sm:w-auto shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-1">
+            <Button className="bg-[#ED7A30] hover:bg-[#d66520] text-white text-lg px-8 py-4 rounded-none font-bold uppercase tracking-wider w-full sm:w-auto shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-1">
               Book a Demo
             </Button>
           </div>
@@ -333,7 +333,7 @@ export default function EmployeeOnboarding() {
                 ))}
               </div>
               
-              <Button className="bg-white text-[#ED7A30] hover:bg-gray-100 hover:text-[#ED7A30] text-xl px-10 py-8 rounded-none font-bold uppercase tracking-wider shadow-2xl w-full md:w-auto">
+              <Button className="bg-white text-[#ED7A30] hover:bg-gray-100 hover:text-[#ED7A30] text-xl px-8 py-4 rounded-none font-bold uppercase tracking-wider shadow-2xl w-full md:w-auto">
                 Book a Demo
               </Button>
             </div>
