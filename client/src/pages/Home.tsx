@@ -541,7 +541,7 @@ export default function Home() {
       {/* Section 9: Bottom CTA */}
       <section className="py-32 bg-[#ED7A30] text-white">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start">
             <div className="text-left">
               <h2 className="text-4xl md:text-6xl font-extrabold leading-[1.1] tracking-tighter">
                 Make onboarding the easiest part of your day.
