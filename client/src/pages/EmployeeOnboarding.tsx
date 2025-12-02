@@ -1,213 +1,327 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Check, Users, FileText, Shield, Zap } from "lucide-react";
+import { ArrowRight, Check, Users, FileText, Shield, Zap, MessageSquare, Archive } from "lucide-react";
 import { WindowFrame } from "@/components/ui/WindowFrame";
 import dashboardImage from "@assets/generated_images/clean_saas_form_interface_for_employee_data_collection.png";
+import caseStudyImage from "@assets/stock_images/chaotic_messy_office_8b8ef31a.jpg"; // Reusing the office image for case study or finding a new one? Using same for now or placeholder.
+import heroDashboard from "@assets/generated_images/saas_dashboard_showing_onboarding_progress.png";
 
 export default function EmployeeOnboarding() {
   return (
     <div className="bg-white font-montserrat">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-[#171717] text-white overflow-hidden">
+      <section className="relative pt-32 pb-24 bg-[#171717] text-white overflow-hidden">
         <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-orange-500/30 bg-orange-500/10 text-[#ED7A30] text-xs font-bold uppercase tracking-widest mb-8">
             <Users size={12} />
             <span>Employee Onboarding</span>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-extrabold mb-8 leading-tight tracking-tighter max-w-4xl mx-auto">
-            Give new hires a <span className="text-[#ED7A30]">world-class welcome</span>
+          <h1 className="text-5xl md:text-7xl font-extrabold mb-8 leading-tight tracking-tighter max-w-5xl mx-auto">
+            Give Every New Hire a <span className="text-[#ED7A30]">Confident Start</span>
           </h1>
           
-          <p className="text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed font-light">
-            Stop burying new employees in paperwork on their first day. Automate the boring stuff so they can focus on their new team.
+          <p className="text-xl text-gray-400 mb-10 max-w-3xl mx-auto leading-relaxed font-light">
+            Make onboarding consistent, compliant, and human. No more missing documents, lost checklists, or frantic first-day scrambles.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button className="bg-[#ED7A30] hover:bg-[#d66520] text-white text-lg px-8 py-6 rounded-none font-bold uppercase tracking-wider w-full sm:w-auto">
-              Start Free Trial
-            </Button>
-            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-[#171717] text-lg px-8 py-6 rounded-none font-bold uppercase tracking-wider w-full sm:w-auto">
-              View Demo
+            <Button className="bg-[#ED7A30] hover:bg-[#d66520] text-white text-lg px-10 py-6 rounded-none font-bold uppercase tracking-wider w-full sm:w-auto shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-1">
+              Book a Demo
             </Button>
           </div>
         </div>
         
         {/* Background Elements */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10 pointer-events-none">
-           <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] rounded-full bg-[#ED7A30] blur-[100px]" />
-           <div className="absolute bottom-[-10%] left-[-5%] w-[500px] h-[500px] rounded-full bg-blue-900 blur-[100px]" />
+           <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] rounded-full bg-[#ED7A30] blur-[120px]" />
+           <div className="absolute bottom-[-10%] left-[-5%] w-[600px] h-[600px] rounded-full bg-blue-900 blur-[120px]" />
         </div>
       </section>
 
-      {/* The Problem Section */}
-      <section className="py-24 bg-white border-b border-gray-100">
+      {/* Trusted By Section */}
+      <section className="py-20 bg-[#FAFAFA] border-b border-gray-200">
+        <div className="container mx-auto px-4 md:px-6 text-center">
+            <h3 className="text-xl md:text-2xl font-bold text-[#171717] mb-12 tracking-tighter uppercase opacity-80">
+            Trusted by teams who care about first impressions
+          </h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 items-center justify-items-center opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+            <div className="font-extrabold text-xl text-gray-600 tracking-tight">WAYWHE</div>
+            <div className="font-bold text-xl text-green-700 flex items-center justify-center gap-2">
+               <span className="text-2xl">🌱</span> Sanegrowers
+            </div>
+            <div className="font-bold text-xl text-red-600 flex items-center justify-center gap-2">
+               <span className="text-2xl">🌶️</span> Capsicum
+            </div>
+            <div className="font-bold text-xl text-purple-800 border-2 border-purple-800 rounded-full w-12 h-12 flex items-center justify-center">cbf</div>
+            <div className="font-bold text-xl text-gray-800 flex items-center justify-center gap-1">
+               <span className="text-red-600 text-2xl">❖</span> turnkey
+            </div>
+             <div className="font-bold text-lg text-red-700 border-2 border-red-700 rounded px-3 py-1 tracking-wider">BRM</div>
+            <div className="font-extrabold text-2xl text-black tracking-tighter lowercase">nologo</div>
+            <div className="font-bold text-xl text-amber-800 font-serif">Tongaat Hulett</div>
+          </div>
+        </div>
+      </section>
+
+      {/* The Challenge & Solution Section */}
+      <section className="py-24 bg-white border-b border-gray-200">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8">
-              <h2 className="text-4xl font-bold text-[#171717] tracking-tight">
-                First impressions matter.<br/>Don't mess them up.
+            <div>
+              <h2 className="text-4xl font-bold text-[#171717] leading-tight mb-8 tracking-tighter">
+                Onboarding delays hurt employee relationships
               </h2>
-              <p className="text-xl text-gray-600 font-light leading-relaxed">
-                When a new employee spends their first week chasing IT for a laptop, printing forms to sign by hand, and waiting for access to systems, they feel forgotten.
-              </p>
               
-              <div className="space-y-4 pt-4">
-                <div className="flex gap-4 items-start">
-                  <div className="w-10 h-10 rounded-lg bg-red-50 flex items-center justify-center shrink-0">
-                    <FileText className="text-red-500" size={20} />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-[#171717] text-lg">Manual Paperwork</h4>
-                    <p className="text-gray-500 leading-relaxed">Hours lost scanning, printing, and re-typing data.</p>
-                  </div>
+              <div className="space-y-8">
+                <div className="bg-red-50 p-6 rounded-xl border-l-4 border-red-500">
+                  <h3 className="text-xl font-bold text-[#171717] mb-2">The Problem</h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    HR works hard to give people a great start but scattered documents, unclear ownership, and inconsistent processes undo those efforts.
+                  </p>
                 </div>
-                
-                <div className="flex gap-4 items-start">
-                  <div className="w-10 h-10 rounded-lg bg-red-50 flex items-center justify-center shrink-0">
-                    <Zap className="text-red-500" size={20} />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-[#171717] text-lg">Slow IT Provisioning</h4>
-                    <p className="text-gray-500 leading-relaxed">Employees waiting days for email and Slack access.</p>
-                  </div>
-                </div>
-                
-                <div className="flex gap-4 items-start">
-                  <div className="w-10 h-10 rounded-lg bg-red-50 flex items-center justify-center shrink-0">
-                    <Shield className="text-red-500" size={20} />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-[#171717] text-lg">Compliance Gaps</h4>
-                    <p className="text-gray-500 leading-relaxed">Missing policy acknowledgments and incomplete files.</p>
-                  </div>
+
+                <div className="bg-green-50 p-6 rounded-xl border-l-4 border-green-500">
+                  <h3 className="text-xl font-bold text-[#171717] mb-2">The Solution</h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    Autopilot creates a single source of truth so people, tasks, and timelines never fall through the cracks.
+                  </p>
                 </div>
               </div>
             </div>
-            
-            <div className="bg-gray-50 rounded-2xl p-8 border border-gray-200 relative">
-              <div className="absolute -top-4 -right-4 bg-red-500 text-white text-xs font-bold px-3 py-1 uppercase tracking-wider rounded shadow-lg rotate-3">
-                The Old Way
-              </div>
-              <div className="space-y-4 opacity-60 pointer-events-none grayscale">
-                <div className="bg-white p-4 rounded shadow-sm border border-gray-200 flex gap-3 items-center">
-                   <div className="w-8 h-8 bg-gray-200 rounded-full" />
-                   <div className="h-2 bg-gray-200 rounded w-24" />
-                   <div className="h-2 bg-gray-200 rounded w-full" />
-                </div>
-                <div className="bg-white p-4 rounded shadow-sm border border-gray-200 flex gap-3 items-center ml-8">
-                   <div className="w-8 h-8 bg-gray-200 rounded-full" />
-                   <div className="h-2 bg-gray-200 rounded w-24" />
-                   <div className="h-2 bg-gray-200 rounded w-full" />
-                </div>
-                <div className="bg-white p-4 rounded shadow-sm border border-gray-200 flex gap-3 items-center">
-                   <div className="w-8 h-8 bg-gray-200 rounded-full" />
-                   <div className="h-2 bg-gray-200 rounded w-24" />
-                   <div className="h-2 bg-gray-200 rounded w-full" />
-                </div>
-              </div>
-              <div className="mt-8 text-center">
-                 <p className="text-red-500 font-bold text-lg italic">"Where is my laptop?"</p>
+
+            <div className="relative h-full min-h-[400px] bg-gray-100 rounded-xl overflow-hidden border border-gray-200 shadow-lg">
+               {/* Using the messy office image to represent the 'problem' state visually */}
+               <img 
+                src={caseStudyImage} 
+                alt="Chaotic Office Environment" 
+                className="absolute inset-0 w-full h-full object-cover opacity-80"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end p-8">
+                <p className="text-white text-lg font-medium italic">"Is this document the latest version?"</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* The Solution Section */}
-      <section className="py-24 bg-[#F5F5F5]">
+      {/* Core Value Proposition */}
+      <section className="py-24 bg-[#F5F5F5] border-b border-gray-200 text-center">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-4xl font-bold text-[#171717] mb-6 tracking-tighter">
-              A complete onboarding journey in one flow
+          <div className="max-w-4xl mx-auto mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#171717] mb-6 tracking-tighter">
+              Use one connected system for every employee onboarding
             </h2>
-            <p className="text-xl text-gray-600 font-light leading-relaxed">
-              Autopilot orchestrates the entire process—from offer letter to first-day login—so nothing slips through the cracks.
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div className="bg-white p-10 rounded-2xl shadow-sm border border-gray-200 text-left hover:shadow-md transition-all hover:-translate-y-1">
+              <div className="w-14 h-14 bg-orange-50 rounded-xl flex items-center justify-center text-[#ED7A30] mb-6">
+                <ArrowRight size={28} />
+              </div>
+              <h3 className="text-2xl font-bold text-[#171717] mb-4">Guided Journey</h3>
+              <p className="text-gray-600 leading-relaxed text-lg">
+                From pre-boarding forms to IT setup. Handle compliance checks, and team handovers—keep every step in one connected, traceable flow.
+              </p>
+            </div>
+
+            <div className="bg-white p-10 rounded-2xl shadow-sm border border-gray-200 text-left hover:shadow-md transition-all hover:-translate-y-1">
+              <div className="w-14 h-14 bg-orange-50 rounded-xl flex items-center justify-center text-[#ED7A30] mb-6">
+                <Zap size={28} />
+              </div>
+              <h3 className="text-2xl font-bold text-[#171717] mb-4">The Result</h3>
+              <p className="text-gray-600 leading-relaxed text-lg">
+                Give new hires a consistent, well-coordinated onboarding experience without delays, confusion, or missing steps.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Key Features That Matter */}
+      <section className="py-24 bg-white border-b border-gray-200">
+        <div className="container mx-auto px-4 md:px-6">
+          <h2 className="text-3xl font-bold text-[#171717] border-l-8 border-[#ED7A30] pl-6 uppercase tracking-wide mb-16">
+            Key Features That Matter
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+             {[
+               "Automated Data & Document Collection",
+               "Multi-Team Checklists",
+               "Role-Based Visibility",
+               "Built-In Communication",
+               "Document Generation & Signing",
+               "Automatic Archiving",
+               "AI-Driven Document Validation"
+             ].map((feature, i) => (
+               <div key={i} className="bg-gray-50 p-6 rounded-xl border border-gray-100 flex items-center gap-4 hover:border-[#ED7A30] transition-colors group">
+                 <div className="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-[#ED7A30] shrink-0 group-hover:scale-110 transition-transform">
+                    <Check size={20} strokeWidth={3} />
+                 </div>
+                 <span className="font-bold text-[#171717] text-lg">{feature}</span>
+               </div>
+             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Integrations */}
+      <section className="py-24 bg-[#F5F5F5] border-b border-gray-200">
+        <div className="container mx-auto px-4 md:px-6">
+           <div className="flex flex-col lg:flex-row gap-16 items-center">
+             <div className="lg:w-1/3">
+                <h2 className="text-3xl font-bold text-[#171717] mb-6 tracking-tighter">
+                  Works with the tools your team already uses
+                </h2>
+                <p className="text-lg text-gray-600 font-light mb-8">
+                  Autopilot fits naturally into your existing environment, no need to rebuild.
+                </p>
+                <Button variant="outline" className="border-[#ED7A30] text-[#ED7A30] hover:bg-[#ED7A30] hover:text-white font-bold uppercase">
+                  View All Integrations
+                </Button>
+             </div>
+             
+             <div className="lg:w-2/3 grid grid-cols-2 md:grid-cols-4 gap-6">
+                {["Sage One", "DocuSign", "flow", "gear", "Azure", "pipedrive", "SharePoint Online"].map((tool, i) => (
+                  <div key={i} className="bg-white h-24 rounded-xl border border-gray-200 flex items-center justify-center shadow-sm hover:shadow-md transition-all text-gray-500 font-bold text-sm">
+                    {tool}
+                  </div>
+                ))}
+             </div>
+           </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section className="py-24 bg-white border-b border-gray-200">
+        <div className="container mx-auto px-4 md:px-6">
+          <h2 className="text-3xl font-bold text-[#171717] mb-16 text-center uppercase tracking-tighter">
+            Made for People. Powered by Process.
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+             <div className="hidden md:block absolute top-8 left-0 right-0 h-0.5 bg-gray-100 -z-10" />
+             
+             {[
+               {
+                 title: "Prepare Once",
+                 desc: "Set up your onboarding checklist, data fields, documents, and automations—one setup for all future workflows."
+               },
+               {
+                 title: "Collect What's Needed",
+                 desc: "External parties complete a clean, guided journey to submit details, upload documents, and sign agreements."
+               },
+               {
+                 title: "Everyone in Sync",
+                 desc: "HR, IT, Finance, Payroll, and vendors receive structured tasks with full visibility of what's done and what's pending."
+               },
+               {
+                 title: "Deliver a Confident Start",
+                 desc: "Every onboarding ends with validated data, completed documents, and a complete audit trail without anyone needing to chase."
+               }
+             ].map((step, i) => (
+               <div key={i} className="bg-white pt-4">
+                 <div className="w-16 h-16 bg-[#ED7A30] text-white rounded-2xl flex items-center justify-center text-xl font-bold mb-6 mx-auto md:mx-0 shadow-lg rotate-3">
+                   {i + 1}
+                 </div>
+                 <h3 className="text-xl font-bold text-[#171717] mb-3">{step.title}</h3>
+                 <p className="text-gray-600 text-sm leading-relaxed">{step.desc}</p>
+               </div>
+             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Case Study: YMCA */}
+      <section className="py-24 bg-[#171717] text-white border-b border-gray-800">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center mb-16">
+            <div className="inline-block bg-[#ED7A30] text-white text-xs font-bold px-3 py-1 uppercase tracking-widest mb-6">
+              Case Study: YMCA
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight text-white max-w-5xl mx-auto tracking-tighter mb-8">
+              From Paper Delays to Real-Time, Error-Free Onboarding for YMCA
+            </h2>
+            <p className="text-xl text-gray-400 font-light italic">
+              "A network of partners. A shared standard."
             </p>
           </div>
 
-          <div className="max-w-5xl mx-auto">
-            <WindowFrame title="Employee Onboarding Workflow">
-              <img src={dashboardImage} alt="Onboarding Dashboard" className="w-full h-auto" />
-            </WindowFrame>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
-              {
-                title: "Pre-Boarding",
-                desc: "Send welcome kits, digital contracts, and data forms before day one.",
-                step: "01"
-              },
-              {
-                title: "Day One",
-                desc: "Automate IT account creation and hardware provisioning requests.",
-                step: "02"
-              },
-              {
-                title: "First Week",
-                desc: "Schedule check-ins, assign training, and track policy sign-offs.",
-                step: "03"
-              }
-            ].map((feature, i) => (
-              <div key={i} className="bg-white p-8 rounded-xl border border-gray-200 hover:border-[#ED7A30] transition-colors group">
-                <div className="text-4xl font-bold text-gray-200 mb-4 group-hover:text-[#ED7A30] transition-colors">{feature.step}</div>
-                <h3 className="text-xl font-bold text-[#171717] mb-3">{feature.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{feature.desc}</p>
+              "Gave remote and rural staff mobile-friendly access, reducing onboarding delays caused by limited computer access.",
+              "Centralized documents and activity logs for easy retrieval, removing back-and-forth and missing paperwork during supplier or partner onboarding.",
+              "Standardized onboarding steps through rule-driven digital workflows, ensuring consistency and fewer manual errors."
+            ].map((point, i) => (
+              <div key={i} className="bg-gray-800/50 p-8 rounded-xl border border-gray-700">
+                <div className="w-10 h-10 bg-[#ED7A30]/20 text-[#ED7A30] rounded-full flex items-center justify-center mb-6">
+                  <Check size={20} />
+                </div>
+                <p className="text-gray-300 leading-relaxed">{point}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Results Section */}
-      <section className="py-24 bg-[#171717] text-white border-b border-gray-800">
+      {/* Testimonials */}
+      <section className="py-24 bg-white border-b border-gray-200">
         <div className="container mx-auto px-4 md:px-6">
-           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-             <div>
-                <h2 className="text-4xl font-bold mb-8 tracking-tight">The Autopilot Effect</h2>
-                <div className="space-y-6">
-                  <div className="flex gap-4 items-center border-b border-gray-800 pb-6">
-                    <span className="text-5xl font-bold text-[#ED7A30]">40%</span>
-                    <p className="text-xl text-gray-300">Faster time-to-productivity for new hires</p>
-                  </div>
-                  <div className="flex gap-4 items-center border-b border-gray-800 pb-6">
-                    <span className="text-5xl font-bold text-[#ED7A30]">0</span>
-                    <p className="text-xl text-gray-300">Emails needed to setup IT accounts</p>
-                  </div>
-                  <div className="flex gap-4 items-center">
-                    <span className="text-5xl font-bold text-[#ED7A30]">100%</span>
-                    <p className="text-xl text-gray-300">Compliance on policy acknowledgments</p>
-                  </div>
+          <h2 className="text-3xl md:text-5xl font-bold text-[#171717] text-center mb-16 tracking-tighter">
+            Results that speak for themselves
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {[
+              {
+                quote: "Autopilot Onboarding has transformed our internal processes. What used to take days now takes hours. The visibility and robust reporting have saved us countless hours.",
+                author: "Jane Doe",
+                role: "Operations Manager"
+              },
+              {
+                quote: "The ease of setting up workflows and the clarity it provides are game-changers. Our team is more efficient, and we can make quicker, more informed decisions.",
+                author: "John Smith",
+                role: ""
+              },
+              {
+                quote: "The customizable features and control are unmatched. Finally, an onboarding solution that truly understands our needs.",
+                author: "Emily White",
+                role: ""
+              }
+            ].map((t, i) => (
+              <div key={i} className="bg-gray-50 p-8 rounded-xl border border-gray-100 relative">
+                <div className="text-[#ED7A30] text-4xl font-serif absolute top-4 left-4 opacity-20">"</div>
+                <p className="text-gray-700 text-lg italic mb-6 relative z-10 pt-4">"{t.quote}"</p>
+                <div>
+                  <div className="font-bold text-[#171717]">{t.author}</div>
+                  {t.role && <div className="text-sm text-gray-500">{t.role}</div>}
                 </div>
-             </div>
-             <div className="bg-gray-800/50 p-10 rounded-2xl border border-gray-700">
-                <p className="text-2xl font-light italic leading-relaxed mb-8 text-gray-300">
-                  "Our new hires used to spend their first week filling out forms. Now they spend it meeting their team and learning the product. It's a game changer."
-                </p>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-gray-600 rounded-full" />
-                  <div>
-                    <div className="font-bold text-white">Sarah Jenkins</div>
-                    <div className="text-[#ED7A30] text-sm">VP of People, TechFlow</div>
-                  </div>
-                </div>
-             </div>
-           </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4 md:px-6 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#171717] mb-8 tracking-tighter max-w-3xl mx-auto">
-            Ready to upgrade your welcome mat?
+      {/* Footer / Bottom CTA */}
+      <section className="py-32 bg-[#ED7A30] text-white text-center">
+        <div className="container mx-auto px-4 md:px-6">
+          <h2 className="text-4xl md:text-6xl font-extrabold leading-[1.1] tracking-tighter mb-8 max-w-4xl mx-auto">
+            Make onboarding the easiest part of your day
           </h2>
-          <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
-            Join forward-thinking companies who treat onboarding as a strategic advantage, not an admin burden.
+          <p className="text-xl opacity-90 mb-12 font-light">
+            Connecting people, teams, and partners from day one
           </p>
-          <Button className="bg-[#ED7A30] hover:bg-[#d66520] text-white text-xl px-12 py-8 rounded-none font-bold uppercase tracking-wider shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-1">
-            Get Started Now
-          </Button>
+          
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
+             <Button className="bg-white text-[#ED7A30] hover:bg-gray-100 hover:text-[#ED7A30] text-xl px-12 py-8 rounded-none font-bold uppercase tracking-wider shadow-2xl">
+                Book a Demo
+             </Button>
+          </div>
+
+          <div className="flex justify-center gap-8 text-sm font-bold uppercase tracking-widest opacity-80">
+            <span className="cursor-pointer hover:opacity-100 hover:underline">Product</span>
+            <span className="cursor-pointer hover:opacity-100 hover:underline">Resources</span>
+          </div>
         </div>
       </section>
     </div>
