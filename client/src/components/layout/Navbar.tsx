@@ -34,9 +34,7 @@ export function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/">
-            <a className="flex items-center">
-              <img src={logo} alt="Autopilot Onboarding" className="h-10 w-auto" />
-            </a>
+            <img src={logo} alt="Autopilot Onboarding" className="h-10 w-auto cursor-pointer" />
           </Link>
 
           {/* Desktop Nav */}
@@ -53,10 +51,8 @@ export function Navbar() {
                     <DropdownMenuContent className="w-64 p-2 bg-white border border-gray-200 shadow-xl rounded-none animate-in fade-in-0 zoom-in-95">
                       {solutionLinks.map((subLink) => (
                         <DropdownMenuItem key={subLink.name} asChild className="rounded-none cursor-pointer focus:bg-orange-50 focus:text-[#ED7A30]">
-                          <Link href={subLink.href}>
-                            <a className="block w-full py-2 px-2 text-sm font-medium text-[#171717]">
-                              {subLink.name}
-                            </a>
+                          <Link href={subLink.href} className="block w-full py-2 px-2 text-sm font-medium text-[#171717]">
+                            {subLink.name}
                           </Link>
                         </DropdownMenuItem>
                       ))}
@@ -66,14 +62,14 @@ export function Navbar() {
               }
               
               return (
-                <Link key={link.name} href={link.href}>
-                  <a
-                    className={`text-sm font-semibold uppercase tracking-wide hover:text-[#ED7A30] transition-colors ${
-                      location === link.href ? "text-[#ED7A30]" : "text-[#171717]"
-                    }`}
-                  >
-                    {link.name}
-                  </a>
+                <Link 
+                  key={link.name} 
+                  href={link.href}
+                  className={`text-sm font-semibold uppercase tracking-wide hover:text-[#ED7A30] transition-colors ${
+                    location === link.href ? "text-[#ED7A30]" : "text-[#171717]"
+                  }`}
+                >
+                  {link.name}
                 </Link>
               );
             })}
@@ -111,13 +107,8 @@ export function Navbar() {
                     </div>
                     <div className="pl-4 flex flex-col space-y-3">
                       {solutionLinks.map((subLink) => (
-                         <Link key={subLink.name} href={subLink.href}>
-                           <a 
-                             className="block text-sm font-medium text-gray-600 hover:text-[#ED7A30]"
-                             onClick={() => setIsOpen(false)}
-                           >
-                             {subLink.name}
-                           </a>
+                         <Link key={subLink.name} href={subLink.href} className="block text-sm font-medium text-gray-600 hover:text-[#ED7A30]" onClick={() => setIsOpen(false)}>
+                           {subLink.name}
                          </Link>
                       ))}
                     </div>
@@ -125,13 +116,13 @@ export function Navbar() {
                 );
               }
               return (
-                <Link key={link.name} href={link.href}>
-                  <a
-                    className="block text-base font-semibold text-[#171717] hover:text-[#ED7A30] uppercase tracking-wide"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {link.name}
-                  </a>
+                <Link 
+                  key={link.name} 
+                  href={link.href}
+                  className="block text-base font-semibold text-[#171717] hover:text-[#ED7A30] uppercase tracking-wide"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {link.name}
                 </Link>
               );
             })}
