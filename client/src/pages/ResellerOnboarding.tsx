@@ -41,7 +41,7 @@ export default function ResellerOnboarding() {
             <h3 className="text-xl md:text-2xl font-bold text-[#171717] mb-12 tracking-tighter uppercase opacity-80">
             Trusted by teams who care about first impressions
           </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 items-center justify-items-center opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 items-center justify-items-center [&>*]:opacity-50 [&>*]:grayscale [&>*]:transition-all [&>*]:duration-500 [&>:hover]:grayscale-0 [&>:hover]:opacity-100">
             <div className="font-bold text-xl text-green-700 flex items-center justify-center gap-2">
                <span className="text-2xl">🌱</span> Sanegrowers
             </div>
