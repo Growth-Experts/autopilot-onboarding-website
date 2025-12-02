@@ -53,7 +53,7 @@ export function CaseStudyTemplate({
   return (
     <div className="bg-white font-montserrat">
       {/* Hero Section */}
-      <section className="pt-24 pb-12 bg-[#171717] text-white relative overflow-hidden">
+      <section className="bg-[#171717] text-white relative overflow-hidden pt-[30px] pb-[30px]">
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <Link href="/case-studies">
             <Button variant="link" className="text-gray-400 hover:text-[#ED7A30] pl-0 mb-6 group">
@@ -93,7 +93,6 @@ export function CaseStudyTemplate({
         {/* Background Blobs */}
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#ED7A30] rounded-full opacity-5 blur-[100px] pointer-events-none translate-x-1/3 -translate-y-1/3" />
       </section>
-
       {/* Challenge Section */}
       <section className="py-24 bg-white border-b border-gray-100">
         <div className="container mx-auto px-4 md:px-6">
@@ -135,7 +134,6 @@ export function CaseStudyTemplate({
           </div>
         </div>
       </section>
-
       {/* Solution Section */}
       <section className="py-24 bg-[#F5F5F5]">
         <div className="container mx-auto px-4 md:px-6">
@@ -168,7 +166,6 @@ export function CaseStudyTemplate({
           </div>
         </div>
       </section>
-
       {/* Results Section */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
