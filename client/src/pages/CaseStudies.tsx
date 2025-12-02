@@ -3,6 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import talksureLogo from "@assets/talksure-logo_1764682329403.png";
 import lawdLogo from "@assets/lawd-logo_1764682505153.png";
 import saCanegrowersLogo from "@assets/SA_CaneGrowers_logo_1764682801217.png";
+import syntechLogo from "@assets/Syntech-Logo_1764684082971.png";
 import { Link } from "wouter";
 
 export default function CaseStudies() {
@@ -34,7 +35,7 @@ export default function CaseStudies() {
       description: "How Syntech replaced manual forms with a fully digital workflow, reducing onboarding from 10 days to 1 day.",
       stat: "10 Days → 1 Day",
       color: "bg-orange-600",
-      logo: <div className="font-extrabold text-2xl text-gray-800 tracking-tight">SYNTECH</div>,
+      logo: <img src={syntechLogo} alt="Syntech" className="h-12 w-auto object-contain" />,
       link: "/case-studies/syntech"
     },
     {

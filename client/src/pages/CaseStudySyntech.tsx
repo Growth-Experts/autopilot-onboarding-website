@@ -1,5 +1,6 @@
 import { CaseStudyTemplate } from "@/components/CaseStudyTemplate";
 import dashboardImage from "@assets/generated_images/clean_saas_form_interface_for_employee_data_collection.png";
+import syntechLogo from "@assets/Syntech-Logo_1764684082971.png";
 
 export default function CaseStudySyntech() {
   return (
@@ -8,7 +9,7 @@ export default function CaseStudySyntech() {
       industry="Technology Distribution"
       title="Faster, Paperless Reseller Onboarding"
       subtitle="How Syntech leveraged Autopilot to streamline their reseller application process, reducing turnaround time from 10 days to just 1 day."
-      logo={<div className="font-extrabold text-3xl text-white tracking-tight">SYNTECH</div>}
+      logo={<img src={syntechLogo} alt="Syntech" className="h-12 w-auto object-contain brightness-0 invert" />}
       stats={[
         { label: "Turnaround Time", value: "1 Day" },
         { label: "Record Completion", value: "10 Min" },
