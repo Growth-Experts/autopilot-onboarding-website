@@ -4,32 +4,36 @@ import { ArrowUpRight } from "lucide-react";
 export default function CaseStudies() {
   const cases = [
     {
-      client: "YMCA",
-      industry: "Non-Profit",
-      title: "From Paper Delays to Real-Time, Error-Free Onboarding",
-      stat: "60% Faster Onboarding",
-      color: "bg-red-600"
-    },
-    {
-      client: "TechFlow Inc.",
-      industry: "SaaS",
-      title: "Scaling Engineering Hires Across 3 Continents",
-      stat: "Zero Compliance Failures",
+      client: "Talksure",
+      industry: "Financial Services",
+      title: "Streamlining Procurement with Microsoft Teams",
+      description: "How Talksure centralized purchase requests inside Teams, reduced ERP licence costs, and sped up approvals across 1,200 employees.",
+      stat: "Reduced ERP Costs",
       color: "bg-blue-600"
     },
     {
-      client: "Global Logistics",
-      industry: "Supply Chain",
-      title: "Automating Vendor Compliance for 500+ Suppliers",
-      stat: "Saved 20hrs/Week",
-      color: "bg-green-600"
+      client: "LAWD",
+      industry: "Legal Services",
+      title: "Cutting Onboarding Time by 40-50%",
+      description: "See how LAWD automated recruitment and onboarding, improved accountability, and scaled processes during rapid growth.",
+      stat: "40-50% Faster",
+      color: "bg-slate-600"
     },
     {
-      client: "City Finance",
-      industry: "Financial Services",
-      title: "Secure Onboarding for High-Trust Roles",
-      stat: "100% Audit Readiness",
-      color: "bg-slate-600"
+      client: "Syntech",
+      industry: "Technology",
+      title: "Faster, Paperless Reseller Onboarding",
+      description: "How Syntech replaced manual forms with a fully digital workflow, reducing onboarding from 10 days to 1 day.",
+      stat: "10 Days → 1 Day",
+      color: "bg-orange-600"
+    },
+    {
+      client: "SA Canegrowers",
+      industry: "Agriculture",
+      title: "Approvals Built Directly into Teams",
+      description: "How SA Canegrowers digitized key approval processes and improved control by integrating Autopilot into their daily Microsoft 365 workflow.",
+      stat: "Integrated into MS Teams",
+      color: "bg-green-600"
     }
   ];
 
@@ -61,12 +65,15 @@ export default function CaseStudies() {
                 <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wide mb-2">
                   {study.client}
                 </h3>
-                <h2 className="text-3xl font-bold text-[#171717] mb-6 group-hover:underline decoration-[#ED7A30] decoration-2 underline-offset-4">
+                <h2 className="text-3xl font-bold text-[#171717] mb-4 group-hover:underline decoration-[#ED7A30] decoration-2 underline-offset-4">
                   {study.title}
                 </h2>
+                <p className="text-gray-600 text-lg leading-relaxed mb-8">
+                  {study.description}
+                </p>
                 
-                <div className="mt-auto pt-8 border-t border-gray-100">
-                  <div className="text-4xl font-bold text-[#ED7A30]">
+                <div className="mt-auto pt-6 border-t border-gray-100">
+                  <div className="text-lg font-bold text-[#ED7A30] uppercase tracking-wide">
                     {study.stat}
                   </div>
                 </div>
