@@ -30,8 +30,6 @@ export function Footer() {
             <ul className="space-y-4 text-sm text-gray-300">
               <li><Link href="/case-studies"><a className="hover:text-white transition-colors">Case Studies</a></Link></li>
               <li><Link href="/contact"><a className="hover:text-white transition-colors">Contact Us</a></Link></li>
-              <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Terms of Service</a></li>
             </ul>
           </div>
 
@@ -49,9 +47,8 @@ export function Footer() {
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
           <p>&copy; 2025 Autopilot Onboarding. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="hover:text-white">Twitter</a>
-            <a href="#" className="hover:text-white">LinkedIn</a>
-            <a href="#" className="hover:text-white">Facebook</a>
+            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
           </div>
         </div>
       </div>
