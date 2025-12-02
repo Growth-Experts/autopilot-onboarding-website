@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
+import talksureLogo from "@assets/talksure-logo_1764682329403.png";
+import lawdLogo from "@assets/lawd-logo_1764682505153.png";
 
 export default function CaseStudies() {
   const cases = [
@@ -9,7 +11,8 @@ export default function CaseStudies() {
       title: "Streamlining Procurement with Microsoft Teams",
       description: "How Talksure centralized purchase requests inside Teams, reduced ERP licence costs, and sped up approvals across 1,200 employees.",
       stat: "Reduced ERP Costs",
-      color: "bg-blue-600"
+      color: "bg-blue-600",
+      logo: <img src={talksureLogo} alt="Talksure" className="h-12 w-auto object-contain" />
     },
     {
       client: "LAWD",
@@ -17,7 +20,8 @@ export default function CaseStudies() {
       title: "Cutting Onboarding Time by 40-50%",
       description: "See how LAWD automated recruitment and onboarding, improved accountability, and scaled processes during rapid growth.",
       stat: "40-50% Faster",
-      color: "bg-slate-600"
+      color: "bg-slate-600",
+      logo: <img src={lawdLogo} alt="LAWD" className="h-12 w-auto object-contain" />
     },
     {
       client: "Syntech",
@@ -25,7 +29,8 @@ export default function CaseStudies() {
       title: "Faster, Paperless Reseller Onboarding",
       description: "How Syntech replaced manual forms with a fully digital workflow, reducing onboarding from 10 days to 1 day.",
       stat: "10 Days → 1 Day",
-      color: "bg-orange-600"
+      color: "bg-orange-600",
+      logo: <div className="font-extrabold text-2xl text-gray-800 tracking-tight">SYNTECH</div>
     },
     {
       client: "SA Canegrowers",
@@ -33,7 +38,12 @@ export default function CaseStudies() {
       title: "Approvals Built Directly into Teams",
       description: "How SA Canegrowers digitized key approval processes and improved control by integrating Autopilot into their daily Microsoft 365 workflow.",
       stat: "Integrated into MS Teams",
-      color: "bg-green-600"
+      color: "bg-green-600",
+      logo: (
+        <div className="font-bold text-xl text-green-700 flex items-center gap-2">
+           <span className="text-2xl">🌱</span> SA Canegrowers
+        </div>
+      )
     }
   ];
 
@@ -55,13 +65,13 @@ export default function CaseStudies() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {cases.map((study, index) => (
               <div key={index} className="group bg-white border border-gray-200 p-8 md:p-12 hover:border-[#ED7A30] transition-colors cursor-pointer flex flex-col h-full">
-                <div className="flex justify-end items-start mb-8">
+                <div className="flex justify-between items-start mb-8">
+                  <div className="h-12 flex items-center">
+                    {study.logo}
+                  </div>
                   <ArrowUpRight className="text-gray-300 group-hover:text-[#ED7A30] transition-colors w-8 h-8" />
                 </div>
                 
-                <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wide mb-2">
-                  {study.client}
-                </h3>
                 <h2 className="text-3xl font-bold text-[#171717] mb-4 group-hover:underline decoration-[#ED7A30] decoration-2 underline-offset-4">
                   {study.title}
                 </h2>
