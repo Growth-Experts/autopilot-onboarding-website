@@ -166,7 +166,7 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-bold text-[#171717] mb-6 tracking-tighter">
               Use one connected system for every onboarding
             </h2>
-            <p className="text-xl text-gray-600 font-light leading-relaxed max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto font-medium">
               Autopilot links HR, IT, Finance, and your vendors into one shared onboarding flow - no spreadsheets, no chasing, no guesswork.
             </p>
           </div>
