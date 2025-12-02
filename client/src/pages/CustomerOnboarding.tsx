@@ -4,6 +4,11 @@ import caseStudyImage from "@assets/stock_images/chaotic_messy_office_8b8ef31a.j
 import capsicumLogo from "@assets/capsicum-logo_1764671045702.png";
 import saCanegrowersLogo from "@assets/SA_CaneGrowers_logo_1764682801217.png";
 import threeWayLogo from "@assets/3way-logo_1764684321801.png";
+import brmLogo from "@assets/brm-logo_1764685148310.png";
+import cbfLogo from "@assets/cbf-logo_1764685158359.png";
+import nologoLogo from "@assets/nologo_studios_1764685164945.png";
+import tongaatLogo from "@assets/Tongaat-Huletts-Logo_1764685174149.png";
+import turnkeyLogo from "@assets/Turnkey_logo_1764685300771.png";
 
 export default function CustomerOnboarding() {
   return (
@@ -53,13 +58,21 @@ export default function CustomerOnboarding() {
             <div className="flex items-center justify-center">
                <img src={capsicumLogo} alt="Capsicum" className="h-12 w-auto object-contain" />
             </div>
-            <div className="font-bold text-xl text-purple-800 border-2 border-purple-800 rounded-full w-12 h-12 flex items-center justify-center">cbf</div>
-            <div className="font-bold text-xl text-gray-800 flex items-center justify-center gap-1">
-               <span className="text-red-600 text-2xl">❖</span> turnkey
+            <div className="flex items-center justify-center">
+               <img src={cbfLogo} alt="CBF" className="h-12 w-auto object-contain" />
             </div>
-             <div className="font-bold text-lg text-red-700 border-2 border-red-700 rounded px-3 py-1 tracking-wider">BRM</div>
-            <div className="font-extrabold text-2xl text-black tracking-tighter lowercase">nologo</div>
-            <div className="font-bold text-xl text-amber-800 font-serif">Tongaat Hulett</div>
+            <div className="flex items-center justify-center">
+               <img src={turnkeyLogo} alt="Turnkey" className="h-12 w-auto object-contain" />
+            </div>
+             <div className="flex items-center justify-center">
+               <img src={brmLogo} alt="BRM" className="h-12 w-auto object-contain" />
+            </div>
+            <div className="flex items-center justify-center">
+               <img src={nologoLogo} alt="Nologo Studios" className="h-12 w-auto object-contain" />
+            </div>
+            <div className="flex items-center justify-center">
+               <img src={tongaatLogo} alt="Tongaat Hulett" className="h-12 w-auto object-contain" />
+            </div>
           </div>
         </div>
       </section>
