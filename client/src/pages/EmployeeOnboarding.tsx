@@ -303,24 +303,40 @@ export default function EmployeeOnboarding() {
       </section>
 
       {/* Footer / Bottom CTA */}
-      <section className="py-32 bg-[#ED7A30] text-white text-center">
+      <section className="py-32 bg-[#ED7A30] text-white">
         <div className="container mx-auto px-4 md:px-6">
-          <h2 className="text-4xl md:text-6xl font-extrabold leading-[1.1] tracking-tighter mb-8 max-w-4xl mx-auto">
-            Make onboarding the easiest part of your day
-          </h2>
-          <p className="text-xl opacity-90 mb-12 font-light">
-            Connecting people, teams, and partners from day one
-          </p>
-          
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
-             <Button className="bg-white text-[#ED7A30] hover:bg-gray-100 hover:text-[#ED7A30] text-xl px-12 py-8 rounded-none font-bold uppercase tracking-wider shadow-2xl">
-                Book a Demo
-             </Button>
-          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+            <div className="text-left">
+              <h2 className="text-4xl md:text-6xl font-extrabold leading-[1.1] tracking-tighter">
+                Make employee onboarding the easiest part of your day.
+              </h2>
+            </div>
+            
+            <div className="flex flex-col items-start gap-8">
+              <p className="text-xl md:text-2xl font-light opacity-90 leading-relaxed text-left">
+                Let's replace scattered emails and loose tasks with one clean onboarding flow.
+              </p>
 
-          <div className="flex justify-center gap-8 text-sm font-bold uppercase tracking-widest opacity-80">
-            <span className="cursor-pointer hover:opacity-100 hover:underline">Product</span>
-            <span className="cursor-pointer hover:opacity-100 hover:underline">Resources</span>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs md:text-sm font-medium opacity-80 w-full max-w-md">
+                {[
+                  "Free 30-day trial",
+                  "No payment info required",
+                  "Full feature access",
+                  "Dedicated onboarding support"
+                ].map((benefit, i) => (
+                  <div key={i} className="flex items-center gap-2">
+                    <div className="bg-white p-0.5 rounded-full">
+                      <Check className="w-2.5 h-2.5 text-green-600" strokeWidth={4} />
+                    </div>
+                    <span>{benefit}</span>
+                  </div>
+                ))}
+              </div>
+              
+              <Button className="bg-white text-[#ED7A30] hover:bg-gray-100 hover:text-[#ED7A30] text-xl px-10 py-8 rounded-none font-bold uppercase tracking-wider shadow-2xl w-full md:w-auto">
+                Book a Demo
+              </Button>
+            </div>
           </div>
         </div>
       </section>
