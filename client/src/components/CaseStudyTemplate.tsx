@@ -53,44 +53,45 @@ export function CaseStudyTemplate({
   return (
     <div className="bg-white font-montserrat">
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-[#171717] text-white relative overflow-hidden">
+      <section className="pt-24 pb-12 bg-[#171717] text-white relative overflow-hidden">
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <Link href="/case-studies">
-            <Button variant="link" className="text-gray-400 hover:text-[#ED7A30] pl-0 mb-8 group">
+            <Button variant="link" className="text-gray-400 hover:text-[#ED7A30] pl-0 mb-6 group">
               <ArrowLeft className="mr-2 h-4 w-4 group-hover:-translate-x-1 transition-transform" />
               Back to Case Studies
             </Button>
           </Link>
           
-          <div className="flex flex-col md:flex-row gap-8 items-start mb-12">
-            <div className="bg-white/10 p-6 rounded-xl backdrop-blur-sm border border-white/10">
+          <div className="flex flex-col md:flex-row gap-6 items-center md:items-start mb-8">
+            <div className="opacity-90">
               {logo}
             </div>
-            <div className="bg-[#ED7A30]/10 text-[#ED7A30] px-4 py-1 rounded-full text-sm font-bold uppercase tracking-widest border border-[#ED7A30]/20 self-start mt-2">
+            <div className="hidden md:block w-px h-8 bg-gray-700 mx-2 self-center" />
+            <div className="text-[#ED7A30] font-bold uppercase tracking-widest text-sm md:self-center">
               {industry}
             </div>
           </div>
 
-          <h1 className="text-4xl md:text-6xl font-extrabold mb-8 leading-tight tracking-tighter max-w-5xl text-white">
+          <h1 className="text-3xl md:text-5xl font-extrabold mb-6 leading-tight tracking-tighter max-w-4xl text-white">
             {title}
           </h1>
           
-          <p className="text-xl text-gray-400 max-w-3xl leading-relaxed font-light mb-16">
+          <p className="text-lg text-gray-400 max-w-3xl leading-relaxed font-light mb-10">
             {subtitle}
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-gray-800 pt-12">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-4 border-t border-gray-800 pt-8">
             {stats.map((stat, i) => (
               <div key={i}>
-                <div className="text-4xl md:text-5xl font-bold text-[#ED7A30] mb-2">{stat.value}</div>
-                <div className="text-gray-400 uppercase tracking-wide text-sm font-bold">{stat.label}</div>
+                <div className="text-3xl md:text-4xl font-bold text-[#ED7A30] mb-1">{stat.value}</div>
+                <div className="text-gray-500 uppercase tracking-wide text-xs font-bold">{stat.label}</div>
               </div>
             ))}
           </div>
         </div>
         
         {/* Background Blobs */}
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#ED7A30] rounded-full opacity-5 blur-[120px] pointer-events-none translate-x-1/3 -translate-y-1/3" />
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#ED7A30] rounded-full opacity-5 blur-[100px] pointer-events-none translate-x-1/3 -translate-y-1/3" />
       </section>
 
       {/* Challenge Section */}
