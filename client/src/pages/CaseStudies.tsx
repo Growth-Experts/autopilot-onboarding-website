@@ -55,10 +55,7 @@ export default function CaseStudies() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {cases.map((study, index) => (
               <div key={index} className="group bg-white border border-gray-200 p-8 md:p-12 hover:border-[#ED7A30] transition-colors cursor-pointer flex flex-col h-full">
-                <div className="flex justify-between items-start mb-8">
-                  <div className={`px-4 py-1 text-white text-xs font-bold uppercase tracking-widest ${study.color}`}>
-                    {study.industry}
-                  </div>
+                <div className="flex justify-end items-start mb-8">
                   <ArrowUpRight className="text-gray-300 group-hover:text-[#ED7A30] transition-colors w-8 h-8" />
                 </div>
                 
