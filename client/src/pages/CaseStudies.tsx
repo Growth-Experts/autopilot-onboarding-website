@@ -41,12 +41,11 @@ export default function CaseStudies() {
             Smarter Onboarding. <br className="hidden md:block" />
             <span className="text-[#ED7A30]">Stronger Partnerships.</span>
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl font-light leading-relaxed">
+          <p className="text-xl text-gray-600 max-w-3xl leading-relaxed font-medium">
             See how organizations use Autopilot to replace scattered emails and manual checklists with one connected onboarding flow - for customers, vendors, resellers, and employees.
           </p>
         </div>
       </section>
-
       <section className="py-16 bg-[#F5F5F5]">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
