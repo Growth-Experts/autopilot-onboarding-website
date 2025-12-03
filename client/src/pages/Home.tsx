@@ -28,6 +28,54 @@ import nologoLogo from "@assets/nologo_studios_1764685164945.png";
 import tongaatLogo from "@assets/Tongaat-Huletts-Logo_1764685174149.png";
 import turnkeyLogo from "@assets/Turnkey_logo_1764685300771.png";
 
+import backoffice004 from "@assets/Backoffice_004_1764759276122.PNG";
+import backoffice005 from "@assets/Backoffice_005_1764759285752.PNG";
+import reseller009 from "@assets/Reseller_Application_009_1764759323929.PNG";
+import reseller011 from "@assets/Reseller_Application_011_1764759334079.PNG";
+
+function HeroSlideshow({ images }: { images: string[] }) {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % images.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [images.length]);
+
+  return (
+    <div className="relative w-full aspect-[16/9] bg-gray-50 overflow-hidden">
+      {images.map((img, index) => (
+        <div
+          key={index}
+          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+            index === currentIndex ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <img
+            src={img}
+            alt={`Onboarding Preview ${index + 1}`}
+            className="w-full h-full object-cover object-top"
+          />
+        </div>
+      ))}
+      
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+        {images.map((_, idx) => (
+          <button
+            key={idx}
+            onClick={() => setCurrentIndex(idx)}
+            className={`h-2 rounded-full transition-all duration-300 ${
+              idx === currentIndex ? "bg-[#ED7A30] w-8" : "bg-gray-300 hover:bg-gray-400 w-2"
+            }`}
+            aria-label={`Go to slide ${idx + 1}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function AppGallerySlider({ images }: { images: string[] }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -99,11 +147,7 @@ export default function Home() {
 
           <div className="max-w-6xl mx-auto mt-12">
             <WindowFrame title="Onboarding Overview - Dashboard">
-              <img 
-                src={heroDashboard} 
-                alt="Autopilot Dashboard" 
-                className="w-full h-auto object-cover"
-              />
+              <HeroSlideshow images={[backoffice004, backoffice005, reseller009, reseller011]} />
             </WindowFrame>
           </div>
         </div>
