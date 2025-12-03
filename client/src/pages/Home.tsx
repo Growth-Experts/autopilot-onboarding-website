@@ -27,7 +27,7 @@ import nologoLogo from "@assets/nologo_studios_1764685164945.png";
 import tongaatLogo from "@assets/Tongaat-Huletts-Logo_1764685174149.png";
 import turnkeyLogo from "@assets/Turnkey_logo_1764685300771.png";
 
-import backofficeHero from "@assets/Backoffice_004_1764758383470.PNG";
+import multiDeviceMockup from "@assets/generated_images/multi-device_saas_mockup_with_laptop,_tablet,_and_phone.png";
 
 function AppGallerySlider({ images }: { images: string[] }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -80,29 +80,6 @@ function AppGallerySlider({ images }: { images: string[] }) {
   );
 }
 
-function LaptopFrame({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="relative mx-auto w-full max-w-[800px]">
-      {/* Laptop Top/Screen */}
-      <div className="relative bg-gray-800 rounded-t-xl p-[3%] pb-[1%] shadow-2xl border-4 border-gray-700">
-        {/* Camera Dot */}
-        <div className="absolute top-[1.5%] left-1/2 -translate-x-1/2 w-[0.8%] h-[0.8%] rounded-full bg-black/60 border border-white/10" />
-        
-        {/* Screen Content Container */}
-        <div className="bg-white rounded-sm overflow-hidden relative aspect-[16/10]">
-           {children}
-        </div>
-      </div>
-      
-      {/* Laptop Bottom/Base */}
-      <div className="relative h-[15px] md:h-[24px] bg-gray-700 rounded-b-xl shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
-        {/* Opener Groove */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[15%] h-[40%] bg-gray-600 rounded-b-md" />
-      </div>
-    </div>
-  );
-}
-
 export default function Home() {
   return (
     <div className="bg-white">
@@ -115,10 +92,10 @@ export default function Home() {
             
             {/* Left Column: Text */}
             <div className="lg:col-span-5 text-left">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#171717] leading-[1.1] mb-8 tracking-tighter">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#171717] leading-[1.1] mb-8 tracking-tighter">
                 Onboarding shouldn't feel like a <span className="text-[#ED7A30]">scavenger hunt</span>
               </h1>
-              <h2 className="text-xl md:text-2xl text-gray-600 font-light leading-relaxed mb-10">
+              <h2 className="text-lg md:text-xl text-gray-600 font-light leading-relaxed mb-10">
                 <span className="font-bold text-[#171717]">Autopilot Onboarding</span> connects every department - HR, IT, Finance, Ops, and anyone else - so the people you're onboarding get one clean, guided flow instead of scattered emails and manual checklists.
               </h2>
               <Button className="bg-[#ED7A30] hover:bg-[#d66520] text-white text-lg px-8 py-4 rounded-none font-bold uppercase tracking-wider shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1">
@@ -126,16 +103,14 @@ export default function Home() {
               </Button>
             </div>
 
-            {/* Right Column: Laptop Image */}
-            <div className="lg:col-span-7 relative">
-              <div className="relative w-[140%] -right-[10%] lg:-right-[20%]">
-                <LaptopFrame>
+            {/* Right Column: Multi-Device Image */}
+            <div className="lg:col-span-7 flex justify-center items-center">
+              <div className="relative w-full max-w-[120%]">
                    <img 
-                    src={backofficeHero} 
-                    alt="Autopilot Onboarding Dashboard" 
-                    className="w-full h-full object-cover"
+                    src={multiDeviceMockup} 
+                    alt="Autopilot Onboarding Dashboard on Laptop, Tablet, and Phone" 
+                    className="w-full h-auto object-contain drop-shadow-2xl"
                   />
-                </LaptopFrame>
               </div>
             </div>
 
