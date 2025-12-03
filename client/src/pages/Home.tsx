@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { WindowFrame } from "@/components/ui/WindowFrame";
 import featureDashboard from "@assets/generated_images/clean_saas_form_interface_for_employee_data_collection.png";
 import checklistImage from "@assets/generated_images/saas_interface_showing_role-based_checklists_and_progress_tracking.png";
 import appShot1 from "@assets/generated_images/saas_dashboard_showing_onboarding_progress.png";
