@@ -20,22 +20,33 @@ export default function Contact() {
               <div className="grid grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-sm font-bold text-[#171717] uppercase tracking-wide">First Name</label>
-                  <Input className="rounded-none border-gray-300 focus:border-[#ED7A30] h-12 bg-gray-50" placeholder="Jane" />
+                  <Input className="rounded-none border-gray-300 focus:border-[#ED7A30] h-12 bg-gray-50" placeholder="Jane" required />
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-bold text-[#171717] uppercase tracking-wide">Last Name</label>
-                  <Input className="rounded-none border-gray-300 focus:border-[#ED7A30] h-12 bg-gray-50" placeholder="Doe" />
+                  <Input className="rounded-none border-gray-300 focus:border-[#ED7A30] h-12 bg-gray-50" placeholder="Doe" required />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-6">
+                <div className="space-y-2">
+                  <label className="text-sm font-bold text-[#171717] uppercase tracking-wide">Work Email</label>
+                  <Input type="email" className="rounded-none border-gray-300 focus:border-[#ED7A30] h-12 bg-gray-50" placeholder="jane@company.com" required />
+                </div>
+                <div className="space-y-2">
+                  <label className="text-sm font-bold text-[#171717] uppercase tracking-wide">Phone Number</label>
+                  <Input type="tel" className="rounded-none border-gray-300 focus:border-[#ED7A30] h-12 bg-gray-50" placeholder="+1 (555) 000-0000" required />
                 </div>
               </div>
 
               <div className="space-y-2">
-                <label className="text-sm font-bold text-[#171717] uppercase tracking-wide">Work Email</label>
-                <Input className="rounded-none border-gray-300 focus:border-[#ED7A30] h-12 bg-gray-50" placeholder="jane@company.com" />
+                <label className="text-sm font-bold text-[#171717] uppercase tracking-wide">Company Name</label>
+                <Input className="rounded-none border-gray-300 focus:border-[#ED7A30] h-12 bg-gray-50" placeholder="Acme Inc." required />
               </div>
 
               <div className="space-y-2">
                 <label className="text-sm font-bold text-[#171717] uppercase tracking-wide">Message</label>
-                <Textarea className="rounded-none border-gray-300 focus:border-[#ED7A30] min-h-[150px] bg-gray-50" placeholder="Tell us about your onboarding challenges..." />
+                <Textarea className="rounded-none border-gray-300 focus:border-[#ED7A30] min-h-[150px] bg-gray-50" placeholder="Tell us about your onboarding challenges..." required />
               </div>
 
               <Button className="w-full bg-[#ED7A30] hover:bg-[#d66520] text-white h-14 text-lg font-bold uppercase tracking-wider rounded-none">
