@@ -16,6 +16,7 @@ import capsicumLogo from "@assets/capsicum-logo_1764671045702.png";
 import integrationsImage from "@assets/autopilot-integrations_1764671619557.png";
 import { Check, ArrowRight, Clock, Users, FileText, Shield, MessageSquare, Database, Archive, Zap, Play, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
+import { Link } from "wouter";
 
 import autopilot_integrations from "@assets/autopilot-integrations.png";
 
