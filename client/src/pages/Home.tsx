@@ -44,23 +44,25 @@ function HeroSlideshow({ images }: { images: string[] }) {
   }, [images.length]);
 
   return (
-    <div className="relative w-full aspect-[16/9] bg-gray-100 overflow-hidden rounded-xl border border-gray-200 shadow-sm">
-      {images.map((img, index) => (
-        <div
-          key={index}
-          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-            index === currentIndex ? "opacity-100" : "opacity-0"
-          }`}
-        >
-          <img
-            src={img}
-            alt={`Onboarding Preview ${index + 1}`}
-            className="w-full h-full object-contain bg-gray-100"
-          />
-        </div>
-      ))}
+    <div className="flex flex-col gap-4">
+      <div className="relative w-full aspect-[16/9] bg-gray-100 overflow-hidden rounded-xl border border-gray-200 shadow-sm">
+        {images.map((img, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+              index === currentIndex ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            <img
+              src={img}
+              alt={`Onboarding Preview ${index + 1}`}
+              className="w-full h-full object-contain bg-gray-100"
+            />
+          </div>
+        ))}
+      </div>
       
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+      <div className="flex justify-center gap-2">
         {images.map((_, idx) => (
           <button
             key={idx}
