@@ -44,7 +44,7 @@ function HeroSlideshow({ images }: { images: string[] }) {
   }, [images.length]);
 
   return (
-    <div className="relative w-full aspect-[16/9] bg-gray-50 overflow-hidden">
+    <div className="relative w-full aspect-[16/9] bg-gray-100 overflow-hidden rounded-xl border border-gray-200 shadow-sm">
       {images.map((img, index) => (
         <div
           key={index}
@@ -55,7 +55,7 @@ function HeroSlideshow({ images }: { images: string[] }) {
           <img
             src={img}
             alt={`Onboarding Preview ${index + 1}`}
-            className="w-full h-full object-cover object-top"
+            className="w-full h-full object-contain bg-gray-100"
           />
         </div>
       ))}
