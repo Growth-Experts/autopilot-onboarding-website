@@ -10,6 +10,8 @@ import nologoLogo from "@assets/nologo_studios_1764685164945.png";
 import tongaatLogo from "@assets/Tongaat-Huletts-Logo_1764685174149.png";
 import turnkeyLogo from "@assets/Turnkey_logo_1764685300771.png";
 
+import { Link } from "wouter";
+
 export default function CustomerOnboarding() {
   return (
     <div className="bg-white font-montserrat">
@@ -268,6 +270,14 @@ export default function CustomerOnboarding() {
                 <p className="text-gray-300 leading-relaxed">{point}</p>
               </div>
             ))}
+          </div>
+
+          <div className="text-center mt-16">
+            <Link href="/case-studies/ymca">
+              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-[#171717] rounded-none uppercase font-bold px-10 py-6 text-lg transition-all duration-300">
+                Read Full Story
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
