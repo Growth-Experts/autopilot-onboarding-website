@@ -61,19 +61,6 @@ function HeroSlideshow({ images }: { images: string[] }) {
           </div>
         ))}
       </div>
-      
-      <div className="flex justify-center gap-2">
-        {images.map((_, idx) => (
-          <button
-            key={idx}
-            onClick={() => setCurrentIndex(idx)}
-            className={`h-2 rounded-full transition-all duration-300 ${
-              idx === currentIndex ? "bg-[#ED7A30] w-8" : "bg-gray-300 hover:bg-gray-400 w-2"
-            }`}
-            aria-label={`Go to slide ${idx + 1}`}
-          />
-        ))}
-      </div>
     </div>
   );
 }
