@@ -1,6 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { WindowFrame } from "@/components/ui/WindowFrame";
-import heroDashboard from "@assets/generated_images/modern_saas_dashboard_ui_showing_onboarding_progress_with_orange_accents.png";
 import featureDashboard from "@assets/generated_images/clean_saas_form_interface_for_employee_data_collection.png";
 import checklistImage from "@assets/generated_images/saas_interface_showing_role-based_checklists_and_progress_tracking.png";
 import appShot1 from "@assets/generated_images/saas_dashboard_showing_onboarding_progress.png";
@@ -27,6 +25,8 @@ import cbfLogo from "@assets/cbf-logo_1764685158359.png";
 import nologoLogo from "@assets/nologo_studios_1764685164945.png";
 import tongaatLogo from "@assets/Tongaat-Huletts-Logo_1764685174149.png";
 import turnkeyLogo from "@assets/Turnkey_logo_1764685300771.png";
+
+import backofficeHero from "@assets/Backoffice_004_1764758383470.PNG";
 
 function AppGallerySlider({ images }: { images: string[] }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -79,32 +79,65 @@ function AppGallerySlider({ images }: { images: string[] }) {
   );
 }
 
+function LaptopFrame({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="relative mx-auto w-full max-w-[800px]">
+      {/* Laptop Top/Screen */}
+      <div className="relative bg-gray-800 rounded-t-xl p-[3%] pb-[1%] shadow-2xl border-4 border-gray-700">
+        {/* Camera Dot */}
+        <div className="absolute top-[1.5%] left-1/2 -translate-x-1/2 w-[0.8%] h-[0.8%] rounded-full bg-black/60 border border-white/10" />
+        
+        {/* Screen Content Container */}
+        <div className="bg-white rounded-sm overflow-hidden relative aspect-[16/10]">
+           {children}
+        </div>
+      </div>
+      
+      {/* Laptop Bottom/Base */}
+      <div className="relative h-[15px] md:h-[24px] bg-gray-700 rounded-b-xl shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
+        {/* Opener Groove */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[15%] h-[40%] bg-gray-600 rounded-b-md" />
+      </div>
+    </div>
+  );
+}
+
 export default function Home() {
   return (
     <div className="bg-white">
       {/* Section 1: Hero */}
-      <section className="relative pt-20 pb-24 overflow-hidden border-b border-gray-200">
+      <section className="relative pt-20 pb-24 overflow-hidden border-b border-gray-200 min-h-[800px] flex items-center">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40 pointer-events-none" />
         
         <div className="container mx-auto px-4 md:px-6 relative z-10">
-          <div className="max-w-4xl mx-auto text-center mb-16">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#171717] leading-[1.1] mb-8 tracking-tighter">
-              Onboarding shouldn't feel like a <span className="text-[#ED7A30]">scavenger hunt</span>
-            </h1>
-            <h2 className="text-xl md:text-2xl text-gray-600 font-light max-w-3xl mx-auto leading-relaxed mb-10"><span className="font-bold text-[#171717]">Autopilot Onboarding</span> connects every department - HR, IT, Finance, Ops, and anyone else - so the people you're onboarding get one clean, guided flow instead of scattered emails and manual checklists.</h2>
-            <Button className="bg-[#ED7A30] hover:bg-[#d66520] text-white text-lg px-8 py-4 rounded-none font-bold uppercase tracking-wider shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1">
-              Book a Demo
-            </Button>
-          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            {/* Left Column: Text */}
+            <div className="lg:col-span-5 text-left">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#171717] leading-[1.1] mb-8 tracking-tighter">
+                Onboarding shouldn't feel like a <span className="text-[#ED7A30]">scavenger hunt</span>
+              </h1>
+              <h2 className="text-xl md:text-2xl text-gray-600 font-light leading-relaxed mb-10">
+                <span className="font-bold text-[#171717]">Autopilot Onboarding</span> connects every department - HR, IT, Finance, Ops, and anyone else - so the people you're onboarding get one clean, guided flow instead of scattered emails and manual checklists.
+              </h2>
+              <Button className="bg-[#ED7A30] hover:bg-[#d66520] text-white text-lg px-8 py-4 rounded-none font-bold uppercase tracking-wider shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1">
+                Book a Demo
+              </Button>
+            </div>
 
-          <div className="max-w-6xl mx-auto mt-12">
-            <WindowFrame title="Onboarding Overview - Dashboard">
-              <img 
-                src={heroDashboard} 
-                alt="Autopilot Dashboard" 
-                className="w-full h-auto object-cover"
-              />
-            </WindowFrame>
+            {/* Right Column: Laptop Image */}
+            <div className="lg:col-span-7 relative">
+              <div className="relative w-[140%] -right-[10%] lg:-right-[20%]">
+                <LaptopFrame>
+                   <img 
+                    src={backofficeHero} 
+                    alt="Autopilot Onboarding Dashboard" 
+                    className="w-full h-full object-cover"
+                  />
+                </LaptopFrame>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
