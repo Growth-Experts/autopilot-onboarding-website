@@ -50,7 +50,7 @@ export function Footer() {
           <p>&copy; 2025 Autopilot Onboarding. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link href="/privacy-policy"><a className="hover:text-white transition-colors">Privacy Policy</a></Link>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+            <Link href="/terms-conditions"><a className="hover:text-white transition-colors">Terms of Service</a></Link>
           </div>
         </div>
       </div>

@@ -29,6 +29,7 @@ import ResellerOnboarding from "@/pages/ResellerOnboarding";
 import VendorOnboarding from "@/pages/VendorOnboarding";
 import CustomerOnboarding from "@/pages/CustomerOnboarding";
 import PrivacyPolicy from "@/pages/PrivacyPolicy";
+import TermsConditions from "@/pages/TermsConditions";
 
 import CaseStudyLAWD from "@/pages/CaseStudyLAWD";
 import CaseStudySyntech from "@/pages/CaseStudySyntech";
@@ -56,6 +57,7 @@ function Router() {
           <Route path="/case-studies/ymca" component={CaseStudyYMCA} />
           <Route path="/contact" component={Contact} />
           <Route path="/privacy-policy" component={PrivacyPolicy} />
+          <Route path="/terms-conditions" component={TermsConditions} />
           <Route path="/book-demo" component={BookDemo} />
           <Route component={NotFound} />
         </Switch>
