@@ -10,6 +10,7 @@ import Home from "@/pages/Home";
 import Solutions from "@/pages/Solutions";
 import CaseStudies from "@/pages/CaseStudies";
 import Contact from "@/pages/Contact";
+import BookDemo from "@/pages/BookDemo";
 import { useEffect } from "react";
 import { useLocation } from "wouter";
 
@@ -53,6 +54,7 @@ function Router() {
           <Route path="/case-studies/talksure" component={CaseStudyTalksure} />
           <Route path="/case-studies/ymca" component={CaseStudyYMCA} />
           <Route path="/contact" component={Contact} />
+          <Route path="/book-demo" component={BookDemo} />
           <Route component={NotFound} />
         </Switch>
       </main>
