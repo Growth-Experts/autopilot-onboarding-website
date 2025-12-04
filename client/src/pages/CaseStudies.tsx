@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
-import talksureLogo from "@assets/talksure-logo_1764682329403.png";
 import lawdLogo from "@assets/lawd-logo_1764682505153.png";
 import syntechLogo from "@assets/Syntech-Logo_1764684082971.png";
 import ymcaLogo from "@assets/ymca-logo_1764755090576.png";
@@ -17,16 +16,6 @@ export default function CaseStudies() {
       color: "bg-red-600",
       logo: <img src={ymcaLogo} alt="YMCA South Africa" className="h-12 w-auto object-contain" />,
       link: "/case-studies/ymca"
-    },
-    {
-      client: "Talksure",
-      industry: "Financial Services",
-      title: "Streamlining Procurement with Microsoft Teams",
-      description: "How Talksure centralized purchase requests inside Teams, reduced ERP licence costs, and sped up approvals across 1,200 employees.",
-      stat: "Reduced ERP Costs",
-      color: "bg-blue-600",
-      logo: <img src={talksureLogo} alt="Talksure" className="h-12 w-auto object-contain" />,
-      link: "/case-studies/talksure"
     },
     {
       client: "LAWD",
