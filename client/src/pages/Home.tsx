@@ -32,6 +32,7 @@ import backoffice004 from "@assets/Backoffice_004_1764759276122.PNG";
 import backoffice005 from "@assets/Backoffice_005_1764759285752.PNG";
 import reseller009 from "@assets/Reseller_Application_009_1764759323929.PNG";
 import reseller011 from "@assets/Reseller_Application_011_1764759334079.PNG";
+import joanneWalsh from "@assets/Joanne_Walsh_1764834864661.jpeg";
 
 function HeroSlideshow({ images }: { images: string[] }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -547,31 +548,17 @@ export default function Home() {
           </div>
 
           {/* Testimonials Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="flex justify-center max-w-4xl mx-auto">
             {[
               {
-                quote: "Autopilot Onboarding has transformed our internal processes. What used to take days now takes hours. The visibility and control are unmatched.",
-                name: "Jane Doe",
-                role: "Operations Manager",
-                company: "Tech Solutions Inc.",
-                image: avatarJane
-              },
-              {
-                quote: "The ease of setting up workflows and the clarity it provides are game-changers. Our team is more efficient, and we can make quicker, more informed decisions.",
-                name: "John Smith",
-                role: "Product Lead",
-                company: "Innovate Corp.",
-                image: avatarJohn
-              },
-              {
-                quote: "Finally, an onboarding solution that truly understands B2B needs. The customizable features and robust reporting have saved us countless hours.",
-                name: "Emily White",
-                role: "Marketing Director",
-                company: "Global Brands Inc.",
-                image: avatarEmily
+                quote: "Onboarding time was reduced from hours to minutes, eliminated errors with documents, avoided the need to hire new staff, and provided business-wide visibility on client progress.",
+                name: "Joanne Walsh",
+                role: "Commercial Director",
+                company: "Commscloud",
+                image: joanneWalsh
               }
             ].map((testimonial, i) => (
-              <div key={i} className="bg-white p-8 border border-gray-100 shadow-sm hover:shadow-md transition-shadow rounded-xl flex flex-col">
+              <div key={i} className="bg-white p-8 border border-gray-100 shadow-sm hover:shadow-md transition-shadow rounded-xl flex flex-col max-w-2xl w-full">
                 <div className="mb-6">
                   {[...Array(5)].map((_, i) => (
                     <span key={i} className="text-[#ED7A30] text-lg">★</span>
