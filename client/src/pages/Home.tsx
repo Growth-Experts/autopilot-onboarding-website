@@ -271,7 +271,7 @@ export default function Home() {
             <div className="mt-16 text-center">
               <p className="text-2xl font-bold text-[#171717] italic mb-8 tracking-tight">Everything moves in sync, every time.</p>
               <Button className="bg-[#ED7A30] hover:bg-[#d66520] text-white text-lg px-8 py-4 rounded-none font-bold uppercase tracking-wider shadow-lg hover:shadow-xl transition-all transform hover:scale-105">
-                See how it works
+                Book a Demo
               </Button>
             </div>
           </div>
