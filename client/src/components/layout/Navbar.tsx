@@ -59,11 +59,13 @@ export function Navbar() {
                         <NavigationMenuContent>
                           <div className="w-64 p-2 bg-white border border-gray-200 shadow-xl">
                             {solutionLinks.map((subLink) => (
-                              <Link key={subLink.name} href={subLink.href}>
-                                <div className="block w-full py-2 px-2 text-sm font-medium text-[#171717] hover:bg-orange-50 hover:text-[#ED7A30] cursor-pointer transition-colors">
-                                  {subLink.name}
-                                </div>
-                              </Link>
+                              <NavigationMenuLink key={subLink.name} asChild>
+                                <Link href={subLink.href}>
+                                  <div className="block w-full py-2 px-2 text-sm font-medium text-[#171717] hover:bg-orange-50 hover:text-[#ED7A30] cursor-pointer transition-colors">
+                                    {subLink.name}
+                                  </div>
+                                </Link>
+                              </NavigationMenuLink>
                             ))}
                           </div>
                         </NavigationMenuContent>
@@ -73,16 +75,17 @@ export function Navbar() {
                   
                   return (
                     <NavigationMenuItem key={link.name}>
-                      <Link href={link.href}>
-                        <NavigationMenuLink 
+                      <NavigationMenuLink asChild>
+                        <Link 
+                          href={link.href}
                           className={cn(
                             "text-sm font-semibold uppercase tracking-wide transition-colors cursor-pointer block",
                             location === link.href ? "text-[#ED7A30]" : "text-[#171717] hover:text-[#ED7A30]"
                           )}
                         >
                           {link.name}
-                        </NavigationMenuLink>
-                      </Link>
+                        </Link>
+                      </NavigationMenuLink>
                     </NavigationMenuItem>
                   );
                 })}
