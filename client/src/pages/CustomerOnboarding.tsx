@@ -12,7 +12,6 @@ import turnkeyLogo from "@assets/Turnkey_logo_1764685300771.png";
 import joanneWalsh from "@assets/Joanne_Walsh_1764834864661.jpeg";
 import brendanAntunez from "@assets/Brendan_Antunez_1764834968337.jpeg";
 import johnMoll from "@assets/John_Moll_1764835180381.jpeg";
-import integrationsImage from "@assets/integrations_1764838243247.png";
 
 import { Link } from "wouter";
 
@@ -196,8 +195,12 @@ export default function CustomerOnboarding() {
                 </p>
              </div>
              
-             <div className="lg:w-2/3 flex justify-center">
-                <img src={integrationsImage} alt="Autopilot Integrations" className="w-full h-auto object-contain" />
+             <div className="lg:w-2/3 grid grid-cols-2 md:grid-cols-4 gap-6">
+                {["Sage One", "DocuSign", "flow gear", "Azure", "pipedrive", "SharePoint Online"].map((tool, i) => (
+                  <div key={i} className="bg-white h-24 rounded-xl border border-gray-200 flex items-center justify-center shadow-sm hover:shadow-md transition-all text-gray-500 font-bold text-sm">
+                    {tool}
+                  </div>
+                ))}
              </div>
            </div>
         </div>
