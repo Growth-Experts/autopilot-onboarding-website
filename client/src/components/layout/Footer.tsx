@@ -38,9 +38,11 @@ export function Footer() {
             <p className="text-gray-400 text-sm mb-4">
               Ready to streamline your onboarding?
             </p>
-            <button className="w-full py-3 px-6 border border-[#ED7A30] text-[#ED7A30] hover:bg-[#ED7A30] hover:text-white transition-colors font-bold uppercase text-sm">
-              Book a Demo
-            </button>
+            <Link href="/book-demo">
+              <button className="w-full py-3 px-6 border border-[#ED7A30] text-[#ED7A30] hover:bg-[#ED7A30] hover:text-white transition-colors font-bold uppercase text-sm cursor-pointer">
+                Book a Demo
+              </button>
+            </Link>
           </div>
         </div>
 

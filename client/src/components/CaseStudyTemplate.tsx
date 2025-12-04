@@ -188,9 +188,11 @@ export function CaseStudyTemplate({
                 <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
                   Join {client} and other industry leaders who have transformed their onboarding with Autopilot.
                 </p>
-                <Button className="bg-[#ED7A30] hover:bg-[#d66520] text-white text-lg px-8 py-4 rounded-none font-bold uppercase tracking-wider shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1">
-                  Book a Demo
-                </Button>
+                <Link href="/book-demo">
+                  <Button className="bg-[#ED7A30] hover:bg-[#d66520] text-white text-lg px-8 py-4 rounded-none font-bold uppercase tracking-wider shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 cursor-pointer">
+                    Book a Demo
+                  </Button>
+                </Link>
               </div>
               
               {/* Background decorative elements */}

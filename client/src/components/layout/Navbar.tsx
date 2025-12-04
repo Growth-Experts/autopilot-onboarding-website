@@ -77,11 +77,13 @@ export function Navbar() {
 
           {/* CTA */}
           <div className="hidden md:flex">
-            <Button 
-              className="bg-[#ED7A30] hover:bg-[#d66520] text-white rounded-none px-8 font-bold uppercase tracking-wider"
-            >
-              Book a Demo
-            </Button>
+            <Link href="/book-demo">
+              <Button 
+                className="bg-[#ED7A30] hover:bg-[#d66520] text-white rounded-none px-8 font-bold uppercase tracking-wider cursor-pointer"
+              >
+                Book a Demo
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -127,9 +129,11 @@ export function Navbar() {
               );
             })}
             <div className="pt-4">
-              <Button className="w-full bg-[#ED7A30] hover:bg-[#d66520] text-white rounded-none font-bold uppercase py-6">
-                Book a Demo
-              </Button>
+              <Link href="/book-demo">
+                <Button className="w-full bg-[#ED7A30] hover:bg-[#d66520] text-white rounded-none font-bold uppercase py-6 cursor-pointer">
+                  Book a Demo
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
