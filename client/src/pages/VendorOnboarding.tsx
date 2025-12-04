@@ -238,26 +238,26 @@ export default function VendorOnboarding() {
           </div>
         </div>
       </section>
-      {/* Case Study: YMCA */}
+      {/* Case Study: Syntech */}
       <section className="py-24 bg-[#171717] text-white border-b border-gray-800">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
             <div className="inline-block bg-[#ED7A30] text-white text-xs font-bold px-3 py-1 uppercase tracking-widest mb-6">
-              Case Study: YMCA
+              Case Study: Syntech
             </div>
             <h2 className="text-4xl md:text-5xl font-bold leading-tight text-white max-w-5xl mx-auto tracking-tighter mb-8">
-              From Paper Delays to Real-Time, Error-Free Onboarding for YMCA
+              Faster, Paperless Reseller Onboarding
             </h2>
-            <p className="text-xl text-gray-400 italic font-medium">
-              "A network of partners. A shared standard."
+            <p className="text-xl text-gray-400 font-light italic">
+              "Our aim was simple – prioritize the customer experience. Autopilot allowed us to make work flow faster, effortlessly, and more accurately."
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
-              "Gave remote and rural staff mobile-friendly access, reducing onboarding delays caused by limited computer access.",
-              "Centralized documents and activity logs for easy retrieval, removing back-and-forth and missing paperwork during supplier or partner onboarding.",
-              "Standardized onboarding steps through rule-driven digital workflows, ensuring consistency and fewer manual errors."
+              "Reseller approval times reduced from 10 days to one day, with some applications completed in just 10 minutes.",
+              "Validation checks at the point of entry mean no more illegible handwriting or missing information.",
+              "Validated data is automatically pushed to Syntech’s existing financial and CRM systems, eliminating manual re-keying."
             ].map((point, i) => (
               <div key={i} className="bg-gray-800/50 p-8 rounded-xl border border-gray-700">
                 <div className="w-10 h-10 bg-[#ED7A30]/20 text-[#ED7A30] rounded-full flex items-center justify-center mb-6">
@@ -269,7 +269,7 @@ export default function VendorOnboarding() {
           </div>
 
           <div className="text-center mt-16">
-            <Link href="/case-studies/ymca">
+            <Link href="/case-studies/syntech">
               <Button variant="outline" className="border-white text-white hover:bg-white hover:text-[#171717] rounded-none uppercase font-bold px-10 py-6 text-lg transition-all duration-300">
                 Read Full Story
               </Button>
