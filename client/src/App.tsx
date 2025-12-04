@@ -28,6 +28,7 @@ import EmployeeOnboarding from "@/pages/EmployeeOnboarding";
 import ResellerOnboarding from "@/pages/ResellerOnboarding";
 import VendorOnboarding from "@/pages/VendorOnboarding";
 import CustomerOnboarding from "@/pages/CustomerOnboarding";
+import PrivacyPolicy from "@/pages/PrivacyPolicy";
 
 import CaseStudyLAWD from "@/pages/CaseStudyLAWD";
 import CaseStudySyntech from "@/pages/CaseStudySyntech";
@@ -54,6 +55,7 @@ function Router() {
           <Route path="/case-studies/talksure" component={CaseStudyTalksure} />
           <Route path="/case-studies/ymca" component={CaseStudyYMCA} />
           <Route path="/contact" component={Contact} />
+          <Route path="/privacy-policy" component={PrivacyPolicy} />
           <Route path="/book-demo" component={BookDemo} />
           <Route component={NotFound} />
         </Switch>
