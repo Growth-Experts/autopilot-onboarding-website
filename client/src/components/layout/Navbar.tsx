@@ -50,7 +50,7 @@ export function Navbar() {
                       <NavigationMenuItem key={link.name}>
                         <NavigationMenuTrigger 
                           className={cn(
-                            "bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent p-0 h-auto text-sm font-semibold uppercase tracking-wide transition-colors rounded-none",
+                            "bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent data-[active]:bg-transparent p-0 h-auto text-sm font-semibold uppercase tracking-wide transition-colors rounded-none",
                             location.startsWith("/solutions") ? "text-[#ED7A30]" : "text-[#171717] hover:text-[#ED7A30]"
                           )}
                         >
