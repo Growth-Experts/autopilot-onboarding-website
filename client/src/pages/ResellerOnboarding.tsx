@@ -206,7 +206,7 @@ export default function ResellerOnboarding() {
                   { name: "SharePoint", logo: sharepointLogo }
                 ].map((tool, i) => (
                   <div key={i} className="bg-white h-24 rounded-xl border border-gray-200 flex items-center justify-center shadow-sm hover:shadow-md transition-all p-6 group">
-                    <img src={tool.logo} alt={tool.name} className="max-h-full max-w-full object-contain grayscale group-hover:grayscale-0 opacity-60 group-hover:opacity-100 transition-all duration-300" />
+                    <img src={tool.logo} alt={tool.name} className="max-h-full max-w-full object-contain transition-all duration-300" />
                   </div>
                 ))}
              </div>
