@@ -33,6 +33,7 @@ import backoffice005 from "@assets/Backoffice_005_1764759285752.PNG";
 import reseller009 from "@assets/Reseller_Application_009_1764759323929.PNG";
 import reseller011 from "@assets/Reseller_Application_011_1764759334079.PNG";
 import joanneWalsh from "@assets/Joanne_Walsh_1764834864661.jpeg";
+import brendanAntunez from "@assets/Brendan_Antunez_1764834968337.jpeg";
 
 function HeroSlideshow({ images }: { images: string[] }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -548,7 +549,7 @@ export default function Home() {
           </div>
 
           {/* Testimonials Grid */}
-          <div className="flex justify-center max-w-4xl mx-auto">
+          <div className="flex flex-col md:flex-row justify-center gap-8 max-w-5xl mx-auto">
             {[
               {
                 quote: "Onboarding time was reduced from hours to minutes, eliminated errors with documents, avoided the need to hire new staff, and provided business-wide visibility on client progress.",
@@ -556,9 +557,16 @@ export default function Home() {
                 role: "Commercial Director",
                 company: "Commscloud",
                 image: joanneWalsh
+              },
+              {
+                quote: "Massive amounts of time saved all around. Autopilot has more than paid for itself in the hours we have saved.",
+                name: "Brendan Antunez",
+                role: "Sr. IT Manager",
+                company: "CLARK+ELBING LLP",
+                image: brendanAntunez
               }
             ].map((testimonial, i) => (
-              <div key={i} className="bg-white p-8 border border-gray-100 shadow-sm hover:shadow-md transition-shadow rounded-xl flex flex-col max-w-2xl w-full">
+              <div key={i} className="bg-white p-8 border border-gray-100 shadow-sm hover:shadow-md transition-shadow rounded-xl flex flex-col w-full md:w-1/2">
                 <div className="mb-6">
                   {[...Array(5)].map((_, i) => (
                     <span key={i} className="text-[#ED7A30] text-lg">★</span>
