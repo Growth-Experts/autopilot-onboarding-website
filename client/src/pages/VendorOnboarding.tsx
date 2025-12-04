@@ -11,6 +11,12 @@ import turnkeyLogo from "@assets/Turnkey_logo_1764685300771.png";
 import joanneWalsh from "@assets/Joanne_Walsh_1764834864661.jpeg";
 import brendanAntunez from "@assets/Brendan_Antunez_1764834968337.jpeg";
 import johnMoll from "@assets/John_Moll_1764835180381.jpeg";
+import sageLogo from "@assets/sage-group-logo_1764839521453.png";
+import docusignLogo from "@assets/docusign_logo_1764839521453.png";
+import flowgearLogo from "@assets/flowgear_logo_1764839521453.png";
+import axureLogo from "@assets/axure-logo_1764839521453.png";
+import pipedriveLogo from "@assets/pipedrive-logo_1764839521453.png";
+import sharepointLogo from "@assets/sharepoint-logo_1764839521453.png";
 
 import { Link } from "wouter";
 
@@ -188,10 +194,17 @@ export default function VendorOnboarding() {
                 </p>
              </div>
              
-             <div className="lg:w-2/3 grid grid-cols-2 md:grid-cols-4 gap-6">
-                {["Sage One", "DocuSign", "flow gear", "Azure", "pipedrive", "SharePoint Online"].map((tool, i) => (
-                  <div key={i} className="bg-white h-24 rounded-xl border border-gray-200 flex items-center justify-center shadow-sm hover:shadow-md transition-all text-gray-500 font-bold text-sm">
-                    {tool}
+             <div className="lg:w-2/3 grid grid-cols-2 md:grid-cols-3 gap-6">
+                {[
+                  { name: "Sage", logo: sageLogo },
+                  { name: "DocuSign", logo: docusignLogo },
+                  { name: "Flowgear", logo: flowgearLogo },
+                  { name: "Axure", logo: axureLogo },
+                  { name: "Pipedrive", logo: pipedriveLogo },
+                  { name: "SharePoint", logo: sharepointLogo }
+                ].map((tool, i) => (
+                  <div key={i} className="bg-white h-24 rounded-xl border border-gray-200 flex items-center justify-center shadow-sm hover:shadow-md transition-all p-6 group">
+                    <img src={tool.logo} alt={tool.name} className="max-h-full max-w-full object-contain grayscale group-hover:grayscale-0 opacity-60 group-hover:opacity-100 transition-all duration-300" />
                   </div>
                 ))}
              </div>
