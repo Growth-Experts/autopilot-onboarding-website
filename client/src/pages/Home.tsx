@@ -138,7 +138,7 @@ export default function Home() {
           </div>
 
           <div className="max-w-6xl mx-auto mt-12">
-            <WindowFrame title="Onboarding Overview - Dashboard">
+            <WindowFrame title="Autopilot Onboarding Overview">
               <HeroSlideshow images={[backoffice004, backoffice005, reseller009, reseller011]} />
             </WindowFrame>
           </div>
