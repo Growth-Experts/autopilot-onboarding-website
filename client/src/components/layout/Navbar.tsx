@@ -1,14 +1,17 @@
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import logo from "@assets/autopilot-onboarding-logo_1764237094364.png";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
+import { cn } from "@/lib/utils";
 
 export function Navbar() {
   const [location] = useLocation();
@@ -39,40 +42,52 @@ export function Navbar() {
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => {
-              if (link.isDropdown) {
-                return (
-                  <DropdownMenu key={link.name}>
-                    <DropdownMenuTrigger className={`flex items-center gap-1 text-sm font-semibold uppercase tracking-wide hover:text-[#ED7A30] transition-colors outline-none ${
-                      location.startsWith("/solutions") ? "text-[#ED7A30]" : "text-[#171717]"
-                    }`}>
-                      {link.name} <ChevronDown size={16} />
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent className="w-64 p-2 bg-white border border-gray-200 shadow-xl rounded-none animate-in fade-in-0 zoom-in-95">
-                      {solutionLinks.map((subLink) => (
-                        <DropdownMenuItem key={subLink.name} asChild className="rounded-none cursor-pointer focus:bg-orange-50 focus:text-[#ED7A30]">
-                          <Link href={subLink.href} className="block w-full py-2 px-2 text-sm font-medium text-[#171717]">
-                            {subLink.name}
-                          </Link>
-                        </DropdownMenuItem>
-                      ))}
-                    </DropdownMenuContent>
-                  </DropdownMenu>
-                );
-              }
-              
-              return (
-                <Link 
-                  key={link.name} 
-                  href={link.href}
-                  className={`text-sm font-semibold uppercase tracking-wide hover:text-[#ED7A30] transition-colors ${
-                    location === link.href ? "text-[#ED7A30]" : "text-[#171717]"
-                  }`}
-                >
-                  {link.name}
-                </Link>
-              );
-            })}
+            <NavigationMenu>
+              <NavigationMenuList className="gap-8">
+                {navLinks.map((link) => {
+                  if (link.isDropdown) {
+                    return (
+                      <NavigationMenuItem key={link.name}>
+                        <NavigationMenuTrigger 
+                          className={cn(
+                            "bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent p-0 h-auto text-sm font-semibold uppercase tracking-wide transition-colors rounded-none",
+                            location.startsWith("/solutions") ? "text-[#ED7A30]" : "text-[#171717] hover:text-[#ED7A30]"
+                          )}
+                        >
+                          {link.name}
+                        </NavigationMenuTrigger>
+                        <NavigationMenuContent>
+                          <div className="w-64 p-2 bg-white border border-gray-200 shadow-xl">
+                            {solutionLinks.map((subLink) => (
+                              <Link key={subLink.name} href={subLink.href}>
+                                <div className="block w-full py-2 px-2 text-sm font-medium text-[#171717] hover:bg-orange-50 hover:text-[#ED7A30] cursor-pointer transition-colors">
+                                  {subLink.name}
+                                </div>
+                              </Link>
+                            ))}
+                          </div>
+                        </NavigationMenuContent>
+                      </NavigationMenuItem>
+                    );
+                  }
+                  
+                  return (
+                    <NavigationMenuItem key={link.name}>
+                      <Link href={link.href}>
+                        <NavigationMenuLink 
+                          className={cn(
+                            "text-sm font-semibold uppercase tracking-wide transition-colors cursor-pointer block",
+                            location === link.href ? "text-[#ED7A30]" : "text-[#171717] hover:text-[#ED7A30]"
+                          )}
+                        >
+                          {link.name}
+                        </NavigationMenuLink>
+                      </Link>
+                    </NavigationMenuItem>
+                  );
+                })}
+              </NavigationMenuList>
+            </NavigationMenu>
           </div>
 
           {/* CTA */}
