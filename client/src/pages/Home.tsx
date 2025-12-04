@@ -37,6 +37,12 @@ import joanneWalsh from "@assets/Joanne_Walsh_1764834864661.jpeg";
 import brendanAntunez from "@assets/Brendan_Antunez_1764834968337.jpeg";
 import johnMoll from "@assets/John_Moll_1764835180381.jpeg";
 
+import backoffice001 from "@assets/Backoffice_001_1764837439866.PNG";
+import backoffice002 from "@assets/Backoffice_002_1764837444678.PNG";
+import resellerApp001 from "@assets/Reseller_Application_001_1764837470544.PNG";
+import resellerApp008 from "@assets/Reseller_Application_008_1764837481982.PNG";
+import resellerApp010 from "@assets/Reseller_Application_010_1764837488338.PNG";
+
 function HeroSlideshow({ images }: { images: string[] }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -106,15 +112,6 @@ function AppGallerySlider({ images }: { images: string[] }) {
         >
           <ChevronRight size={20} />
         </button>
-      </div>
-      
-      <div className="absolute bottom-4 left-6 flex gap-1.5 z-20">
-        {images.map((_, idx) => (
-          <div 
-            key={idx} 
-            className={`h-1.5 rounded-full transition-all duration-300 ${idx === currentIndex ? 'w-6 bg-[#ED7A30]' : 'w-1.5 bg-white/30'}`}
-          />
-        ))}
       </div>
     </div>
   );
@@ -310,7 +307,7 @@ export default function Home() {
                   Platform Preview
                </div>
                
-               <AppGallerySlider images={[appShot1, appShot2, appShot3, appShot4]} />
+               <AppGallerySlider images={[backoffice001, backoffice002, resellerApp001, resellerApp008, resellerApp010]} />
             </div>
 
             {/* 2. Automated Data - Standard Block */}
