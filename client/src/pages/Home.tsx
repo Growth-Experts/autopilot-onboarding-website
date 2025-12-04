@@ -632,9 +632,11 @@ export default function Home() {
                 ))}
               </div>
               
-              <Button className="bg-white text-[#ED7A30] hover:bg-gray-100 hover:text-[#ED7A30] text-xl px-8 py-4 rounded-none font-bold uppercase tracking-wider shadow-2xl w-full md:w-auto">
-                Book a Demo
-              </Button>
+              <Link href="/book-demo">
+                <Button className="bg-white text-[#ED7A30] hover:bg-gray-100 hover:text-[#ED7A30] text-xl px-8 py-4 rounded-none font-bold uppercase tracking-wider shadow-2xl w-full md:w-auto cursor-pointer">
+                  Book a Demo
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
