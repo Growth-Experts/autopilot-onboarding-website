@@ -32,6 +32,7 @@ import backoffice004 from "@assets/Backoffice_004_1764759276122.PNG";
 import backoffice005 from "@assets/Backoffice_005_1764759285752.PNG";
 import reseller009 from "@assets/Reseller_Application_009_1764759323929.PNG";
 import reseller011 from "@assets/Reseller_Application_011_1764759334079.PNG";
+import backoffice011 from "@assets/Backoffice_011_1764836642764.PNG";
 import joanneWalsh from "@assets/Joanne_Walsh_1764834864661.jpeg";
 import brendanAntunez from "@assets/Brendan_Antunez_1764834968337.jpeg";
 import johnMoll from "@assets/John_Moll_1764835180381.jpeg";
@@ -227,9 +228,9 @@ export default function Home() {
               <div className="relative shadow-2xl rounded-xl overflow-hidden border border-gray-200 bg-white">
                 <WindowFrame title="Workflow Management">
                   <img 
-                    src={checklistImage} 
+                    src={backoffice011} 
                     alt="Checklist Dashboard" 
-                    className="w-full h-auto object-cover"
+                    className="w-full h-auto object-contain"
                   />
                 </WindowFrame>
               </div>
