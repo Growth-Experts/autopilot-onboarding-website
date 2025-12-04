@@ -186,9 +186,6 @@ export default function VendorOnboarding() {
                 <p className="text-lg text-gray-600 font-light mb-8">
                   Autopilot fits naturally into your existing environment, no need to rebuild.
                 </p>
-                <Button variant="outline" className="border-[#ED7A30] text-[#ED7A30] hover:bg-[#ED7A30] hover:text-white font-bold uppercase">
-                  View All Integrations
-                </Button>
              </div>
              
              <div className="lg:w-2/3 grid grid-cols-2 md:grid-cols-4 gap-6">
