@@ -14,7 +14,7 @@ import avatarJohn from "@assets/stock_images/professional_man_cor_a0338afc.jpg";
 import avatarEmily from "@assets/stock_images/business_woman_profe_0724059b.jpg";
 import capsicumLogo from "@assets/capsicum-logo_1764671045702.png";
 import integrationsImage from "@assets/autopilot-integrations_1764671619557.png";
-import { Check, ArrowRight, Clock, Users, FileText, Shield, MessageSquare, Database, Archive, Zap, Play, ChevronLeft, ChevronRight } from "lucide-react";
+import { Check, ArrowRight, Clock, Users, FileText, Shield, MessageSquare, Database, Archive, Zap, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
 
@@ -541,15 +541,6 @@ export default function Home() {
             Results that speak for themselves
           </h2>
 
-          {/* Video Placeholder */}
-          <div className="max-w-5xl mx-auto mb-20 relative group cursor-pointer">
-            <div className="aspect-video bg-gray-100 rounded-xl border border-gray-200 flex items-center justify-center shadow-lg overflow-hidden relative">
-              <div className="absolute inset-0 bg-black/5 group-hover:bg-black/10 transition-colors" />
-              <div className="w-24 h-24 bg-white rounded-full shadow-xl flex items-center justify-center z-10 group-hover:scale-110 transition-transform duration-300">
-                <Play className="w-10 h-10 text-[#ED7A30] ml-2 fill-[#ED7A30]" />
-              </div>
-            </div>
-          </div>
 
           {/* Testimonials Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
