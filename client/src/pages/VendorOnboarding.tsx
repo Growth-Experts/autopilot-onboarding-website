@@ -246,7 +246,7 @@ export default function VendorOnboarding() {
               Case Study: Syntech
             </div>
             <h2 className="text-4xl md:text-5xl font-bold leading-tight text-white max-w-5xl mx-auto tracking-tighter mb-8">Faster, Paperless Vendor Onboarding</h2>
-            <p className="text-xl text-gray-400 font-light italic">
+            <p className="text-xl text-gray-400 italic font-medium">
               "Our aim was simple – prioritize the customer experience. Autopilot allowed us to make work flow faster, effortlessly, and more accurately."
             </p>
           </div>
