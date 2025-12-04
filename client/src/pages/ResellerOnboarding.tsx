@@ -8,6 +8,9 @@ import cbfLogo from "@assets/cbf-logo_1764685158359.png";
 import nologoLogo from "@assets/nologo_studios_1764685164945.png";
 import tongaatLogo from "@assets/Tongaat-Huletts-Logo_1764685174149.png";
 import turnkeyLogo from "@assets/Turnkey_logo_1764685300771.png";
+import joanneWalsh from "@assets/Joanne_Walsh_1764834864661.jpeg";
+import brendanAntunez from "@assets/Brendan_Antunez_1764834968337.jpeg";
+import johnMoll from "@assets/John_Moll_1764835180381.jpeg";
 
 import { Link } from "wouter";
 
@@ -286,27 +289,43 @@ export default function ResellerOnboarding() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
               {
-                quote: "Autopilot Onboarding has transformed our internal processes. What used to take days now takes hours. The visibility and robust reporting have saved us countless hours.",
-                author: "Jane Doe",
-                role: "Operations Manager"
+                quote: "Onboarding time was reduced from hours to minutes, eliminated errors with documents, avoided the need to hire new staff, and provided business-wide visibility on client progress.",
+                name: "Joanne Walsh",
+                role: "Commercial Director",
+                company: "Commscloud",
+                image: joanneWalsh
               },
               {
-                quote: "The ease of setting up workflows and the clarity it provides are game-changers. Our team is more efficient, and we can make quicker, more informed decisions.",
-                author: "John Smith",
-                role: ""
+                quote: "Massive amounts of time saved all around. Autopilot has more than paid for itself in the hours we have saved.",
+                name: "Brendan Antunez",
+                role: "Sr. IT Manager",
+                company: "CLARK+ELBING LLP",
+                image: brendanAntunez
               },
               {
-                quote: "The customizable features and control are unmatched. Finally, an onboarding solution that truly understands our needs.",
-                author: "Emily White",
-                role: ""
+                quote: "As a small company, we increasingly rely on systems and data; our new staff have many systems and protocols to learn – onboarding can be overwhelming for them. Autopilot's 'keep it clean and simple' is great because it takes 5 minutes to onboard and they get it, no worries or comebacks.",
+                name: "John Moll",
+                role: "Knowledge and Information Manager",
+                company: "SA Canegrowers",
+                image: johnMoll
               }
-            ].map((t, i) => (
-              <div key={i} className="bg-gray-50 p-8 rounded-xl border border-gray-100 relative">
-                <div className="text-[#ED7A30] text-4xl font-serif absolute top-4 left-4 opacity-20">"</div>
-                <p className="text-gray-700 text-lg italic mb-6 relative z-10 pt-4">"{t.quote}"</p>
-                <div>
-                  <div className="font-bold text-[#171717]">{t.author}</div>
-                  {t.role && <div className="text-sm text-gray-500">{t.role}</div>}
+            ].map((testimonial, i) => (
+              <div key={i} className="bg-white p-8 border border-gray-100 shadow-sm hover:shadow-md transition-shadow rounded-xl flex flex-col">
+                <div className="mb-6">
+                  {[...Array(5)].map((_, i) => (
+                    <span key={i} className="text-[#ED7A30] text-lg">★</span>
+                  ))}
+                </div>
+                <blockquote className="text-gray-700 text-lg leading-relaxed mb-8 flex-grow">
+                  "{testimonial.quote}"
+                </blockquote>
+                <div className="flex items-center gap-4 mt-auto">
+                  <img src={testimonial.image} alt={testimonial.name} className="w-12 h-12 rounded-full object-cover border-2 border-gray-100" />
+                  <div>
+                    <div className="font-bold text-[#171717] text-sm">{testimonial.name}</div>
+                    <div className="text-xs text-gray-500 leading-tight">{testimonial.role}</div>
+                    <div className="text-xs text-gray-400 leading-tight">{testimonial.company}</div>
+                  </div>
                 </div>
               </div>
             ))}
