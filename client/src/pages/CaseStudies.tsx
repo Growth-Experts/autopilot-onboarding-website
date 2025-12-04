@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
 import talksureLogo from "@assets/talksure-logo_1764682329403.png";
 import lawdLogo from "@assets/lawd-logo_1764682505153.png";
-import saCanegrowersLogo from "@assets/SA_CaneGrowers_logo_1764682801217.png";
 import syntechLogo from "@assets/Syntech-Logo_1764684082971.png";
 import ymcaLogo from "@assets/ymca-logo_1764755090576.png";
 import { Link } from "wouter";
@@ -48,16 +47,6 @@ export default function CaseStudies() {
       color: "bg-orange-600",
       logo: <img src={syntechLogo} alt="Syntech" className="h-12 w-auto object-contain" />,
       link: "/case-studies/syntech"
-    },
-    {
-      client: "SA Canegrowers",
-      industry: "Agriculture",
-      title: "Approvals Built Directly into Teams",
-      description: "How SA Canegrowers digitized key approval processes and improved control by integrating Autopilot into their daily Microsoft 365 workflow.",
-      stat: "Integrated into MS Teams",
-      color: "bg-green-600",
-      logo: <img src={saCanegrowersLogo} alt="SA Canegrowers" className="h-12 w-auto object-contain" />,
-      link: "#"
     }
   ];
 
