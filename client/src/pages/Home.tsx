@@ -24,7 +24,7 @@ import saCanegrowersLogo from "@assets/SA_CaneGrowers_logo_1764682801217.png";
 import threeWayLogo from "@assets/3way-logo_1764684321801.png";
 import brmLogo from "@assets/brm-logo_1764685148310.png";
 import cbfLogo from "@assets/cbf-logo_1764685158359.png";
-import nologoLogo from "@assets/nologo_studios_1764685164945.png";
+import nologoLogo from "@assets/nologo_logo_1765189608574.png";
 import tongaatLogo from "@assets/Tongaat-Huletts-Logo_1764685174149.png";
 import turnkeyLogo from "@assets/Turnkey_logo_1764685300771.png";
 
