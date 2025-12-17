@@ -438,7 +438,7 @@ export default function Home() {
             {/* Right: The Logos Grid */}
             <div className="p-10 border border-gray-200 shadow-sm bg-[#fefefe]">
               <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-8 text-center">Integrated Ecosystem</h3>
-              <div className="flex justify-center items-center">
+              <div className="flex justify-center items-center bg-[#fff]">
                 <img 
                   src={autopilot_partners} 
                   alt="Autopilot Integrations Ecosystem including Sage, DocuSign, Azure, and more" 
