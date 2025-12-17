@@ -82,16 +82,18 @@ function HeroSlideshow({ images }: { images: string[] }) {
 function AppGallerySlider({ images }: { images: string[] }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const nextSlide = () => {
+  const nextSlide = (e?: React.MouseEvent) => {
+    e?.stopPropagation();
     setCurrentIndex((prev) => (prev + 1) % images.length);
   };
 
-  const prevSlide = () => {
+  const prevSlide = (e?: React.MouseEvent) => {
+    e?.stopPropagation();
     setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
   };
 
   return (
-    <div className="relative w-full h-full">
+    <div className="relative w-full h-full group">
       <div className="absolute inset-0">
         <img 
           src={images[currentIndex]} 
@@ -101,20 +103,20 @@ function AppGallerySlider({ images }: { images: string[] }) {
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/70 to-transparent pointer-events-none" />
       </div>
       
-      <div className="absolute bottom-4 right-4 flex gap-2 z-20">
+      <div className="absolute bottom-4 right-4 flex gap-2 z-30">
         <button 
           onClick={prevSlide}
-          className="bg-white/10 hover:bg-white/20 border-0 text-white p-2 rounded-full transition-colors"
+          className="bg-black/50 hover:bg-black/70 border border-white/20 text-white p-3 rounded-full transition-all cursor-pointer backdrop-blur-sm"
           aria-label="Previous slide"
         >
-          <ChevronLeft size={20} />
+          <ChevronLeft size={24} />
         </button>
         <button 
           onClick={nextSlide}
-          className="bg-white/10 hover:bg-white/20 border-0 text-white p-2 rounded-full transition-colors"
+          className="bg-black/50 hover:bg-black/70 border border-white/20 text-white p-3 rounded-full transition-all cursor-pointer backdrop-blur-sm"
           aria-label="Next slide"
         >
-          <ChevronRight size={20} />
+          <ChevronRight size={24} />
         </button>
       </div>
     </div>
