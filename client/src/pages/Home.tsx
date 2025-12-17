@@ -34,7 +34,7 @@ import reseller009 from "@assets/Reseller_Application_009_1765964508563.PNG";
 import reseller011 from "@assets/Reseller_Application_011_1765964508563.PNG";
 import backoffice011 from "@assets/Backoffice_011_1764836642764.PNG";
 import ymcaLogo from "@assets/ymca-logo_1765965781928.png";
-import autopilotLogo from "@assets/Autopilot_Logo_Onboarding_-_Primary_1765965794977.png";
+import autopilotLogo from "@assets/Autopilot Logo_Onboarding - White.png";
 import joanneWalsh from "@assets/Joanne_Walsh_1764834864661.jpeg";
 import brendanAntunez from "@assets/Brendan_Antunez_1764834968337.jpeg";
 import johnMoll from "@assets/John_Moll_1764835180381.jpeg";
@@ -504,14 +504,13 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
-            <div className="relative h-full min-h-[400px] rounded-xl overflow-hidden shadow-2xl border border-gray-700 bg-white flex flex-col items-center justify-center p-8 md:p-12">
-              <div className="flex flex-col items-center justify-center gap-8 w-full">
+            <div className="relative h-full min-h-[400px] rounded-xl overflow-hidden shadow-2xl border border-gray-700 bg-[#262626] flex flex-col items-center justify-center p-8 md:p-12">
+              <div className="flex flex-col items-center justify-center gap-12 w-full">
                 <img 
                   src={ymcaLogo} 
                   alt="YMCA South Africa" 
                   className="w-48 md:w-56 object-contain"
                 />
-                <div className="text-gray-300 text-2xl font-light">PARTNERING WITH</div>
                 <img 
                   src={autopilotLogo} 
                   alt="Autopilot Onboarding" 
