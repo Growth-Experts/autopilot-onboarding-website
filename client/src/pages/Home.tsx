@@ -537,7 +537,7 @@ export default function Home() {
 
           <div className="text-center">
             <Link href="/case-studies/ymca">
-              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-[#171717] rounded-none uppercase font-bold px-10 py-6 text-lg transition-all duration-300">
+              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-[#171717] rounded-none uppercase font-bold px-10 py-6 text-lg transition-all duration-300 cursor-pointer">
                 Read Full Story
               </Button>
             </Link>
