@@ -45,6 +45,8 @@ import resellerApp001 from "@assets/Reseller_Application_001_1764837470544.PNG";
 import resellerApp008 from "@assets/Reseller_Application_008_1764837481982.PNG";
 import resellerApp010 from "@assets/Reseller_Application_010_1764837488338.PNG";
 
+import autopilot_partners from "@assets/autopilot-partners.png";
+
 function HeroSlideshow({ images }: { images: string[] }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -438,7 +440,7 @@ export default function Home() {
               <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-8 text-center">Integrated Ecosystem</h3>
               <div className="flex justify-center items-center">
                 <img 
-                  src={autopilot_integrations} 
+                  src={autopilot_partners} 
                   alt="Autopilot Integrations Ecosystem including Sage, DocuSign, Azure, and more" 
                   className="w-full h-auto max-w-md object-contain hover:scale-105 transition-transform duration-500"
                 />
