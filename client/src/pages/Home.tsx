@@ -12,7 +12,7 @@ import problemImage from "@assets/stock_images/chaotic_messy_office_8b8ef31a.jpg
 import avatarJane from "@assets/stock_images/professional_woman_c_a3afb741.jpg";
 import avatarJohn from "@assets/stock_images/professional_man_cor_a0338afc.jpg";
 import avatarEmily from "@assets/stock_images/business_woman_profe_0724059b.jpg";
-import bidvestLogo from "@assets/bidvest_logo_1765963561955.png";
+import bidvestLogo from "@assets/bidvest-logo_1765964035827.png";
 import integrationsImage from "@assets/autopilot-integrations_1764671619557.png";
 import { Check, ArrowRight, Clock, Users, FileText, Shield, MessageSquare, Database, Archive, Zap, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
@@ -26,7 +26,7 @@ import syntechLogo from "@assets/Syntech-Logo_1765963655582.png";
 import cbfLogo from "@assets/cbf-logo_1764685158359.png";
 import nologoLogo from "@assets/nologo_logo_1765189608574.png";
 import tongaatLogo from "@assets/Tongaat-Huletts-Logo_1764685174149.png";
-import metrofileLogo from "@assets/metrofile_logo_1765963558532.png";
+import metrofileLogo from "@assets/metrofile-logo_1765964032371.png";
 
 import backoffice004 from "@assets/Backoffice_004_1764759276122.PNG";
 import backoffice005 from "@assets/Backoffice_005_1764759285752.PNG";

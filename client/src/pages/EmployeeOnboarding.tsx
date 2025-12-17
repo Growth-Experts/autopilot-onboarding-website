@@ -4,14 +4,14 @@ import { WindowFrame } from "@/components/ui/WindowFrame";
 import dashboardImage from "@assets/generated_images/clean_saas_form_interface_for_employee_data_collection.png";
 import caseStudyImage from "@assets/stock_images/chaotic_messy_office_8b8ef31a.jpg"; // Reusing the office image for case study or finding a new one? Using same for now or placeholder.
 import heroDashboard from "@assets/generated_images/saas_dashboard_showing_onboarding_progress.png";
-import bidvestLogo from "@assets/bidvest_logo_1765963561955.png";
+import bidvestLogo from "@assets/bidvest-logo_1765964035827.png";
 import saCanegrowersLogo from "@assets/SA_CaneGrowers_logo_1764682801217.png";
 import threeWayLogo from "@assets/3way-logo_1764684321801.png";
 import syntechLogo from "@assets/Syntech-Logo_1765963655582.png";
 import cbfLogo from "@assets/cbf-logo_1764685158359.png";
 import nologoLogo from "@assets/nologo_studios_1764685164945.png";
 import tongaatLogo from "@assets/Tongaat-Huletts-Logo_1764685174149.png";
-import metrofileLogo from "@assets/metrofile_logo_1765963558532.png";
+import metrofileLogo from "@assets/metrofile-logo_1765964032371.png";
 import joanneWalsh from "@assets/Joanne_Walsh_1764834864661.jpeg";
 import brendanAntunez from "@assets/Brendan_Antunez_1764834968337.jpeg";
 import johnMoll from "@assets/John_Moll_1764835180381.jpeg";
