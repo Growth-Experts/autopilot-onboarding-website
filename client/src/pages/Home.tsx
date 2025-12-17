@@ -87,14 +87,14 @@ function AppGallerySlider({ images }: { images: string[] }) {
   };
 
   return (
-    <div className="relative w-full h-full min-h-[300px] md:min-h-[350px]">
+    <div className="relative w-full h-full">
       <div className="absolute inset-0">
         <img 
           src={images[currentIndex]} 
           alt={`App Screenshot ${currentIndex + 1}`} 
-          className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-500" 
+          className="w-full h-full object-cover transition-opacity duration-500" 
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/70 to-transparent pointer-events-none" />
       </div>
       
       <div className="absolute bottom-4 right-4 flex gap-2 z-20">
@@ -302,7 +302,7 @@ export default function Home() {
             </div>
 
             {/* NEW: App Gallery Slider - Big Block (2x2) */}
-            <div className="md:col-span-2 md:row-span-2 bg-[#171717] rounded-xl overflow-hidden relative flex flex-col justify-center p-0 group min-h-[280px] border border-gray-800 shadow-2xl">
+            <div className="md:col-span-2 bg-[#171717] rounded-xl overflow-hidden relative flex flex-col justify-center p-0 group h-[325px] border border-gray-800 shadow-2xl">
                <div className="absolute top-6 left-6 z-20 bg-[#ED7A30] text-white text-xs font-bold px-3 py-1 uppercase tracking-widest rounded-full">
                   Platform Preview
                </div>
