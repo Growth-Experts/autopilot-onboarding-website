@@ -440,7 +440,7 @@ export default function Home() {
               <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-8 text-center">Integrated Ecosystem</h3>
               <div className="flex justify-center items-center bg-[#fff]">
                 <img 
-                  src={autopilot_partners} 
+                  src={autopilot_integrations} 
                   alt="Autopilot Integrations Ecosystem including Sage, DocuSign, Azure, and more" 
                   className="w-full h-auto max-w-md object-contain hover:scale-105 transition-transform duration-500"
                 />
