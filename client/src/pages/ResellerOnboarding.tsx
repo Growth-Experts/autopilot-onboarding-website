@@ -1,13 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, Users, Zap } from "lucide-react";
 import caseStudyImage from "@assets/stock_images/chaotic_messy_office_8b8ef31a.jpg";
-import capsicumLogo from "@assets/capsicum-logo_1764671045702.png";
+import bidvestLogo from "@assets/bidvest_logo_1765963561955.png";
 import saCanegrowersLogo from "@assets/SA_CaneGrowers_logo_1764682801217.png";
-import brmLogo from "@assets/brm-logo_1764685148310.png";
+import syntechLogo from "@assets/Syntech-Logo_1765963655582.png";
 import cbfLogo from "@assets/cbf-logo_1764685158359.png";
 import nologoLogo from "@assets/nologo_studios_1764685164945.png";
 import tongaatLogo from "@assets/Tongaat-Huletts-Logo_1764685174149.png";
-import turnkeyLogo from "@assets/Turnkey_logo_1764685300771.png";
+import metrofileLogo from "@assets/metrofile_logo_1765963558532.png";
 import joanneWalsh from "@assets/Joanne_Walsh_1764834864661.jpeg";
 import brendanAntunez from "@assets/Brendan_Antunez_1764834968337.jpeg";
 import johnMoll from "@assets/John_Moll_1764835180381.jpeg";
@@ -65,16 +65,16 @@ export default function ResellerOnboarding() {
                <img src={saCanegrowersLogo} alt="SA Canegrowers" className="h-16 w-auto object-contain" />
             </div>
             <div className="flex items-center justify-center">
-               <img src={capsicumLogo} alt="Capsicum" className="h-12 w-auto object-contain" />
+               <img src={bidvestLogo} alt="Bidvest" className="h-12 w-auto object-contain" />
             </div>
             <div className="flex items-center justify-center">
                <img src={cbfLogo} alt="CBF" className="h-12 w-auto object-contain" />
             </div>
             <div className="flex items-center justify-center">
-               <img src={turnkeyLogo} alt="Turnkey" className="h-12 w-auto object-contain" />
+               <img src={metrofileLogo} alt="Metrofile" className="h-12 w-auto object-contain" />
             </div>
              <div className="flex items-center justify-center">
-               <img src={brmLogo} alt="BRM" className="h-12 w-auto object-contain" />
+               <img src={syntechLogo} alt="Syntech" className="h-12 w-auto object-contain" />
             </div>
             <div className="flex items-center justify-center">
                <img src={nologoLogo} alt="Nologo Studios" className="h-12 w-auto object-contain" />

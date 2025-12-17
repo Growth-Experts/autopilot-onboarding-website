@@ -12,7 +12,7 @@ import problemImage from "@assets/stock_images/chaotic_messy_office_8b8ef31a.jpg
 import avatarJane from "@assets/stock_images/professional_woman_c_a3afb741.jpg";
 import avatarJohn from "@assets/stock_images/professional_man_cor_a0338afc.jpg";
 import avatarEmily from "@assets/stock_images/business_woman_profe_0724059b.jpg";
-import capsicumLogo from "@assets/capsicum-logo_1764671045702.png";
+import bidvestLogo from "@assets/bidvest_logo_1765963561955.png";
 import integrationsImage from "@assets/autopilot-integrations_1764671619557.png";
 import { Check, ArrowRight, Clock, Users, FileText, Shield, MessageSquare, Database, Archive, Zap, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
@@ -22,11 +22,11 @@ import autopilot_integrations from "@assets/autopilot-integrations.png";
 
 import saCanegrowersLogo from "@assets/SA_CaneGrowers_logo_1764682801217.png";
 import threeWayLogo from "@assets/3way-logo_1764684321801.png";
-import brmLogo from "@assets/brm-logo_1764685148310.png";
+import syntechLogo from "@assets/Syntech-Logo_1765963655582.png";
 import cbfLogo from "@assets/cbf-logo_1764685158359.png";
 import nologoLogo from "@assets/nologo_logo_1765189608574.png";
 import tongaatLogo from "@assets/Tongaat-Huletts-Logo_1764685174149.png";
-import turnkeyLogo from "@assets/Turnkey_logo_1764685300771.png";
+import metrofileLogo from "@assets/metrofile_logo_1765963558532.png";
 
 import backoffice004 from "@assets/Backoffice_004_1764759276122.PNG";
 import backoffice005 from "@assets/Backoffice_005_1764759285752.PNG";
@@ -158,16 +158,16 @@ export default function Home() {
               <img src={saCanegrowersLogo} alt="SA Canegrowers" className="h-14 w-auto object-contain" />
             </div>
             <div className="flex items-center justify-center">
-               <img src={capsicumLogo} alt="Capsicum" className="h-12 w-auto object-contain" />
+               <img src={bidvestLogo} alt="Bidvest" className="h-12 w-auto object-contain" />
             </div>
             <div className="flex items-center justify-center">
                <img src={cbfLogo} alt="CBF" className="h-12 w-auto object-contain" />
             </div>
             <div className="flex items-center justify-center">
-               <img src={turnkeyLogo} alt="Turnkey" className="h-12 w-auto object-contain" />
+               <img src={metrofileLogo} alt="Metrofile" className="h-12 w-auto object-contain" />
             </div>
              <div className="flex items-center justify-center">
-               <img src={brmLogo} alt="BRM" className="h-12 w-auto object-contain" />
+               <img src={syntechLogo} alt="Syntech" className="h-12 w-auto object-contain" />
             </div>
             <div className="flex items-center justify-center">
                <img src={nologoLogo} alt="Nologo Studios" className="h-12 w-auto object-contain" />
