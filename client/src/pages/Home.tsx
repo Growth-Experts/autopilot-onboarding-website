@@ -28,10 +28,10 @@ import nologoLogo from "@assets/nologo_logo_1765189608574.png";
 import tongaatLogo from "@assets/Tongaat-Huletts-Logo_1764685174149.png";
 import metrofileLogo from "@assets/metrofile-logo_1765964032371.png";
 
-import backoffice004 from "@assets/Backoffice_004_1764759276122.PNG";
-import backoffice005 from "@assets/Backoffice_005_1764759285752.PNG";
-import reseller009 from "@assets/Reseller_Application_009_1764759323929.PNG";
-import reseller011 from "@assets/Reseller_Application_011_1764759334079.PNG";
+import backoffice004 from "@assets/Backoffice_004_1765964508560.PNG";
+import backoffice005 from "@assets/Backoffice_005_1765964508562.PNG";
+import reseller009 from "@assets/Reseller_Application_009_1765964508563.PNG";
+import reseller011 from "@assets/Reseller_Application_011_1765964508563.PNG";
 import backoffice011 from "@assets/Backoffice_011_1764836642764.PNG";
 import joanneWalsh from "@assets/Joanne_Walsh_1764834864661.jpeg";
 import brendanAntunez from "@assets/Brendan_Antunez_1764834968337.jpeg";
