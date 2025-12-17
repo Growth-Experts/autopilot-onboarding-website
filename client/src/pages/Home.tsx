@@ -290,10 +290,10 @@ export default function Home() {
             </div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-[minmax(280px,auto)] grid-flow-dense">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-[minmax(232px,auto)] grid-flow-dense">
             
             {/* 1. Guided Journey - Standard Block */}
-            <div className="bg-white border border-gray-200 p-8 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1">
+            <div className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1">
               <div className="flex flex-col items-start gap-2">
                 <span className="text-[#ED7A30] font-mono text-lg font-bold">01</span>
                 <h3 className="text-xl font-bold text-[#171717] leading-tight">Guided Journey</h3>
@@ -301,8 +301,8 @@ export default function Home() {
               <p className="text-gray-500 text-sm leading-relaxed">Give customers, vendors, and new hires one simple, step-by-step flow to provide details and upload documents - no back-and-forth emails.</p>
             </div>
 
-            {/* NEW: App Gallery Slider - Big Block (2x2) */}
-            <div className="md:col-span-2 bg-[#171717] rounded-xl overflow-hidden relative flex flex-col justify-center p-0 group h-[325px] border border-gray-800 shadow-2xl">
+            {/* NEW: App Gallery Slider - Big Block (3x2) */}
+            <div className="md:col-span-2 lg:col-span-3 lg:row-span-2 bg-[#171717] rounded-xl overflow-hidden relative flex flex-col justify-center p-0 group h-[488px] border border-gray-800 shadow-2xl">
                <div className="absolute top-6 left-6 z-20 bg-[#ED7A30] text-white text-xs font-bold px-3 py-1 uppercase tracking-widest rounded-full">
                   Platform Preview
                </div>
@@ -311,7 +311,7 @@ export default function Home() {
             </div>
 
             {/* 2. Automated Data - Standard Block */}
-            <div className="bg-white border border-gray-200 p-8 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1">
+            <div className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1">
               <div className="flex flex-col items-start gap-2">
                 <span className="text-[#ED7A30] font-mono text-lg font-bold">02</span>
                 <h3 className="text-xl font-bold text-[#171717] leading-tight">Automated Data & Document Collection</h3>
@@ -320,7 +320,7 @@ export default function Home() {
             </div>
 
             {/* 3. Checklists - Standard Block */}
-            <div className="bg-white border border-gray-200 p-8 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1">
+            <div className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1">
               <div className="flex flex-col items-start gap-2">
                 <span className="text-[#ED7A30] font-mono text-lg font-bold">03</span>
                 <h3 className="text-xl font-bold text-[#171717] leading-tight">Multi-Team Checklists</h3>
@@ -329,7 +329,7 @@ export default function Home() {
             </div>
 
             {/* 4. Role Based - Standard Block */}
-            <div className="bg-white border border-gray-200 p-8 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1">
+            <div className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1">
               <div className="flex flex-col items-start gap-2">
                 <span className="text-[#ED7A30] font-mono text-lg font-bold">04</span>
                 <h3 className="text-xl font-bold text-[#171717] leading-tight">Role-Based Visibility</h3>
@@ -338,7 +338,7 @@ export default function Home() {
             </div>
 
             {/* 5. Communication - Standard Block */}
-            <div className="bg-white border border-gray-200 p-8 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1">
+            <div className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1">
               <div className="flex flex-col items-start gap-2">
                 <span className="text-[#ED7A30] font-mono text-lg font-bold">05</span>
                 <h3 className="text-xl font-bold text-[#171717] leading-tight">Built-In Communication</h3>
@@ -347,7 +347,7 @@ export default function Home() {
             </div>
 
             {/* 6. Document Generation - Standard Block (Fixed Alignment) */}
-            <div className="bg-white border border-gray-200 p-8 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1">
+            <div className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1">
               <div className="flex flex-col items-start gap-2">
                 <span className="text-[#ED7A30] font-mono text-lg font-bold">06</span>
                 <h3 className="text-xl font-bold text-[#171717] leading-tight">Document Generation & Signing</h3>
@@ -359,7 +359,7 @@ export default function Home() {
             </div>
 
             {/* 7. Archiving - Standard Block */}
-            <div className="bg-white border border-gray-200 p-8 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1">
+            <div className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1">
               <div className="flex flex-col items-start gap-2">
                  <span className="text-[#ED7A30] font-mono text-lg font-bold">07</span>
                  <h3 className="text-xl font-bold text-[#171717] leading-tight">Automatic Archiving</h3>
@@ -371,7 +371,7 @@ export default function Home() {
             </div>
 
             {/* AI - Standard Block */}
-            <div className="bg-orange-50 border border-orange-100 p-8 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:border-[#ED7A30]">
+            <div className="bg-orange-50 border border-orange-100 p-6 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:border-[#ED7A30]">
               <div className="flex justify-between items-start">
                 <h3 className="text-xl font-bold text-[#171717] leading-tight">AI Validation</h3>
                 <div className="w-8 h-8 bg-[#ED7A30] text-white rounded-full flex items-center justify-center shadow-md">
