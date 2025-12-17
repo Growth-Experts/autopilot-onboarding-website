@@ -39,11 +39,11 @@ import joanneWalsh from "@assets/Joanne_Walsh_1764834864661.jpeg";
 import brendanAntunez from "@assets/Brendan_Antunez_1764834968337.jpeg";
 import johnMoll from "@assets/John_Moll_1764835180381.jpeg";
 
-import backoffice001 from "@assets/Backoffice_001_1764837439866.PNG";
-import backoffice002 from "@assets/Backoffice_002_1764837444678.PNG";
-import resellerApp001 from "@assets/Reseller_Application_001_1764837470544.PNG";
-import resellerApp008 from "@assets/Reseller_Application_008_1764837481982.PNG";
-import resellerApp010 from "@assets/Reseller_Application_010_1764837488338.PNG";
+import backoffice001 from "@assets/Backoffice_001_1765982003538.PNG";
+import backoffice002 from "@assets/Backoffice_002_1765982003539.PNG";
+import resellerApp001 from "@assets/Reseller_Application_001_1765982003539.PNG";
+import resellerApp008 from "@assets/Reseller_Application_008_1765982003539.PNG";
+import resellerApp010 from "@assets/Reseller_Application_010_1765982003539.PNG";
 
 import autopilot_partners from "@assets/autopilot-partners.png";
 
