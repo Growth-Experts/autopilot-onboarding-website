@@ -1,29 +1,15 @@
 import { useEffect } from "react";
 import { Mail, Phone } from "lucide-react";
 
-declare global {
-  interface Window {
-    SavvyCal: any;
-  }
-}
-
 export default function BookDemo() {
   useEffect(() => {
-    // Load SavvyCal script
+    // Load Calendly script
     const script = document.createElement("script");
-    script.src = "https://embed.savvycal.com/v1/embed.js";
+    script.src = "https://assets.calendly.com/assets/external/widget.js";
     script.async = true;
     document.body.appendChild(script);
 
-    // Initialize SavvyCal
-    window.SavvyCal = window.SavvyCal || function() {
-      (window.SavvyCal.q = window.SavvyCal.q || []).push(arguments);
-    };
-    window.SavvyCal('init');
-    window.SavvyCal('inline', { link: 'jasonbagley/quickquick', selector: '#booking-page' });
-
     return () => {
-      // Cleanup script if needed, though usually fine to leave for SPA
       if (document.body.contains(script)) {
         document.body.removeChild(script);
       }
@@ -42,9 +28,13 @@ export default function BookDemo() {
           </p>
         </div>
 
-        {/* SavvyCal Embed */}
-        <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden mb-16 min-h-[600px]">
-          <div id="booking-page" className="w-full h-full"></div>
+        {/* Calendly Embed */}
+        <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden mb-16">
+          <div 
+            className="calendly-inline-widget" 
+            data-url="https://calendly.com/marklehrer-autopilot/30min" 
+            style={{ minWidth: '320px', height: '700px' }} 
+          />
         </div>
 
         {/* Contact Details */}
