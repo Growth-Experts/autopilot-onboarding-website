@@ -82,19 +82,21 @@ function HeroSlideshow({ images }: { images: string[] }) {
 function AppGallerySlider({ images }: { images: string[] }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const nextSlide = (e?: React.MouseEvent) => {
-    e?.stopPropagation();
+  const nextSlide = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
     setCurrentIndex((prev) => (prev + 1) % images.length);
   };
 
-  const prevSlide = (e?: React.MouseEvent) => {
-    e?.stopPropagation();
+  const prevSlide = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
     setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
   };
 
   return (
-    <div className="relative w-full h-full group">
-      <div className="absolute inset-0">
+    <div className="relative w-full h-full group isolate">
+      <div className="absolute inset-0 z-0">
         <img 
           src={images[currentIndex]} 
           alt={`App Screenshot ${currentIndex + 1}`} 
@@ -103,20 +105,22 @@ function AppGallerySlider({ images }: { images: string[] }) {
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/70 to-transparent pointer-events-none" />
       </div>
       
-      <div className="absolute bottom-4 right-4 flex gap-2 z-30">
+      <div className="absolute bottom-4 right-4 flex gap-2 z-50">
         <button 
+          type="button"
           onClick={prevSlide}
-          className="bg-black/50 hover:bg-black/70 border border-white/20 text-white p-3 rounded-full transition-all cursor-pointer backdrop-blur-sm"
+          className="bg-black/50 hover:bg-black/70 border border-white/20 text-white p-3 rounded-full transition-all cursor-pointer backdrop-blur-sm active:scale-95 flex items-center justify-center"
           aria-label="Previous slide"
         >
-          <ChevronLeft size={24} />
+          <ChevronLeft size={24} className="pointer-events-none" />
         </button>
         <button 
+          type="button"
           onClick={nextSlide}
-          className="bg-black/50 hover:bg-black/70 border border-white/20 text-white p-3 rounded-full transition-all cursor-pointer backdrop-blur-sm"
+          className="bg-black/50 hover:bg-black/70 border border-white/20 text-white p-3 rounded-full transition-all cursor-pointer backdrop-blur-sm active:scale-95 flex items-center justify-center"
           aria-label="Next slide"
         >
-          <ChevronRight size={24} />
+          <ChevronRight size={24} className="pointer-events-none" />
         </button>
       </div>
     </div>
