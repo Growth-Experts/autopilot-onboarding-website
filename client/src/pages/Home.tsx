@@ -553,7 +553,7 @@ export default function Home() {
                 image: joanneWalsh
               },
               {
-                quote: "Massive amounts of time saved all around. Autopilot has more than paid for itself in the hours we have saved.",
+                quote: "The support and documentation from Autopilot is amazing - they go above and beyond documenting what they have done, even in the backend. They are on par with Fortune 500 companies in support.",
                 name: "Brendan Antunez",
                 role: "Sr. IT Manager",
                 company: "CLARK+ELBING LLP",
