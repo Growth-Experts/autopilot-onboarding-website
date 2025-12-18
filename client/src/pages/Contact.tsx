@@ -67,14 +67,6 @@ export default function Contact() {
           </div>
 
           <div className="relative z-10 max-w-lg mx-auto w-full">
-            <div className="mb-12">
-              <h3 className="text-[#ED7A30] font-bold uppercase tracking-widest mb-2">Headquarters</h3>
-              <p className="text-3xl font-light">
-                123 Innovation Drive,<br />
-                Tech District,<br />
-                San Francisco, CA 94105
-              </p>
-            </div>
 
             <div className="space-y-6">
               <div className="flex items-center gap-4">
