@@ -18,7 +18,7 @@ import { Check, ArrowRight, Clock, Users, FileText, Shield, MessageSquare, Datab
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
 
-import autopilot_integrations from "@assets/autopilot-integrations.png";
+import autopilot_integrations from "@assets/autopilot_integrations_1766071616309.png";
 
 import saCanegrowersLogo from "@assets/SA_CaneGrowers_logo_1764682801217.png";
 import threeWayLogo from "@assets/3way-logo_1764684321801.png";
