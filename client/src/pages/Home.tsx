@@ -381,14 +381,14 @@ export default function Home() {
             </div>
 
             {/* AI - Standard Block */}
-            <div className="bg-orange-50 border border-orange-100 p-6 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:border-[#ED7A30]">
-              <div className="flex justify-between items-start">
-                <h3 className="text-xl font-bold text-[#171717] leading-tight">AI Validation</h3>
-                <div className="w-8 h-8 bg-[#ED7A30] text-white rounded-full flex items-center justify-center shadow-md">
-                  <Zap size={16} />
+            <div className="md:col-span-2 lg:col-span-3 bg-orange-50 border border-orange-100 p-8 hover:shadow-lg transition-all rounded-xl flex flex-col justify-center gap-6 group hover:border-[#ED7A30]">
+              <div className="flex justify-between items-center">
+                <h3 className="text-2xl md:text-3xl font-bold text-[#171717] leading-tight">AI Validation</h3>
+                <div className="w-12 h-12 bg-[#ED7A30] text-white rounded-full flex items-center justify-center shadow-md">
+                  <Zap size={24} />
                 </div>
               </div>
-              <p className="text-gray-600 text-sm leading-relaxed">Uploaded documents are checked and cross-verified against captured form data, reducing errors and preventing delays.</p>
+              <p className="text-gray-700 text-lg md:text-xl leading-relaxed max-w-4xl">Uploaded documents are checked and cross-verified against captured form data, reducing errors and preventing delays.</p>
             </div>
           </div>
         </div>
