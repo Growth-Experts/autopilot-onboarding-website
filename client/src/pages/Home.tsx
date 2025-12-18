@@ -360,7 +360,7 @@ export default function Home() {
             <div className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1">
               <div className="flex flex-col items-start gap-2">
                 <span className="text-[#ED7A30] font-mono text-lg font-bold">06</span>
-                <h3 className="text-xl font-bold text-[#171717] leading-tight">Document Generation & Signing</h3>
+                <h3 className="text-xl font-bold text-[#171717] leading-tight">Document Generation & eSignatures</h3>
               </div>
               <p className="text-gray-500 text-sm leading-relaxed">Generate standard forms automatically and send them for compliant e-signature with a click.</p>
               <div className="mt-auto pt-4">
