@@ -383,7 +383,10 @@ export default function Home() {
             {/* AI - Standard Block */}
             <div className="md:col-span-2 lg:col-span-3 bg-orange-50 border border-orange-100 p-8 hover:shadow-lg transition-all rounded-xl flex flex-col justify-center gap-6 group hover:border-[#ED7A30]">
               <div className="flex justify-between items-center">
-                <h3 className="text-2xl md:text-3xl font-bold text-[#171717] leading-tight">AI Validation</h3>
+                <div className="flex items-center gap-3">
+                  <h3 className="text-2xl md:text-3xl font-bold text-[#171717] leading-tight">AI Validation</h3>
+                  <span className="bg-[#ED7A30] text-white text-xs font-bold px-2 py-1 rounded-full uppercase tracking-wider shadow-sm">New</span>
+                </div>
                 <div className="w-12 h-12 bg-[#ED7A30] text-white rounded-full flex items-center justify-center shadow-md">
                   <Zap size={24} />
                 </div>
