@@ -2,21 +2,10 @@ import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
 import lawdLogo from "@assets/lawd-logo_1764682505153.png";
 import syntechLogo from "@assets/Syntech-Logo_1764684082971.png";
-import ymcaLogo from "@assets/ymca-logo_1764755090576.png";
 import { Link } from "wouter";
 
 export default function CaseStudies() {
   const cases = [
-    {
-      client: "YMCA South Africa",
-      industry: "Non-Profit / NGO",
-      title: "Addressing Key Challenges with Automation",
-      description: "How YMCA South Africa reduced audit times by 40% and streamlined approvals for rural staff using Autopilot's mobile-friendly workflows.",
-      stat: "30-40% Less Audit Time",
-      color: "bg-red-600",
-      logo: <img src={ymcaLogo} alt="YMCA South Africa" className="h-12 w-auto object-contain" />,
-      link: "/case-studies/ymca"
-    },
     {
       client: "LAWD",
       industry: "Legal Services",
