@@ -45,6 +45,14 @@ import resellerApp001 from "@assets/Reseller_Application_001_1765982003539.PNG";
 import resellerApp008 from "@assets/Reseller_Application_008_1765982003539.PNG";
 import resellerApp010 from "@assets/Reseller_Application_010_1765982003539.PNG";
 
+import featureGuidedJourney from "@assets/unnamed_(3)_1768582041101.png";
+import featureAutomatedData from "@assets/unnamed_1768582041101.png";
+import featureChecklists from "@assets/unnamed_(8)_1768582041102.png";
+import featureRoleBased from "@assets/unnamed_2_1768582041100.png";
+import featureCommunication from "@assets/unnamed_3_1768582041100.png";
+import featureSignatures from "@assets/unnamed_(6)_1768582041102.png";
+import featureArchiving from "@assets/unnamed_(10)_1768582041102.png";
+
 import autopilot_partners from "@assets/autopilot-partners.png";
 
 function HeroSlideshow({ images }: { images: string[] }) {
@@ -348,7 +356,7 @@ export default function Home() {
                 id: "01",
                 title: "Guided Journey",
                 description: "Give customers, vendors, and new hires one simple, step-by-step flow to provide details and upload documents - no back-and-forth emails.",
-                image: resellerApp001
+                image: featureGuidedJourney
               })}
               className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1 cursor-pointer hover:border-[#ED7A30]"
             >
@@ -374,7 +382,7 @@ export default function Home() {
                 id: "02",
                 title: "Automated Data & Document Collection",
                 description: "Capture information, documents, and signatures from anyone through a single, structured process.",
-                image: resellerApp008
+                image: featureAutomatedData
               })}
               className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1 cursor-pointer hover:border-[#ED7A30]"
             >
@@ -391,7 +399,7 @@ export default function Home() {
                 id: "03",
                 title: "Multi-Team Checklists",
                 description: "HR, IT, Finance, Operations - everyone sees their tasks in one shared place, so work happens in parallel, not sequentially.",
-                image: backoffice011
+                image: featureChecklists
               })}
               className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1 cursor-pointer hover:border-[#ED7A30]"
             >
@@ -408,7 +416,7 @@ export default function Home() {
                 id: "04",
                 title: "Role-Based Visibility",
                 description: "Each team member sees only what they need, with sensitive data protected by role permissions.",
-                image: backoffice004
+                image: featureRoleBased
               })}
               className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1 cursor-pointer hover:border-[#ED7A30]"
             >
@@ -425,7 +433,7 @@ export default function Home() {
                 id: "05",
                 title: "Built-In Communication",
                 description: "Ask questions and share clarifications directly inside the flow (instead of spawning new email threads).",
-                image: backoffice005
+                image: featureCommunication
               })}
               className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1 cursor-pointer hover:border-[#ED7A30]"
             >
@@ -442,7 +450,7 @@ export default function Home() {
                 id: "06",
                 title: "Document Generation & eSignatures",
                 description: "Generate standard forms automatically and send them for compliant e-signature with a click.",
-                image: appShot3
+                image: featureSignatures
               })}
               className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1 cursor-pointer hover:border-[#ED7A30]"
             >
@@ -462,7 +470,7 @@ export default function Home() {
                 id: "07",
                 title: "Automatic Archiving",
                 description: "Completed documents go straight into SharePoint or your CRM - neatly stored and fully traceable.",
-                image: backoffice001
+                image: featureArchiving
               })}
               className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1 cursor-pointer hover:border-[#ED7A30]"
             >
