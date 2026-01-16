@@ -125,8 +125,8 @@ export default function EmployeeOnboarding() {
                 alt="Chaotic Office Environment" 
                 className="absolute inset-0 w-full h-full object-cover opacity-80"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end p-8">
-                <p className="text-white text-lg font-medium italic">"Is this document the latest version?"</p>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex items-end p-10">
+                <p className="text-white text-2xl font-bold italic drop-shadow-lg leading-snug">"Is this document the latest version?"</p>
               </div>
             </div>
           </div>
