@@ -523,7 +523,7 @@ export default function Home() {
                 <img 
                   src={lawdLogo} 
                   alt="LAWD" 
-                  className="w-48 md:w-56 object-contain"
+                  className="w-48 md:w-56 object-contain brightness-0 invert"
                 />
                 <img 
                   src={autopilotLogo} 
