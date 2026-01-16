@@ -33,7 +33,7 @@ import backoffice005 from "@assets/Backoffice_005_1765964508562.PNG";
 import reseller009 from "@assets/Reseller_Application_009_1765964508563.PNG";
 import reseller011 from "@assets/Reseller_Application_011_1765964508563.PNG";
 import backoffice011 from "@assets/Backoffice_011_1764836642764.PNG";
-import ymcaLogo from "@assets/ymca-logo_1765965781928.png";
+import lawdLogo from "@assets/lawd-logo_1764682505153.png";
 import autopilotLogo from "@assets/Autopilot Logo_Onboarding - White.png";
 import joanneWalsh from "@assets/Joanne_Walsh_1764834864661.jpeg";
 import brendanAntunez from "@assets/Brendan_Antunez_1764834968337.jpeg";
@@ -509,17 +509,20 @@ export default function Home() {
             <div className="inline-block bg-[#ED7A30] text-white text-xs font-bold px-3 py-1 uppercase tracking-widest mb-6">
               Case Study
             </div>
-            <h2 className="text-4xl md:text-6xl font-bold leading-tight text-white max-w-5xl mx-auto tracking-tighter">
-              From Paper Delays to Real-Time, Error-Free Onboarding for YMCA
+            <h2 className="text-4xl md:text-6xl font-bold leading-tight text-white max-w-5xl mx-auto tracking-tighter mb-6">
+              LAWD’s Growth on Autopilot: Slashing Onboarding Management Time by 50%
             </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto font-light leading-relaxed">
+              How a rapidly expanding property advisory firm automated their recruitment and onboarding to support 100% staff growth without a dedicated HR department.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
             <div className="relative h-full min-h-[400px] rounded-xl overflow-hidden shadow-2xl border border-gray-700 bg-[#262626] flex flex-col items-center justify-center p-8 md:p-12">
               <div className="flex flex-col items-center justify-center gap-12 w-full">
                 <img 
-                  src={ymcaLogo} 
-                  alt="YMCA South Africa" 
+                  src={lawdLogo} 
+                  alt="LAWD" 
                   className="w-48 md:w-56 object-contain"
                 />
                 <img 
@@ -532,9 +535,9 @@ export default function Home() {
             
             <div className="space-y-8">
               {[
-                "Gave remote and rural staff mobile-friendly access, reducing onboarding delays caused by limited computer access.",
-                "Centralized documents and activity logs for easy retrieval, removing back-and-forth and missing paperwork.",
-                "Standardized onboarding steps through rule-driven digital workflows, ensuring consistency and fewer manual errors."
+                "Automated recruitment and onboarding to support 100% staff growth.",
+                "Managed rapid expansion without a dedicated HR department.",
+                "Slashed onboarding management time by 50% through automated workflows."
               ].map((benefit, i) => (
                 <div key={i} className="flex gap-4 border-b border-gray-800 pb-6 last:border-0">
                   <div className="w-6 h-6 rounded-full bg-[#ED7A30] shrink-0 mt-1" />
@@ -545,7 +548,7 @@ export default function Home() {
           </div>
 
           <div className="text-center">
-            <Link href="/case-studies/ymca">
+            <Link href="/case-studies/lawd">
               <Button variant="outline" className="border-white text-white hover:bg-white hover:text-[#171717] rounded-none uppercase font-bold px-10 py-6 text-lg transition-all duration-300 cursor-pointer">
                 Read Full Story
               </Button>
