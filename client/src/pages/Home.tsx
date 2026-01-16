@@ -14,7 +14,7 @@ import avatarJohn from "@assets/stock_images/professional_man_cor_a0338afc.jpg";
 import avatarEmily from "@assets/stock_images/business_woman_profe_0724059b.jpg";
 import bidvestLogo from "@assets/bidvest-logo_1765964035827.png";
 import integrationsImage from "@assets/autopilot-integrations_1764671619557.png";
-import { Check, ArrowRight, Clock, Users, FileText, Shield, MessageSquare, Database, Archive, Zap, ChevronLeft, ChevronRight } from "lucide-react";
+import { Check, ArrowRight, Clock, Users, FileText, Shield, MessageSquare, Database, Archive, Zap, ChevronLeft, ChevronRight, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
 
@@ -127,9 +127,49 @@ function AppGallerySlider({ images }: { images: string[] }) {
   );
 }
 
+function FeatureModal({ feature, onClose }: { feature: { id: string; title: string; description: string; image: string } | null; onClose: () => void }) {
+  if (!feature) return null;
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200" onClick={onClose}>
+      <div 
+        className="bg-white rounded-xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto relative animate-in zoom-in-95 duration-200 border border-gray-100" 
+        onClick={(e) => e.stopPropagation()}
+      >
+        <button 
+          onClick={onClose}
+          className="absolute top-4 right-4 p-2 bg-white/80 hover:bg-gray-100 rounded-full transition-colors z-10 cursor-pointer"
+        >
+          <X size={24} className="text-gray-500" />
+        </button>
+        
+        <div className="p-8 md:p-12">
+          <div className="flex items-center gap-4 mb-6">
+            <span className="text-[#ED7A30] font-mono text-xl font-bold bg-[#ED7A30]/10 px-3 py-1 rounded-md">{feature.id}</span>
+            <h3 className="text-3xl font-bold text-[#171717]">{feature.title}</h3>
+          </div>
+          
+          <p className="text-xl text-gray-600 mb-8 font-light leading-relaxed max-w-2xl">{feature.description}</p>
+          
+          <div className="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden shadow-inner">
+            <img 
+              src={feature.image} 
+              alt={feature.title} 
+              className="w-full h-auto object-contain"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Home() {
+  const [activeFeature, setActiveFeature] = useState<{ id: string; title: string; description: string; image: string } | null>(null);
+
   return (
     <div className="bg-white">
+      <FeatureModal feature={activeFeature} onClose={() => setActiveFeature(null)} />
       {/* Section 1: Hero */}
       <section className="relative pt-20 pb-24 overflow-hidden border-b border-gray-200">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40 pointer-events-none" />
@@ -303,10 +343,18 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-[minmax(232px,auto)] grid-flow-dense">
             
             {/* 1. Guided Journey - Standard Block */}
-            <div className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1">
+            <div 
+              onClick={() => setActiveFeature({
+                id: "01",
+                title: "Guided Journey",
+                description: "Give customers, vendors, and new hires one simple, step-by-step flow to provide details and upload documents - no back-and-forth emails.",
+                image: resellerApp001
+              })}
+              className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1 cursor-pointer hover:border-[#ED7A30]"
+            >
               <div className="flex flex-col items-start gap-2">
                 <span className="text-[#ED7A30] font-mono text-lg font-bold">01</span>
-                <h3 className="text-xl font-bold text-[#171717] leading-tight">Guided Journey</h3>
+                <h3 className="text-xl font-bold text-[#171717] leading-tight group-hover:text-[#ED7A30] transition-colors">Guided Journey</h3>
               </div>
               <p className="text-gray-500 text-sm leading-relaxed">Give customers, vendors, and new hires one simple, step-by-step flow to provide details and upload documents - no back-and-forth emails.</p>
             </div>
@@ -321,46 +369,86 @@ export default function Home() {
             </div>
 
             {/* 2. Automated Data - Standard Block */}
-            <div className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1">
+            <div 
+              onClick={() => setActiveFeature({
+                id: "02",
+                title: "Automated Data & Document Collection",
+                description: "Capture information, documents, and signatures from anyone through a single, structured process.",
+                image: resellerApp008
+              })}
+              className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1 cursor-pointer hover:border-[#ED7A30]"
+            >
               <div className="flex flex-col items-start gap-2">
                 <span className="text-[#ED7A30] font-mono text-lg font-bold">02</span>
-                <h3 className="text-xl font-bold text-[#171717] leading-tight">Automated Data & Document Collection</h3>
+                <h3 className="text-xl font-bold text-[#171717] leading-tight group-hover:text-[#ED7A30] transition-colors">Automated Data & Document Collection</h3>
               </div>
               <p className="text-gray-500 text-sm leading-relaxed">Capture information, documents, and signatures from anyone through a single, structured process.</p>
             </div>
 
             {/* 3. Checklists - Standard Block */}
-            <div className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1">
+            <div 
+              onClick={() => setActiveFeature({
+                id: "03",
+                title: "Multi-Team Checklists",
+                description: "HR, IT, Finance, Operations - everyone sees their tasks in one shared place, so work happens in parallel, not sequentially.",
+                image: backoffice011
+              })}
+              className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1 cursor-pointer hover:border-[#ED7A30]"
+            >
               <div className="flex flex-col items-start gap-2">
                 <span className="text-[#ED7A30] font-mono text-lg font-bold">03</span>
-                <h3 className="text-xl font-bold text-[#171717] leading-tight">Multi-Team Checklists</h3>
+                <h3 className="text-xl font-bold text-[#171717] leading-tight group-hover:text-[#ED7A30] transition-colors">Multi-Team Checklists</h3>
               </div>
               <p className="text-gray-500 text-sm leading-relaxed">HR, IT, Finance, Operations - everyone sees their tasks in one shared place, so work happens in parallel, not sequentially.</p>
             </div>
 
             {/* 4. Role Based - Standard Block */}
-            <div className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1">
+            <div 
+              onClick={() => setActiveFeature({
+                id: "04",
+                title: "Role-Based Visibility",
+                description: "Each team member sees only what they need, with sensitive data protected by role permissions.",
+                image: backoffice004
+              })}
+              className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1 cursor-pointer hover:border-[#ED7A30]"
+            >
               <div className="flex flex-col items-start gap-2">
                 <span className="text-[#ED7A30] font-mono text-lg font-bold">04</span>
-                <h3 className="text-xl font-bold text-[#171717] leading-tight">Role-Based Visibility</h3>
+                <h3 className="text-xl font-bold text-[#171717] leading-tight group-hover:text-[#ED7A30] transition-colors">Role-Based Visibility</h3>
               </div>
               <p className="text-gray-500 text-sm leading-relaxed">Each team member sees only what they need, with sensitive data protected by role permissions.</p>
             </div>
 
             {/* 5. Communication - Standard Block */}
-            <div className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1">
+            <div 
+              onClick={() => setActiveFeature({
+                id: "05",
+                title: "Built-In Communication",
+                description: "Ask questions and share clarifications directly inside the flow (instead of spawning new email threads).",
+                image: backoffice005
+              })}
+              className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1 cursor-pointer hover:border-[#ED7A30]"
+            >
               <div className="flex flex-col items-start gap-2">
                 <span className="text-[#ED7A30] font-mono text-lg font-bold">05</span>
-                <h3 className="text-xl font-bold text-[#171717] leading-tight">Built-In Communication</h3>
+                <h3 className="text-xl font-bold text-[#171717] leading-tight group-hover:text-[#ED7A30] transition-colors">Built-In Communication</h3>
               </div>
               <p className="text-gray-500 text-sm leading-relaxed">Ask questions and share clarifications directly inside the flow (instead of spawning new email threads).</p>
             </div>
 
             {/* 6. Document Generation - Standard Block (Fixed Alignment) */}
-            <div className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1">
+            <div 
+              onClick={() => setActiveFeature({
+                id: "06",
+                title: "Document Generation & eSignatures",
+                description: "Generate standard forms automatically and send them for compliant e-signature with a click.",
+                image: appShot3
+              })}
+              className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1 cursor-pointer hover:border-[#ED7A30]"
+            >
               <div className="flex flex-col items-start gap-2">
                 <span className="text-[#ED7A30] font-mono text-lg font-bold">06</span>
-                <h3 className="text-xl font-bold text-[#171717] leading-tight">Document Generation & eSignatures</h3>
+                <h3 className="text-xl font-bold text-[#171717] leading-tight group-hover:text-[#ED7A30] transition-colors">Document Generation & eSignatures</h3>
               </div>
               <p className="text-gray-500 text-sm leading-relaxed">Generate standard forms automatically and send them for compliant e-signature with a click.</p>
               <div className="mt-auto pt-4">
@@ -369,10 +457,18 @@ export default function Home() {
             </div>
 
             {/* 7. Archiving - Standard Block */}
-            <div className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1">
+            <div 
+              onClick={() => setActiveFeature({
+                id: "07",
+                title: "Automatic Archiving",
+                description: "Completed documents go straight into SharePoint or your CRM - neatly stored and fully traceable.",
+                image: backoffice001
+              })}
+              className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1 cursor-pointer hover:border-[#ED7A30]"
+            >
               <div className="flex flex-col items-start gap-2">
                  <span className="text-[#ED7A30] font-mono text-lg font-bold">07</span>
-                 <h3 className="text-xl font-bold text-[#171717] leading-tight">Automatic Archiving</h3>
+                 <h3 className="text-xl font-bold text-[#171717] leading-tight group-hover:text-[#ED7A30] transition-colors">Automatic Archiving</h3>
               </div>
               <p className="text-gray-500 text-sm leading-relaxed">Completed documents go straight into SharePoint or your CRM - neatly stored and fully traceable.</p>
               <div className="mt-auto pt-4">
