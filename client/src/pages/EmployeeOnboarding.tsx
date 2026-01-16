@@ -268,7 +268,7 @@ export default function EmployeeOnboarding() {
               Case Study: LAWD
             </div>
             <h2 className="text-4xl md:text-5xl font-bold leading-tight text-white max-w-5xl mx-auto tracking-tighter mb-8">
-              LAWD’s Growth on Autopilot: Slashing Onboarding Management Time by 50%
+              LAWD’s Growth on Autopilot:<br />Slashing Onboarding Management Time by 50%
             </h2>
             <p className="text-xl text-gray-400 italic font-medium">
               "We used to use a mental checklist, so you can imagine that a few things fell through the cracks. Now... we know exactly what happened."

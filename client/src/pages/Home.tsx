@@ -614,7 +614,7 @@ export default function Home() {
               Case Study
             </div>
             <h2 className="text-4xl md:text-6xl font-bold leading-tight text-white max-w-5xl mx-auto tracking-tighter mb-6">
-              LAWD’s Growth on Autopilot: Slashing Onboarding Management Time by 50%
+              LAWD’s Growth on Autopilot:<br />Slashing Onboarding Management Time by 50%
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto font-light leading-relaxed">
               How a rapidly expanding property advisory firm automated their recruitment and onboarding to support 100% staff growth without a dedicated HR department.
