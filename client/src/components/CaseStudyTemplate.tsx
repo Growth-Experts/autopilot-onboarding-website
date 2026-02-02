@@ -158,7 +158,7 @@ export function CaseStudyTemplate({
               <img 
                 src={Onboarding_6} 
                 alt="Solution Interface" 
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-contain bg-white"
               />
             </div>
           </div>
