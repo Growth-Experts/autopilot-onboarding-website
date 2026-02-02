@@ -143,8 +143,8 @@ export function CaseStudyTemplate({
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-            <div className="order-2 lg:order-1 grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="mb-16">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {solution.points.map((point, i) => (
                 <div key={i} className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm flex items-start gap-4">
                   <div className="bg-green-100 text-green-700 p-2 rounded-lg shrink-0">
@@ -153,13 +153,6 @@ export function CaseStudyTemplate({
                   <span className="font-medium text-gray-800">{point}</span>
                 </div>
               ))}
-            </div>
-            <div className="order-1 lg:order-2 relative h-[400px] lg:h-[500px] bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200">
-              <img 
-                src={Onboarding_6} 
-                alt="Solution Interface" 
-                className="absolute inset-0 w-full h-full object-contain bg-white"
-              />
             </div>
           </div>
         </div>
