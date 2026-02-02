@@ -280,20 +280,7 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col items-center">
-            {/* Central Visual - Large & Responsive */}
-            <div className="w-full max-w-5xl mb-16">
-              <div className="relative shadow-2xl rounded-xl overflow-hidden border border-gray-200 bg-white">
-                <WindowFrame title="Workflow Management">
-                  <img 
-                    src={backoffice011} 
-                    alt="Checklist Dashboard" 
-                    className="w-full h-auto object-contain"
-                  />
-                </WindowFrame>
-              </div>
-            </div>
-
-            {/* Features Grid - Underneath */}
+            {/* Features Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-full max-w-6xl">
               <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 group">
                 <div className="w-12 h-12 bg-[#ED7A30]/10 rounded-lg flex items-center justify-center text-[#ED7A30] mb-4 group-hover:bg-[#ED7A30] group-hover:text-white transition-colors">
