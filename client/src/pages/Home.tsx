@@ -321,11 +321,13 @@ export default function Home() {
                 </Button>
               </Link>
 
-              <div className="mt-6 inline-flex items-center gap-4 rounded-full border border-gray-200 bg-white px-5 py-3 shadow-sm">
-                <img data-testid="img-microsoft-partner-logo" src={microsoftPartnerLogo} alt="Microsoft Partner" className="h-6 w-auto object-contain" />
-                <p data-testid="text-microsoft-partner" className="text-sm font-semibold text-gray-700">
-                  Autopilot is a <span className="text-[#171717]">Proud Microsoft Partner</span>
-                </p>
+              <div className="mt-8 flex justify-center">
+                <div className="inline-flex items-center gap-4 rounded-full border border-gray-200 bg-white px-6 py-4 shadow-sm">
+                  <img data-testid="img-microsoft-partner-logo" src={microsoftPartnerLogo} alt="Microsoft Partner" className="h-9 sm:h-10 w-auto object-contain" />
+                  <p data-testid="text-microsoft-partner" className="text-sm sm:text-base font-semibold text-gray-700">
+                    Autopilot is a <span className="text-[#171717]">Proud Microsoft Partner</span>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
