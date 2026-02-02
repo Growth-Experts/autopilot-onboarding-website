@@ -54,7 +54,6 @@ import featureSignatures from "@assets/unnamed_(6)_1768582041102.png";
 import featureArchiving from "@assets/unnamed_(10)_1768582041102.png";
 
 import autopilot_partners from "@assets/autopilot-partners.png";
-import microsoftPartnerBadge from "@assets/Autopilot (1).png";
 
 function HeroSlideshow({ images }: { images: string[] }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -185,17 +184,6 @@ export default function Home() {
         
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <div className="flex items-center justify-center sm:justify-start gap-3 mb-5 opacity-80 hover:opacity-100 transition-opacity" data-testid="badge-microsoft-partner">
-              <img
-                src={microsoftPartnerBadge}
-                alt="Microsoft Partner"
-                className="h-[28px] max-h-[35px] w-auto object-contain"
-                data-testid="img-microsoft-partner"
-              />
-              <span className="text-xs font-semibold tracking-wide text-gray-500" data-testid="text-microsoft-partner">
-                Proud Microsoft Partner
-              </span>
-            </div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#171717] leading-[1.1] mb-8 tracking-tighter">
               Onboarding shouldn't feel like a <span className="text-[#ED7A30]">scavenger hunt</span>
             </h1>
