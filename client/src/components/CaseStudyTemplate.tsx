@@ -144,15 +144,27 @@ export function CaseStudyTemplate({
           </div>
 
           <div className="mb-16">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {solution.points.map((point, i) => (
-                <div key={i} className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm flex items-start gap-4">
-                  <div className="bg-green-100 text-green-700 p-2 rounded-lg shrink-0">
-                    <Check size={20} strokeWidth={3} />
-                  </div>
-                  <span className="font-medium text-gray-800">{point}</span>
+            <div className="rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden">
+              <div className="px-6 py-5 border-b border-gray-100 bg-gradient-to-r from-[#ED7A30]/10 via-white to-white">
+                <div className="flex items-center justify-between gap-4">
+                  <p className="text-sm font-bold uppercase tracking-widest text-[#171717]">What changed for {client}</p>
+                  <p className="text-xs font-semibold text-gray-500">Implementation highlights</p>
                 </div>
-              ))}
+              </div>
+
+              <div className="divide-y divide-gray-100">
+                {solution.points.map((point, i) => (
+                  <div key={i} className="flex items-start gap-4 px-6 py-4 hover:bg-gray-50/70 transition-colors">
+                    <div className="mt-0.5 w-9 h-9 rounded-full bg-green-50 text-green-700 flex items-center justify-center shrink-0 ring-1 ring-green-100">
+                      <Check size={18} strokeWidth={3} />
+                    </div>
+                    <div className="flex-1">
+                      <div className="text-xs font-bold text-gray-400 tracking-widest uppercase">Step {String(i + 1).padStart(2, "0")}</div>
+                      <div className="mt-1 font-semibold text-gray-900 leading-snug">{point}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
