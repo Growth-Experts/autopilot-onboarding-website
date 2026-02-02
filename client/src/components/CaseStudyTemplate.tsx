@@ -144,36 +144,95 @@ export function CaseStudyTemplate({
           </div>
 
           <div className="mb-16">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {solution.points.map((point, i) => (
-                <div key={i} className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm flex items-start gap-4">
-                  <div className="bg-green-100 text-green-700 p-2 rounded-lg shrink-0">
-                    <Check size={20} strokeWidth={3} />
+            <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
+              <div className="px-6 sm:px-8 py-6 border-b border-gray-100 bg-gradient-to-r from-[#ED7A30]/10 via-transparent to-transparent">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                  <div>
+                    <div className="text-xs font-bold uppercase tracking-widest text-[#ED7A30]">Delivered in weeks</div>
+                    <div className="text-lg font-extrabold text-[#171717]">What Autopilot automated for LAWD</div>
                   </div>
-                  <span className="font-medium text-gray-800">{point}</span>
+                  <div className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-gray-700">
+                    <span className="inline-block w-2 h-2 rounded-full bg-[#ED7A30]" />
+                    Workflow automation
+                  </div>
                 </div>
-              ))}
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2">
+                {solution.points.map((point, i) => (
+                  <div
+                    key={i}
+                    className="flex items-start gap-4 px-6 sm:px-8 py-5 border-t border-gray-100 sm:[&:nth-child(-n+2)]:border-t-0 sm:border-l sm:[&:nth-child(odd)]:border-l-0"
+                  >
+                    <div className="mt-0.5 w-9 h-9 rounded-xl bg-[#ED7A30]/10 text-[#ED7A30] flex items-center justify-center shrink-0">
+                      <Check size={18} strokeWidth={3} />
+                    </div>
+                    <div className="flex-1">
+                      <div className="text-[11px] font-bold uppercase tracking-widest text-gray-400">Capability</div>
+                      <div className="font-semibold text-gray-900 leading-snug">{point}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </section>
+
       {/* Results Section */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#171717] mb-16 text-center">{results.title}</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {results.points.map((result, i) => (
-              <div key={i} className="bg-gray-50 p-8 rounded-xl border border-gray-100 hover:border-[#ED7A30] transition-colors group">
-                <div className="w-12 h-12 bg-[#ED7A30]/10 text-[#ED7A30] rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#ED7A30] group-hover:text-white transition-colors">
-                  <Check size={24} />
+          <div className="text-center mb-14">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#171717] tracking-tight">{results.title}</h2>
+            <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+              Measurable gains in speed, accountability, and consistency — without hiring a dedicated HR team.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <div className="lg:col-span-5 bg-[#171717] text-white rounded-2xl p-10 shadow-xl relative overflow-hidden border border-gray-900">
+              <div className="relative z-10">
+                <div className="text-xs font-bold uppercase tracking-widest text-white/60">Headline outcome</div>
+                <div className="mt-3 text-5xl md:text-6xl font-extrabold tracking-tight text-[#ED7A30]">50%</div>
+                <div className="mt-2 text-xl font-bold">Less onboarding management time</div>
+                <div className="mt-4 text-white/70 leading-relaxed">
+                  A smoother process for new hires, and far fewer follow-ups for operations.
                 </div>
-                <h3 className="text-xl font-bold text-[#171717] mb-4">{result.title}</h3>
-                <p className="text-gray-600 leading-relaxed">
-                  {result.description}
-                </p>
+
+                <div className="mt-8 grid grid-cols-2 gap-4">
+                  <div className="rounded-xl bg-white/5 border border-white/10 p-4">
+                    <div className="text-[11px] font-bold uppercase tracking-widest text-white/60">Staff growth</div>
+                    <div className="mt-1 text-2xl font-extrabold">2x</div>
+                  </div>
+                  <div className="rounded-xl bg-white/5 border border-white/10 p-4">
+                    <div className="text-[11px] font-bold uppercase tracking-widest text-white/60">Compliance</div>
+                    <div className="mt-1 text-2xl font-extrabold">100%</div>
+                  </div>
+                </div>
               </div>
-            ))}
+              <div className="absolute -top-28 -right-24 w-72 h-72 bg-[#ED7A30] rounded-full blur-[90px] opacity-20" />
+              <div className="absolute -bottom-28 -left-24 w-72 h-72 bg-blue-900 rounded-full blur-[90px] opacity-25" />
+            </div>
+
+            <div className="lg:col-span-7">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {results.points.map((result, i) => (
+                  <div
+                    key={i}
+                    className="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-all group hover:-translate-y-0.5"
+                  >
+                    <div className="flex items-center justify-between gap-4 mb-5">
+                      <div className="w-11 h-11 bg-[#ED7A30]/10 text-[#ED7A30] rounded-xl flex items-center justify-center group-hover:bg-[#ED7A30] group-hover:text-white transition-colors">
+                        <Check size={22} />
+                      </div>
+                      <div className="text-[11px] font-bold uppercase tracking-widest text-gray-400">Impact</div>
+                    </div>
+                    <h3 className="text-xl font-extrabold text-[#171717] mb-3 tracking-tight">{result.title}</h3>
+                    <p className="text-gray-600 leading-relaxed">{result.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
 
           <div className="mt-20 text-center">
@@ -189,7 +248,7 @@ export function CaseStudyTemplate({
                   </Button>
                 </Link>
               </div>
-              
+
               {/* Background decorative elements */}
               <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-20 pointer-events-none">
                 <div className="absolute -top-24 -right-24 w-64 h-64 bg-[#ED7A30] rounded-full blur-[80px]" />
