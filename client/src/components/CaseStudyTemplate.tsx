@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, Check, Quote } from "lucide-react";
 import { Link } from "wouter";
 
+import Onboarding_6 from "@assets/Onboarding 6.png";
+
 interface CaseStudyTemplateProps {
   client: string;
   industry: string;
@@ -154,7 +156,7 @@ export function CaseStudyTemplate({
             </div>
             <div className="order-1 lg:order-2 relative h-[400px] lg:h-[500px] bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200">
               <img 
-                src={solution.image} 
+                src={Onboarding_6} 
                 alt="Solution Interface" 
                 className="absolute inset-0 w-full h-full object-cover"
               />
