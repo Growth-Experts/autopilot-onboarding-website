@@ -144,104 +144,34 @@ export function CaseStudyTemplate({
           </div>
 
           <div className="mb-16">
-            <div className="relative rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden">
-              <div className="absolute inset-0 pointer-events-none">
-                <div className="absolute -top-20 -right-20 w-72 h-72 bg-[#ED7A30] opacity-[0.06] blur-[70px]" />
-                <div className="absolute -bottom-24 -left-24 w-72 h-72 bg-blue-900 opacity-[0.05] blur-[80px]" />
-              </div>
-
-              <div className="relative grid grid-cols-1 lg:grid-cols-12">
-                <div className="lg:col-span-4 px-6 sm:px-8 py-8 border-b lg:border-b-0 lg:border-r border-gray-100">
-                  <div className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-gray-700">
-                    <span className="inline-block w-2 h-2 rounded-full bg-[#ED7A30]" />
-                    Implementation
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {solution.points.map((point, i) => (
+                <div key={i} className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm flex items-start gap-4">
+                  <div className="bg-green-100 text-green-700 p-2 rounded-lg shrink-0">
+                    <Check size={20} strokeWidth={3} />
                   </div>
-
-                  <h4 className="mt-4 text-2xl font-extrabold text-[#171717] tracking-tight">Workflow automation delivered</h4>
-                  <p className="mt-3 text-gray-600 leading-relaxed">
-                    A clear, repeatable process that connects internal teams and external providers — with auditability built in.
-                  </p>
-
-                  <div className="mt-6 grid grid-cols-2 gap-3">
-                    <div className="rounded-xl border border-gray-200 bg-gray-50 px-4 py-3">
-                      <div className="text-[11px] font-bold uppercase tracking-widest text-gray-400">Approvals</div>
-                      <div className="mt-1 text-sm font-extrabold text-gray-900">Standardized</div>
-                    </div>
-                    <div className="rounded-xl border border-gray-200 bg-gray-50 px-4 py-3">
-                      <div className="text-[11px] font-bold uppercase tracking-widest text-gray-400">Tasks</div>
-                      <div className="mt-1 text-sm font-extrabold text-gray-900">Assigned</div>
-                    </div>
-                  </div>
+                  <span className="font-medium text-gray-800">{point}</span>
                 </div>
-
-                <div className="lg:col-span-8 px-6 sm:px-8 py-8">
-                  <div className="flex items-end justify-between gap-6 mb-6">
-                    <div>
-                      <div className="text-xs font-bold uppercase tracking-widest text-gray-400">Capabilities</div>
-                      <div className="mt-1 text-lg font-extrabold text-[#171717]">What was automated</div>
-                    </div>
-                    <div className="hidden sm:flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-gray-400">
-                      <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#ED7A30]" />
-                      End-to-end onboarding
-                    </div>
-                  </div>
-
-                  <div className="space-y-3">
-                    {solution.points.map((point, i) => (
-                      <div
-                        key={i}
-                        className="flex items-start gap-4 rounded-xl border border-gray-200 bg-white px-5 py-4 shadow-[0_1px_0_rgba(0,0,0,0.02)] hover:shadow-sm transition-shadow"
-                      >
-                        <div className="mt-0.5 w-9 h-9 rounded-xl bg-[#ED7A30]/10 text-[#ED7A30] flex items-center justify-center shrink-0">
-                          <Check size={18} strokeWidth={3} />
-                        </div>
-                        <div className="flex-1">
-                          <div className="font-semibold text-gray-900 leading-snug">{point}</div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
-
       {/* Results Section */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center mb-14">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#171717] tracking-tight">{results.title}</h2>
-            <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
-              Outcomes that were visible across the business — faster execution, better accountability, and a consistent experience.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#171717] mb-16 text-center">{results.title}</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {results.points.map((result, i) => (
-              <div
-                key={i}
-                className="relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-md transition-all overflow-hidden group"
-              >
-                <div className="absolute inset-0 pointer-events-none">
-                  <div className="absolute -top-16 -right-16 w-52 h-52 bg-[#ED7A30] opacity-0 group-hover:opacity-[0.06] blur-[60px] transition-opacity" />
+              <div key={i} className="bg-gray-50 p-8 rounded-xl border border-gray-100 hover:border-[#ED7A30] transition-colors group">
+                <div className="w-12 h-12 bg-[#ED7A30]/10 text-[#ED7A30] rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#ED7A30] group-hover:text-white transition-colors">
+                  <Check size={24} />
                 </div>
-
-                <div className="relative">
-                  <div className="flex items-center justify-between gap-4 mb-5">
-                    <div className="inline-flex items-center gap-2 rounded-full bg-gray-50 border border-gray-200 px-3 py-1.5">
-                      <span className="inline-block w-2 h-2 rounded-full bg-[#ED7A30]" />
-                      <span className="text-xs font-bold uppercase tracking-wider text-gray-600">Impact</span>
-                    </div>
-                    <div className="w-10 h-10 rounded-xl bg-[#ED7A30]/10 text-[#ED7A30] flex items-center justify-center group-hover:bg-[#ED7A30] group-hover:text-white transition-colors">
-                      <Check size={20} />
-                    </div>
-                  </div>
-
-                  <h3 className="text-xl font-extrabold text-[#171717] mb-3 tracking-tight">{result.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{result.description}</p>
-                </div>
+                <h3 className="text-xl font-bold text-[#171717] mb-4">{result.title}</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {result.description}
+                </p>
               </div>
             ))}
           </div>
@@ -259,7 +189,7 @@ export function CaseStudyTemplate({
                   </Button>
                 </Link>
               </div>
-
+              
               {/* Background decorative elements */}
               <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-20 pointer-events-none">
                 <div className="absolute -top-24 -right-24 w-64 h-64 bg-[#ED7A30] rounded-full blur-[80px]" />
