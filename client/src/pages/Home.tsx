@@ -54,6 +54,7 @@ import featureSignatures from "@assets/unnamed_(6)_1768582041102.png";
 import featureArchiving from "@assets/unnamed_(10)_1768582041102.png";
 
 import autopilot_partners from "@assets/autopilot-partners.png";
+import microsoftPartnerLogo from "@assets/microsoft-partner-logo.png";
 
 function HeroSlideshow({ images }: { images: string[] }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -315,10 +316,17 @@ export default function Home() {
             <div className="mt-16 text-center">
               <p className="text-2xl font-bold text-[#171717] italic mb-8 tracking-tight">Everything moves in sync, every time.</p>
               <Link href="/book-demo">
-                <Button className="bg-[#ED7A30] hover:bg-[#d66520] text-white text-lg px-8 py-4 rounded-none font-bold uppercase tracking-wider shadow-lg hover:shadow-xl transition-all transform hover:scale-105 cursor-pointer">
+                <Button data-testid="button-book-demo-solution" className="bg-[#ED7A30] hover:bg-[#d66520] text-white text-lg px-8 py-4 rounded-none font-bold uppercase tracking-wider shadow-lg hover:shadow-xl transition-all transform hover:scale-105 cursor-pointer">
                   Book a Demo
                 </Button>
               </Link>
+
+              <div className="mt-6 inline-flex items-center gap-4 rounded-full border border-gray-200 bg-white px-5 py-3 shadow-sm">
+                <img data-testid="img-microsoft-partner-logo" src={microsoftPartnerLogo} alt="Microsoft Partner" className="h-6 w-auto object-contain" />
+                <p data-testid="text-microsoft-partner" className="text-sm font-semibold text-gray-700">
+                  Autopilot is a <span className="text-[#171717]">Proud Microsoft Partner</span>
+                </p>
+              </div>
             </div>
           </div>
         </div>
