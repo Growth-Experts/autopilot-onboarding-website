@@ -62,32 +62,16 @@ import autopilot_partners from "@assets/autopilot-partners.png";
 import microsoftPartnerLogo from "@assets/microsoft-partner-logo.png";
 
 function HeroSlideshow({ images }: { images: string[] }) {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, [images.length]);
+  const [currentIndex] = useState(0);
 
   return (
     <div className="flex flex-col gap-4">
       <div className="relative w-full aspect-[16/9] bg-gray-100 overflow-hidden rounded-xl border border-gray-200 shadow-sm">
-        {images.map((img, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-              index === currentIndex ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            <img
-              src={img}
-              alt={`Onboarding Preview ${index + 1}`}
-              className="w-full h-full object-contain bg-gray-100"
-            />
-          </div>
-        ))}
+        <img
+          src={images[currentIndex]}
+          alt="Autopilot Onboarding Overview"
+          className="w-full h-full object-contain bg-gray-100"
+        />
       </div>
     </div>
   );
@@ -308,7 +292,7 @@ export default function Home() {
                 </Button>
               </Link>
 
-              <div className="mt-8 flex justify-center">
+              <div className="mt-5 flex justify-center">
                 <div className="inline-flex items-center gap-4 rounded-full border border-gray-200 bg-white px-6 py-4 shadow-sm">
                   <img data-testid="img-microsoft-partner-logo" src={microsoftPartnerLogo} alt="Microsoft Partner" className="h-9 sm:h-10 w-auto object-contain" />
                   <p data-testid="text-microsoft-partner" className="text-sm sm:text-base font-semibold text-gray-700">
