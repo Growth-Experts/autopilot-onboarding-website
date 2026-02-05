@@ -252,53 +252,55 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col items-center">
-            {/* Features Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-full max-w-6xl">
-              <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 group">
-                <div className="w-12 h-12 bg-[#ED7A30]/10 rounded-lg flex items-center justify-center text-[#ED7A30] mb-4 group-hover:bg-[#ED7A30] group-hover:text-white transition-colors">
-                  <Zap size={24} />
-                </div>
-                <h3 className="text-lg font-bold text-[#171717] mb-2">Automate data collection and task hand offs</h3>
-              </div>
-
-              <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 group">
-                <div className="w-12 h-12 bg-[#ED7A30]/10 rounded-lg flex items-center justify-center text-[#ED7A30] mb-4 group-hover:bg-[#ED7A30] group-hover:text-white transition-colors">
-                  <Users size={24} />
-                </div>
-                <h3 className="text-lg font-bold text-[#171717] mb-2">Give internal teams role-based checklists</h3>
-              </div>
-
-              <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 group">
-                <div className="w-12 h-12 bg-[#ED7A30]/10 rounded-lg flex items-center justify-center text-[#ED7A30] mb-4 group-hover:bg-[#ED7A30] group-hover:text-white transition-colors">
-                  <ArrowRight size={24} />
-                </div>
-                <h3 className="text-lg font-bold text-[#171717] mb-2">Let external parties upload documents and sign in one guided journey</h3>
-              </div>
-
-              <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 group">
-                <div className="w-12 h-12 bg-[#ED7A30]/10 rounded-lg flex items-center justify-center text-[#ED7A30] mb-4 group-hover:bg-[#ED7A30] group-hover:text-white transition-colors">
-                  <Check size={24} />
-                </div>
-                <h3 className="text-lg font-bold text-[#171717] mb-2">Track progress end-to-end with a clear audit trail</h3>
-              </div>
-            </div>
-
-            {/* Footer / CTA */}
-            <div className="mt-16 text-center">
-              <p className="text-2xl font-bold text-[#171717] italic mb-8 tracking-tight">Everything moves in sync, every time.</p>
-              <Link href="/book-demo">
-                <Button data-testid="button-book-demo-solution" className="bg-[#ED7A30] hover:bg-[#d66520] text-white text-lg px-8 py-4 rounded-none font-bold uppercase tracking-wider shadow-lg hover:shadow-xl transition-all transform hover:scale-105 cursor-pointer">
-                  Book a Demo
-                </Button>
-              </Link>
-
-              <div className="mt-5 flex justify-center">
+            <div className="w-full max-w-6xl flex flex-col items-center">
+              <div className="mb-6 flex justify-center">
                 <div className="inline-flex items-center gap-4 rounded-full border border-gray-200 bg-white px-6 py-4 shadow-sm">
                   <img data-testid="img-microsoft-partner-logo" src={microsoftPartnerLogo} alt="Microsoft Partner" className="h-9 sm:h-10 w-auto object-contain" />
                   <p data-testid="text-microsoft-partner" className="text-sm sm:text-base font-semibold text-gray-700">
                     Autopilot is a <span className="text-[#171717]">Proud Microsoft Partner</span>
                   </p>
                 </div>
+              </div>
+
+              {/* Features Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-full">
+                <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 group">
+                  <div className="w-12 h-12 bg-[#ED7A30]/10 rounded-lg flex items-center justify-center text-[#ED7A30] mb-4 group-hover:bg-[#ED7A30] group-hover:text-white transition-colors">
+                    <Zap size={24} />
+                  </div>
+                  <h3 className="text-lg font-bold text-[#171717] mb-2">Automate data collection and task hand offs</h3>
+                </div>
+
+                <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 group">
+                  <div className="w-12 h-12 bg-[#ED7A30]/10 rounded-lg flex items-center justify-center text-[#ED7A30] mb-4 group-hover:bg-[#ED7A30] group-hover:text-white transition-colors">
+                    <Users size={24} />
+                  </div>
+                  <h3 className="text-lg font-bold text-[#171717] mb-2">Give internal teams role-based checklists</h3>
+                </div>
+
+                <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 group">
+                  <div className="w-12 h-12 bg-[#ED7A30]/10 rounded-lg flex items-center justify-center text-[#ED7A30] mb-4 group-hover:bg-[#ED7A30] group-hover:text-white transition-colors">
+                    <ArrowRight size={24} />
+                  </div>
+                  <h3 className="text-lg font-bold text-[#171717] mb-2">Let external parties upload documents and sign in one guided journey</h3>
+                </div>
+
+                <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 group">
+                  <div className="w-12 h-12 bg-[#ED7A30]/10 rounded-lg flex items-center justify-center text-[#ED7A30] mb-4 group-hover:bg-[#ED7A30] group-hover:text-white transition-colors">
+                    <Check size={24} />
+                  </div>
+                  <h3 className="text-lg font-bold text-[#171717] mb-2">Track progress end-to-end with a clear audit trail</h3>
+                </div>
+              </div>
+
+              {/* Footer / CTA */}
+              <div className="mt-12 text-center">
+                <p className="text-2xl font-bold text-[#171717] italic mb-8 tracking-tight">Everything moves in sync, every time.</p>
+                <Link href="/book-demo">
+                  <Button data-testid="button-book-demo-solution" className="bg-[#ED7A30] hover:bg-[#d66520] text-white text-lg px-8 py-4 rounded-none font-bold uppercase tracking-wider shadow-lg hover:shadow-xl transition-all transform hover:scale-105 cursor-pointer">
+                    Book a Demo
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
