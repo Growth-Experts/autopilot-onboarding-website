@@ -14,7 +14,7 @@ import avatarJohn from "@assets/stock_images/professional_man_cor_a0338afc.jpg";
 import avatarEmily from "@assets/stock_images/business_woman_profe_0724059b.jpg";
 import bidvestLogo from "@assets/bidvest-logo_1765964035827.png";
 import integrationsImage from "@assets/autopilot-integrations_1764671619557.png";
-import { Check, ArrowRight, Clock, Users, FileText, Shield, MessageSquare, Database, Archive, Zap, ChevronLeft, ChevronRight, X } from "lucide-react";
+import { Check, ArrowRight, Clock, Users, FileText, Shield, MessageSquare, Database, Archive, Zap, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
 
@@ -119,24 +119,6 @@ function AppGallerySlider({ images }: { images: string[] }) {
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/70 to-transparent pointer-events-none" />
       </div>
       
-      <div className="absolute bottom-4 right-4 flex gap-2 z-50">
-        <button 
-          type="button"
-          onClick={prevSlide}
-          className="bg-black/50 hover:bg-black/70 border border-white/20 text-white p-3 rounded-full transition-all cursor-pointer backdrop-blur-sm active:scale-95 flex items-center justify-center"
-          aria-label="Previous slide"
-        >
-          <ChevronLeft size={24} className="pointer-events-none" />
-        </button>
-        <button 
-          type="button"
-          onClick={nextSlide}
-          className="bg-black/50 hover:bg-black/70 border border-white/20 text-white p-3 rounded-full transition-all cursor-pointer backdrop-blur-sm active:scale-95 flex items-center justify-center"
-          aria-label="Next slide"
-        >
-          <ChevronRight size={24} className="pointer-events-none" />
-        </button>
-      </div>
     </div>
   );
 }
