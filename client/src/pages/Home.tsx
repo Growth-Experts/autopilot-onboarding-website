@@ -303,6 +303,50 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Strategic Partnership Section */}
+      <section className="py-24 bg-white border-b border-gray-200">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="flex flex-col items-start text-left">
+              <div className="inline-flex items-center gap-2 bg-blue-50 px-4 py-2 rounded-full mb-6 border border-blue-100">
+                <Shield className="w-4 h-4 text-blue-600" fill="currentColor" />
+                <span className="text-blue-700 font-bold text-xs uppercase tracking-widest">Strategic Partnership</span>
+              </div>
+              
+              <h2 className="text-4xl md:text-5xl font-bold text-[#171717] mb-8 leading-tight tracking-tighter">
+                Your Trusted <span className="text-[#00A4EF]">Microsoft Partner</span>
+              </h2>
+              
+              <div className="space-y-6 text-lg text-gray-600 font-light leading-relaxed">
+                <p>
+                  For over a decade, we've built solutions that live where you work. Our deep partnership ensures Autopilot evolves alongside Microsoft's latest innovations.
+                </p>
+                <p>
+                  We integrate directly into <strong className="font-semibold text-[#171717]">Microsoft Teams</strong> and <strong className="font-semibold text-[#171717]">Office 365</strong>, removing friction by bringing workflows to the tools your team uses every day.
+                </p>
+                <p>
+                  With <strong className="font-semibold text-[#171717]">Microsoft CoPilot</strong>, we bring next-gen AI capabilities into your processes—automating decisions while keeping your data secure.
+                </p>
+              </div>
+            </div>
+            
+            <div className="relative flex justify-center items-center">
+              <div className="relative z-10 bg-white p-12 rounded-2xl shadow-xl border border-gray-100 max-w-md w-full flex flex-col items-center justify-center aspect-[4/3]">
+                <img 
+                  src={microsoftPartnerLogo} 
+                  alt="Microsoft Partner Logo" 
+                  className="w-full h-auto object-contain max-h-32" 
+                />
+              </div>
+              
+              {/* Background decorative elements */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-blue-50/50 rounded-full blur-3xl -z-10" />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Section 4: Features Grid (Bento Style) */}
       <section className="py-24 bg-white border-b border-gray-200">
         <div className="container mx-auto px-4 md:px-6">
