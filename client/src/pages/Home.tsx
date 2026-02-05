@@ -334,14 +334,6 @@ export default function Home() {
               <p className="text-gray-500 text-sm leading-relaxed">Give customers, vendors, and new hires one simple, step-by-step flow to provide details and upload documents - no back-and-forth emails.</p>
             </div>
 
-            {/* NEW: App Gallery Slider - Big Block (3x2) */}
-            <div className="md:col-span-2 lg:col-span-3 lg:row-span-2 bg-[#171717] rounded-xl overflow-hidden relative flex flex-col justify-center p-0 group h-[488px] border border-gray-800 shadow-2xl">
-               <div className="absolute top-6 left-6 z-20 bg-[#ED7A30] text-white text-xs font-bold px-3 py-1 uppercase tracking-widest rounded-full">
-                  Platform Preview
-               </div>
-               
-               <AppGallerySlider images={[backoffice001, backoffice002, resellerApp001, resellerApp008, resellerApp010]} />
-            </div>
 
             {/* 2. Automated Data - Standard Block */}
             <div 
