@@ -309,13 +309,13 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="flex flex-col items-start text-left">
-              <div className="inline-flex items-center gap-2 bg-blue-50 px-4 py-2 rounded-full mb-6 border border-blue-100">
-                <Shield className="w-4 h-4 text-blue-600" fill="currentColor" />
-                <span className="text-blue-700 font-bold text-xs uppercase tracking-widest">Strategic Partnership</span>
+              <div className="inline-flex items-center gap-2 bg-[#ED7A30]/10 px-4 py-2 rounded-full mb-6 border border-[#ED7A30]/20">
+                <Shield className="w-4 h-4 text-[#ED7A30]" fill="currentColor" />
+                <span className="text-[#ED7A30] font-bold text-xs uppercase tracking-widest">Strategic Partnership</span>
               </div>
               
               <h2 className="text-4xl md:text-5xl font-bold text-[#171717] mb-8 leading-tight tracking-tighter">
-                Your Trusted <span className="text-[#00A4EF]">Microsoft Partner</span>
+                Your Trusted <span className="text-[#ED7A30]">Microsoft Partner</span>
               </h2>
               
               <div className="space-y-6 text-lg text-gray-600 font-light leading-relaxed">
@@ -341,7 +341,7 @@ export default function Home() {
               </div>
               
               {/* Background decorative elements */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-blue-50/50 rounded-full blur-3xl -z-10" />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[#ED7A30]/5 rounded-full blur-3xl -z-10" />
             </div>
           </div>
         </div>
