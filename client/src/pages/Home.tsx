@@ -332,7 +332,7 @@ export default function Home() {
             </div>
             
             <div className="relative flex justify-center items-center">
-              <div className="relative z-10 bg-white p-12 rounded-2xl shadow-xl border border-gray-100 max-w-md w-full flex flex-col items-center justify-center aspect-[4/3]">
+              <div className="relative z-10 bg-white p-12 rounded-2xl shadow-xl border border-gray-100 max-w-sm w-full flex flex-col items-center justify-center aspect-[4/3] hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 cursor-default">
                 <img 
                   src={microsoftPartnerLogo} 
                   alt="Microsoft Partner Logo" 
