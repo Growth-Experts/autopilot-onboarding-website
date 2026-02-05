@@ -59,7 +59,7 @@ import featureSignatures from "@assets/unnamed_(6)_1768582041102.png";
 import featureArchiving from "@assets/unnamed_(10)_1768582041102.png";
 
 import autopilot_partners from "@assets/autopilot-partners.png";
-import microsoftPartnerLogo from "@assets/microsoft-partner-logo.png";
+import microsoftPartnerLogo from "@assets/Autopilot_(2)_1770304988766.png";
 
 function HeroSlideshow({ images }: { images: string[] }) {
   const [currentIndex] = useState(0);
