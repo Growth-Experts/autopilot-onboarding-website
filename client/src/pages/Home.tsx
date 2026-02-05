@@ -574,7 +574,7 @@ export default function Home() {
                 }
               ].map((item, index) => (
                 <div key={index} className="bg-white p-4 md:pt-0">
-                  <div className="w-24 h-24 bg-white border-2 border-[#ED7A30] rounded-full flex items-center justify-center text-[#ED7A30] text-2xl font-bold mb-6 mx-auto md:mx-0 shadow-[0_0_0_8px_rgba(255,255,255,1)] z-10 hover:bg-[#ED7A30] hover:text-white transition-colors duration-300 cursor-default">
+                  <div className="w-24 h-24 bg-white border-2 border-[#ED7A30] rounded-full flex items-center justify-center text-[#ED7A30] text-2xl font-bold mb-6 mx-auto md:mx-0 shadow-[0_0_0_8px_rgba(255,255,255,1)] z-10 hover:bg-[#ED7A30] hover:text-white transition-colors duration-300 cursor-default rotate-0">
                     {item.step}
                   </div>
                   <h3 className="text-xl font-bold text-[#171717] mb-3">{item.title}</h3>
