@@ -191,7 +191,7 @@ export function CaseStudyTemplate({
           <div className="mt-20 text-center">
             <div className="bg-[#171717] text-white p-12 rounded-2xl max-w-4xl mx-auto relative overflow-hidden">
               <div className="relative z-10">
-                <h3 className="text-3xl font-bold mb-6">Ready to achieve similar results?</h3>
+                <h3 className="text-3xl font-bold mb-6 text-white">Ready to achieve similar results?</h3>
                 <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
                   Join {client} and other industry leaders who have transformed their onboarding with Autopilot.
                 </p>
