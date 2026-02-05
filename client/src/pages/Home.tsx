@@ -443,18 +443,27 @@ export default function Home() {
               </div>
             </div>
 
-            {/* AI - Standard Block */}
-            <div className="md:col-span-2 lg:col-span-3 bg-orange-50 border border-orange-100 p-8 hover:shadow-lg transition-all rounded-xl flex flex-col justify-center gap-6 group hover:border-[#ED7A30]">
-              <div className="flex justify-between items-center">
-                <div className="flex items-center gap-3">
-                  <h3 className="text-2xl md:text-3xl font-bold text-[#171717] leading-tight">AI Validation</h3>
-                  <span className="bg-[#ED7A30] text-white text-xs font-bold px-2 py-1 rounded-full uppercase tracking-wider shadow-sm">New</span>
+            {/* AI - Standard Block (Fixed Alignment) */}
+            <div 
+              onClick={() => setActiveFeature({
+                id: "08",
+                title: "AI Validation",
+                description: "Uploaded documents are checked and cross-verified against captured form data, reducing errors and preventing delays.",
+                image: featureAutomatedData
+              })}
+              className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1 cursor-pointer hover:border-[#ED7A30]"
+            >
+              <div className="flex flex-col items-start gap-2">
+                <div className="flex items-center gap-2">
+                  <span className="text-[#ED7A30] font-mono text-lg font-bold">08</span>
+                  <span className="bg-[#ED7A30] text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider shadow-sm">New</span>
                 </div>
-                <div className="w-12 h-12 bg-[#ED7A30] text-white rounded-full flex items-center justify-center shadow-md">
-                  <Zap size={24} />
-                </div>
+                <h3 className="text-xl font-bold text-[#171717] leading-tight group-hover:text-[#ED7A30] transition-colors">AI Validation</h3>
               </div>
-              <p className="text-gray-700 text-lg md:text-xl leading-relaxed max-w-4xl">Uploaded documents are checked and cross-verified against captured form data, reducing errors and preventing delays.</p>
+              <p className="text-gray-500 text-sm leading-relaxed">Uploaded documents are checked and cross-verified against captured form data, reducing errors and preventing delays.</p>
+              <div className="mt-auto pt-4">
+                 <Zap className="text-[#ED7A30] opacity-20 w-12 h-12 group-hover:scale-110 transition-transform" />
+              </div>
             </div>
           </div>
         </div>
