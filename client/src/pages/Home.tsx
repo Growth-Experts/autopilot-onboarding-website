@@ -30,6 +30,11 @@ import metrofileLogo from "@assets/metrofile-logo_1765964032371.png";
 
 import backoffice004 from "@assets/Backoffice_004_1765964508560.PNG";
 import backoffice005 from "@assets/Backoffice_005_1765964508562.PNG";
+
+import heroSlide1 from "@assets/image_1770270099115.png";
+import heroSlide2 from "@assets/image_1770270237626.png";
+import heroSlide3 from "@assets/image_1770270256210.png";
+import heroSlide4 from "@assets/image_1770270284265.png";
 import reseller009 from "@assets/Reseller_Application_009_1765964508563.PNG";
 import reseller011 from "@assets/Reseller_Application_011_1765964508563.PNG";
 import backoffice011 from "@assets/Backoffice_011_1764836642764.PNG";
@@ -198,7 +203,7 @@ export default function Home() {
 
           <div className="max-w-6xl mx-auto mt-12">
             <WindowFrame title="Autopilot Onboarding Overview">
-              <HeroSlideshow images={[backoffice004, backoffice005, reseller009, reseller011]} />
+              <HeroSlideshow images={[heroSlide1, heroSlide2, heroSlide3, heroSlide4]} />
             </WindowFrame>
           </div>
         </div>
