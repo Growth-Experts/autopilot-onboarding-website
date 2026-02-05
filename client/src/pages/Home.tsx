@@ -254,12 +254,6 @@ export default function Home() {
           <div className="flex flex-col items-center">
             <div className="w-full max-w-6xl flex flex-col items-center">
               <div className="mb-6 flex justify-center">
-                <div className="inline-flex items-center gap-4 rounded-full border border-gray-200 bg-white px-6 py-4 shadow-sm">
-                  <img data-testid="img-microsoft-partner-logo" src={microsoftPartnerLogo} alt="Microsoft Partner" className="h-[54px] sm:h-[60px] w-auto object-contain" />
-                  <p data-testid="text-microsoft-partner" className="text-sm sm:text-base font-semibold text-gray-700">
-                    Autopilot is a <span className="text-[#171717]">Proud Microsoft Partner</span>
-                  </p>
-                </div>
               </div>
 
               {/* Features Grid */}
@@ -303,12 +297,6 @@ export default function Home() {
                 </Link>
 
                 <div className="mt-6 flex justify-center">
-                  <div data-testid="pill-microsoft-partner-solution" className="inline-flex items-center gap-4 rounded-full border border-gray-200 bg-white px-6 py-4 shadow-sm">
-                    <img data-testid="img-microsoft-partner-logo-solution" src={microsoftPartnerLogo} alt="Microsoft Partner" className="h-[54px] sm:h-[60px] w-auto object-contain" />
-                    <p data-testid="text-microsoft-partner-solution" className="text-sm sm:text-base font-semibold text-gray-700">
-                      Autopilot is a <span className="text-[#171717]">Proud Microsoft Partner</span>
-                    </p>
-                  </div>
                 </div>
               </div>
             </div>
