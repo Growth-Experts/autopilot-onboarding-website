@@ -169,7 +169,17 @@ export default function Home() {
 
           <div className="max-w-6xl mx-auto mt-12">
             <WindowFrame title="Autopilot Onboarding Overview">
-              <HeroSlideshow images={[heroSlide1, heroSlide2, heroSlide3, heroSlide4]} />
+              <div style={{ position: 'relative', paddingBottom: 'calc(48.75% + 41px)', height: '0px', width: '100%' }}>
+                <iframe 
+                  src="https://demo.arcade.software/QjLs7UfXhKdAMmmkghO5?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" 
+                  title="Start an employee onboarding request and route it to the right team" 
+                  frameBorder="0" 
+                  loading="lazy" 
+                  allowFullScreen 
+                  allow="clipboard-write" 
+                  style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', colorScheme: 'light' }} 
+                />
+              </div>
             </WindowFrame>
           </div>
         </div>
