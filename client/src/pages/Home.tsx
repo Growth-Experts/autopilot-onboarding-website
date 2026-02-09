@@ -230,11 +230,17 @@ export default function Home() {
             </div>
 
             <div className="relative h-full min-h-[400px] bg-gray-100 rounded-xl overflow-hidden border border-gray-200">
-              <img 
-                src={problemImage} 
-                alt="Disorganized Onboarding Process" 
-                className="absolute inset-0 w-full h-full object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-700"
-              />
+              <div style={{ position: 'relative', paddingBottom: 'calc(48.75% + 41px)', height: 0, width: '100%' }}>
+                <iframe 
+                  src="https://demo.arcade.software/QjLs7UfXhKdAMmmkghO5?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" 
+                  title="Start an employee onboarding request and route it to the right team" 
+                  frameBorder="0" 
+                  loading="lazy" 
+                  allowFullScreen 
+                  allow="clipboard-write" 
+                  style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', colorScheme: 'light' }} 
+                />
+              </div>
             </div>
           </div>
         </div>
