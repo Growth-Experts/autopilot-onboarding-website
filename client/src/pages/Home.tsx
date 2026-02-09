@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { WindowFrame } from "@/components/ui/WindowFrame";
 import heroDashboard from "@assets/generated_images/modern_saas_dashboard_ui_showing_onboarding_progress_with_orange_accents.png";
 import featureDashboard from "@assets/generated_images/clean_saas_form_interface_for_employee_data_collection.png";
 import checklistImage from "@assets/generated_images/saas_interface_showing_role-based_checklists_and_progress_tracking.png";
@@ -168,7 +167,7 @@ export default function Home() {
           </div>
 
           <div className="max-w-6xl mx-auto mt-12">
-            <WindowFrame title="Autopilot Onboarding Overview">
+            <div className="rounded-xl overflow-hidden border border-gray-200 shadow-2xl bg-white">
               <div style={{ position: 'relative', paddingBottom: 'calc(48.75% + 41px)', height: '0px', width: '100%' }}>
                 <iframe 
                   src="https://demo.arcade.software/QjLs7UfXhKdAMmmkghO5?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" 
@@ -180,7 +179,7 @@ export default function Home() {
                   style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', colorScheme: 'light' }} 
                 />
               </div>
-            </WindowFrame>
+            </div>
           </div>
         </div>
       </section>
