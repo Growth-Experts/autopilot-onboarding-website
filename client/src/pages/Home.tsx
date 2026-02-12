@@ -575,7 +575,7 @@ export default function Home() {
               <div className="flex justify-center items-center bg-[#fff]">
                 <img 
                   src={autopilot_integrations} 
-                  alt="Autopilot Integrations Ecosystem including Sage, DocuSign, Azure, and more" 
+                  alt="Autopilot Integrations Ecosystem including Sage, DocuSign, and more" 
                   className="w-full h-auto max-w-md object-contain hover:scale-105 transition-transform duration-500"
                 />
               </div>

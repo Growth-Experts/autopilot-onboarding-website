@@ -49,8 +49,8 @@ export function Footer() {
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
           <p>&copy; 2025 Autopilot Onboarding. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link href="/privacy-policy"><a className="hover:text-white transition-colors">Privacy Policy</a></Link>
-            <Link href="/terms-conditions"><a className="hover:text-white transition-colors">Terms of Service</a></Link>
+            <a href="https://cdn.autopilot.co.za/legal/teams/Autopilot%20Privacy%20Policy.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Privacy Policy</a>
+            <a href="https://cdn.autopilot.co.za/legal/Autopilot%20Client%20Terms%20%20Conditions%2020160224.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Terms of Service</a>
           </div>
         </div>
       </div>

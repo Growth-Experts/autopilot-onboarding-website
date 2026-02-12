@@ -14,7 +14,7 @@ import johnMoll from "@assets/John_Moll_1764835180381.jpeg";
 import sageLogo from "@assets/sage-group-logo_1764839521453.png";
 import docusignLogo from "@assets/docusign_logo_1764839521453.png";
 import flowgearLogo from "@assets/flowgear_logo_1764839521453.png";
-import axureLogo from "@assets/axure-logo_1764839521453.png";
+
 import pipedriveLogo from "@assets/pipedrive-logo_1764839521453.png";
 import sharepointLogo from "@assets/sharepoint-logo_1764839521453.png";
 
@@ -201,7 +201,7 @@ export default function ResellerOnboarding() {
                   { name: "Sage", logo: sageLogo },
                   { name: "DocuSign", logo: docusignLogo },
                   { name: "Flowgear", logo: flowgearLogo },
-                  { name: "Axure", logo: axureLogo },
+
                   { name: "Pipedrive", logo: pipedriveLogo },
                   { name: "SharePoint", logo: sharepointLogo }
                 ].map((tool, i) => (
