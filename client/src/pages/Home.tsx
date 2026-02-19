@@ -17,7 +17,7 @@ import { Check, ArrowRight, Clock, Users, FileText, Shield, MessageSquare, Datab
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
 
-import autopilot_integrations from "@assets/autopilot_integrations_1766071616309.png";
+import autopilot_integrations from "@assets/integrations.png";
 
 import saCanegrowersLogo from "@assets/SA_CaneGrowers_logo_1764682801217.png";
 import threeWayLogo from "@assets/3way-logo_1764684321801.png";
@@ -570,15 +570,12 @@ export default function Home() {
             </div>
 
             {/* Right: The Logos Grid */}
-            <div className="p-10 border border-gray-200 shadow-sm bg-[#fefefe]">
-              <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-8 text-center">Integrated Ecosystem</h3>
-              <div className="flex justify-center items-center bg-[#fff]">
-                <img 
-                  src={autopilot_integrations} 
-                  alt="Autopilot Integrations Ecosystem including Sage, DocuSign, and more" 
-                  className="w-full h-auto max-w-md object-contain hover:scale-105 transition-transform duration-500"
+            <div className="flex justify-center items-center">
+                <img
+                  src={autopilot_integrations}
+                  alt="Autopilot Integrations Ecosystem including Sage, DocuSign, and more"
+                  className="w-full h-auto object-contain"
                 />
-              </div>
             </div>
           </div>
         </div>
