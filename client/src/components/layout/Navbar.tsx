@@ -21,6 +21,7 @@ export function Navbar() {
     { name: "Home", href: "/" },
     { name: "Solutions", href: "/solutions/employee", isDropdown: true }, 
     { name: "Case Studies", href: "/case-studies" },
+    { name: "Pricing", href: "/pricing" },
     { name: "Contact", href: "/contact" },
   ];
 

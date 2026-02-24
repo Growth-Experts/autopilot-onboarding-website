@@ -35,6 +35,7 @@ import CaseStudyLAWD from "@/pages/CaseStudyLAWD";
 import CaseStudySyntech from "@/pages/CaseStudySyntech";
 import CaseStudyTalksure from "@/pages/CaseStudyTalksure";
 import CaseStudyYMCA from "@/pages/CaseStudyYMCA";
+import Pricing from "@/pages/Pricing";
 
 function Router() {
   return (
@@ -55,6 +56,7 @@ function Router() {
           <Route path="/case-studies/syntech" component={CaseStudySyntech} />
           <Route path="/case-studies/talksure" component={CaseStudyTalksure} />
           <Route path="/case-studies/ymca" component={CaseStudyYMCA} />
+          <Route path="/pricing" component={Pricing} />
           <Route path="/contact" component={Contact} />
           <Route path="/privacy-policy" component={PrivacyPolicy} />
           <Route path="/terms-conditions" component={TermsConditions} />
