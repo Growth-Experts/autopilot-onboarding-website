@@ -19,7 +19,8 @@ export function Navbar() {
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "Solutions", href: "/solutions/employee", isDropdown: true }, 
+    { name: "Solutions", href: "/solutions/employee", isDropdown: true },
+    { name: "Features", href: "/#features", isAnchor: true },
     { name: "Case Studies", href: "/case-studies" },
     { name: "Pricing", href: "/pricing" },
     { name: "Contact", href: "/contact" },
@@ -38,7 +39,7 @@ export function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/">
-            <img src={logo} alt="Autopilot Onboarding" className="h-10 w-auto cursor-pointer" />
+            <img src={logo} alt="Autopilot Onboarding" className="h-10 md:h-14 w-auto cursor-pointer" />
           </Link>
 
           {/* Desktop Nav */}
@@ -49,9 +50,9 @@ export function Navbar() {
                   if (link.isDropdown) {
                     return (
                       <NavigationMenuItem key={link.name}>
-                        <NavigationMenuTrigger 
+                        <NavigationMenuTrigger
                           className={cn(
-                            "bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent data-[active]:bg-transparent p-0 h-auto text-sm font-semibold uppercase tracking-wide transition-colors rounded-none",
+                            "bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent data-[active]:bg-transparent p-0 h-auto text-base font-medium font-montserrat transition-colors rounded-none",
                             location.startsWith("/solutions") ? "text-[#ED7A30]" : "text-[#171717] hover:text-[#ED7A30]"
                           )}
                         >
@@ -74,13 +75,29 @@ export function Navbar() {
                     );
                   }
                   
+                  if (link.isAnchor) {
+                    return (
+                      <NavigationMenuItem key={link.name}>
+                        <a
+                          href={link.href}
+                          className={cn(
+                            "text-base font-medium font-montserrat transition-colors cursor-pointer block",
+                            "text-[#171717] hover:text-[#ED7A30]"
+                          )}
+                        >
+                          {link.name}
+                        </a>
+                      </NavigationMenuItem>
+                    );
+                  }
+
                   return (
                     <NavigationMenuItem key={link.name}>
                       <NavigationMenuLink asChild>
-                        <Link 
+                        <Link
                           href={link.href}
                           className={cn(
-                            "text-sm font-semibold uppercase tracking-wide transition-colors cursor-pointer block",
+                            "text-base font-medium font-montserrat transition-colors cursor-pointer block",
                             location === link.href ? "text-[#ED7A30]" : "text-[#171717] hover:text-[#ED7A30]"
                           )}
                         >
@@ -136,9 +153,21 @@ export function Navbar() {
                   </div>
                 );
               }
+              if (link.isAnchor) {
+                return (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    className="block text-base font-semibold text-[#171717] hover:text-[#ED7A30] uppercase tracking-wide"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {link.name}
+                  </a>
+                );
+              }
               return (
-                <Link 
-                  key={link.name} 
+                <Link
+                  key={link.name}
                   href={link.href}
                   className="block text-base font-semibold text-[#171717] hover:text-[#ED7A30] uppercase tracking-wide"
                   onClick={() => setIsOpen(false)}
