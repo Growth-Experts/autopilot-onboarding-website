@@ -18,18 +18,18 @@ export function Footer() {
           <div>
             <h4 className="text-[#ED7A30] font-bold uppercase tracking-wider mb-6">Solutions</h4>
             <ul className="space-y-4 text-sm text-gray-300">
-              <li><Link href="/solutions/employee"><a className="hover:text-white transition-colors">Employee Onboarding</a></Link></li>
-              <li><Link href="/solutions/customer"><a className="hover:text-white transition-colors">Customer Onboarding</a></Link></li>
-              <li><Link href="/solutions/vendor"><a className="hover:text-white transition-colors">Vendor Onboarding</a></Link></li>
-              <li><Link href="/solutions/reseller"><a className="hover:text-white transition-colors">Reseller Onboarding</a></Link></li>
+              <li><Link href="/solutions/employee" className="hover:text-white transition-colors">Employee Onboarding</Link></li>
+              <li><Link href="/solutions/customer" className="hover:text-white transition-colors">Customer Onboarding</Link></li>
+              <li><Link href="/solutions/vendor" className="hover:text-white transition-colors">Vendor Onboarding</Link></li>
+              <li><Link href="/solutions/reseller" className="hover:text-white transition-colors">Reseller Onboarding</Link></li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-[#ED7A30] font-bold uppercase tracking-wider mb-6">Company</h4>
             <ul className="space-y-4 text-sm text-gray-300">
-              <li><Link href="/case-studies"><a className="hover:text-white transition-colors">Case Studies</a></Link></li>
-              <li><Link href="/contact"><a className="hover:text-white transition-colors">Contact Us</a></Link></li>
+              <li><Link href="/case-studies" className="hover:text-white transition-colors">Case Studies</Link></li>
+              <li><Link href="/contact" className="hover:text-white transition-colors">Contact Us</Link></li>
             </ul>
           </div>
 

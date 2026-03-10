@@ -59,6 +59,7 @@ import featureArchiving from "@assets/unnamed_(10)_1768582041102.png";
 
 import autopilot_partners from "@assets/autopilot-partners.png";
 import microsoftPartnerLogo from "@assets/Autopilot_(2)_1770304988766.png";
+import microsoftCopilotImage from "@assets/products-overview.png";
 
 function HeroSlideshow({ images }: { images: string[] }) {
   const [currentIndex] = useState(0);
@@ -338,26 +339,42 @@ export default function Home() {
                   With <strong className="font-semibold text-[#171717]">Microsoft CoPilot</strong>, we bring next-gen AI capabilities into your processes—automating decisions while keeping your data secure.
                 </p>
               </div>
-            </div>
-            
-            <div className="relative flex justify-center items-center">
-              <div className="relative z-10 bg-white p-12 rounded-2xl shadow-xl border border-gray-100 max-w-sm w-full flex flex-col items-center justify-center aspect-[4/3] hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 cursor-default">
-                <img 
-                  src={microsoftPartnerLogo} 
-                  alt="Microsoft Partner Logo" 
-                  className="w-full h-auto object-contain max-h-32" 
-                />
+
+              <div className="mt-8 pt-6 border-t border-gray-200">
+                <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Integrated With</p>
+                <div className="flex flex-wrap gap-3">
+                  {[
+                    { label: "Microsoft Teams", color: "#5b5fc7" },
+                    { label: "Office 365", color: "#d83b01" },
+                    { label: "Copilot", color: "#0078d4" },
+                  ].map((item) => (
+                    <div key={item.label} className="flex items-center gap-2 border border-gray-200 rounded-full px-4 py-1.5 text-sm font-medium text-[#171717] bg-white">
+                      <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ backgroundColor: item.color }} />
+                      {item.label}
+                    </div>
+                  ))}
+                </div>
               </div>
-              
-              {/* Background decorative elements */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[#ED7A30]/5 rounded-full blur-3xl -z-10" />
+            </div>
+
+            <div className="relative">
+              <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-200">
+                <img
+                  src={microsoftCopilotImage}
+                  alt="Autopilot featured in the Microsoft Copilot partner ecosystem"
+                  className="w-full h-auto object-cover"
+                />
+                <div className="bg-[#171717] px-5 py-3">
+                  <p className="text-white text-sm font-medium">Autopilot featured in the Microsoft Copilot partner ecosystem</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Section 4: Features Grid (Bento Style) */}
-      <section className="py-24 bg-white border-b border-gray-200">
+      <section id="features" className="py-24 bg-white border-b border-gray-200">
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
             <h2 className="text-3xl font-bold text-[#171717] border-l-8 border-[#ED7A30] pl-6 uppercase tracking-wide">
@@ -370,26 +387,28 @@ export default function Home() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-[minmax(232px,auto)] grid-flow-dense">
             
-            {/* 1. Guided Journey - Standard Block */}
-            <div 
+            {/* 1. AI Validation */}
+            <div
               onClick={() => setActiveFeature({
                 id: "01",
-                title: "Guided Journey",
-                description: "Give customers, vendors, and new hires one simple, step-by-step flow to provide details and upload documents - no back-and-forth emails.",
-                image: featureGuidedJourney
+                title: "AI Validation",
+                description: "Uploaded documents are checked and cross-verified against captured form data, reducing errors and preventing delays.",
+                image: featureAutomatedData
               })}
               className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1 cursor-pointer hover:border-[#ED7A30]"
             >
               <div className="flex flex-col items-start gap-2">
-                <span className="text-[#ED7A30] font-mono text-lg font-bold">01</span>
-                <h3 className="text-xl font-bold text-[#171717] leading-tight group-hover:text-[#ED7A30] transition-colors">Guided Journey</h3>
+                <div className="flex items-center gap-2">
+                  <span className="text-[#ED7A30] font-mono text-lg font-bold">01</span>
+                  <span className="bg-[#ED7A30] text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider shadow-sm">New</span>
+                </div>
+                <h3 className="text-xl font-bold text-[#171717] leading-tight group-hover:text-[#ED7A30] transition-colors">AI Validation</h3>
               </div>
-              <p className="text-gray-500 text-sm leading-relaxed">Give customers, vendors, and new hires one simple, step-by-step flow to provide details and upload documents - no back-and-forth emails.</p>
+              <p className="text-gray-500 text-sm leading-relaxed">Uploaded documents are checked and cross-verified against captured form data, reducing errors and preventing delays.</p>
             </div>
 
-
-            {/* 2. Automated Data - Standard Block */}
-            <div 
+            {/* 2. Automated Data */}
+            <div
               onClick={() => setActiveFeature({
                 id: "02",
                 title: "Automated Data & Document Collection",
@@ -405,8 +424,8 @@ export default function Home() {
               <p className="text-gray-500 text-sm leading-relaxed">Capture information, documents, and signatures from anyone through a single, structured process.</p>
             </div>
 
-            {/* 3. Checklists - Standard Block */}
-            <div 
+            {/* 3. Checklists */}
+            <div
               onClick={() => setActiveFeature({
                 id: "03",
                 title: "Multi-Team Checklists",
@@ -422,8 +441,8 @@ export default function Home() {
               <p className="text-gray-500 text-sm leading-relaxed">HR, IT, Finance, Operations - everyone sees their tasks in one shared place, so work happens in parallel, not sequentially.</p>
             </div>
 
-            {/* 4. Role Based - Standard Block */}
-            <div 
+            {/* 4. Role Based */}
+            <div
               onClick={() => setActiveFeature({
                 id: "04",
                 title: "Role-Based Visibility",
@@ -439,8 +458,8 @@ export default function Home() {
               <p className="text-gray-500 text-sm leading-relaxed">Each team member sees only what they need, with sensitive data protected by role permissions.</p>
             </div>
 
-            {/* 5. Communication - Standard Block */}
-            <div 
+            {/* 5. Communication */}
+            <div
               onClick={() => setActiveFeature({
                 id: "05",
                 title: "Built-In Communication",
@@ -456,8 +475,8 @@ export default function Home() {
               <p className="text-gray-500 text-sm leading-relaxed">Ask questions and share clarifications directly inside the flow (instead of spawning new email threads).</p>
             </div>
 
-            {/* 6. Document Generation - Standard Block (Fixed Alignment) */}
-            <div 
+            {/* 6. Document Generation */}
+            <div
               onClick={() => setActiveFeature({
                 id: "06",
                 title: "Document Generation & eSignatures",
@@ -471,13 +490,10 @@ export default function Home() {
                 <h3 className="text-xl font-bold text-[#171717] leading-tight group-hover:text-[#ED7A30] transition-colors">Document Generation & eSignatures</h3>
               </div>
               <p className="text-gray-500 text-sm leading-relaxed">Generate standard forms automatically and send them for compliant e-signature with a click.</p>
-              <div className="mt-auto pt-4">
-                 <FileText className="text-[#ED7A30] opacity-20 w-12 h-12 group-hover:scale-110 transition-transform" />
-              </div>
             </div>
 
-            {/* 7. Archiving - Standard Block */}
-            <div 
+            {/* 7. Archiving */}
+            <div
               onClick={() => setActiveFeature({
                 id: "07",
                 title: "Automatic Archiving",
@@ -491,32 +507,23 @@ export default function Home() {
                  <h3 className="text-xl font-bold text-[#171717] leading-tight group-hover:text-[#ED7A30] transition-colors">Automatic Archiving</h3>
               </div>
               <p className="text-gray-500 text-sm leading-relaxed">Completed documents go straight into SharePoint or your CRM - neatly stored and fully traceable.</p>
-              <div className="mt-auto pt-4">
-                 <Archive className="text-[#ED7A30] opacity-20 w-12 h-12 group-hover:scale-110 transition-transform" />
-              </div>
             </div>
 
-            {/* AI - Standard Block (Fixed Alignment) */}
-            <div 
+            {/* 8. Guided Journey */}
+            <div
               onClick={() => setActiveFeature({
                 id: "08",
-                title: "AI Validation",
-                description: "Uploaded documents are checked and cross-verified against captured form data, reducing errors and preventing delays.",
-                image: featureAutomatedData
+                title: "Guided Journey",
+                description: "Give customers, vendors, and new hires one simple, step-by-step flow to provide details and upload documents - no back-and-forth emails.",
+                image: featureGuidedJourney
               })}
               className="bg-white border border-gray-200 p-6 hover:shadow-lg transition-all rounded-xl flex flex-col justify-start gap-4 group hover:-translate-y-1 cursor-pointer hover:border-[#ED7A30]"
             >
               <div className="flex flex-col items-start gap-2">
-                <div className="flex items-center gap-2">
-                  <span className="text-[#ED7A30] font-mono text-lg font-bold">08</span>
-                  <span className="bg-[#ED7A30] text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider shadow-sm">New</span>
-                </div>
-                <h3 className="text-xl font-bold text-[#171717] leading-tight group-hover:text-[#ED7A30] transition-colors">AI Validation</h3>
+                <span className="text-[#ED7A30] font-mono text-lg font-bold">08</span>
+                <h3 className="text-xl font-bold text-[#171717] leading-tight group-hover:text-[#ED7A30] transition-colors">Guided Journey</h3>
               </div>
-              <p className="text-gray-500 text-sm leading-relaxed">Uploaded documents are checked and cross-verified against captured form data, reducing errors and preventing delays.</p>
-              <div className="mt-auto pt-4">
-                 <Zap className="text-[#ED7A30] opacity-20 w-12 h-12 group-hover:scale-110 transition-transform" />
-              </div>
+              <p className="text-gray-500 text-sm leading-relaxed">Give customers, vendors, and new hires one simple, step-by-step flow to provide details and upload documents - no back-and-forth emails.</p>
             </div>
           </div>
         </div>
