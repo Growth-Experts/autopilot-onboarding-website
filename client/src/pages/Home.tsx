@@ -317,18 +317,19 @@ export default function Home() {
       {/* Strategic Partnership Section */}
       <section className="py-24 bg-white border-b border-gray-200">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            {/* Left: text + image + badges */}
             <div className="flex flex-col items-start text-left">
-              <div className="inline-flex items-center gap-2 bg-[#ED7A30]/10 px-4 py-2 rounded-full mb-6 border border-[#ED7A30]/20">
-                <Shield className="w-4 h-4 text-[#ED7A30]" fill="currentColor" />
-                <span className="text-[#ED7A30] font-bold text-xs uppercase tracking-widest">Strategic Partnership</span>
+              <div className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full mb-6 border border-gray-200">
+                <Check className="w-4 h-4 text-gray-500" />
+                <span className="text-gray-600 font-bold text-xs uppercase tracking-widest">Strategic Partnership</span>
               </div>
-              
+
               <h2 className="text-4xl md:text-5xl font-bold text-[#171717] mb-8 leading-tight tracking-tighter">
                 Your Trusted <span className="text-[#ED7A30]">Microsoft Partner</span>
               </h2>
-              
-              <div className="space-y-6 text-lg text-gray-600 font-light leading-relaxed">
+
+              <div className="space-y-6 text-lg text-gray-600 font-light leading-relaxed mb-8">
                 <p>
                   For over a decade, we've built solutions that live where you work. Our deep partnership ensures Autopilot evolves alongside Microsoft's latest innovations.
                 </p>
@@ -340,7 +341,18 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="mt-8 pt-6 border-t border-gray-200">
+              <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-200 w-full mb-8">
+                <img
+                  src={microsoftCopilotImage}
+                  alt="Autopilot featured in the Microsoft Copilot partner ecosystem"
+                  className="w-full h-auto object-cover"
+                />
+                <div className="bg-[#171717] px-5 py-3">
+                  <p className="text-white text-sm font-medium">Autopilot featured in the Microsoft Copilot partner ecosystem</p>
+                </div>
+              </div>
+
+              <div className="pt-6 border-t border-gray-200 w-full">
                 <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Integrated With</p>
                 <div className="flex flex-wrap gap-3">
                   {[
@@ -357,18 +369,8 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="relative">
-              <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-200">
-                <img
-                  src={microsoftCopilotImage}
-                  alt="Autopilot featured in the Microsoft Copilot partner ecosystem"
-                  className="w-full h-auto object-cover"
-                />
-                <div className="bg-[#171717] px-5 py-3">
-                  <p className="text-white text-sm font-medium">Autopilot featured in the Microsoft Copilot partner ecosystem</p>
-                </div>
-              </div>
-            </div>
+            {/* Right: intentionally empty */}
+            <div className="hidden lg:block" />
           </div>
         </div>
       </section>
