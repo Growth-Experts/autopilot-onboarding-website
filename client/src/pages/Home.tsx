@@ -59,7 +59,6 @@ import featureArchiving from "@assets/unnamed_(10)_1768582041102.png";
 
 import autopilot_partners from "@assets/autopilot-partners.png";
 import microsoftPartnerLogo from "@assets/Autopilot_(2)_1770304988766.png";
-import microsoftCopilotImage from "@assets/products-overview.png";
 
 function HeroSlideshow({ images }: { images: string[] }) {
   const [currentIndex] = useState(0);
@@ -315,62 +314,64 @@ export default function Home() {
       </section>
 
       {/* Strategic Partnership Section */}
-      <section className="py-24 bg-white border-b border-gray-200">
+      <section className="py-20 md:py-32 bg-white border-b border-gray-100">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-            {/* Left: text + image + badges */}
-            <div className="flex flex-col items-start text-left">
-              <div className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full mb-6 border border-gray-200">
-                <Check className="w-4 h-4 text-gray-500" />
-                <span className="text-gray-600 font-bold text-xs uppercase tracking-widest">Strategic Partnership</span>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Left: text + badges */}
+            <div className="space-y-8">
+              <div className="inline-flex items-center gap-2 bg-[#ED7A30]/5 text-[#ED7A30] border border-[#ED7A30]/20 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wider">
+                <Check className="h-3 w-3" />
+                Strategic Partnership
               </div>
 
-              <h2 className="text-4xl md:text-5xl font-bold text-[#171717] mb-8 leading-tight tracking-tighter">
-                Your Trusted <span className="text-[#ED7A30]">Microsoft Partner</span>
-              </h2>
+              <div className="space-y-6">
+                <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight leading-tight text-[#171717]">
+                  Your Trusted <span className="text-[#ED7A30]">Microsoft Partner</span>
+                </h2>
 
-              <div className="space-y-6 text-lg text-gray-600 font-light leading-relaxed mb-8">
-                <p>
-                  For over a decade, we've built solutions that live where you work. Our deep partnership ensures Autopilot evolves alongside Microsoft's latest innovations.
-                </p>
-                <p>
-                  We integrate directly into <strong className="font-semibold text-[#171717]">Microsoft Teams</strong> and <strong className="font-semibold text-[#171717]">Office 365</strong>, removing friction by bringing workflows to the tools your team uses every day.
-                </p>
-                <p>
-                  With <strong className="font-semibold text-[#171717]">Microsoft CoPilot</strong>, we bring next-gen AI capabilities into your processes—automating decisions while keeping your data secure.
-                </p>
-              </div>
-
-              <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-200 w-full mb-8">
-                <img
-                  src={microsoftCopilotImage}
-                  alt="Autopilot featured in the Microsoft Copilot partner ecosystem"
-                  className="w-full h-auto object-cover"
-                />
-                <div className="bg-[#171717] px-5 py-3">
-                  <p className="text-white text-sm font-medium">Autopilot featured in the Microsoft Copilot partner ecosystem</p>
+                <div className="space-y-6 text-lg text-gray-500 leading-relaxed">
+                  <p>
+                    For over a decade, we've built solutions that live where you work. Our deep partnership ensures Autopilot evolves alongside Microsoft's latest innovations.
+                  </p>
+                  <p>
+                    We integrate directly into <strong className="text-[#171717]">Microsoft Teams</strong> and <strong className="text-[#171717]">Office 365</strong>, removing friction by bringing workflows to the tools your team uses every day.
+                  </p>
+                  <p>
+                    With <strong className="text-[#171717]">Microsoft CoPilot</strong>, we bring next-gen AI capabilities into your processes—automating decisions while keeping your data secure.
+                  </p>
                 </div>
               </div>
 
-              <div className="pt-6 border-t border-gray-200 w-full">
-                <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Integrated With</p>
+              <div>
+                <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">Integrated With</p>
                 <div className="flex flex-wrap gap-3">
                   {[
-                    { label: "Microsoft Teams", color: "#5b5fc7" },
-                    { label: "Office 365", color: "#d83b01" },
-                    { label: "Copilot", color: "#0078d4" },
-                  ].map((item) => (
-                    <div key={item.label} className="flex items-center gap-2 border border-gray-200 rounded-full px-4 py-1.5 text-sm font-medium text-[#171717] bg-white">
-                      <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ backgroundColor: item.color }} />
-                      {item.label}
+                    { label: "Microsoft Teams", color: "#6264A7" },
+                    { label: "Office 365", color: "#D83B01" },
+                    { label: "Copilot", color: "#0F6CBD" },
+                  ].map(({ label, color }) => (
+                    <div key={label} className="flex items-center gap-2 border border-gray-200 rounded px-4 py-2 bg-white shadow-sm">
+                      <div className="w-2 h-2 rounded-full" style={{ backgroundColor: color }} />
+                      <span className="text-sm font-medium text-[#171717]">{label}</span>
                     </div>
                   ))}
                 </div>
               </div>
             </div>
 
-            {/* Right: intentionally empty */}
-            <div className="hidden lg:block" />
+            {/* Right: Copilot ecosystem photo */}
+            <div className="relative">
+              <div className="relative overflow-hidden rounded-lg shadow-[0_20px_50px_rgba(0,0,0,0.12)]">
+                <img
+                  src="/copilot-ecosystem.png"
+                  alt="Autopilot featured in the Microsoft Copilot partner ecosystem"
+                  className="w-full h-auto object-cover"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-black/60 px-4 py-3">
+                  <p className="text-white text-sm font-medium">Autopilot featured in the Microsoft Copilot partner ecosystem</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
