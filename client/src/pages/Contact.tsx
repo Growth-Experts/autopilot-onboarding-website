@@ -1,178 +1,98 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, Users, Headphones, Handshake } from "lucide-react";
-import { useState } from "react";
+import Section from "@/components/layout/Section";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Mail, Phone, Users, HelpCircle, Handshake } from "lucide-react";
+import { InlineWidget } from "react-calendly";
 
 export default function Contact() {
-  const [form, setForm] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    company: "",
-    message: "",
-  });
-  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
-  const [errorMsg, setErrorMsg] = useState("");
-
-  function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
-    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  }
-
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    setStatus("sending");
-    setErrorMsg("");
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-      });
-      if (res.ok) {
-        setStatus("success");
-        setForm({ firstName: "", lastName: "", email: "", phone: "", company: "", message: "" });
-      } else {
-        const data = await res.json();
-        setErrorMsg(data.message || "Something went wrong.");
-        setStatus("error");
-      }
-    } catch {
-      setErrorMsg("Network error. Please try again.");
-      setStatus("error");
-    }
-  }
-
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <div className="pt-20 pb-12 text-center">
-        <h1 className="text-4xl md:text-5xl font-bold text-[#171717] mb-4">Contact Autopilot</h1>
-        <p className="text-gray-500 text-lg max-w-md mx-auto">
-          Whether you need a full demonstration, technical assistance, or partnership information, we're here to help.
-        </p>
-      </div>
+    <div className="flex flex-col">
+      <Section background="gray">
+        <div className="text-center max-w-3xl mx-auto mb-12">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Autopilot</h1>
+          <p className="text-xl text-gray-600">Whether you need a full demonstration, technical assistance, or partnership information, we're here to help.</p>
+        </div>
 
-      <div className="container mx-auto px-4 md:px-6 pb-24">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start max-w-5xl mx-auto">
-
-          {/* Left: Contact Cards */}
-          <div className="space-y-4">
-
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 max-w-7xl mx-auto items-stretch">
+          {/* Left Column: Contact Info Blocks */}
+          <div className="lg:col-span-4 flex flex-col gap-6 h-full">
             {/* General Inquiries */}
-            <div className="bg-white border border-gray-200 rounded-xl p-6">
-              <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center mb-4">
-                <Users className="w-5 h-5 text-gray-500" />
-              </div>
-              <h3 className="text-base font-semibold text-[#171717] mb-1">General Inquiries</h3>
-              <p className="text-sm text-gray-500 mb-4">
-                For general questions about the company, licensing, or corporate information.
-              </p>
-              <div className="space-y-2">
-                <a href="mailto:info@autopilot.co.za" className="flex items-center gap-2 text-sm text-[#ED7A30] hover:underline">
-                  <Mail className="w-4 h-4" />
-                  info@autopilot.co.za
-                </a>
-                <a href="tel:+27111234567" className="flex items-center gap-2 text-sm text-[#ED7A30] hover:underline">
-                  <Phone className="w-4 h-4" />
-                  +27 (0) 11 123 4567
-                </a>
-              </div>
-            </div>
+            <Card className="border-gray-100 shadow-md hover:shadow-lg transition-shadow flex-1">
+              <CardHeader className="pb-3">
+                <div className="w-10 h-10 bg-blue-100 rounded-none flex items-center justify-center text-primary mb-3">
+                  <Users className="h-5 w-5" />
+                </div>
+                <CardTitle className="text-lg">General Inquiries</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-3 text-sm">
+                <p className="text-gray-600">For general questions about the company, licensing, or corporate information.</p>
+                <div className="space-y-2 pt-1">
+                  <div className="flex items-center gap-3 font-medium">
+                    <Mail className="h-4 w-4 text-accent" />
+                    <span>info@autopilot.co.za</span>
+                  </div>
+                  <div className="flex items-center gap-3 font-medium">
+                    <Phone className="h-4 w-4 text-accent" />
+                    <span>+27 (0) 11 123 4567</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
 
             {/* Technical Support */}
-            <div className="bg-white border border-gray-200 rounded-xl p-6">
-              <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center mb-4">
-                <Headphones className="w-5 h-5 text-gray-500" />
-              </div>
-              <h3 className="text-base font-semibold text-[#171717] mb-1">Technical Support</h3>
-              <p className="text-sm text-gray-500 mb-4">
-                If you are a current client and require technical assistance or support.
-              </p>
-              <a href="mailto:support@autopilot.co.za" className="flex items-center gap-2 text-sm text-[#ED7A30] hover:underline">
-                <Mail className="w-4 h-4" />
-                support@autopilot.co.za
-              </a>
-            </div>
+            <Card className="border-gray-100 shadow-md hover:shadow-lg transition-shadow flex-1">
+              <CardHeader className="pb-3">
+                <div className="w-10 h-10 bg-blue-100 rounded-none flex items-center justify-center text-primary mb-3">
+                  <HelpCircle className="h-5 w-5" />
+                </div>
+                <CardTitle className="text-lg">Technical Support</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-3 text-sm">
+                <p className="text-gray-600">If you are a current client and require technical assistance or support.</p>
+                <div className="space-y-2 pt-1">
+                  <div className="flex items-center gap-3 font-medium">
+                    <Mail className="h-4 w-4 text-accent" />
+                    <span>support@autopilot.co.za</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
 
-            {/* Partnerships */}
-            <div className="bg-white border border-gray-200 rounded-xl p-6">
-              <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center mb-4">
-                <Handshake className="w-5 h-5 text-gray-500" />
-              </div>
-              <h3 className="text-base font-semibold text-[#171717] mb-1">Partnerships</h3>
-              <p className="text-sm text-gray-500 mb-4">
-                Interested in becoming an implementation Partner?
-              </p>
-              <a href="mailto:partners@autopilot.co.za" className="flex items-center gap-2 text-sm text-[#ED7A30] hover:underline">
-                <Mail className="w-4 h-4" />
-                partners@autopilot.co.za
-              </a>
-            </div>
+            {/* Partnership */}
+            <Card className="border-gray-100 shadow-md hover:shadow-lg transition-shadow flex-1">
+              <CardHeader className="pb-3">
+                <div className="w-10 h-10 bg-blue-100 rounded-none flex items-center justify-center text-primary mb-3">
+                  <Handshake className="h-5 w-5" />
+                </div>
+                <CardTitle className="text-lg">Partnerships</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-3 text-sm">
+                <p className="text-gray-600">Interested in becoming an Implementation Partner?</p>
+                <div className="space-y-2 pt-1">
+                  <div className="flex items-center gap-3 font-medium">
+                    <Mail className="h-4 w-4 text-accent" />
+                    <span>partners@autopilot.co.za</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
 
-          {/* Right: Schedule Demo + Contact Form */}
-          <div className="bg-white border border-gray-200 rounded-xl p-8">
-            <h2 className="text-xl font-bold text-[#171717] mb-1">Send Us a Message</h2>
-            <p className="text-sm text-gray-500 mb-6">Fill out the form and our team will be in touch shortly.</p>
+          {/* Right Column: Calendly */}
+          <div className="lg:col-span-8 flex flex-col h-full">
+            <div
+              className="bg-white p-4 md:p-6 rounded-none shadow-lg border border-gray-100 flex-1 h-full"
+              data-testid="card-contact-calendly"
+            >
+              <h2 className="text-2xl font-bold mb-2" data-testid="text-contact-calendly-title">Schedule Your Live Demo</h2>
+              <p className="text-gray-600 mb-6" data-testid="text-contact-calendly-subtitle">Pick a time that works for you and we'll send a calendar invite immediately.</p>
 
-            {status === "success" ? (
-              <div className="bg-green-50 border border-green-200 rounded-lg p-6 text-center">
-                <p className="text-green-700 font-semibold text-lg">Message sent!</p>
-                <p className="text-green-600 text-sm mt-1">We'll be in touch shortly.</p>
+              <div className="border border-gray-200 shadow-sm rounded-none overflow-hidden" data-testid="embed-contact-calendly">
+                <InlineWidget url="https://calendly.com/marklehrer-autopilot/30min" styles={{ height: "820px", width: "100%" }} />
               </div>
-            ) : (
-              <form className="space-y-4" onSubmit={handleSubmit}>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="space-y-1.5">
-                    <label className="text-xs font-bold text-[#171717] uppercase tracking-wide">First Name</label>
-                    <Input name="firstName" value={form.firstName} onChange={handleChange} className="rounded-lg border-gray-300 focus:border-[#ED7A30] h-11 bg-gray-50" placeholder="Jane" required />
-                  </div>
-                  <div className="space-y-1.5">
-                    <label className="text-xs font-bold text-[#171717] uppercase tracking-wide">Last Name</label>
-                    <Input name="lastName" value={form.lastName} onChange={handleChange} className="rounded-lg border-gray-300 focus:border-[#ED7A30] h-11 bg-gray-50" placeholder="Doe" required />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="space-y-1.5">
-                    <label className="text-xs font-bold text-[#171717] uppercase tracking-wide">Work Email</label>
-                    <Input type="email" name="email" value={form.email} onChange={handleChange} className="rounded-lg border-gray-300 focus:border-[#ED7A30] h-11 bg-gray-50" placeholder="jane@company.com" required />
-                  </div>
-                  <div className="space-y-1.5">
-                    <label className="text-xs font-bold text-[#171717] uppercase tracking-wide">Phone Number</label>
-                    <Input type="tel" name="phone" value={form.phone} onChange={handleChange} className="rounded-lg border-gray-300 focus:border-[#ED7A30] h-11 bg-gray-50" placeholder="+27 (0) 00 000 0000" />
-                  </div>
-                </div>
-
-                <div className="space-y-1.5">
-                  <label className="text-xs font-bold text-[#171717] uppercase tracking-wide">Company Name</label>
-                  <Input name="company" value={form.company} onChange={handleChange} className="rounded-lg border-gray-300 focus:border-[#ED7A30] h-11 bg-gray-50" placeholder="Acme Inc." />
-                </div>
-
-                <div className="space-y-1.5">
-                  <label className="text-xs font-bold text-[#171717] uppercase tracking-wide">Message</label>
-                  <Textarea name="message" value={form.message} onChange={handleChange} className="rounded-lg border-gray-300 focus:border-[#ED7A30] min-h-[120px] bg-gray-50" placeholder="Tell us about your onboarding challenges..." required />
-                </div>
-
-                {status === "error" && (
-                  <p className="text-red-600 text-sm">{errorMsg}</p>
-                )}
-
-                <Button
-                  type="submit"
-                  disabled={status === "sending"}
-                  className="w-full bg-[#ED7A30] hover:bg-[#d66520] text-white h-12 text-sm font-bold uppercase tracking-wider rounded-lg disabled:opacity-60"
-                >
-                  {status === "sending" ? "Sending..." : "Send Message"}
-                </Button>
-              </form>
-            )}
+            </div>
           </div>
-
         </div>
-      </div>
+      </Section>
     </div>
   );
 }
