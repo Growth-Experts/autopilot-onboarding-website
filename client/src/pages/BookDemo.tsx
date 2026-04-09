@@ -32,7 +32,7 @@ export default function BookDemo() {
         <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden mb-16">
           <div 
             className="calendly-inline-widget" 
-            data-url="https://calendly.com/marklehrer-autopilot/30min" 
+            data-url="https://calendly.com/marklehrer-autopilot/autopilotworkflows-onboarding" 
             style={{ minWidth: '320px', height: '700px' }} 
           />
         </div>
