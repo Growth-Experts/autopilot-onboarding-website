@@ -5,6 +5,26 @@ import { ArrowRight, Clock, DollarSign, TrendingDown } from "lucide-react";
 import * as SliderPrimitive from "@radix-ui/react-slider";
 
 const SAVINGS_RATE = 0.6;
+const BASE_LICENSE = 500; // $500/month base (covers 1–100 workflows)
+const TIER1_RATE = 1.0;   // $1.00 per workflow: 101–1,000
+const TIER2_RATE = 0.7;   // $0.70 per workflow: 1,001–5,000
+const TIER3_RATE = 0.6;   // $0.60 per workflow: 5,001+
+
+function calcAutopilotMonthlyCost(hiresPerMonth: number): number {
+  let cost = BASE_LICENSE;
+  if (hiresPerMonth > 100) {
+    const tier1 = Math.min(hiresPerMonth - 100, 900);
+    cost += tier1 * TIER1_RATE;
+  }
+  if (hiresPerMonth > 1000) {
+    const tier2 = Math.min(hiresPerMonth - 1000, 4000);
+    cost += tier2 * TIER2_RATE;
+  }
+  if (hiresPerMonth > 5000) {
+    cost += (hiresPerMonth - 5000) * TIER3_RATE;
+  }
+  return cost;
+}
 
 function formatCurrency(value: number): string {
   return new Intl.NumberFormat("en-US", {
@@ -57,9 +77,11 @@ export function OnboardingCalculator() {
     const annualHires = hiresPerMonth * 12;
     const annualHours = annualHires * hoursPerHire;
     const annualCost = annualHours * hourlyRate;
-    const savedCost = annualCost * SAVINGS_RATE;
     const savedHours = annualHours * SAVINGS_RATE;
-    return { annualCost, savedCost, savedHours, annualHours };
+    const autopilotMonthly = calcAutopilotMonthlyCost(hiresPerMonth);
+    const autopilotAnnual = autopilotMonthly * 12;
+    const netSaving = annualCost * SAVINGS_RATE - autopilotAnnual;
+    return { annualCost, netSaving, savedHours, annualHours, autopilotAnnual };
   }, [hiresPerMonth, hourlyRate, hoursPerHire]);
 
   return (
@@ -166,10 +188,13 @@ export function OnboardingCalculator() {
                 <span className="text-xs font-bold uppercase tracking-widest" style={{ color: "rgba(255,255,255,0.8)" }}>With Autopilot Onboarding</span>
               </div>
               <div className="text-3xl font-bold tracking-tight mb-1">
-                Recover {formatCurrency(results.savedCost)}/year
+                {results.netSaving > 0 ? `Net saving: ${formatCurrency(results.netSaving)}/year` : "ROI positive at scale"}
               </div>
-              <div className="text-sm font-light mb-4" style={{ color: "rgba(255,255,255,0.85)" }}>
-                and reclaim {formatHours(results.savedHours)} hours of admin time — based on a conservative 60% reduction in manual onboarding work.*
+              <div className="text-sm font-light mb-1" style={{ color: "rgba(255,255,255,0.85)" }}>
+                Autopilot subscription: {formatCurrency(results.autopilotAnnual)}/year — reclaim {formatHours(results.savedHours)} hours of admin time.*
+              </div>
+              <div className="text-xs font-light mb-4" style={{ color: "rgba(255,255,255,0.7)" }}>
+                Based on $500/month base license (1–100 workflows) + volume tiers above that.
               </div>
               <Link href="/pricing">
                 <Button className="rounded-none font-bold uppercase text-sm px-6 py-5 w-full transition-all duration-200 cursor-pointer" style={{ backgroundColor: "#ffffff", color: "#ED7A30" }}>
@@ -179,7 +204,7 @@ export function OnboardingCalculator() {
             </div>
 
             <p className="text-xs leading-relaxed px-1" style={{ color: "#9ca3af" }}>
-              * 60% figure reflects the lower bound of time savings reported by organisations using structured onboarding automation. Source: SHRM / Deloitte onboarding research.
+              * 60% admin time reduction reflects the lower bound reported by organisations using structured onboarding automation (SHRM / Deloitte). Autopilot subscription cost based on published pricing: $500/month base covering 1–100 workflows, with volume tiers above that.
             </p>
           </div>
         </div>
