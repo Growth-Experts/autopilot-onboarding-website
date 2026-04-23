@@ -23,7 +23,7 @@ export function Navbar() {
     { name: "Features", href: "/#features", isAnchor: true },
     { name: "Case Studies", href: "/case-studies" },
     { name: "Pricing", href: "/pricing" },
-    { name: "Contact", href: "/contact" },
+    { name: "ROI Calculator", href: "/roi-calculator" },
   ];
 
   const solutionLinks = [

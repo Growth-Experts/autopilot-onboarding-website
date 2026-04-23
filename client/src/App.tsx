@@ -36,6 +36,7 @@ import CaseStudySyntech from "@/pages/CaseStudySyntech";
 import CaseStudyTalksure from "@/pages/CaseStudyTalksure";
 import CaseStudyYMCA from "@/pages/CaseStudyYMCA";
 import Pricing from "@/pages/Pricing";
+import ROICalculator from "@/pages/ROICalculator";
 
 function Router() {
   return (
@@ -57,6 +58,7 @@ function Router() {
           <Route path="/case-studies/talksure" component={CaseStudyTalksure} />
           <Route path="/case-studies/ymca" component={CaseStudyYMCA} />
           <Route path="/pricing" component={Pricing} />
+          <Route path="/roi-calculator" component={ROICalculator} />
           <Route path="/contact" component={Contact} />
           <Route path="/privacy-policy" component={PrivacyPolicy} />
           <Route path="/terms-conditions" component={TermsConditions} />
