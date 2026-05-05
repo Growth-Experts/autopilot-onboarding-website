@@ -14,6 +14,7 @@ import avatarEmily from "@assets/stock_images/business_woman_profe_0724059b.jpg"
 import bidvestLogo from "@assets/bidvest-logo_1765964035827.png";
 import integrationsImage from "@assets/autopilot-integrations_1764671619557.png";
 import { Check, ArrowRight, Clock, Users, FileText, Shield, MessageSquare, Database, Archive, Zap, X } from "lucide-react";
+import { OnboardingCalculator } from "@/components/OnboardingCalculator";
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
 
@@ -688,6 +689,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <OnboardingCalculator />
       {/* Section 8: Testimonials & Video */}
       <section className="py-24 bg-white border-b border-gray-200">
         <div className="container mx-auto px-4 md:px-6">
