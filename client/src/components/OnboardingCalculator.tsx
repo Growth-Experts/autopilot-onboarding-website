@@ -88,9 +88,9 @@ export function OnboardingCalculator() {
                 <label className="text-sm font-semibold uppercase tracking-wide" style={{ color: "#171717" }}>HR / Admin hourly rate</label>
                 <span className="text-2xl font-bold" style={{ color: "#ED7A30" }}>${hourlyRate}/hr</span>
               </div>
-              <CalcSlider value={hourlyRate} min={10} max={150} step={5} onChange={setHourlyRate} />
+              <CalcSlider value={hourlyRate} min={25} max={150} step={5} onChange={setHourlyRate} />
               <div className="flex justify-between text-xs mt-2" style={{ color: "#9ca3af" }}>
-                <span>$10</span><span>$150</span>
+                <span>$25</span><span>$150</span>
               </div>
             </div>
 
