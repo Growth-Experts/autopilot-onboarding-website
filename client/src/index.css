@@ -79,3 +79,29 @@
 .window-dot {
   @apply w-3 h-3 rounded-full;
 }
+
+/* Product tour entrances. Only `from` is defined, so each ends on the element's own style and
+   nothing changes when the animation finishes (no end-of-animation style handoff). */
+@theme {
+  --animate-tour-fade-in: tour-fade-in 300ms ease-out both;
+  --animate-tour-rise-in: tour-rise-in 450ms ease-out 100ms both;
+  --animate-tour-slide-in: tour-slide-in 500ms ease-out 150ms both;
+
+  @keyframes tour-fade-in {
+    from {
+      opacity: 0;
+    }
+  }
+  @keyframes tour-rise-in {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+  }
+  @keyframes tour-slide-in {
+    from {
+      opacity: 0;
+      transform: translateX(16px);
+    }
+  }
+}

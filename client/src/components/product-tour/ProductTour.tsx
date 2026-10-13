@@ -4,11 +4,11 @@ import {
   useLayoutEffect,
   useRef,
   useState,
+  useSyncExternalStore,
   type CSSProperties,
   type KeyboardEvent,
   type RefObject,
 } from "react";
-import { MotionConfig, motion, useReducedMotion } from "framer-motion";
 import { ArrowLeft, ArrowRight, Pause, Play, RotateCcw } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type {
@@ -51,7 +51,9 @@ export function ProductTour({
   const rootRef = useRef<HTMLDivElement>(null);
   const stageRef = useRef<HTMLDivElement>(null);
   const stage = useElementSize(stageRef);
-  const reduceMotion = useReducedMotion() ?? false;
+  const reduceMotion = usePrefersReducedMotion();
+  const sheetRef = useRef<HTMLDivElement>(null);
+  const sheetFontReady = useFontReady(sheetRef);
 
   const step = steps[index];
   const total = steps.length;
@@ -129,131 +131,133 @@ export function ProductTour({
   const sheetText = step.type === "card" ? step.subtitle : step.type === "image" ? step.caption : undefined;
 
   return (
-    <MotionConfig reducedMotion="user">
+    <div
+      ref={rootRef}
+      role="region"
+      aria-roledescription="product tour"
+      aria-label={label}
+      tabIndex={0}
+      onKeyDown={onKeyDown}
+      className={cn(
+        "relative w-full bg-white text-[#0B1220] outline-none focus-visible:ring-2 focus-visible:ring-[#2142E7] focus-visible:ring-offset-2",
+        className,
+      )}
+    >
       <div
-        ref={rootRef}
-        role="region"
-        aria-roledescription="product tour"
-        aria-label={label}
-        tabIndex={0}
-        onKeyDown={onKeyDown}
-        className={cn(
-          "relative w-full bg-white text-[#0B1220] outline-none focus-visible:ring-2 focus-visible:ring-[#2142E7] focus-visible:ring-offset-2",
-          className,
-        )}
+        ref={stageRef}
+        className="relative w-full overflow-hidden bg-white select-none"
+        style={{ aspectRatio }}
       >
+        {/* One camera for all media, so the view pans from one step's framing to the next. A CSS
+            transform (not framer-motion) so the new framing is committed in the same paint as the
+            frame swap; with reduced motion there's no transition, so no in-between frame. */}
         <div
-          ref={stageRef}
-          className="relative w-full overflow-hidden bg-white select-none"
-          style={{ aspectRatio }}
+          className="absolute inset-0 origin-top-left transition-transform duration-[800ms] ease-[cubic-bezier(0.4,0,0.2,1)] motion-reduce:transition-none"
+          style={{ transform: zoomTransform(step.type === "card" ? undefined : shownStep) }}
         >
-          {/* One camera for all media, so the view pans from one step's framing to the next. A CSS
-              transform (not framer-motion) so the new framing is committed in the same paint as the
-              frame swap; with reduced motion there's no transition, so no in-between frame. */}
-          <div
-            className="absolute inset-0 origin-top-left transition-transform duration-[800ms] ease-[cubic-bezier(0.4,0,0.2,1)] motion-reduce:transition-none"
-            style={{ transform: zoomTransform(step.type === "card" ? undefined : shownStep) }}
-          >
-            {mediaTarget && (
-              <MediaStage
-                target={mediaTarget}
-                upcoming={upcomingMedia}
-                playing={step.type === "video" && videoPlaying}
-                onShown={setShownId}
-                onVideoEnded={onVideoEnded}
-                onPlayFailed={(id) => setVideoToggle({ id, playing: false })}
-              />
-            )}
-          </div>
-
-          {card && (
-            <motion.div
-              className="absolute inset-0 z-10"
-              initial={false}
-              animate={{ opacity: cardVisible ? 1 : 0 }}
-              transition={{ duration: 0.35 }}
-              style={{ pointerEvents: cardVisible ? "auto" : "none" }}
-              aria-hidden={!cardVisible}
-              inert={!cardVisible}
-            >
-              <CardLayer
-                step={card}
-                isLast={isLast}
-                onAdvance={advanceFromStage}
-                onRestart={() => {
-                  rootRef.current?.focus({ preventScroll: true });
-                  goTo(0);
-                }}
-              />
-            </motion.div>
-          )}
-
-          {showing && step.type === "image" && step.hotspot && step.caption && (
-            <HotspotLayer
-              key={step.id}
-              step={step}
-              hotspot={step.hotspot}
-              caption={step.caption}
-              stage={stage}
-              reduceMotion={reduceMotion}
-              onActivate={advanceFromStage}
+          {mediaTarget && (
+            <MediaStage
+              target={mediaTarget}
+              upcoming={upcomingMedia}
+              playing={step.type === "video" && videoPlaying}
+              onShown={setShownId}
+              onVideoEnded={onVideoEnded}
+              onPlayFailed={(id) => setVideoToggle({ id, playing: false })}
             />
           )}
+        </div>
 
-          {showing && step.type === "video" && (
+        {card && (
+          <div
+            className="absolute inset-0 z-10 transition-opacity duration-[350ms]"
+            style={{ opacity: cardVisible ? 1 : 0, pointerEvents: cardVisible ? "auto" : "none" }}
+            aria-hidden={!cardVisible}
+            inert={!cardVisible}
+          >
+            <CardLayer
+              step={card}
+              isLast={isLast}
+              onAdvance={advanceFromStage}
+              onRestart={() => {
+                rootRef.current?.focus({ preventScroll: true });
+                goTo(0);
+              }}
+            />
+          </div>
+        )}
+
+        {showing && step.type === "image" && step.hotspot && step.caption && (
+          <HotspotLayer
+            key={step.id}
+            step={step}
+            hotspot={step.hotspot}
+            caption={step.caption}
+            stage={stage}
+            reduceMotion={reduceMotion}
+            onActivate={advanceFromStage}
+          />
+        )}
+
+        {showing && step.type === "video" && (
+          <button
+            type="button"
+            onClick={() => setVideoToggle({ id: step.id, playing: !videoPlaying })}
+            aria-label={videoPlaying ? "Pause video" : "Play video"}
+            className="absolute bottom-2 left-2 z-20 inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#0B1220]/70 text-white transition-colors hover:bg-[#0B1220]/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white sm:bottom-3 sm:left-3"
+          >
+            {videoPlaying ? (
+              <Pause className="h-4 w-4" aria-hidden="true" />
+            ) : (
+              <Play className="h-4 w-4" aria-hidden="true" />
+            )}
+          </button>
+        )}
+      </div>
+
+      {/* Fixed height so the page doesn't jump on steps without a caption. The text waits for the
+          caption font (as the desktop bubble does), so it isn't drawn in a fallback font first. */}
+      <div
+        ref={sheetRef}
+        className="md:hidden flex min-h-[5.875rem] items-stretch border-t border-[#0B1220]/10 bg-white"
+      >
+        {sheetText &&
+          (isLast ? (
+            <p className={cn("px-4 py-3 text-sm leading-relaxed text-[#0B1220]", !sheetFontReady && "invisible")}>
+              <RichText text={sheetText} />
+            </p>
+          ) : (
+            // The Next button is the keyboard and screen-reader route; this is a larger touch target.
             <button
               type="button"
-              onClick={() => setVideoToggle({ id: step.id, playing: !videoPlaying })}
-              aria-label={videoPlaying ? "Pause video" : "Play video"}
-              className="absolute bottom-2 left-2 z-20 inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#0B1220]/70 text-white transition-colors hover:bg-[#0B1220]/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white sm:bottom-3 sm:left-3"
-            >
-              {videoPlaying ? (
-                <Pause className="h-4 w-4" aria-hidden="true" />
-              ) : (
-                <Play className="h-4 w-4" aria-hidden="true" />
+              tabIndex={-1}
+              aria-hidden="true"
+              onClick={advanceFromStage}
+              className={cn(
+                "flex w-full cursor-pointer items-center gap-3 px-4 py-3 text-left text-sm leading-relaxed text-[#0B1220] transition-colors active:bg-[#2142E7]/5",
+                !sheetFontReady && "invisible",
               )}
-            </button>
-          )}
-        </div>
-
-        {/* Fixed height so the page doesn't jump on steps without a caption. */}
-        <div className="md:hidden flex min-h-[5.875rem] items-stretch border-t border-[#0B1220]/10 bg-white">
-          {sheetText &&
-            (isLast ? (
-              <p className="px-4 py-3 text-sm leading-relaxed text-[#0B1220]">
+            >
+              <span className="flex-1">
                 <RichText text={sheetText} />
-              </p>
-            ) : (
-              // The Next button is the keyboard and screen-reader route; this is a larger touch target.
-              <button
-                type="button"
-                tabIndex={-1}
-                aria-hidden="true"
-                onClick={advanceFromStage}
-                className="flex w-full cursor-pointer items-center gap-3 px-4 py-3 text-left text-sm leading-relaxed text-[#0B1220] transition-colors active:bg-[#2142E7]/5"
-              >
-                <span className="flex-1">
-                  <RichText text={sheetText} />
-                </span>
-                <ArrowRight className="h-4 w-4 shrink-0" style={{ color: BRAND }} />
-              </button>
-            ))}
-        </div>
-
-        <ControlBar
-          index={index}
-          total={total}
-          isFirst={isFirst}
-          isLast={isLast}
-          onBack={back}
-          onNext={isLast ? () => goTo(0) : next}
-        />
-
-        <p className="sr-only" aria-live="polite" aria-atomic="true">
-          {`Step ${index + 1} of ${total}. ${announcement(step)}`}
-        </p>
+              </span>
+              <ArrowRight className="h-4 w-4 shrink-0" style={{ color: BRAND }} />
+            </button>
+          ))}
       </div>
-    </MotionConfig>
+
+      <ControlBar
+        index={index}
+        total={total}
+        isFirst={isFirst}
+        isLast={isLast}
+        onBack={back}
+        onNext={isLast ? () => goTo(0) : next}
+      />
+
+      <p className="sr-only" aria-live="polite" aria-atomic="true">
+        {`Step ${index + 1} of ${total}. ${announcement(step)}`}
+      </p>
+    </div>
   );
 }
 
@@ -296,25 +300,19 @@ function CardLayer({
         }
       />
       {step.previewImage && (
-        <motion.img
+        <img
           src={step.previewImage}
           alt=""
           aria-hidden="true"
           draggable={false}
-          className="absolute left-1/2 top-[19%] hidden w-[85%] max-w-none rounded-tl-lg border border-[#0B1220]/10 bg-white shadow-[0_16px_48px_rgba(11,18,32,0.18)] sm:block"
-          initial={{ opacity: 0, x: 16 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.15 }}
+          className="absolute left-1/2 top-[19%] hidden w-[85%] max-w-none animate-tour-slide-in rounded-tl-lg border border-[#0B1220]/10 bg-white shadow-[0_16px_48px_rgba(11,18,32,0.18)] motion-reduce:animate-none sm:block"
         />
       )}
-      <motion.div
+      <div
         className={cn(
-          "relative flex h-full flex-col justify-center gap-3 px-[5%] sm:gap-4",
+          "relative flex h-full animate-tour-rise-in flex-col justify-center gap-3 px-[5%] motion-reduce:animate-none sm:gap-4",
           step.previewImage ? "max-w-full sm:max-w-[47%]" : "max-w-3xl px-[7%]",
         )}
-        initial={{ opacity: 0, y: 12 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.45, delay: 0.1 }}
       >
         <h2
           className={cn(
@@ -372,7 +370,7 @@ function CardLayer({
             </button>
           )}
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 }
@@ -530,14 +528,21 @@ function HotspotLayer({
 }) {
   const { x, y } = displayedHotspot(hotspot, step.zoom);
   // Let the zoom settle before the hotspot appears at its final position.
-  const delay = reduceMotion ? 0 : step.zoom ? 0.65 : 0.25;
+  const delay = reduceMotion ? 0 : step.zoom ? 650 : 250;
+  const bubbleRef = useRef<HTMLButtonElement>(null);
+  // Fade in once the caption font is ready, so the bubble renders once at its final size.
+  const fontReady = useFontReady(bubbleRef);
 
   return (
-    <motion.div
-      className="pointer-events-none absolute inset-0 z-20"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.3, delay }}
+    // CSS fade, not framer-motion: when its WAAPI fade finishes it cancels the animation before
+    // writing the final opacity, which can paint one frame at opacity 0. `will-change` keeps the
+    // layer composited for its whole life, so the text isn't re-rasterized when the fade ends.
+    <div
+      className={cn(
+        "pointer-events-none absolute inset-0 z-20 will-change-[opacity]",
+        fontReady ? "animate-tour-fade-in motion-reduce:animate-none" : "opacity-0",
+      )}
+      style={{ animationDelay: `${delay}ms` }}
     >
       <button
         type="button"
@@ -570,9 +575,10 @@ function HotspotLayer({
           stage={stage}
           preferred={hotspot.placement}
           onActivate={onActivate}
+          bubbleRef={bubbleRef}
         />
       )}
-    </motion.div>
+    </div>
   );
 }
 
@@ -582,14 +588,15 @@ function Tooltip({
   stage,
   preferred,
   onActivate,
+  bubbleRef: ref,
 }: {
   caption: string;
   anchor: { x: number; y: number };
   stage: Size;
   preferred?: TooltipPlacement;
   onActivate: () => void;
+  bubbleRef: RefObject<HTMLButtonElement | null>;
 }) {
-  const ref = useRef<HTMLButtonElement>(null);
   const size = useElementSize(ref);
   const layout = layoutTooltip(anchor, size, stage, preferred);
 
@@ -601,7 +608,7 @@ function Tooltip({
       tabIndex={-1}
       aria-hidden="true"
       onClick={onActivate}
-      className="pointer-events-auto absolute hidden w-max max-w-[min(20rem,42%)] cursor-pointer rounded-[6px] px-4 py-3 text-left text-sm font-medium leading-snug text-white shadow-[0_12px_32px_rgba(11,18,32,0.3)] transition-[filter] hover:brightness-110 md:block"
+      className="pointer-events-auto absolute hidden w-max max-w-[min(20rem,42%)] cursor-pointer rounded-[6px] px-4 py-3 text-left text-sm font-medium leading-snug text-white shadow-[0_12px_32px_rgba(11,18,32,0.3)] md:block"
       style={{
         backgroundColor: BRAND,
         left: layout.left,
@@ -721,6 +728,46 @@ interface Size {
   height: number;
 }
 
+const REDUCED_MOTION_QUERY = "(prefers-reduced-motion: reduce)";
+
+function usePrefersReducedMotion() {
+  return useSyncExternalStore(
+    (onChange) => {
+      const query = window.matchMedia(REDUCED_MOTION_QUERY);
+      query.addEventListener("change", onChange);
+      return () => query.removeEventListener("change", onChange);
+    },
+    () => window.matchMedia(REDUCED_MOTION_QUERY).matches,
+    () => false,
+  );
+}
+
+/** Never hold the caption back longer than this if the web font is slow or fails. */
+const FONT_WAIT_MS = 3000;
+
+/** True once the element's font face has loaded (immediately, before paint, if it already has). */
+function useFontReady(ref: RefObject<HTMLElement | null>) {
+  const [ready, setReady] = useState(false);
+
+  useLayoutEffect(() => {
+    const el = ref.current;
+    if (!el || !document.fonts) return setReady(true);
+    const { fontStyle, fontWeight, fontSize, fontFamily } = getComputedStyle(el);
+    const font = `${fontStyle} ${fontWeight} ${fontSize} ${fontFamily}`;
+    if (document.fonts.check(font)) return setReady(true);
+    let live = true;
+    const timeout = new Promise((resolve) => setTimeout(resolve, FONT_WAIT_MS));
+    Promise.race([document.fonts.load(font), timeout])
+      .catch(() => {})
+      .finally(() => live && setReady(true));
+    return () => {
+      live = false;
+    };
+  }, [ref]);
+
+  return ready;
+}
+
 function useElementSize(ref: RefObject<HTMLElement | null>): Size {
   const [size, setSize] = useState<Size>({ width: 0, height: 0 });
 
@@ -823,8 +870,8 @@ function layoutTooltip(
     left = anchor.x - tip.width / 2;
     top = placement === "bottom" ? anchor.y + TOOLTIP_GAP : anchor.y - TOOLTIP_GAP - tip.height;
   }
-  left = clamp(left, EDGE_MARGIN, stage.width - tip.width - EDGE_MARGIN);
-  top = clamp(top, EDGE_MARGIN, stage.height - tip.height - EDGE_MARGIN);
+  left = Math.round(clamp(left, EDGE_MARGIN, stage.width - tip.width - EDGE_MARGIN));
+  top = Math.round(clamp(top, EDGE_MARGIN, stage.height - tip.height - EDGE_MARGIN));
 
   const arrowInset = 14;
   const arrow: CSSProperties =
