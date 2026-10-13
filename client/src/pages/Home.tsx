@@ -15,7 +15,7 @@ import bidvestLogo from "@assets/bidvest-logo_1765964035827.png";
 import integrationsImage from "@assets/autopilot-integrations_1764671619557.png";
 import { Check, ArrowRight, Clock, Users, FileText, Shield, MessageSquare, Database, Archive, Zap, X } from "lucide-react";
 import { OnboardingCalculator } from "@/components/OnboardingCalculator";
-import { useState, useEffect } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 import { Link } from "wouter";
 
 import autopilot_integrations from "@assets/onboarding integrations.png";
@@ -60,6 +60,19 @@ import featureArchiving from "@assets/unnamed_(10)_1768582041102.png";
 
 import autopilot_partners from "@assets/autopilot-partners.png";
 import microsoftPartnerLogo from "@assets/Autopilot_(2)_1770304988766.png";
+
+const OnboardingTour = lazy(() => import("@/components/product-tour/OnboardingTour"));
+
+/** Same footprint as the tour: 1872/3840 frame, 5.875rem mobile caption sheet, 41px control bar. */
+function OnboardingTourPlaceholder() {
+  return (
+    <div aria-hidden="true">
+      <div className="w-full bg-white" style={{ aspectRatio: 3840 / 1872 }} />
+      <div className="h-[5.875rem] border-t border-gray-100 md:hidden" />
+      <div className="h-[41px] border-t border-gray-100" />
+    </div>
+  );
+}
 
 function HeroSlideshow({ images }: { images: string[] }) {
   const [currentIndex] = useState(0);
@@ -169,17 +182,9 @@ export default function Home() {
 
           <div className="max-w-6xl mx-auto mt-12">
             <div className="rounded-xl overflow-hidden border border-gray-200 shadow-2xl bg-white">
-              <div style={{ position: 'relative', paddingBottom: 'calc(48.75% + 41px)', height: '0px', width: '100%' }}>
-                <iframe 
-                  src="https://demo.arcade.software/QjLs7UfXhKdAMmmkghO5?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" 
-                  title="Start an employee onboarding request and route it to the right team" 
-                  frameBorder="0" 
-                  loading="lazy" 
-                  allowFullScreen 
-                  allow="clipboard-write" 
-                  style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', colorScheme: 'light' }} 
-                />
-              </div>
+              <Suspense fallback={<OnboardingTourPlaceholder />}>
+                <OnboardingTour />
+              </Suspense>
             </div>
           </div>
         </div>
