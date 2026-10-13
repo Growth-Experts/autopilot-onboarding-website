@@ -63,12 +63,12 @@ import microsoftPartnerLogo from "@assets/Autopilot_(2)_1770304988766.png";
 
 const OnboardingTour = lazy(() => import("@/components/product-tour/OnboardingTour"));
 
-/** Same footprint as the tour: 1872/3840 frame, 4.5rem mobile caption sheet, 41px control bar. */
+/** Same footprint as the tour: 1872/3840 frame, 5.875rem mobile caption sheet, 41px control bar. */
 function OnboardingTourPlaceholder() {
   return (
     <div aria-hidden="true">
       <div className="w-full bg-white" style={{ aspectRatio: 3840 / 1872 }} />
-      <div className="h-[4.5rem] border-t border-gray-100 md:hidden" />
+      <div className="h-[5.875rem] border-t border-gray-100 md:hidden" />
       <div className="h-[41px] border-t border-gray-100" />
     </div>
   );

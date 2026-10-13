@@ -226,7 +226,7 @@ export function ProductTour({
         </div>
 
         {/* Fixed height so the page doesn't jump on steps without a caption. */}
-        <div className="md:hidden flex min-h-[4.5rem] items-stretch border-t border-[#0B1220]/10 bg-white">
+        <div className="md:hidden flex min-h-[5.875rem] items-stretch border-t border-[#0B1220]/10 bg-white">
           {sheetText &&
             (isLast ? (
               <p className="px-4 py-3 text-sm leading-relaxed text-[#0B1220]">
