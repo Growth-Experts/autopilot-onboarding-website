@@ -54,7 +54,6 @@ export interface TourImageStep extends TourStepBase {
 export interface TourVideoStep extends TourStepBase {
   type: "video";
   video: string;
-  poster?: string;
   playbackRate?: number;
 }
 

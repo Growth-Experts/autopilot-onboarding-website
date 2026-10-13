@@ -40,7 +40,6 @@ export const onboardingTourSteps: TourStep[] = [
     id: "step-03",
     type: "video",
     video: `${BASE}/step-03.mp4`,
-    poster: `${BASE}/step-03-poster.webp`,
     playbackRate: 2.5,
   },
   {
@@ -65,7 +64,6 @@ export const onboardingTourSteps: TourStep[] = [
     id: "step-06",
     type: "video",
     video: `${BASE}/step-06.mp4`,
-    poster: `${BASE}/step-06-poster.webp`,
     playbackRate: 2.5,
   },
   {
@@ -90,7 +88,6 @@ export const onboardingTourSteps: TourStep[] = [
     id: "step-09",
     type: "video",
     video: `${BASE}/step-09.mp4`,
-    poster: `${BASE}/step-09-poster.webp`,
     playbackRate: 2.5,
   },
   {
@@ -115,7 +112,6 @@ export const onboardingTourSteps: TourStep[] = [
     id: "step-12",
     type: "video",
     video: `${BASE}/step-12.mp4`,
-    poster: `${BASE}/step-12-poster.webp`,
     playbackRate: 2.5,
   },
   {
@@ -140,7 +136,6 @@ export const onboardingTourSteps: TourStep[] = [
     id: "step-15",
     type: "video",
     video: `${BASE}/step-15.mp4`,
-    poster: `${BASE}/step-15-poster.webp`,
     playbackRate: 2.5,
   },
   {
@@ -165,7 +160,6 @@ export const onboardingTourSteps: TourStep[] = [
     id: "step-18",
     type: "video",
     video: `${BASE}/step-18.mp4`,
-    poster: `${BASE}/step-18-poster.webp`,
     playbackRate: 2.5,
   },
   {
@@ -217,7 +211,6 @@ export const onboardingTourSteps: TourStep[] = [
     id: "step-24",
     type: "video",
     video: `${BASE}/step-24.mp4`,
-    poster: `${BASE}/step-24-poster.webp`,
     playbackRate: 2.5,
   },
   {
@@ -242,7 +235,6 @@ export const onboardingTourSteps: TourStep[] = [
     id: "step-27",
     type: "video",
     video: `${BASE}/step-27.mp4`,
-    poster: `${BASE}/step-27-poster.webp`,
     playbackRate: 1,
   },
   {
@@ -258,7 +250,6 @@ export const onboardingTourSteps: TourStep[] = [
     id: "step-29",
     type: "video",
     video: `${BASE}/step-29.mp4`,
-    poster: `${BASE}/step-29-poster.webp`,
     playbackRate: 1,
   },
   {
@@ -292,7 +283,6 @@ export const onboardingTourSteps: TourStep[] = [
     id: "step-33",
     type: "video",
     video: `${BASE}/step-33.mp4`,
-    poster: `${BASE}/step-33-poster.webp`,
     playbackRate: 2.5,
   },
   {
@@ -308,7 +298,6 @@ export const onboardingTourSteps: TourStep[] = [
     id: "step-35",
     type: "video",
     video: `${BASE}/step-35.mp4`,
-    poster: `${BASE}/step-35-poster.webp`,
     playbackRate: 1,
   },
   {
@@ -342,7 +331,6 @@ export const onboardingTourSteps: TourStep[] = [
     id: "step-39",
     type: "video",
     video: `${BASE}/step-39.mp4`,
-    poster: `${BASE}/step-39-poster.webp`,
     playbackRate: 2.5,
   },
   {

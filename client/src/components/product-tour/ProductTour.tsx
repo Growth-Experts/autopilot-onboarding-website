@@ -8,7 +8,7 @@ import {
   type KeyboardEvent,
   type RefObject,
 } from "react";
-import { AnimatePresence, MotionConfig, motion, useReducedMotion } from "framer-motion";
+import { MotionConfig, motion, useReducedMotion } from "framer-motion";
 import { ArrowLeft, ArrowRight, Pause, Play, RotateCcw } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type {
@@ -26,9 +26,6 @@ export type { TourStep } from "./types";
 const BRAND = "#2142E7";
 const TOOLTIP_GAP = 22;
 const EDGE_MARGIN = 8;
-const ZOOM_EASE = [0.4, 0, 0.2, 1] as const;
-const ZOOM_DURATION = 0.8;
-const NO_ZOOM = { x: "0%", y: "0%", scale: 1 };
 
 export interface ProductTourProps {
   steps: TourStep[];
@@ -80,7 +77,7 @@ export function ProductTour({
     next();
   }, [next]);
 
-  // A video that is fading out can still fire `ended`; only advance from the step it belongs to.
+  // Only advance from the step the video belongs to, in case the user already moved on.
   const stepIdRef = useRef(step?.id);
   stepIdRef.current = step?.id;
   const onVideoEnded = useCallback(
@@ -90,10 +87,25 @@ export function ProductTour({
     [next],
   );
 
+  // The media actually on screen. It lags `step` until the new frame has decoded, and the zoom
+  // and hotspot follow it so they never move ahead of the picture.
+  const [shownId, setShownId] = useState<string | null>(null);
+  const mediaIndex = step?.type === "card" ? nearbyMediaIndex(steps, index) : index;
+  const mediaTarget = mediaIndex === -1 ? undefined : (steps[mediaIndex] as TourMediaStep);
+  const upcomingMedia = mediaIndex === -1 ? undefined : nextMedia(steps, mediaIndex);
+  const shownStep = steps.find((s) => s.id === shownId);
+  const showing = step && shownId === step.id;
+
+  // The intro/closing card stays mounted and fades as an overlay, so its images are never reloaded.
+  const lastCardRef = useRef<TourCardStep | undefined>(undefined);
+  if (step?.type === "card") lastCardRef.current = step;
+  const card = lastCardRef.current ?? steps.find((s): s is TourCardStep => s.type === "card");
+  const cardVisible = step?.type === "card";
+
   useEffect(() => {
-    for (const neighbour of [steps[index + 1], steps[index - 1]]) {
+    for (const neighbour of [steps[index + 1], steps[index + 2], steps[index - 1]]) {
       const src = neighbour && previewSource(neighbour);
-      if (src) new Image().src = src;
+      if (src) warmImage(src);
     }
   }, [index, steps]);
 
@@ -135,69 +147,48 @@ export function ProductTour({
           className="relative w-full overflow-hidden bg-white select-none"
           style={{ aspectRatio }}
         >
-          {/* One camera for all media, so the view pans between steps while the screens crossfade. */}
-          <motion.div
-            className="absolute inset-0"
-            style={{ originX: 0, originY: 0 }}
-            initial={false}
-            animate={zoomTarget(step)}
-            transition={{ duration: ZOOM_DURATION, ease: ZOOM_EASE }}
+          {/* One camera for all media, so the view pans from one step's framing to the next. A CSS
+              transform (not framer-motion) so the new framing is committed in the same paint as the
+              frame swap; with reduced motion there's no transition, so no in-between frame. */}
+          <div
+            className="absolute inset-0 origin-top-left transition-transform duration-[800ms] ease-[cubic-bezier(0.4,0,0.2,1)] motion-reduce:transition-none"
+            style={{ transform: zoomTransform(step.type === "card" ? undefined : shownStep) }}
           >
-            <AnimatePresence initial={false}>
-              {step.type !== "card" && (
-                <motion.div
-                  key={layerKey(step)}
-                  className="absolute inset-0"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.35 }}
-                >
-                  {step.type === "image" ? (
-                    <img
-                      src={step.image}
-                      alt={step.alt}
-                      draggable={false}
-                      decoding="async"
-                      className="h-full w-full object-cover"
-                    />
-                  ) : (
-                    <TourVideo
-                      step={step}
-                      playing={videoPlaying}
-                      onPlayFailed={() => setVideoToggle({ id: step.id, playing: false })}
-                      onEnded={onVideoEnded}
-                    />
-                  )}
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </motion.div>
-
-          <AnimatePresence initial={false}>
-            {step.type === "card" && (
-              <motion.div
-                key={step.id}
-                className="absolute inset-0"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.35 }}
-              >
-                <CardLayer
-                  step={step}
-                  isLast={isLast}
-                  onAdvance={advanceFromStage}
-                  onRestart={() => {
-                    rootRef.current?.focus({ preventScroll: true });
-                    goTo(0);
-                  }}
-                />
-              </motion.div>
+            {mediaTarget && (
+              <MediaStage
+                target={mediaTarget}
+                upcoming={upcomingMedia}
+                playing={step.type === "video" && videoPlaying}
+                onShown={setShownId}
+                onVideoEnded={onVideoEnded}
+                onPlayFailed={(id) => setVideoToggle({ id, playing: false })}
+              />
             )}
-          </AnimatePresence>
+          </div>
 
-          {step.type === "image" && step.hotspot && step.caption && (
+          {card && (
+            <motion.div
+              className="absolute inset-0 z-10"
+              initial={false}
+              animate={{ opacity: cardVisible ? 1 : 0 }}
+              transition={{ duration: 0.35 }}
+              style={{ pointerEvents: cardVisible ? "auto" : "none" }}
+              aria-hidden={!cardVisible}
+              inert={!cardVisible}
+            >
+              <CardLayer
+                step={card}
+                isLast={isLast}
+                onAdvance={advanceFromStage}
+                onRestart={() => {
+                  rootRef.current?.focus({ preventScroll: true });
+                  goTo(0);
+                }}
+              />
+            </motion.div>
+          )}
+
+          {showing && step.type === "image" && step.hotspot && step.caption && (
             <HotspotLayer
               key={step.id}
               step={step}
@@ -209,12 +200,12 @@ export function ProductTour({
             />
           )}
 
-          {step.type === "video" && (
+          {showing && step.type === "video" && (
             <button
               type="button"
               onClick={() => setVideoToggle({ id: step.id, playing: !videoPlaying })}
               aria-label={videoPlaying ? "Pause video" : "Play video"}
-              className="absolute bottom-2 left-2 z-10 inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#0B1220]/70 text-white transition-colors hover:bg-[#0B1220]/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white sm:bottom-3 sm:left-3"
+              className="absolute bottom-2 left-2 z-20 inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#0B1220]/70 text-white transition-colors hover:bg-[#0B1220]/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white sm:bottom-3 sm:left-3"
             >
               {videoPlaying ? (
                 <Pause className="h-4 w-4" aria-hidden="true" />
@@ -386,58 +377,140 @@ function CardLayer({
   );
 }
 
-function TourVideo({
-  step,
+type MediaLayer = 0 | 1 | "video";
+
+/**
+ * Two image slots and one video, mounted once and never keyed. The next screen is loaded and
+ * decoded into a hidden slot ahead of time, and a slot is only brought to the front (by z-index,
+ * never by opacity) once it has decoded pixels, so the previous frame stays up until then.
+ * `src` is set imperatively; React never touches it, so a re-render can't trigger a reload.
+ */
+function MediaStage({
+  target,
+  upcoming,
   playing,
+  onShown,
+  onVideoEnded,
   onPlayFailed,
-  onEnded,
 }: {
-  step: TourVideoStep;
+  target: TourMediaStep;
+  upcoming?: TourMediaStep;
   playing: boolean;
-  onPlayFailed: () => void;
-  onEnded: (id: string) => void;
+  onShown: (id: string) => void;
+  onVideoEnded: (id: string) => void;
+  onPlayFailed: (id: string) => void;
 }) {
-  const ref = useRef<HTMLVideoElement>(null);
-  const onPlayFailedRef = useRef(onPlayFailed);
-  onPlayFailedRef.current = onPlayFailed;
+  const imageRefs = [useRef<HTMLImageElement>(null), useRef<HTMLImageElement>(null)] as const;
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [shown, setShown] = useState<{ step: TourMediaStep; layer: MediaLayer } | null>(null);
+  const shownRef = useRef(shown);
+  shownRef.current = shown;
+  const callbacks = useRef({ onShown, onVideoEnded, onPlayFailed });
+  callbacks.current = { onShown, onVideoEnded, onPlayFailed };
 
   useEffect(() => {
-    const video = ref.current;
-    if (!video) return;
-    const rate = step.playbackRate ?? 1;
-    const applyRate = () => {
-      video.defaultPlaybackRate = rate;
-      video.playbackRate = rate;
+    const slots = [imageRefs[0].current!, imageRefs[1].current!];
+    const video = videoRef.current!;
+    const front = shownRef.current?.layer ?? null;
+    let cancelled = false;
+    let cleanup = () => {};
+
+    const reveal = (layer: MediaLayer) => {
+      if (cancelled) return;
+      if (target.type === "video") video.playbackRate = target.playbackRate ?? 1;
+      setShown({ step: target, layer });
+      callbacks.current.onShown(target.id);
     };
-    applyRate();
-    video.addEventListener("loadedmetadata", applyRate);
-    return () => video.removeEventListener("loadedmetadata", applyRate);
-  }, [step]);
+
+    if (target.type === "image") {
+      if ((front === 0 || front === 1) && slots[front].getAttribute("src") === target.image) {
+        reveal(front);
+      } else {
+        const layer = front === 0 ? 1 : 0;
+        const slot = slots[layer];
+        if (slot.getAttribute("src") !== target.image) slot.src = target.image;
+        // A failed decode (e.g. a 404) still reveals, so the tour can't get stuck on the old frame.
+        slot.decode().then(
+          () => reveal(layer),
+          () => reveal(layer),
+        );
+      }
+    } else {
+      loadVideo(video, target);
+      const showFirstFrame = () => {
+        if (video.currentTime === 0) return reveal("video");
+        video.addEventListener("seeked", () => reveal("video"), { once: true });
+        video.currentTime = 0;
+      };
+      if (video.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA) {
+        showFirstFrame();
+      } else {
+        video.addEventListener("loadeddata", showFirstFrame, { once: true });
+        cleanup = () => video.removeEventListener("loadeddata", showFirstFrame);
+      }
+    }
+    return () => {
+      cancelled = true;
+      cleanup();
+    };
+  }, [target]);
+
+  // Load the next screen into a hidden slot. This runs after the swap has been committed: touching
+  // a slot's src before then could repaint the slot that is still on top.
+  useEffect(() => {
+    if (!upcoming || shown?.step.id !== target.id) return;
+    if (upcoming.type === "image") {
+      const slot = imageRefs[shown.layer === 0 ? 1 : 0].current!;
+      if (slot.getAttribute("src") !== upcoming.image) {
+        slot.src = upcoming.image;
+        slot.decode().catch(() => {});
+      }
+    } else if (shown.layer !== "video") {
+      loadVideo(videoRef.current!, upcoming);
+    }
+  }, [shown, target, upcoming]);
 
   useEffect(() => {
-    const video = ref.current;
-    if (!video) return;
-    if (playing) {
+    const video = videoRef.current!;
+    if (shown?.layer === "video" && playing) {
       if (video.ended) video.currentTime = 0;
-      video.play().catch(() => onPlayFailedRef.current());
+      video.play().catch(() => callbacks.current.onPlayFailed(shown.step.id));
     } else {
       video.pause();
     }
-  }, [playing]);
+  }, [shown, playing]);
+
+  const layerProps = (layer: MediaLayer) => ({
+    "aria-hidden": shown?.layer !== layer,
+    draggable: false,
+    className: cn("absolute inset-0 h-full w-full object-cover", shown?.layer === layer ? "z-[2]" : "z-[1]"),
+  });
+  const shownAlt = shown?.step.type === "image" ? shown.step.alt : "";
 
   return (
-    <video
-      ref={ref}
-      src={step.video}
-      poster={step.poster}
-      muted
-      playsInline
-      preload="auto"
-      aria-hidden="true"
-      onEnded={() => onEnded(step.id)}
-      className="h-full w-full object-cover"
-    />
+    <>
+      <img ref={imageRefs[0]} alt={shown?.layer === 0 ? shownAlt : ""} {...layerProps(0)} />
+      <img ref={imageRefs[1]} alt={shown?.layer === 1 ? shownAlt : ""} {...layerProps(1)} />
+      <video
+        ref={videoRef}
+        muted
+        playsInline
+        preload="auto"
+        onEnded={() => {
+          const current = shownRef.current;
+          if (current?.layer === "video") callbacks.current.onVideoEnded(current.step.id);
+        }}
+        {...layerProps("video")}
+        aria-hidden="true"
+      />
+    </>
   );
+}
+
+function loadVideo(video: HTMLVideoElement, step: TourVideoStep) {
+  if (video.getAttribute("src") === step.video) return;
+  video.defaultPlaybackRate = step.playbackRate ?? 1;
+  video.src = step.video;
 }
 
 function HotspotLayer({
@@ -461,7 +534,7 @@ function HotspotLayer({
 
   return (
     <motion.div
-      className="pointer-events-none absolute inset-0"
+      className="pointer-events-none absolute inset-0 z-20"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.3, delay }}
@@ -672,19 +745,33 @@ function clamp(value: number, min: number, max: number) {
   return Math.min(Math.max(value, min), Math.max(min, max));
 }
 
-function zoomTarget(step: TourStep) {
-  const zoom = step.type === "image" ? step.zoom : undefined;
-  return zoom ? { x: `${zoom.left * 100}%`, y: `${zoom.top * 100}%`, scale: zoom.level } : NO_ZOOM;
+function zoomTransform(step: TourStep | undefined) {
+  const zoom = step?.type === "image" ? step.zoom : undefined;
+  if (!zoom) return "translate(0%, 0%) scale(1)";
+  return `translate(${zoom.left * 100}%, ${zoom.top * 100}%) scale(${zoom.level})`;
 }
 
-/** Same element key for consecutive steps on one image, so only the zoom animates instead of a crossfade. */
-function layerKey(step: TourMediaStep) {
-  return step.type === "image" ? `image:${step.image}` : `video:${step.id}`;
+function nextMedia(steps: TourStep[], index: number) {
+  return steps.slice(index + 1).find((s): s is TourMediaStep => s.type !== "card");
+}
+
+/** The media to keep ready under a card: the step after it, or the one before at the end of a tour. */
+function nearbyMediaIndex(steps: TourStep[], index: number) {
+  const after = steps.findIndex((s, i) => i > index && s.type !== "card");
+  if (after !== -1) return after;
+  return steps.findLastIndex((s, i) => i < index && s.type !== "card");
+}
+
+/** Fetch and decode ahead of time, so showing the image later doesn't wait on the network or decoder. */
+function warmImage(src: string) {
+  const img = new Image();
+  img.src = src;
+  img.decode().catch(() => {});
 }
 
 function previewSource(step: TourStep) {
   if (step.type === "card") return step.backgroundImage;
-  return step.type === "image" ? step.image : step.poster;
+  return step.type === "image" ? step.image : undefined;
 }
 
 /** Hotspot position within the frame once the step's zoom is applied. */
