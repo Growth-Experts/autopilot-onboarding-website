@@ -1,0 +1,1724 @@
+[
+ {
+  "id": "0e860fed-f22c-49f3-8057-f323c10098ee",
+  "type": 3,
+  "title": "Start an employee onboarding request and route it to the right team",
+  "subtitle": "See how to assign key approvers, set urgency, request missing details, and hand off ownership fast.",
+  "theme": "light",
+  "variant": "buttons",
+  "textAlign": "left",
+  "showPreviewImage": true,
+  "showLogo": false,
+  "paths": [
+   {
+    "buttonColor": "#2142E7",
+    "targetStepId": null,
+    "id": "f8b3ff54-de8b-417d-be8e-ba1458c59051",
+    "pathType": "step",
+    "buttonText": "Get Started",
+    "buttonTextColor": "#FFFFFF"
+   }
+  ]
+ },
+ {
+  "id": "d570c23c-0640-44bd-b15f-4cc638acb5c9",
+  "url": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/d5362df2-8d4a-4056-96bc-8cf8da4f33dc.png",
+  "size": {
+   "height": 1872,
+   "width": 3840
+  },
+  "clickContext": {
+   "sections": [],
+   "text": "6. Employee Onboarding Request (with signing)",
+   "elementType": "other",
+   "cssSelector": "div[id=\"tab-initiatelist\"] > div > div:nth-of-type(6) > div > div:nth-of-type(2)",
+   "originalRect": {
+    "width": 1503,
+    "height": 55,
+    "x": 85,
+    "y": 503
+   }
+  },
+  "pageContext": {
+   "title": "All Demos - Autopilot",
+   "height": 1040,
+   "description": "",
+   "width": 2133,
+   "language": null,
+   "url": "https://alldemos.autopilot-qa.co.za/?"
+  },
+  "type": 1,
+  "originalImageUrl": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/d5362df2-8d4a-4056-96bc-8cf8da4f33dc.png",
+  "hotspots": [
+   {
+    "width": 40,
+    "textColor": "#FFFFFF",
+    "y": 0.5224359365609976,
+    "targetId": null,
+    "id": "0fef5419-56c3-42a7-8568-15261778bde3",
+    "style": "pulsating",
+    "label": "<p>Select **Employee Onboarding Request (with signing)** to start a guided onboarding workflow.</p>",
+    "bgColor": "#2142E7",
+    "x": 0.14064697609001406,
+    "defaultOpen": true,
+    "height": 40
+   }
+  ],
+  "blurhash": "UJR{*~bcRjo#^+oLRjj[?btRRjt7~Wt7WCof",
+  "assetId": "d570c23c-0640-44bd-b15f-4cc638acb5c9"
+ },
+ {
+  "id": "35b8e8cd-11b6-45b2-9f19-8adaee213b03",
+  "url": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/94e1abcd-b1ca-4048-8677-4ad90151535e.png",
+  "size": {
+   "height": 1872,
+   "width": 3840
+  },
+  "panAndZoom": {
+   "enabled": true
+  },
+  "clickContext": {
+   "originalRect": {
+    "height": 45,
+    "x": 621,
+    "y": 596,
+    "width": 541
+   },
+   "elementType": "other",
+   "sections": [],
+   "text": "Payroll Admin *",
+   "cssSelector": "span[id=\"PayrollAdmin\"] > input"
+  },
+  "pageContext": {
+   "height": 1040,
+   "width": 2133,
+   "url": "https://alldemos.autopilot-qa.co.za/?",
+   "title": "All Demos - Autopilot",
+   "description": "",
+   "language": null
+  },
+  "type": 1,
+  "originalImageUrl": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/94e1abcd-b1ca-4048-8677-4ad90151535e.png",
+  "hotspots": [
+   {
+    "id": "9cf670f8-ec12-490c-9286-57564a4f3343",
+    "height": 40,
+    "defaultOpen": true,
+    "bgColor": "#2142E7",
+    "x": 0.3323436080710853,
+    "width": 40,
+    "textColor": "#FFFFFF",
+    "label": "<p>Click Payroll Admin to assign who will handle payroll setup for this new starter.</p>",
+    "style": "pulsating",
+    "targetId": null,
+    "y": 0.5854701115534856
+   }
+  ],
+  "blurhash": "UJSPeCx]V@tS?bt6WBfkR*WVj[j[~WofRkt6",
+  "assetId": "35b8e8cd-11b6-45b2-9f19-8adaee213b03"
+ },
+ {
+  "id": "d3011b3a-215c-46f9-aad7-78d42c424d90",
+  "url": "https://stream.mux.com/hn8P8yv9x9F4lSw00RErIAWRUHk8sXIvFlNB9iyh9nB00.m3u8",
+  "size": {
+   "width": 3840,
+   "height": 1872
+  },
+  "type": 2,
+  "targetId": null,
+  "streamUrl": "https://stream.mux.com/IWRkJ9sH00xAGdeCIeq1TWYNAKuRPrz9UmxvswOtY02lk.m3u8",
+  "videoThumbnailUrl": "https://image.mux.com/hn8P8yv9x9F4lSw00RErIAWRUHk8sXIvFlNB9iyh9nB00/thumbnail.webp?time=8.423",
+  "playbackRate": 2.5,
+  "assetId": "X36fSgszIPwxL004kSzNZqZLWoxwsp3KOBhWxf1QLWek",
+  "startTimeFrac": 0.08681536146441013,
+  "endTimeFrac": 0.1217661973573004,
+  "duration": 97.022,
+  "muted": true,
+  "videoProcessing": false
+ },
+ {
+  "id": "d5caaa20-645e-4f28-9a44-3d7bd1ec2cb4",
+  "url": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/e6972f4a-53eb-445a-8046-384a0c6d3d34.png",
+  "size": {
+   "height": 1872,
+   "width": 3840
+  },
+  "panAndZoom": {
+   "enabled": true
+  },
+  "clickContext": {
+   "text": "Alex Sanchez",
+   "elementType": "link",
+   "cssSelector": "a[id=\"ui-id-24\"]",
+   "originalRect": {
+    "height": 30,
+    "x": 622,
+    "width": 540,
+    "y": 648
+   },
+   "sections": []
+  },
+  "pageContext": {
+   "title": "All Demos - Autopilot",
+   "description": "",
+   "language": null,
+   "url": "https://alldemos.autopilot-qa.co.za/?",
+   "width": 2133,
+   "height": 1040
+  },
+  "type": 1,
+  "originalImageUrl": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/e6972f4a-53eb-445a-8046-384a0c6d3d34.png",
+  "hotspots": [
+   {
+    "style": "pulsating",
+    "targetId": null,
+    "textColor": "#FFFFFF",
+    "label": "<p>Choose the right Payroll Admin so the request routes to the correct person automatically.</p>",
+    "width": 40,
+    "bgColor": "#2142E7",
+    "x": 0.32400897563034753,
+    "id": "4ae6bbb9-0914-4805-8496-667ada813d71",
+    "height": 40,
+    "defaultOpen": true,
+    "y": 0.6271367586576022
+   }
+  ],
+  "blurhash": "UJSPeCx]WAxv?bt6WBa|R*WWj@jt~WoeR*t7",
+  "assetId": "d5caaa20-645e-4f28-9a44-3d7bd1ec2cb4"
+ },
+ {
+  "id": "21fa3414-e147-4583-89e0-76755fbc6544",
+  "url": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/d950e8c1-6f19-463a-b7a1-7aa45c28470b.png",
+  "size": {
+   "width": 3840,
+   "height": 1872
+  },
+  "panAndZoom": {
+   "enabled": true
+  },
+  "clickContext": {
+   "text": "HR Admin *",
+   "elementType": "other",
+   "sections": [],
+   "cssSelector": "form[id=\"instance-form-participants\"] > div > div:nth-of-type(3)",
+   "originalRect": {
+    "y": 571,
+    "width": 571,
+    "height": 90,
+    "x": 1177
+   }
+  },
+  "pageContext": {
+   "url": "https://alldemos.autopilot-qa.co.za/?",
+   "height": 1040,
+   "title": "All Demos - Autopilot",
+   "description": "",
+   "language": null,
+   "width": 2133
+  },
+  "type": 1,
+  "originalImageUrl": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/d950e8c1-6f19-463a-b7a1-7aa45c28470b.png",
+  "hotspots": [
+   {
+    "targetId": null,
+    "textColor": "#FFFFFF",
+    "bgColor": "#2142E7",
+    "defaultOpen": true,
+    "id": "aee58db5-8147-4cf5-9bb5-54e33e3c0346",
+    "y": 0.6196581326998197,
+    "label": "<p>Open HR Admin to select the HR owner responsible for the onboarding steps.</p>",
+    "height": 40,
+    "style": "pulsating",
+    "width": 40,
+    "x": 0.6266604538428856
+   }
+  ],
+  "blurhash": "UJSPeCx]V@tS?bt6WBfkR*WVj[j[~WofRkt6",
+  "assetId": "21fa3414-e147-4583-89e0-76755fbc6544"
+ },
+ {
+  "id": "6df5c0ef-e8c1-4398-b198-e1345fb06f5c",
+  "url": "https://stream.mux.com/hn8P8yv9x9F4lSw00RErIAWRUHk8sXIvFlNB9iyh9nB00.m3u8",
+  "size": {
+   "width": 3840,
+   "height": 1872
+  },
+  "type": 2,
+  "targetId": null,
+  "streamUrl": "https://stream.mux.com/RDEDJWY7lnkxKD00g2oW4z2dhQvvzpkDFBG6B1kU00PGU.m3u8",
+  "videoThumbnailUrl": "https://image.mux.com/hn8P8yv9x9F4lSw00RErIAWRUHk8sXIvFlNB9iyh9nB00/thumbnail.webp?time=12.803",
+  "playbackRate": 2.5,
+  "assetId": "X36fSgszIPwxL004kSzNZqZLWoxwsp3KOBhWxf1QLWek",
+  "startTimeFrac": 0.13195976170353116,
+  "endTimeFrac": 0.17013667003360064,
+  "duration": 97.022,
+  "muted": true,
+  "videoProcessing": false
+ },
+ {
+  "id": "17f73af9-e097-43f7-a11b-dbc5ceb3662f",
+  "url": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/0e44b651-c216-41c4-b30b-0e706c58b9bb.png",
+  "size": {
+   "width": 3840,
+   "height": 1872
+  },
+  "panAndZoom": {
+   "enabled": true
+  },
+  "clickContext": {
+   "cssSelector": "a[id=\"ui-id-30\"]",
+   "elementType": "link",
+   "sections": [],
+   "text": "Mark Lehrer",
+   "originalRect": {
+    "x": 1193,
+    "height": 30,
+    "width": 540,
+    "y": 648
+   }
+  },
+  "pageContext": {
+   "language": null,
+   "title": "All Demos - Autopilot",
+   "width": 2133,
+   "height": 1040,
+   "description": "",
+   "url": "https://alldemos.autopilot-qa.co.za/?"
+  },
+  "type": 1,
+  "originalImageUrl": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/0e44b651-c216-41c4-b30b-0e706c58b9bb.png",
+  "hotspots": [
+   {
+    "width": 40,
+    "x": 0.617283988770218,
+    "height": 40,
+    "defaultOpen": true,
+    "style": "pulsating",
+    "id": "5153d1a9-9689-4af1-be1c-4fdac2b118a9",
+    "textColor": "#FFFFFF",
+    "bgColor": "#2142E7",
+    "y": 0.6463675278883714,
+    "targetId": null,
+    "label": "<p>Start typing a name to quickly find the right HR Admin from the directory.</p>"
+   }
+  ],
+  "blurhash": "UJSF|kx]adtS?bs:WBfkR+WVj@j[~WofR*t6",
+  "assetId": "17f73af9-e097-43f7-a11b-dbc5ceb3662f"
+ },
+ {
+  "id": "e7773dcb-66a2-4954-8f0c-bbd721f29bb9",
+  "url": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/5a96214b-2f81-4fe2-b24d-24af3edf3a6a.png",
+  "size": {
+   "height": 1872,
+   "width": 3840
+  },
+  "panAndZoom": {
+   "enabled": true
+  },
+  "clickContext": {
+   "originalRect": {
+    "width": 541,
+    "x": 50,
+    "height": 45,
+    "y": 686
+   },
+   "sections": [],
+   "cssSelector": "span[id=\"FinanceAdmin\"] > input",
+   "text": "Finance Admin *",
+   "elementType": "other"
+  },
+  "pageContext": {
+   "description": "",
+   "height": 1040,
+   "title": "All Demos - Autopilot",
+   "language": null,
+   "url": "https://alldemos.autopilot-qa.co.za/?",
+   "width": 2133
+  },
+  "type": 1,
+  "originalImageUrl": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/5a96214b-2f81-4fe2-b24d-24af3edf3a6a.png",
+  "hotspots": [
+   {
+    "targetId": null,
+    "x": 0.2031567480102482,
+    "width": 40,
+    "bgColor": "#2142E7",
+    "style": "pulsating",
+    "id": "e6c610ab-6f25-4b90-9360-25bb7fead2bf",
+    "textColor": "#FFFFFF",
+    "defaultOpen": true,
+    "y": 0.6826923663799579,
+    "label": "<p>Select a Finance Admin to ensure salary and cost approvals go to the right team.</p>",
+    "height": 40
+   }
+  ],
+  "blurhash": "UJSPeCx]V@xv?bt6WBa}R*WWj[jt~WoeRkt6",
+  "assetId": "e7773dcb-66a2-4954-8f0c-bbd721f29bb9"
+ },
+ {
+  "id": "8d20889b-8f0d-4ba8-826a-c04ef290e00f",
+  "url": "https://stream.mux.com/hn8P8yv9x9F4lSw00RErIAWRUHk8sXIvFlNB9iyh9nB00.m3u8",
+  "size": {
+   "width": 3840,
+   "height": 1872
+  },
+  "type": 2,
+  "targetId": null,
+  "streamUrl": "https://stream.mux.com/00Lzww0001jPULZtjkMSbXCo602oXEKqPOhlxJY8Zv3ITZ8.m3u8",
+  "videoThumbnailUrl": "https://image.mux.com/hn8P8yv9x9F4lSw00RErIAWRUHk8sXIvFlNB9iyh9nB00/thumbnail.webp?time=17.377",
+  "playbackRate": 2.5,
+  "assetId": "X36fSgszIPwxL004kSzNZqZLWoxwsp3KOBhWxf1QLWek",
+  "startTimeFrac": 0.17910370843726164,
+  "endTimeFrac": 0.21180763125888974,
+  "duration": 97.022,
+  "muted": true,
+  "videoProcessing": false
+ },
+ {
+  "id": "869fb3bb-05b8-4741-abc8-ec2a403db484",
+  "url": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/338e76d1-615b-4fc6-b5fb-143bdea55418.png",
+  "size": {
+   "width": 3840,
+   "height": 1872
+  },
+  "panAndZoom": {
+   "enabled": true
+  },
+  "clickContext": {
+   "sections": [],
+   "text": "Alex Sanchez",
+   "originalRect": {
+    "y": 738,
+    "height": 30,
+    "width": 540,
+    "x": 51
+   },
+   "elementType": "link",
+   "cssSelector": "a[id=\"ui-id-32\"]"
+  },
+  "pageContext": {
+   "language": null,
+   "height": 1040,
+   "width": 2133,
+   "url": "https://alldemos.autopilot-qa.co.za/?",
+   "description": "",
+   "title": "All Demos - Autopilot"
+  },
+  "type": 1,
+  "originalImageUrl": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/338e76d1-615b-4fc6-b5fb-143bdea55418.png",
+  "hotspots": [
+   {
+    "targetId": null,
+    "textColor": "#FFFFFF",
+    "y": 0.7104701115534856,
+    "x": 0.17138095288784136,
+    "label": "<p>Pick the Finance Admin from the suggestions to lock in the finance route.</p>",
+    "defaultOpen": true,
+    "id": "d9012a92-7e85-4fa3-a84f-c07cf9ef41b7",
+    "height": 40,
+    "style": "pulsating",
+    "bgColor": "#2142E7",
+    "width": 40
+   }
+  ],
+  "blurhash": "UISF|kx]V@xv?bt7WBfkWCbHoLj@~Wa|Rjt6",
+  "assetId": "869fb3bb-05b8-4741-abc8-ec2a403db484"
+ },
+ {
+  "id": "d58a2add-6f73-4709-b9cc-5fdaf0f69610",
+  "url": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/8613648b-d605-444f-b747-557f272f7082.png",
+  "size": {
+   "width": 3840,
+   "height": 1872
+  },
+  "panAndZoom": {
+   "enabled": true
+  },
+  "clickContext": {
+   "elementType": "other",
+   "cssSelector": "span[id=\"ITAdmin\"] > input",
+   "text": "IT Admin *",
+   "originalRect": {
+    "width": 541,
+    "height": 45,
+    "y": 686,
+    "x": 621
+   },
+   "sections": []
+  },
+  "pageContext": {
+   "language": null,
+   "width": 2133,
+   "description": "",
+   "height": 1040,
+   "url": "https://alldemos.autopilot-qa.co.za/?",
+   "title": "All Demos - Autopilot"
+  },
+  "type": 1,
+  "originalImageUrl": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/8613648b-d605-444f-b747-557f272f7082.png",
+  "hotspots": [
+   {
+    "label": "<p>Click IT Admin to assign who will provision access, devices, and licenses.</p>",
+    "y": 0.6901709923377404,
+    "targetId": null,
+    "x": 0.37245403563422996,
+    "width": 40,
+    "height": 40,
+    "id": "af06cb10-c1a3-42aa-814b-e24b445423e5",
+    "textColor": "#FFFFFF",
+    "defaultOpen": true,
+    "style": "pulsating",
+    "bgColor": "#2142E7"
+   }
+  ],
+  "blurhash": "UGS6Y?tSRPx]_3xtayj[WVj]oej[~WR*M|t6",
+  "assetId": "d58a2add-6f73-4709-b9cc-5fdaf0f69610"
+ },
+ {
+  "id": "e2ef633b-f353-45ce-80e5-e93bec73626f",
+  "url": "https://stream.mux.com/hn8P8yv9x9F4lSw00RErIAWRUHk8sXIvFlNB9iyh9nB00.m3u8",
+  "size": {
+   "height": 1872,
+   "width": 3840
+  },
+  "type": 2,
+  "targetId": null,
+  "streamUrl": "https://stream.mux.com/3k6M01XacnGSltJyLodPwnbNQKaz02hu58Ox8TY1t200fw.m3u8",
+  "videoThumbnailUrl": "https://image.mux.com/hn8P8yv9x9F4lSw00RErIAWRUHk8sXIvFlNB9iyh9nB00/thumbnail.webp?time=21.209",
+  "playbackRate": 2.5,
+  "assetId": "X36fSgszIPwxL004kSzNZqZLWoxwsp3KOBhWxf1QLWek",
+  "startTimeFrac": 0.2185999051761456,
+  "endTimeFrac": 0.25230360124507845,
+  "duration": 97.022,
+  "muted": true,
+  "videoProcessing": false
+ },
+ {
+  "id": "d80e9d7b-ca1e-4542-9284-0b7b0e82c99e",
+  "url": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/af0e95b3-b1a0-4aac-8c98-43278d16cef1.png",
+  "size": {
+   "width": 3840,
+   "height": 1872
+  },
+  "panAndZoom": {
+   "enabled": true
+  },
+  "clickContext": {
+   "elementType": "link",
+   "originalRect": {
+    "height": 30,
+    "y": 738,
+    "width": 540,
+    "x": 622
+   },
+   "text": "Alex Sanchez",
+   "cssSelector": "a[id=\"ui-id-37\"]",
+   "sections": []
+  },
+  "pageContext": {
+   "description": "",
+   "url": "https://alldemos.autopilot-qa.co.za/?",
+   "height": 1040,
+   "language": null,
+   "title": "All Demos - Autopilot",
+   "width": 2133
+  },
+  "type": 1,
+  "originalImageUrl": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/af0e95b3-b1a0-4aac-8c98-43278d16cef1.png",
+  "hotspots": [
+   {
+    "x": 0.36880763572982594,
+    "label": "<p>Type the IT Admin’s name to pull up matches instantly.</p>",
+    "height": 40,
+    "textColor": "#FFFFFF",
+    "style": "pulsating",
+    "defaultOpen": true,
+    "bgColor": "#2142E7",
+    "width": 40,
+    "targetId": null,
+    "id": "521e0113-1b11-467c-bd73-9816ec6b87db",
+    "y": 0.7200854961688702
+   }
+  ],
+  "blurhash": "UISF|kx]adx]?bt6R*ayWCWqjtay~Wj[R*xa",
+  "assetId": "d80e9d7b-ca1e-4542-9284-0b7b0e82c99e"
+ },
+ {
+  "id": "3fceb208-c537-470b-9cef-119f268280fd",
+  "url": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/6b73b3c7-cf43-4066-8ea9-cd4dbcc9001c.png",
+  "size": {
+   "height": 1872,
+   "width": 3840
+  },
+  "panAndZoom": {
+   "enabled": true
+  },
+  "clickContext": {
+   "text": "Manager *",
+   "originalRect": {
+    "y": 686,
+    "x": 1192,
+    "width": 541,
+    "height": 45
+   },
+   "sections": [],
+   "elementType": "other",
+   "cssSelector": "span[id=\"Manager\"] > input"
+  },
+  "pageContext": {
+   "language": null,
+   "url": "https://alldemos.autopilot-qa.co.za/?",
+   "title": "All Demos - Autopilot",
+   "height": 1040,
+   "description": "",
+   "width": 2133
+  },
+  "type": 1,
+  "originalImageUrl": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/6b73b3c7-cf43-4066-8ea9-cd4dbcc9001c.png",
+  "hotspots": [
+   {
+    "id": "ffd83f94-323b-44c9-8dbf-d8f79176dede",
+    "width": 40,
+    "height": 40,
+    "textColor": "#FFFFFF",
+    "bgColor": "#2142E7",
+    "defaultOpen": true,
+    "targetId": null,
+    "y": 0.6709402231069711,
+    "style": "pulsating",
+    "x": 0.6381205841794128,
+    "label": "<p>Open Manager to choose the approver who will sign off on the onboarding request.</p>"
+   }
+  ],
+  "blurhash": "UISF|kx]adx]?bt6WBazWCWXj@ay~Wj[R*xa",
+  "assetId": "3fceb208-c537-470b-9cef-119f268280fd"
+ },
+ {
+  "id": "5526fac7-9e2c-402f-9140-86107935770c",
+  "url": "https://stream.mux.com/hn8P8yv9x9F4lSw00RErIAWRUHk8sXIvFlNB9iyh9nB00.m3u8",
+  "size": {
+   "width": 3840,
+   "height": 1872
+  },
+  "type": 2,
+  "targetId": null,
+  "streamUrl": "https://stream.mux.com/Gb8t5PC28Rf6Gt00BldcUALqGFhtiY8G2wAMMvP5Ge2w.m3u8",
+  "videoThumbnailUrl": "https://image.mux.com/hn8P8yv9x9F4lSw00RErIAWRUHk8sXIvFlNB9iyh9nB00/thumbnail.webp?time=25.14",
+  "playbackRate": 2.5,
+  "assetId": "X36fSgszIPwxL004kSzNZqZLWoxwsp3KOBhWxf1QLWek",
+  "startTimeFrac": 0.25911648904372203,
+  "endTimeFrac": 0.2954381480488961,
+  "duration": 97.022,
+  "muted": true,
+  "videoProcessing": false
+ },
+ {
+  "id": "1b6cd5a0-85d3-4344-b1b9-b17d9c57ff44",
+  "url": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/b0132f50-e70a-4617-8203-5c17ccafe41e.png",
+  "size": {
+   "height": 1872,
+   "width": 3840
+  },
+  "panAndZoom": {
+   "enabled": true
+  },
+  "clickContext": {
+   "sections": [],
+   "text": "Mark Lehrer",
+   "elementType": "link",
+   "originalRect": {
+    "y": 738,
+    "x": 1193,
+    "height": 30,
+    "width": 540
+   },
+   "cssSelector": "a[id=\"ui-id-42\"]"
+  },
+  "pageContext": {
+   "width": 2133,
+   "url": "https://alldemos.autopilot-qa.co.za/?",
+   "description": "",
+   "height": 1040,
+   "language": null,
+   "title": "All Demos - Autopilot"
+  },
+  "type": 1,
+  "originalImageUrl": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/b0132f50-e70a-4617-8203-5c17ccafe41e.png",
+  "hotspots": [
+   {
+    "id": "07e26f33-9d6d-4fdb-8734-2f261581b3d5",
+    "height": 40,
+    "defaultOpen": true,
+    "textColor": "#FFFFFF",
+    "y": 0.717948737511268,
+    "targetId": null,
+    "label": "Select the Manager to keep ownership clear and approvals moving fast.",
+    "width": 40,
+    "style": "pulsating",
+    "x": 0.6277022578601149,
+    "bgColor": "#2142E7"
+   }
+  ],
+  "blurhash": "UISF|k%MadtS?bt6WBj[WCWWj@j[~WofR*s:",
+  "assetId": "1b6cd5a0-85d3-4344-b1b9-b17d9c57ff44"
+ },
+ {
+  "id": "803b3fa0-bac5-4f48-b8f1-1a848ce09a56",
+  "url": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/50860905-16d2-42e8-ac73-af4aa8beab76.png",
+  "size": {
+   "height": 1872,
+   "width": 3840
+  },
+  "panAndZoom": {
+   "enabled": true
+  },
+  "clickContext": {
+   "originalRect": {
+    "width": 541,
+    "y": 776,
+    "height": 45,
+    "x": 50
+   },
+   "cssSelector": "span[id=\"officeAdmin\"] > input",
+   "sections": [],
+   "text": "Office Admin *",
+   "elementType": "other"
+  },
+  "pageContext": {
+   "description": "",
+   "title": "All Demos - Autopilot",
+   "height": 1040,
+   "width": 2133,
+   "language": null,
+   "url": "https://alldemos.autopilot-qa.co.za/?"
+  },
+  "type": 1,
+  "originalImageUrl": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/50860905-16d2-42e8-ac73-af4aa8beab76.png",
+  "hotspots": [
+   {
+    "width": 40,
+    "height": 40,
+    "defaultOpen": true,
+    "textColor": "#FFFFFF",
+    "targetId": null,
+    "bgColor": "#2142E7",
+    "x": 0.16617180403554266,
+    "id": "8d5bfb03-5c5a-4237-812c-92afa1c28cb9",
+    "label": "Use Office Admin to route desk, access cards, and office logistics to the right person.",
+    "style": "pulsating",
+    "y": 0.7841880798339844
+   }
+  ],
+  "blurhash": "UISF|k%MadtS?bt6WBj[WCWWj@j[~WofRkt6",
+  "assetId": "803b3fa0-bac5-4f48-b8f1-1a848ce09a56"
+ },
+ {
+  "id": "b80fd92d-55d1-455e-bab9-cb8bc5a5c81c",
+  "url": "https://stream.mux.com/hn8P8yv9x9F4lSw00RErIAWRUHk8sXIvFlNB9iyh9nB00.m3u8",
+  "size": {
+   "height": 1872,
+   "width": 3840
+  },
+  "type": 2,
+  "targetId": null,
+  "streamUrl": "https://stream.mux.com/1tXDpOKOSx01hUx3HmZx602qft2KwyJLQdQsyiH9Hr7e00.m3u8",
+  "videoThumbnailUrl": "https://image.mux.com/hn8P8yv9x9F4lSw00RErIAWRUHk8sXIvFlNB9iyh9nB00/thumbnail.webp?time=29.459",
+  "playbackRate": 2.5,
+  "assetId": "X36fSgszIPwxL004kSzNZqZLWoxwsp3KOBhWxf1QLWek",
+  "startTimeFrac": 0.3036321659005174,
+  "endTimeFrac": 0.34800354558759866,
+  "duration": 97.022,
+  "muted": true,
+  "videoProcessing": false
+ },
+ {
+  "id": "ef34981a-8c13-4de0-ac5c-1dbd5e1b3281",
+  "url": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/f2a37d9f-fd2c-420a-8299-e777c77e7170.png",
+  "size": {
+   "width": 3840,
+   "height": 1872
+  },
+  "panAndZoom": {
+   "enabled": true
+  },
+  "clickContext": {
+   "originalRect": {
+    "x": 51,
+    "height": 30,
+    "width": 540,
+    "y": 828
+   },
+   "sections": [],
+   "elementType": "link",
+   "text": "Alex Sanchez",
+   "cssSelector": "a[id=\"ui-id-44\"]"
+  },
+  "pageContext": {
+   "language": null,
+   "height": 1040,
+   "url": "https://alldemos.autopilot-qa.co.za/?",
+   "width": 2133,
+   "description": "",
+   "title": "All Demos - Autopilot"
+  },
+  "type": 1,
+  "originalImageUrl": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/f2a37d9f-fd2c-420a-8299-e777c77e7170.png",
+  "hotspots": [
+   {
+    "id": "3e88aeca-cce6-4aa7-8eb3-862230785485",
+    "height": 40,
+    "style": "pulsating",
+    "x": 0.15887900422673465,
+    "bgColor": "#2142E7",
+    "defaultOpen": true,
+    "y": 0.8044871990497295,
+    "width": 40,
+    "textColor": "#FFFFFF",
+    "targetId": null,
+    "label": "Choose the Office Admin so workplace setup doesn’t get missed."
+   }
+  ],
+  "blurhash": "UISF|kx]V@xv?bt7WBfkR+WWj[jt~WoLRkt6",
+  "assetId": "ef34981a-8c13-4de0-ac5c-1dbd5e1b3281"
+ },
+ {
+  "id": "5e7cc9cc-dd73-4d1c-b682-ec5062c49d3f",
+  "url": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/e9b4ee55-3cac-4d41-a5e3-89ce2b375391.png",
+  "size": {
+   "height": 1872,
+   "width": 3840
+  },
+  "panAndZoom": {
+   "enabled": true
+  },
+  "clickContext": {
+   "elementType": "other",
+   "cssSelector": "div[id=\"sidebar-instance-actions\"] > div > div:nth-of-type(4) > div > div > span:nth-of-type(2)",
+   "text": "Save progress as draft",
+   "originalRect": {
+    "height": 20,
+    "x": 1864,
+    "width": 145,
+    "y": 396
+   },
+   "sections": []
+  },
+  "pageContext": {
+   "title": "All Demos - Autopilot",
+   "width": 2133,
+   "url": "https://alldemos.autopilot-qa.co.za/?",
+   "height": 1040,
+   "description": "",
+   "language": null
+  },
+  "type": 1,
+  "originalImageUrl": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/e9b4ee55-3cac-4d41-a5e3-89ce2b375391.png",
+  "hotspots": [
+   {
+    "width": 40,
+    "height": 40,
+    "y": 0.38782052260178784,
+    "targetId": null,
+    "defaultOpen": true,
+    "x": 0.894410610422527,
+    "label": "Save progress as a draft to keep everything captured while you gather any missing details.",
+    "bgColor": "#2142E7",
+    "style": "pulsating",
+    "id": "1c4e3faf-363c-42c6-a324-fa13cc76085b",
+    "textColor": "#FFFFFF"
+   }
+  ],
+  "blurhash": "UJSF|kx]V@xv?bt6WBbHR+WXj[j@~WoLRkt6",
+  "assetId": "5e7cc9cc-dd73-4d1c-b682-ec5062c49d3f"
+ },
+ {
+  "id": "86ad5d9b-669c-4fac-aa12-04d703b6519f",
+  "url": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/a9ad29a2-f8eb-46e0-927a-93774035b355.png",
+  "size": {
+   "height": 1872,
+   "width": 3840
+  },
+  "panAndZoom": {
+   "enabled": true
+  },
+  "clickContext": {
+   "elementType": "other",
+   "cssSelector": "span[id=\"priority-selected-container\"] > span",
+   "text": "NO PRIORITY",
+   "originalRect": {
+    "y": 22,
+    "x": 1598,
+    "height": 24,
+    "width": 115
+   },
+   "sections": []
+  },
+  "pageContext": {
+   "title": "All Demos - Autopilot",
+   "height": 1040,
+   "description": "",
+   "width": 2133,
+   "url": "https://alldemos.autopilot-qa.co.za/?",
+   "language": null
+  },
+  "type": 1,
+  "originalImageUrl": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/a9ad29a2-f8eb-46e0-927a-93774035b355.png",
+  "hotspots": [
+   {
+    "height": 40,
+    "label": "Set a priority to help teams triage the onboarding request appropriately.",
+    "textColor": "#FFFFFF",
+    "width": 40,
+    "bgColor": "#2142E7",
+    "targetId": null,
+    "defaultOpen": true,
+    "id": "e74db57d-a9a4-430d-b34f-0b8bb984ae18",
+    "x": 0.7699119972053738,
+    "y": 0.03205128449660081,
+    "style": "pulsating"
+   }
+  ],
+  "blurhash": "UISs89-;M{%M_2xaR*ofNHR+oej[~WayRkt6",
+  "assetId": "86ad5d9b-669c-4fac-aa12-04d703b6519f"
+ },
+ {
+  "id": "bc167d2d-183f-4c94-bf36-980b4d0d434e",
+  "url": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/0d82107f-88d5-43ef-9053-c08dd7125433.png",
+  "size": {
+   "width": 3840,
+   "height": 1872
+  },
+  "panAndZoom": {
+   "enabled": true
+  },
+  "clickContext": {
+   "elementType": "other",
+   "cssSelector": "span[id=\"priority-selectable-container\"] > span:nth-of-type(2)",
+   "text": "HIGH PRIORITY",
+   "sections": [],
+   "originalRect": {
+    "x": 1598,
+    "height": 24,
+    "y": 52,
+    "width": 115
+   }
+  },
+  "pageContext": {
+   "height": 1040,
+   "width": 2133,
+   "title": "All Demos - Autopilot",
+   "description": "",
+   "url": "https://alldemos.autopilot-qa.co.za/?",
+   "language": null
+  },
+  "type": 1,
+  "originalImageUrl": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/0d82107f-88d5-43ef-9053-c08dd7125433.png",
+  "hotspots": [
+   {
+    "width": 40,
+    "x": 0.7683492339501289,
+    "style": "pulsating",
+    "textColor": "#FFFFFF",
+    "label": "Mark as HIGH PRIORITY to push urgent onboardings to the top of the queue.",
+    "targetId": null,
+    "defaultOpen": true,
+    "height": 40,
+    "id": "13200894-853d-4847-b0f8-1445dc9e1529",
+    "bgColor": "#2142E7",
+    "y": 0.05876068702110877
+   }
+  ],
+  "blurhash": "UISs89-;M{%M_2xaR*oLNGR+oejZ~WfkRjs:",
+  "assetId": "bc167d2d-183f-4c94-bf36-980b4d0d434e"
+ },
+ {
+  "id": "7f15e92c-5fa2-4672-82b6-567f726ef3bf",
+  "url": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/a3d7535b-2de9-4689-bc6f-62ef1863793f.png",
+  "size": {
+   "height": 1872,
+   "width": 3840
+  },
+  "panAndZoom": {
+   "enabled": true
+  },
+  "clickContext": {
+   "originalRect": {
+    "x": 797,
+    "y": 465,
+    "height": 119,
+    "width": 509
+   },
+   "elementType": "other",
+   "text": "Enter comments:",
+   "sections": [],
+   "cssSelector": "textarea[id=\"dialog-confirm-comments\"]"
+  },
+  "pageContext": {
+   "title": "All Demos - Autopilot",
+   "url": "https://alldemos.autopilot-qa.co.za/?",
+   "language": null,
+   "height": 1040,
+   "width": 2133,
+   "description": ""
+  },
+  "type": 1,
+  "originalImageUrl": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/a3d7535b-2de9-4689-bc6f-62ef1863793f.png",
+  "hotspots": [
+   {
+    "width": 40,
+    "bgColor": "#2142E7",
+    "style": "pulsating",
+    "x": 0.5032036446429617,
+    "height": 40,
+    "defaultOpen": true,
+    "id": "ffe46ebd-0ea8-4505-96b1-467e2339fb8b",
+    "label": "Add a short reason so everyone understands why this request is urgent.",
+    "textColor": "#FFFFFF",
+    "targetId": null,
+    "y": 0.5267094538762019
+   }
+  ],
+  "blurhash": "UGBptlof00WBxuj[RjfQ00WC~qofIoay%Lj[",
+  "assetId": "7f15e92c-5fa2-4672-82b6-567f726ef3bf"
+ },
+ {
+  "id": "78221abc-d222-4c90-ab15-21696d04c52b",
+  "url": "https://stream.mux.com/hn8P8yv9x9F4lSw00RErIAWRUHk8sXIvFlNB9iyh9nB00.m3u8",
+  "size": {
+   "height": 1872,
+   "width": 3840
+  },
+  "type": 2,
+  "targetId": null,
+  "streamUrl": "https://stream.mux.com/26U5Q3giwfHDKGQcd009u9Dygm02nqwl2kiowjrz3QaSc.m3u8",
+  "videoThumbnailUrl": "https://image.mux.com/hn8P8yv9x9F4lSw00RErIAWRUHk8sXIvFlNB9iyh9nB00/thumbnail.webp?time=42.517",
+  "playbackRate": 2.5,
+  "assetId": "X36fSgszIPwxL004kSzNZqZLWoxwsp3KOBhWxf1QLWek",
+  "startTimeFrac": 0.4382201974809837,
+  "endTimeFrac": 0.5258188864381275,
+  "duration": 97.022,
+  "muted": true,
+  "videoProcessing": false
+ },
+ {
+  "id": "4d869d79-171d-4430-ad20-6f4a2a51b3e7",
+  "url": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/01bbb09e-4e53-4eae-be7c-20e22fe4fa39.png",
+  "size": {
+   "height": 1872,
+   "width": 3840
+  },
+  "panAndZoom": {
+   "enabled": true
+  },
+  "clickContext": {
+   "cssSelector": "html > body > div:nth-of-type(15) > div > div > div:nth-of-type(3) > div > div:nth-of-type(2)",
+   "sections": [],
+   "elementType": "other",
+   "originalRect": {
+    "width": 55,
+    "x": 1287,
+    "height": 33,
+    "y": 629
+   },
+   "text": "Yes"
+  },
+  "pageContext": {
+   "title": "All Demos - Autopilot",
+   "width": 2133,
+   "language": null,
+   "height": 1040,
+   "url": "https://alldemos.autopilot-qa.co.za/?",
+   "description": ""
+  },
+  "type": 1,
+  "originalImageUrl": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/01bbb09e-4e53-4eae-be7c-20e22fe4fa39.png",
+  "hotspots": [
+   {
+    "bgColor": "#2142E7",
+    "targetId": null,
+    "label": "Click Yes to confirm the priority change and log your justification.",
+    "x": 0.624576788579026,
+    "id": "558d5d51-a86b-4069-b889-deb42427880d",
+    "width": 40,
+    "y": 0.6132479154146635,
+    "defaultOpen": true,
+    "style": "pulsating",
+    "height": 40,
+    "textColor": "#FFFFFF"
+   }
+  ],
+  "blurhash": "UGBg9@of00ayxuj[RjfQ00ay~qofIoaz%Lj[",
+  "assetId": "4d869d79-171d-4430-ad20-6f4a2a51b3e7"
+ },
+ {
+  "id": "4fd66a29-6497-4ef9-b92b-18f614d06718",
+  "url": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/b1bdccad-d8c7-46f7-b2c8-4a60740c630c.png",
+  "size": {
+   "height": 1872,
+   "width": 3840
+  },
+  "panAndZoom": {
+   "enabled": true
+  },
+  "clickContext": {
+   "cssSelector": "ul[id=\"nav-tabs\"] > li:nth-of-type(2) > a > span",
+   "elementType": "link",
+   "text": "Flow",
+   "originalRect": {
+    "width": 37,
+    "height": 26,
+    "x": 139,
+    "y": 114
+   },
+   "sections": []
+  },
+  "pageContext": {
+   "url": "https://alldemos.autopilot-qa.co.za/?",
+   "title": "All Demos - Autopilot",
+   "description": "",
+   "width": 2133,
+   "height": 1040,
+   "language": null
+  },
+  "type": 1,
+  "originalImageUrl": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/b1bdccad-d8c7-46f7-b2c8-4a60740c630c.png",
+  "hotspots": [
+   {
+    "id": "b537fd3f-5f6b-418b-9f2c-a8772bbd2fdb",
+    "style": "pulsating",
+    "label": "Switch to the Flow tab to review every step and owner in the onboarding process.",
+    "y": 0.11111111274132361,
+    "defaultOpen": true,
+    "bgColor": "#2142E7",
+    "width": 40,
+    "x": 0.07865812763941998,
+    "height": 40,
+    "textColor": "#FFFFFF",
+    "targetId": null
+   }
+  ],
+  "blurhash": "UISs89-;M{xv^+xaR*ayM|R,s:ja~WayRjxa",
+  "assetId": "4fd66a29-6497-4ef9-b92b-18f614d06718"
+ },
+ {
+  "id": "ec6c4b37-620d-4b13-a909-3a57e3a80350",
+  "url": "https://stream.mux.com/hn8P8yv9x9F4lSw00RErIAWRUHk8sXIvFlNB9iyh9nB00.m3u8",
+  "size": {
+   "height": 1872,
+   "width": 3840
+  },
+  "type": 2,
+  "targetId": null,
+  "streamUrl": "https://stream.mux.com/6vJwG6OE6uUOz6XcN9YoeLqIxmKKcjMHIdG6uo00Ga018.m3u8",
+  "videoThumbnailUrl": "https://image.mux.com/hn8P8yv9x9F4lSw00RErIAWRUHk8sXIvFlNB9iyh9nB00/thumbnail.webp?time=56.937000000000005",
+  "playbackRate": 1,
+  "assetId": "X36fSgszIPwxL004kSzNZqZLWoxwsp3KOBhWxf1QLWek",
+  "startTimeFrac": 0.5868462822864917,
+  "endTimeFrac": 0.6290944321906372,
+  "duration": 97.022,
+  "muted": true,
+  "videoProcessing": false
+ },
+ {
+  "id": "e21e4b0d-118b-4185-9515-4961329999c1",
+  "url": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/b5249323-3729-459f-9abe-35b95961e8c7.png",
+  "size": {
+   "height": 1872,
+   "width": 3840
+  },
+  "panAndZoom": {
+   "enabled": true
+  },
+  "clickContext": {
+   "originalRect": {
+    "width": 91,
+    "y": 396,
+    "x": 1864,
+    "height": 20
+   },
+   "cssSelector": "div[id=\"sidebar-instance-actions\"] > div > div:nth-of-type(4) > div > div > span:nth-of-type(2)",
+   "elementType": "other",
+   "text": "Save progress",
+   "sections": []
+  },
+  "pageContext": {
+   "title": "All Demos - Autopilot",
+   "url": "https://alldemos.autopilot-qa.co.za/?",
+   "width": 2133,
+   "language": null,
+   "height": 1040,
+   "description": ""
+  },
+  "type": 1,
+  "originalImageUrl": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/b5249323-3729-459f-9abe-35b95961e8c7.png",
+  "hotspots": [
+   {
+    "style": "pulsating",
+    "id": "4a63c2a3-1dfe-4814-a75c-3dffab62b65b",
+    "y": 0.38995728125939,
+    "x": 0.8990988429588608,
+    "defaultOpen": true,
+    "targetId": null,
+    "textColor": "#FFFFFF",
+    "width": 40,
+    "bgColor": "#2142E7",
+    "height": 40,
+    "label": "Click Save progress to capture updates without submitting yet."
+   }
+  ],
+  "blurhash": "UHS$r+-;Rj-;~Wt7R*ofIpR*oKWV~Ws:WBs:",
+  "assetId": "e21e4b0d-118b-4185-9515-4961329999c1"
+ },
+ {
+  "id": "312648e5-a4cc-457d-b90c-65131892d8f9",
+  "url": "https://stream.mux.com/hn8P8yv9x9F4lSw00RErIAWRUHk8sXIvFlNB9iyh9nB00.m3u8",
+  "size": {
+   "width": 3840,
+   "height": 1872
+  },
+  "type": 2,
+  "targetId": null,
+  "streamUrl": "https://stream.mux.com/8inNoqJHgL6i4LWX0201PFmprVQ2bGc00pl4nDxWxahLWk.m3u8",
+  "videoThumbnailUrl": "https://image.mux.com/hn8P8yv9x9F4lSw00RErIAWRUHk8sXIvFlNB9iyh9nB00/thumbnail.webp?time=62.543000000000006",
+  "playbackRate": 1,
+  "assetId": "X36fSgszIPwxL004kSzNZqZLWoxwsp3KOBhWxf1QLWek",
+  "startTimeFrac": 0.6446269918162891,
+  "endTimeFrac": 0.6733112077673105,
+  "duration": 97.022,
+  "muted": true,
+  "videoProcessing": false
+ },
+ {
+  "id": "33a55d26-c572-460e-b402-dae2e39e3ed1",
+  "url": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/41da8885-54a5-467f-a947-8582b5eab077.png",
+  "size": {
+   "height": 1872,
+   "width": 3840
+  },
+  "panAndZoom": {
+   "enabled": true
+  },
+  "clickContext": {
+   "elementType": "link",
+   "originalRect": {
+    "width": 56,
+    "height": 26,
+    "y": 127,
+    "x": 217
+   },
+   "text": "Activity",
+   "sections": [],
+   "cssSelector": "ul[id=\"nav-tabs\"] > li:nth-of-type(5) > a > span"
+  },
+  "pageContext": {
+   "width": 2133,
+   "language": null,
+   "description": "",
+   "height": 1040,
+   "title": "All Demos - Autopilot",
+   "url": "https://alldemos.autopilot-qa.co.za/?"
+  },
+  "type": 1,
+  "originalImageUrl": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/41da8885-54a5-467f-a947-8582b5eab077.png",
+  "hotspots": [
+   {
+    "id": "24151f52-fd83-4e0d-99c2-a994001bf777",
+    "targetId": null,
+    "height": 40,
+    "y": 0.13034188197209284,
+    "defaultOpen": true,
+    "style": "pulsating",
+    "textColor": "#FFFFFF",
+    "bgColor": "#2142E7",
+    "label": "<p>Click Activity to see the latest completed steps in the flow.</p>",
+    "x": 0.12085222762009933,
+    "width": 40
+   }
+  ],
+  "blurhash": "UGS$r+-;Rj-;~WxaRjt6IVR*oeR*~Ws:WCs:",
+  "assetId": "33a55d26-c572-460e-b402-dae2e39e3ed1"
+ },
+ {
+  "id": "0966bed1-747c-4ad7-afc4-48663204ec2b",
+  "url": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/795d8c78-0be0-47aa-aa19-35298e3113c0.png",
+  "size": {
+   "width": 3840,
+   "height": 1872
+  },
+  "panAndZoom": {
+   "enabled": true
+  },
+  "clickContext": {
+   "originalRect": {
+    "x": 1864,
+    "y": 438,
+    "height": 20,
+    "width": 134
+   },
+   "elementType": "other",
+   "text": "Request information",
+   "sections": [],
+   "cssSelector": "div[id=\"sidebar-instance-actions\"] > div > div:nth-of-type(4) > div > div:nth-of-type(2) > span:nth-of-type(2)"
+  },
+  "pageContext": {
+   "width": 2133,
+   "language": null,
+   "height": 1040,
+   "url": "https://alldemos.autopilot-qa.co.za/?",
+   "description": "",
+   "title": "All Demos - Autopilot"
+  },
+  "type": 1,
+  "originalImageUrl": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/795d8c78-0be0-47aa-aa19-35298e3113c0.png",
+  "hotspots": [
+   {
+    "y": 0.42948719904972954,
+    "bgColor": "#2142E7",
+    "height": 40,
+    "width": 40,
+    "id": "a1840594-650d-458f-b35a-ce180cd67bfe",
+    "x": 0.8980570389416315,
+    "textColor": "#FFFFFF",
+    "label": "<p>Choose Request information to collect missing details without blocking the whole workflow.</p>",
+    "style": "pulsating",
+    "targetId": null,
+    "defaultOpen": true
+   }
+  ],
+  "blurhash": "UGS?Gd-;M{-;~Wt7Rjs:E2Rks:WB~Ws:WBof",
+  "assetId": "0966bed1-747c-4ad7-afc4-48663204ec2b"
+ },
+ {
+  "id": "b90450e3-8fab-4667-b90c-dac5f98c3e1d",
+  "url": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/b47f8936-a2e7-4aad-9a36-c1952db437dd.png",
+  "size": {
+   "height": 1872,
+   "width": 3840
+  },
+  "panAndZoom": {
+   "enabled": true,
+   "position": {
+    "top": 0,
+    "left": -0.00740123818988449
+   },
+   "zoomLevel": 1.0076687116564418
+  },
+  "clickContext": {
+   "sections": [],
+   "text": "Select the message template you want to use\nOnboarding Final Checklist",
+   "cssSelector": "div[id=\"modalBody\"] > form > div:nth-of-type(2) > div > div > select",
+   "elementType": "select",
+   "originalRect": {
+    "y": 165,
+    "x": 585,
+    "width": 933,
+    "height": 39
+   }
+  },
+  "pageContext": {
+   "width": 2133,
+   "url": "https://alldemos.autopilot-qa.co.za/?",
+   "height": 1040,
+   "title": "All Demos - Autopilot",
+   "language": null,
+   "description": ""
+  },
+  "type": 1,
+  "originalImageUrl": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/b47f8936-a2e7-4aad-9a36-c1952db437dd.png",
+  "hotspots": [
+   {
+    "y": 0.17307693774883565,
+    "style": "pulsating",
+    "defaultOpen": true,
+    "height": 40,
+    "textColor": "#FFFFFF",
+    "bgColor": "#2142E7",
+    "label": "<p>Pick a message template to request info quickly and consistently.</p>",
+    "x": 0.34067824051182316,
+    "width": 40,
+    "id": "3e4bfc91-f4dd-4d36-8199-03cf122f6f2e",
+    "targetId": null
+   }
+  ],
+  "blurhash": "UbH.Wsof00WB~qj[9Fay9Fay-;j]Rkays:j[",
+  "assetId": "b90450e3-8fab-4667-b90c-dac5f98c3e1d"
+ },
+ {
+  "id": "52317cf3-3d36-4cc9-87f9-ae9bc5ab9f47",
+  "url": "https://stream.mux.com/hn8P8yv9x9F4lSw00RErIAWRUHk8sXIvFlNB9iyh9nB00.m3u8",
+  "size": {
+   "width": 3840,
+   "height": 1872
+  },
+  "type": 2,
+  "targetId": null,
+  "streamUrl": "https://stream.mux.com/guQG9WH12uYpttk02yj9901fjC01TG01gUuNMV6GoiELNPE.m3u8",
+  "videoThumbnailUrl": "https://image.mux.com/hn8P8yv9x9F4lSw00RErIAWRUHk8sXIvFlNB9iyh9nB00/thumbnail.webp?time=73.824",
+  "playbackRate": 2.5,
+  "assetId": "X36fSgszIPwxL004kSzNZqZLWoxwsp3KOBhWxf1QLWek",
+  "startTimeFrac": 0.7608995897837604,
+  "endTimeFrac": 0.7830801261569541,
+  "duration": 97.022,
+  "muted": true,
+  "videoProcessing": false
+ },
+ {
+  "id": "eacd981a-afbb-4498-96a5-ed2cb068b59b",
+  "url": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/3415d563-aab9-4e9b-968b-01c9f72188b5.png",
+  "size": {
+   "width": 3840,
+   "height": 1872
+  },
+  "panAndZoom": {
+   "enabled": true
+  },
+  "clickContext": {
+   "elementType": "select",
+   "originalRect": {
+    "width": 933,
+    "height": 39,
+    "y": 308,
+    "x": 585
+   },
+   "sections": [],
+   "text": "Choose...\nOn behalf of a user\nThe Autopilot system (reply.autopilot.co.za)",
+   "cssSelector": "div[id=\"modalBody\"] > form > div:nth-of-type(4) > div > div > select"
+  },
+  "pageContext": {
+   "height": 1040,
+   "language": null,
+   "title": "All Demos - Autopilot",
+   "url": "https://alldemos.autopilot-qa.co.za/?",
+   "width": 2133,
+   "description": ""
+  },
+  "type": 1,
+  "originalImageUrl": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/3415d563-aab9-4e9b-968b-01c9f72188b5.png",
+  "hotspots": [
+   {
+    "targetId": null,
+    "defaultOpen": true,
+    "bgColor": "#2142E7",
+    "y": 0.3183760716364934,
+    "label": "Review the From address so recipients know the request is coming from an official workflow.",
+    "style": "pulsating",
+    "id": "111648c6-7f94-4719-b48c-ac323a8dad11",
+    "textColor": "#FFFFFF",
+    "x": 0.40943899391628574,
+    "width": 40,
+    "height": 40
+   }
+  ],
+  "blurhash": "UaHx.|of00WB~qj[9Fay9Fay%gofRkayt6j[",
+  "assetId": "eacd981a-afbb-4498-96a5-ed2cb068b59b"
+ },
+ {
+  "id": "41edb6ed-ffa9-4e76-b7fc-ae18958619ee",
+  "url": "https://stream.mux.com/hn8P8yv9x9F4lSw00RErIAWRUHk8sXIvFlNB9iyh9nB00.m3u8",
+  "size": {
+   "width": 3840,
+   "height": 1872
+  },
+  "type": 2,
+  "targetId": null,
+  "streamUrl": "https://stream.mux.com/3ZAl016WF4WoOEYmHNZNuw00N1fomE7jH2jy8EU2b7lcM.m3u8",
+  "videoThumbnailUrl": "https://image.mux.com/hn8P8yv9x9F4lSw00RErIAWRUHk8sXIvFlNB9iyh9nB00/thumbnail.webp?time=75.976",
+  "playbackRate": 1,
+  "assetId": "X36fSgszIPwxL004kSzNZqZLWoxwsp3KOBhWxf1QLWek",
+  "startTimeFrac": 0.7830801261569541,
+  "endTimeFrac": 0.8202675681804127,
+  "duration": 97.022,
+  "muted": true,
+  "videoProcessing": false
+ },
+ {
+  "id": "849c5cbb-3b8e-494d-862a-5853ce89d54a",
+  "url": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/ff502381-91ff-4841-9476-feae7a18e893.png",
+  "size": {
+   "height": 1872,
+   "width": 3840
+  },
+  "panAndZoom": {
+   "enabled": true
+  },
+  "clickContext": {
+   "cssSelector": "div[id=\"blankDialog\"] > div > div > div:nth-of-type(5) > div > div",
+   "elementType": "other",
+   "text": "Send",
+   "originalRect": {
+    "y": 693,
+    "x": 1488,
+    "height": 33,
+    "width": 65
+   },
+   "sections": []
+  },
+  "pageContext": {
+   "url": "https://alldemos.autopilot-qa.co.za/?",
+   "language": null,
+   "title": "All Demos - Autopilot",
+   "width": 2133,
+   "height": 1040,
+   "description": ""
+  },
+  "type": 1,
+  "originalImageUrl": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/ff502381-91ff-4841-9476-feae7a18e893.png",
+  "hotspots": [
+   {
+    "id": "239430b9-3e96-4e79-ae78-f0ab41df24d6",
+    "x": 0.719904202560947,
+    "label": "Click **Send** to email the checklist link and keep onboarding moving.",
+    "defaultOpen": true,
+    "style": "pulsating",
+    "height": 40,
+    "y": 0.6837607163649339,
+    "textColor": "#FFFFFF",
+    "bgColor": "#2142E7",
+    "targetId": null,
+    "width": 40
+   }
+  ],
+  "blurhash": "UZHoONof00WB~qoL9Fay9Fay-;j[NHf6t6j[",
+  "assetId": "849c5cbb-3b8e-494d-862a-5853ce89d54a"
+ },
+ {
+  "id": "7b9dac52-9a16-4041-8d49-db4fc9a6409d",
+  "url": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/f6594c76-2877-4338-9e94-8a841deaf92f.png",
+  "size": {
+   "width": 3840,
+   "height": 1872
+  },
+  "panAndZoom": {
+   "enabled": true
+  },
+  "clickContext": {
+   "originalRect": {
+    "width": 265,
+    "y": 517,
+    "height": 35,
+    "x": 1828
+   },
+   "elementType": "other",
+   "text": "Re-assign this to someone else",
+   "cssSelector": "div[id=\"sidebar-instance-actions\"] > div > div:nth-of-type(4) > div > div:nth-of-type(4)",
+   "sections": []
+  },
+  "pageContext": {
+   "description": "",
+   "title": "All Demos - Autopilot",
+   "height": 1040,
+   "width": 2133,
+   "url": "https://alldemos.autopilot-qa.co.za/?",
+   "language": null
+  },
+  "type": 1,
+  "originalImageUrl": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/f6594c76-2877-4338-9e94-8a841deaf92f.png",
+  "hotspots": [
+   {
+    "label": "Use Re-assign to route this onboarding request to the teammate best placed to manage it.",
+    "id": "286856d1-a756-4b76-b668-18018cb7feb4",
+    "width": 40,
+    "targetId": null,
+    "y": 0.5224359365609976,
+    "bgColor": "#2142E7",
+    "textColor": "#FFFFFF",
+    "x": 0.9308746666959681,
+    "style": "pulsating",
+    "defaultOpen": true,
+    "height": 40
+   }
+  ],
+  "blurhash": "UGS?Gd-;M{-;~Wt7Rjs:E2Rks:WB~Ws:WBof",
+  "assetId": "7b9dac52-9a16-4041-8d49-db4fc9a6409d"
+ },
+ {
+  "id": "9dd1bc29-18ef-404e-b9dc-ee13de1836f7",
+  "url": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/ad308738-1780-4882-9518-808ce5681d51.png",
+  "size": {
+   "width": 3840,
+   "height": 1872
+  },
+  "panAndZoom": {
+   "enabled": true
+  },
+  "clickContext": {
+   "elementType": "other",
+   "sections": [],
+   "text": "Reassign the task from Marli Welgemoed to: *",
+   "cssSelector": "span[id=\"reassignUserPicker\"] > input",
+   "originalRect": {
+    "width": 509,
+    "height": 45,
+    "x": 797,
+    "y": 422
+   }
+  },
+  "pageContext": {
+   "title": "All Demos - Autopilot",
+   "language": null,
+   "width": 2133,
+   "height": 1040,
+   "description": "",
+   "url": "https://alldemos.autopilot-qa.co.za/?"
+  },
+  "type": 1,
+  "originalImageUrl": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/ad308738-1780-4882-9518-808ce5681d51.png",
+  "hotspots": [
+   {
+    "width": 40,
+    "id": "be94f25f-fa2d-4d5a-8a2e-66badeaf67c2",
+    "defaultOpen": true,
+    "style": "pulsating",
+    "y": 0.44551283029409555,
+    "height": 40,
+    "x": 0.4948690408169245,
+    "textColor": "#FFFFFF",
+    "label": "Search for the new assignee to hand off ownership cleanly.",
+    "targetId": null,
+    "bgColor": "#2142E7"
+   }
+  ],
+  "blurhash": "UJCP|vof00WBxuj[RjfQ00WB~qofIofQ%2j[",
+  "assetId": "9dd1bc29-18ef-404e-b9dc-ee13de1836f7"
+ },
+ {
+  "id": "e22244d8-c264-42c8-81ec-e56c8bfc3c70",
+  "url": "https://stream.mux.com/hn8P8yv9x9F4lSw00RErIAWRUHk8sXIvFlNB9iyh9nB00.m3u8",
+  "size": {
+   "height": 1872,
+   "width": 3840
+  },
+  "type": 2,
+  "targetId": null,
+  "streamUrl": "https://stream.mux.com/aVfxaSC2gwbCDcGxP1hBH00NTUu4tr9QjYy1D00TACtPs.m3u8",
+  "videoThumbnailUrl": "https://image.mux.com/hn8P8yv9x9F4lSw00RErIAWRUHk8sXIvFlNB9iyh9nB00/thumbnail.webp?time=83.941",
+  "playbackRate": 2.5,
+  "assetId": "X36fSgszIPwxL004kSzNZqZLWoxwsp3KOBhWxf1QLWek",
+  "startTimeFrac": 0.8651749087835748,
+  "endTimeFrac": 0.8958792851105934,
+  "duration": 97.022,
+  "muted": true,
+  "videoProcessing": false
+ },
+ {
+  "id": "4ae280dd-821e-4162-bb90-9eb51007e4ff",
+  "url": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/050c3739-8a03-4a76-a268-3739d128fd5a.png",
+  "size": {
+   "height": 1872,
+   "width": 3840
+  },
+  "panAndZoom": {
+   "enabled": true
+  },
+  "clickContext": {
+   "elementType": "link",
+   "originalRect": {
+    "width": 508,
+    "height": 30,
+    "y": 474,
+    "x": 798
+   },
+   "text": "Alex Sanchez",
+   "cssSelector": "a[id=\"ui-id-51\"]",
+   "sections": []
+  },
+  "pageContext": {
+   "height": 1040,
+   "description": "",
+   "width": 2133,
+   "url": "https://alldemos.autopilot-qa.co.za/?",
+   "language": null,
+   "title": "All Demos - Autopilot"
+  },
+  "type": 1,
+  "originalImageUrl": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/050c3739-8a03-4a76-a268-3739d128fd5a.png",
+  "hotspots": [
+   {
+    "x": 0.4719487515291696,
+    "id": "f7c97328-6a54-40fd-aa04-346a36528e24",
+    "style": "pulsating",
+    "label": "Select the assignee from the list to ensure the request lands with the right person.",
+    "width": 40,
+    "targetId": null,
+    "textColor": "#FFFFFF",
+    "y": 0.45726497356708234,
+    "defaultOpen": true,
+    "bgColor": "#2142E7",
+    "height": 40
+   }
+  ],
+  "blurhash": "UJCP^nof00aexuj[RjfQ00WV~qofIofQ%2j[",
+  "assetId": "4ae280dd-821e-4162-bb90-9eb51007e4ff"
+ },
+ {
+  "id": "627bc422-3161-4594-939f-d94c37161764",
+  "url": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/fdfafbd1-5296-40dc-9096-3f8fb24e050b.png",
+  "size": {
+   "height": 1872,
+   "width": 3840
+  },
+  "panAndZoom": {
+   "enabled": true
+  },
+  "clickContext": {
+   "originalRect": {
+    "y": 672,
+    "x": 1198,
+    "width": 143,
+    "height": 33
+   },
+   "sections": [],
+   "cssSelector": "div[id=\"blankDialog\"] > div > div > div:nth-of-type(5) > div > div",
+   "text": "Reassign Request",
+   "elementType": "other"
+  },
+  "pageContext": {
+   "description": "",
+   "title": "All Demos - Autopilot",
+   "height": 1040,
+   "language": null,
+   "url": "https://alldemos.autopilot-qa.co.za/?",
+   "width": 2133
+  },
+  "type": 1,
+  "originalImageUrl": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/fdfafbd1-5296-40dc-9096-3f8fb24e050b.png",
+  "hotspots": [
+   {
+    "style": "pulsating",
+    "width": 40,
+    "y": 0.669871814434345,
+    "defaultOpen": true,
+    "id": "95b282f3-65d9-4d01-b640-ee111ee06594",
+    "targetId": null,
+    "height": 40,
+    "textColor": "#FFFFFF",
+    "x": 0.6094702869527954,
+    "bgColor": "#2142E7",
+    "label": "Click Reassign Request to confirm the handoff and keep accountability clear."
+   }
+  ],
+  "blurhash": "UJCP|vof00WBxuj[RjfQ00WB~qofIofQ%2j@",
+  "assetId": "627bc422-3161-4594-939f-d94c37161764"
+ },
+ {
+  "id": "QjLs7UfXhKdAMmmkghO5",
+  "url": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/9b0e27a3-7b35-4c0f-821f-fea48a5ec919.png",
+  "size": {
+   "width": 3840,
+   "height": 1872
+  },
+  "pageContext": {
+   "language": null,
+   "description": "",
+   "url": "https://alldemos.autopilot-qa.co.za/?",
+   "width": 2133,
+   "height": 1040,
+   "title": "All Demos - Autopilot"
+  },
+  "type": 1,
+  "originalImageUrl": "https://cdn.arcade.software/extension-uploads/QjLs7UfXhKdAMmmkghO5/image/9b0e27a3-7b35-4c0f-821f-fea48a5ec919.png",
+  "hotspots": [],
+  "blurhash": "UJSs89xvIVxu^+oLRjj[Ipa#ofa|~Wt7WCof",
+  "assetId": "QjLs7UfXhKdAMmmkghO5"
+ }
+]
